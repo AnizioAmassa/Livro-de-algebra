@@ -1,0 +1,58 @@
+% Pacotes úteis
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{physics}
+\usepackage{enumitem}       % listas
+\usepackage{graphicx}       % imagens
+\usepackage{caption}		% legendas nas imagenss
+\usepackage{hyperref}       % links no sumário
+\usepackage{geometry}       % margens
+\usepackage{mathtools}
+\usepackage[most]{tcolorbox}% criar ambientes em caixas
+\usepackage{xcolor}
+\usepackage{listings}
+
+%Margem
+\geometry{margin=2.5cm}
+
+% Renomeando comandos
+\renewcommand{\lstlistingname}{Código}
+\renewcommand{\contentsname}{Sumário}
+
+% Criando ambientes (teorema, definicao, exemplo, exercicio e solucao)
+\newtheoremstyle{meuTeorema}
+{1em}    		% Espaço acima
+{1em}    		% Espaço abaixo
+{\itshape} 		% Fonte
+{}       		% Recuo
+{\bfseries} 	% Fonte do cabeçalho
+{.}      		% Pontuação após cabeçalho
+{.5em}   		% Espaço após cabeçalho
+{}       		% Cabeçalho especifico
+
+\theoremstyle{meuTeorema}
+\newtheorem{teorema}{Teorema}[section]
+
+\theoremstyle{definition}
+\newtheorem{definicao}{Definição}[section]
+
+\theoremstyle{remark}
+\newtheorem{exemplo}{Exemplo}[section]
+
+\newenvironment{exercicio}[1]{%
+	\vspace{0.5cm}
+	\noindent\textbf{Exercício #1. }\itshape}{\vspace{0.3cm}}
+
+\newtcolorbox{solucao}[1][]{%
+	enhanced,
+	breakable,
+	colback=brown!5!white,   % creme claro
+	colframe=brown!90!black, % borda suave
+	fonttitle=\bfseries,
+	title=Solução,
+	boxrule=0.4pt,
+	arc=0pt,
+	outer arc=0pt,
+	coltitle=black
+}
