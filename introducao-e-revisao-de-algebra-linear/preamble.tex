@@ -12,17 +12,14 @@
 \usepackage[most]{tcolorbox}% criar ambientes em caixas
 \usepackage{xcolor}
 \usepackage{listings}
+\usepackage{subfiles}
+\usepackage[brazil]{babel}
 
 %Configurações do arquivo
 \geometry{margin=2.5cm} % margem
 \linespread{1.2}   		% aumenta o espaçamento entre linhas
 \usepackage{lmodern} 	% usa fonte Latin Modern
 
-% Renomeando comandos
-\renewcommand{\lstlistingname}{Código}
-\renewcommand{\contentsname}{Sumário}
-\renewcommand{\chaptername}{Capítulo}
-\renewcommand{\appendixname}{Apêndice}
 
 % Criando ambientes (teorema, definicao, exemplo, exercicio e solucao)
 \newtheoremstyle{meuTeorema}
@@ -58,4 +55,4 @@
 	boxrule=0.4pt,
 	arc=0pt,
 	outer arc=0pt,
-	coltitle=black
+	coltitle=black}
