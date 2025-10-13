@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.9.10)  13 OCT 2025 05:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.9.10)  13 OCT 2025 06:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1131,13 +1131,13 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: D5B674C0698DCEC5D49408D6BD6A7D6B;3115.
+(rerunfilecheck)             Checksum: 8C34665CCD4E5892AB51C92B5F4BBACC;3378.
  ) 
 Here is how much of TeX's memory you used:
- 31757 strings out of 474486
- 633420 string characters out of 5743755
+ 31761 strings out of 474486
+ 633463 string characters out of 5743755
  1933542 words of memory out of 5000000
- 53452 multiletter control sequences out of 15000+600000
+ 53454 multiletter control sequences out of 15000+600000
  603078 words of font info for 65 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  98i,5n,102p,543b,512s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1147,9 +1147,9 @@ b><C:/Users/maria/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb
 <C:/Users/maria/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb>
 <C:/Users/maria/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmro12.pfb>
 
-Output written on main.pdf (19 pages, 179243 bytes).
+Output written on main.pdf (19 pages, 182371 bytes).
 PDF statistics:
- 269 PDF objects out of 1000 (max. 8388607)
- 46 named destinations out of 1000 (max. 500000)
- 309 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 275 PDF objects out of 1000 (max. 8388607)
+ 48 named destinations out of 1000 (max. 500000)
+ 317 words of extra memory for PDF output out of 10000 (max. 10000000)
 
