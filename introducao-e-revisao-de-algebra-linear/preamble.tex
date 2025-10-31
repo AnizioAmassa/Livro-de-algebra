@@ -2,18 +2,27 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{amsmath, amssymb, amsthm}
+\usepackage[most]{tcolorbox}
 \usepackage{physics}
-\usepackage{enumitem}       % listas
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{amsmath}
+\usetikzlibrary{arrows.meta, decorations.markings}
+\usepackage{enumitem}       % personalizar listas
 \usepackage{graphicx}       % imagens
-\usepackage{caption}		% legendas nas imagenss
+\usepackage{caption}		% legendas de imagens
 \usepackage{hyperref}       % links no sumário
 \usepackage{geometry}       % margens
 \usepackage{mathtools}
-\usepackage[most]{tcolorbox}% criar ambientes em caixas
-\usepackage{xcolor}
 \usepackage{listings}
+\usepackage{mathrsfs}
+\lstset{numbers=left, captionpos=b}
+\usepackage{xcolor}
+\usepackage{fancyhdr} 		% cabeçalhos/rodapés
 \usepackage{subfiles}
+\usepackage{esvect}
 \usepackage[brazil]{babel}
+
 
 %Configurações do arquivo
 \geometry{margin=2.5cm} % margem
@@ -44,6 +53,8 @@
 \newenvironment{exercicio}[1]{%
 	\vspace{0.5cm}
 	\noindent\textbf{Exercício #1. }\itshape}{\vspace{0.3cm}}
+	
+\newcommand{\azul}[1]{\textbf{\textcolor{blue}{#1}}}
 
 \newtcolorbox{solucao}[1][]{%
 	enhanced,

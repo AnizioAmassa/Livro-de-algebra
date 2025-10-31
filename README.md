@@ -1,5 +1,7 @@
 # Livro-de-algebra
 
+Mariana - 31/10/25 - atualizei prefácio e capítulo 1
+
 Mariana - 13/10/25 - atualizei introducao, subseções e capítulo 1
 
 Mariana - 23/09/25 - atualizei a ordem dos capítulos
