@@ -37,7 +37,79 @@
 				\end{tikzpicture}
 			\end{center}
 		\end{definicao}
-		
+		\begin{proposicao}
+			Sejam $V$, $W$ e $U$ vetores.
+			A soma de vetores segue as seguintes propriedades:
+			\begin{enumerate}[label=\roman*)]
+				\item $V+W=W+V$ (comutatividade)
+				\item $V+(W+U)=(V+W)+U$ (associatividade)
+				\item $\exists \text{ vetor }\bar{0}\text{, tal que }  V+\bar{0}=V$ (existência do elemento neutro/vetor nulo)
+			\end{enumerate}
+		\end{proposicao}
+		Abaixo seguem ilustrações das propriedades i) e ii).
+		\begin{figure}[h!]
+			\centering
+			\begin{minipage}{0.45\textwidth}
+				\centering
+				\begin{tikzpicture}[scale=0.8, >=stealth]
+					% Pontos
+					\coordinate (A) at (0,0);
+					\coordinate (B) at (3,2);
+					\coordinate (C) at (6,1);
+					\coordinate (D) at (3,-1);
+					
+					% Lados com setas
+					\draw[thick, ->] (A) -- (B) node[midway, above left=3pt] {$V$};
+					\draw[thick, ->] (B) -- (C) node[midway, above right=3pt] {$W$};
+					\draw[thick, ->, red] (A) -- (C) node[midway, below=3pt] {\small $V+W$};
+					\draw[thick, ->] (A) -- (D) node[midway, below=3pt] {$W$};
+					\draw[thick, ->] (D) -- (C) node[midway, below=3pt] {$V$};
+					
+					% Pontos marcados
+					\fill (A) circle (1.5pt) node[below left] {$A$};
+					\fill (B) circle (1.5pt) node[above] {$B$};
+					\fill (C) circle (1.5pt) node[below right] {$C$};
+					\fill (D) circle (1.5pt) node[below] {$D$};
+				\end{tikzpicture}
+			\end{minipage}
+			\hfill
+			\begin{minipage}{0.45\textwidth}
+				\centering
+				\begin{tikzpicture}[scale=0.8, >=stealth]
+					% Pontos
+					\coordinate (A) at (0,0);
+					\coordinate (B) at (2,3);
+					\coordinate (C) at (6,3);
+					\coordinate (D) at (8,0);
+					
+					% Lados com setas
+					\draw[thick, ->] (A) -- (B) node[midway, above left=3pt] {$V$};
+					\draw[thick, ->] (B) -- (C) node[midway, above] {$W$};
+					\draw[thick, ->] (C) -- (D) node[midway, above right=3pt] {$U$};
+					\draw[thick, ->, blue] (A) -- (C) node[midway, above left] {\footnotesize $V+W$};
+					\draw[thick, ->, blue] (B) -- (D) node[midway, above right] {\footnotesize $W+U$};
+					\draw[thick, ->, red] (A) -- (D) node[midway, below] {\small $V+W+U$};
+					
+					% Pontos marcados
+					\fill (A) circle (1.5pt) node[below left] {$A$};
+					\fill (B) circle (1.5pt) node[above] {$B$};
+					\fill (C) circle (1.5pt) node[above right] {$C$};
+					\fill (D) circle (1.5pt) node[below right] {$D$};
+				\end{tikzpicture}
+			\end{minipage}
+		\end{figure}
+		\begin{definicao}
+			Seja $V$ um vetor. Seu \azul{simétrico}, denotado por $-V$, é o vetor tal que
+			\[
+			V+(-V)=\bar{0}
+			\]
+		\end{definicao}
+		\begin{definicao}
+			Sejam $V$ e $W$ vetores. A \azul{diferença $W$ menos $V$} é definida como
+			\[
+			W-V=W+(-V)
+			\]
+		\end{definicao}
 	\section{Geometria Analítica}
 	\section{Matrizes como Vetores}
 	
