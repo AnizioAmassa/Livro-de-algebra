@@ -1,5 +1,9 @@
 # Livro-de-algebra
 
+Anizio - 20/09/25 - decidimos que iremos colocar os links das videoaulas da nara bobko no inicio de todos os capitulos
+                    coloquei definição de espaço vetorial e fiz alguns ajustes
+                    coloquei suporte e destaque para link
+
 Mariana - 31/10/25 - atualizei prefácio e capítulo 1
 
 Mariana - 13/10/25 - atualizei introducao, subseções e capítulo 1
