@@ -5,6 +5,7 @@
 	Para iniciar os estudos de Álgebra Linear, é interessante apresentar, inicialmente, conceitos básicos para visualizar e estruturar o conhecimento. Nesse sentido, entender vetores na perspectiva geométrica, ou seja, no plano ($\mathbb{R}^2$) ou no espaço ($\mathbb{R}^3$), é mais intuitivo em um primeiro contato. Nos próximos capítulos, em especial no capítulo 3, a definição de vetores será ampliada para outros espaços vetoriais, com um maior nível de abstração.
 	
 	\section{Álgebra Vetorial}
+		Embora iniciemos com Álgebra Vetorial e não Geometria Analítica, é interessante começar com um ponto de vista mais geométrico, para criar intuição.
 		\begin{definicao}
 			\azul{Vetores (geometricamente)} são objetos matemáticos que possuem módulo, direção e sentido.
 			
@@ -113,7 +114,7 @@
 		\begin{definicao}
 			Sejam $V\neq \bar{0}$ um vetor e $\alpha\neq 0$ um escalar (ou seja, um número real). A \azul{multiplicação do vetor $V$ por um escalar $\alpha$}, denotada por $\alpha V$, é definida pelo vetor tal que:
 			\begin{enumerate}[label=\roman*)]
-				\item seu módulo é $|\alpha|\cdot |V|$, onde $|V|$ é o módulo de $V$;
+				\item seu módulo é $|\alpha||V|$, onde $|V|$ é o módulo de $V$;
 				\item a direção é a mesma de $V$;
 				\item tem sentido de $V$ se $\alpha>0$, e sentido de $-V$ se $\alpha<0$.
 			\end{enumerate}
@@ -225,8 +226,131 @@
 		
 		Com isso, note que as operações ficam muito mais fáceis, sem depender sempre do apelo geométrico. Assim, podemos buscar uma nova forma de fazer as operações básicas entre vetores (soma e multiplicação por escalar):
 		\begin{proposicao}
-			
+			Sejam $V, W\in \mathbb{R}^2$ e $\alpha\in \mathbb{R}$. Então,
+			\begin{enumerate}[label = \roman*)]
+				\item $V+W = (v_1+w_1,\, v_2+w_2)$
+				\item $\alpha V = (\alpha v_1,\, \alpha v_2)$
+			\end{enumerate} 
 		\end{proposicao}
+		Abaixo temos uma ilustração disso:
+		\begin{figure}[h]
+			\centering
+			
+			%----------------- (a) Soma de vetores -----------------
+			\begin{subfigure}[t]{0.48\textwidth}
+				\centering
+				\begin{tikzpicture}[>=stealth,scale=1.2]
+					
+					% Eixos
+					\draw[->] (-0.3,0) -- (4.5,0) node[right] {$x$};
+					\draw[->] (0,-0.3) -- (0,3.5) node[above] {$y$};
+					
+					\coordinate (O) at (0,0);
+					\coordinate (V) at (2,1.0);   % V = (v1,v2)
+					\coordinate (W) at (1.2,1.6); % W = (w1,w2)
+					\coordinate (S) at ($(V)+(W)$); % V+W
+					
+					% Vetores V e W na origem
+					\draw[->,thick,blue] (W) -- (S)
+					node[below right] {$ V$};
+					\draw[->,thick,red]  (O) -- (W)
+					node[above left] {$W$};
+					
+					% Vetor soma
+					\draw[->,thick,green!60!black] (O) -- (S)
+					node[above right] {$ V+ W$};
+					
+					% Projeções
+					\draw[dashed] (W) -- (1.2, 0) node[below] {$w_1$};
+					\draw[dashed] (W) -- (0, 1.6) node[left] {$w_2$};
+					\draw[dashed] (S) -- (3.2, 0) node[below] {$w_1+v_1$};
+					\draw[dashed] (S) -- (0, 2.6) node[left] {$w_2+v_2$};
+					
+					% Segmentos representando as diferenças
+					\draw[thick,orange,yshift=-10pt]
+					(1.2,-0.2) -- node[below] {\small $v_2$} (3.2,-0.2);
+					
+					\draw[thick,orange,xshift=-13pt]
+					(-0.2,1.6) -- node[left] {\small $v_1$} (-0.2,2.4);
+					
+				\end{tikzpicture}
+				\caption{Soma de vetores: $ V+ W=(v_1+w_1,\;v_2+w_2)$.}
+			\end{subfigure}
+			\hfill
+			%----------------- (b) Multiplicação escalar -----------------
+			\begin{subfigure}[t]{0.48\textwidth}
+				\centering
+				\begin{tikzpicture}[>=stealth,scale=1.2]
+					
+					% Eixos
+					\draw[->] (-0.3,0) -- (4.5,0) node[right] {$x$};
+					\draw[->] (0,-0.3) -- (0,3.5) node[above] {$y$};
+					
+					\coordinate (O) at (0,0);
+					\coordinate (V) at (1.8,1.1);     % V
+					\def\alpha{2}                      % escolha de alpha > 1
+					\coordinate (AV) at ({\alpha*1.8},{\alpha*1.1}); % alpha V
+					
+					% vetor V
+					\draw[->,thick,blue] (0,0) -- (1.8,1.1)
+					node[below right] {$V = (v_1,v_2)$};
+					
+					% vetor 2V um pouco acima, para não ficar em cima de V
+					\draw[->,thick,purple] (0,0.1) -- (3.,2.2)
+					node[above right] {$2V = (2v_1,2v_2)$};
+					
+				\end{tikzpicture}
+				\caption{Multiplicação escalar: $\alpha V=(\alpha v_1,\alpha v_2)$.}
+			\end{subfigure}
+			
+			\caption{Ilustração da soma de vetores e multiplicação escalar em $\mathbb{R}^2$.}
+		\end{figure}
+		
+		Para o $\mathbb{R}^3$, essas operações ocorrem da mesma forma. Generalizando para qualquer dimensão ($\mathbb{R}^n$), temos:
+		
+		\begin{proposicao}
+			Sejam $V, W\in \mathbb{R}^n$ e $\alpha\in \mathbb{R}$. Então,
+			\begin{enumerate}[label = \roman*)]
+				\item $V+W = (v_1+w_1,\dots, \, v_n+w_n)$
+				\item $\alpha V = (\alpha v_1,\dots ,\, \alpha v_n)$
+			\end{enumerate} 
+		\end{proposicao}
+		E se quisermos fazer ambas as operações ao mesmo tempo? Então teremos uma combinação linear!
+		\begin{definicao}
+			Sejam $V_1, \dots, V_k \in \mathbb{R}^n$ vetores e $\alpha_1,\dots, \alpha_k \in \mathbb{R}$ escalares. Seja $W$ um vetor tal que
+			\[
+			W = \alpha_1 V_1 + \dots + \alpha_k V_k 
+			\]
+			Então, $W$ é \azul{combinação linear} de $V_1, \dots, V_k$.
+		\end{definicao}
+		Abordaremos melhor esse conceito em tópicos mais a frente, como em sistemas lineares.
+		
+		A partir da definição de coordenadas e da soma/multiplicação de vetores por meio delas, podemos provar as seguintes propriedades:
+		\begin{teorema}
+			Sejam $U$, $V$ e $W$ vetores e $\alpha$ e $\beta$ escalares. Então:
+			\begin{multicols}{2}
+				\begin{enumerate}[label=\roman*)]
+					\item $U+V=V+U$;
+					\item $(U+V)+W=U+(V+W)$;
+					\item $U+\bar{0}=U$;
+					\item $U+(-U)=\bar{0}$;
+					\item $\alpha(\beta U)=(\alpha \beta)U$;
+					\item $\alpha(U+V)=\alpha U+\alpha V$;
+					\item $(\alpha+\beta)U=\alpha U+\beta U$;
+					\item $1U=U$.
+				\end{enumerate}
+			\end{multicols}
+		\end{teorema}
+		
+		Outra ideia muito importante é saber o módulo do vetor a partir de seus componentes. 
+		\begin{definicao}
+			Seja $V\in \mathbb{R}^n$. O seu comprimento, também chamado de \azul{norma de $V$} e denotado por $\|V\|$, é dado por
+			\[
+			\|V\|=\sqrt{v_1^2 +\dots + v_n^2}
+			\]
+		\end{definicao}
+		
+		Essa forma de calcular a norma está ligada ao cálculo do tamanho de vetores no $\mathbb{R}^2$ e no $\mathbb{R}^3$, utilizando o Teorema de Pitágoras.
 	\section{Geometria Analítica}
 	\section{Matrizes como Vetores}
 	

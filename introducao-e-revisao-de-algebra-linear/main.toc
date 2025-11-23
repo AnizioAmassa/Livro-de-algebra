@@ -1,8 +1,8 @@
 \babel@toc {brazil}{}\relax 
 \contentsline {chapter}{\numberline {1}Álgebra Vetorial e Geometria Analítica}{3}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Álgebra Vetorial}{3}{section.1.1}%
-\contentsline {section}{\numberline {1.2}Geometria Analítica}{5}{section.1.2}%
-\contentsline {section}{\numberline {1.3}Matrizes como Vetores}{5}{section.1.3}%
+\contentsline {section}{\numberline {1.2}Geometria Analítica}{6}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Matrizes como Vetores}{6}{section.1.3}%
 \contentsline {chapter}{\numberline {2}Sistemas Lineares}{7}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Matrizes como Sistemas Lineares}{7}{section.2.1}%
 \contentsline {section}{\numberline {2.2}Combinação Linear}{7}{section.2.2}%
