@@ -1,3 +1,7 @@
+# Anizio - 21/09/25
+- coloquei subsec de subespaco
+- tenho que esperar a mariana para continuar
+
 # Anizio - 20/09/25 
 - decidimos que iremos colocar os links das videoaulas da nara bobko no inicio de todos os capitulos
 - coloquei definição de espaço vetorial e fiz alguns ajustes
