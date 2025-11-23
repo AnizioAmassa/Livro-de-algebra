@@ -17,7 +17,7 @@
 		\end{definicao}
 		Note que, pela definição, um vetor não possui "origem fixa" e pode ser representado por diferentes segmentos de reta orientados.
 		\begin{definicao}
-			Sejam $u$ e $v$ vetores representados por $\vv{AB}$ e $\vv{BC}$, respectivamente. A \azul{soma de vetores} $u+v$ é definida como o vetor representado pelo segmento de reta orientado $\vv{AC}$  
+			Sejam $U$ e $V$ vetores representados por $\vv{AB}$ e $\vv{BC}$, respectivamente. A \azul{soma de vetores} $U+V$ é definida como o vetor representado pelo segmento de reta orientado $\vv{AC}$  
 			\begin{center}
 				\begin{tikzpicture}[scale=1.2, >=stealth]
 					% Pontos
@@ -26,9 +26,9 @@
 					\coordinate (C) at (6,0.5);
 					
 					% Lados com setas
-					\draw[thick, ->] (A) -- (B) node[midway, above left=3pt] {$u$};
-					\draw[thick, ->] (B) -- (C) node[midway, above right=3pt] {$v$};
-					\draw[thick, ->] (A) -- (C) node[midway, below=3pt] {$u+v$};
+					\draw[thick, ->] (A) -- (B) node[midway, above left=3pt] {$U$};
+					\draw[thick, ->] (B) -- (C) node[midway, above right=3pt] {$V$};
+					\draw[thick, ->] (A) -- (C) node[midway, below=3pt] {$U+V$};
 					
 					% Pontos marcados
 					\fill (A) circle (1.5pt) node[below left] {$A$};
@@ -113,11 +113,120 @@
 		\begin{definicao}
 			Sejam $V\neq \bar{0}$ um vetor e $\alpha\neq 0$ um escalar (ou seja, um número real). A \azul{multiplicação do vetor $V$ por um escalar $\alpha$}, denotada por $\alpha V$, é definida pelo vetor tal que:
 			\begin{enumerate}[label=\roman*)]
-				\item seu módulo é $|\alpha|*|V|$, onde $|V|$ é o módulo de $V$;
+				\item seu módulo é $|\alpha|\cdot |V|$, onde $|V|$ é o módulo de $V$;
 				\item a direção é a mesma de $V$;
 				\item tem sentido de $V$ se $\alpha>0$, e sentido de $-V$ se $\alpha<0$.
 			\end{enumerate}
+			Caso $V=\bar{0}$ ou $\alpha=0$, $\alpha V=\bar{0}$
 		\end{definicao}
+		\begin{definicao}
+			Seja $V$ um vetor. As \azul{componentes de V} são cada elemento das coordenadas que representam o ponto final com relação à origem do sistema de coordenadas escolhido.
+			
+			Se $V$ está no plano (\azul{$\mathbb{R}^2$} ou \azul{espaço euclidiano bidimensional}), então suas coordenadas são uma trupla de dois números reais, denotadas usualmente por $(v_1, v_2)$.
+			
+			Se $V$ está no espaço (\azul{$\mathbb{R}^3$} ou \azul{espaço euclidiano tridimensional}), então suas coordenadas são uma tupla de três números reais, denotadas usualmente por $(v_1, v_2, v_3)$.
+			
+			Se $V$ está em "dimensões maiores" (\azul{$\mathbb{R}^n$} ou \azul{espaço euclidiano n-dimensional}), então suas coordenadas são uma tupla de $n$ números reais, denotadas usualmente por $(v_1, \dots, v_n)$.
+		\end{definicao}
+		Abaixo seguem ilustrações de como coordenadas funcionam no plano e no espaço.
+		\begin{figure}[h]
+			\centering
+			
+			% --- subfigura R^2 ---
+			\begin{subfigure}[t]{0.48\textwidth}
+				\centering
+				\begin{tikzpicture}[>=stealth,scale=1.0] % pode ajustar a escala se quiser
+					% Eixos
+					\draw[->] (-0.3,0) -- (5.2,0) node[right] {$x$};
+					\draw[->] (0,-0.3) -- (0,4.2) node[above] {$y$};
+					
+					\coordinate (O) at (0,0);
+					\coordinate (P) at (3,2);   % ponto de v
+					\coordinate (A) at (1,1);   % ponto inicial de w
+					\coordinate (B) at (4,3);   % ponto final de w
+					
+					% Vetor na origem
+					\draw[->,thick,blue] (O) -- (P)
+					node[below right] {$V=(v_1,v_2)$};
+					
+					% Projeções de v
+					\draw[dashed] (P) -- (3,0) node[below] {$v_1$};
+					\draw[dashed] (P) -- (0,2) node[left] {$v_2$};
+					
+					% Vetor deslocado
+					\draw[->,thick,red] (A) -- (B)
+					node[below right] {$W=(w_1,w_2)$};
+					
+					% Pontos A e B e orgigem
+					\fill (A) circle (1.2pt) node[below right] {$A(x_A,y_A)$};
+					\fill (B) circle (1.2pt) node[above] {$B(x_B,y_B)$};
+					\fill (O) circle (2pt) node[below left] {\text{Origem}};
+					
+					% Projeções para mostrar diferenças
+					\draw[dashed] (A) -- (1,0) node[below] {$x_A$};
+					\draw[dashed] (B) -- (4,0) node[below] {$x_B$};
+					\draw[dashed] (A) -- (0,1) node[left] {$y_A$};
+					\draw[dashed] (B) -- (0,3) node[left] {$y_B$};
+					
+					% Segmentos representando as diferenças
+					\draw[thick,orange,yshift=-10pt]
+					(1,-0.2) -- node[below] {\small $w_1 = x_B - x_A$} (4,-0.2);
+					
+					\draw[thick,orange,xshift=-13pt]
+					(-0.2,1) -- node[left] {\small $w_2 = y_B - y_A$} (-0.2,3);
+				\end{tikzpicture}
+				\caption{Representação no $\mathbb{R}^2$.}
+			\end{subfigure}
+			\hfill
+			% --- subfigura R^3 ---
+			\begin{subfigure}[t]{0.48\textwidth}
+				\centering
+				\tdplotsetmaincoords{70}{120}
+				\begin{tikzpicture}[scale=1.6,tdplot_main_coords,>=stealth]
+					% Eixos
+					\draw[->] (0,0,0) -- (3,0,0) node[below right] {$x$};
+					\draw[->] (0,0,0) -- (0,3,0) node[left] {$y$};
+					\draw[->] (0,0,0) -- (0,0,3) node[above] {$z$};
+					
+					% Vetor na origem
+					\coordinate (V) at (1,1.4,3);
+					\draw[->,thick,blue] (0,0,0) -- (V)
+					node[below right] {$V=(v_1,v_2,v_3)$};
+					\fill (0,0,0) circle (1.5pt) node[above left] {\text{Origem}};
+					\fill (V) circle (1.5pt) node[above left] {};
+					
+					% Projeções de v
+					\coordinate (Vxy) at (1,1.4,0);
+					\coordinate (Vx)  at (1,0,0);
+					\coordinate (Vy)  at (0,1.4,0);
+					\draw[dashed] (V) -- (Vxy);
+					\draw[dashed] (Vxy) -- (Vx) node[above left] {$v_1$};
+					\draw[dashed] (Vxy) -- (Vy) node[above right] {$v_2$};
+					\draw[dashed] (V) -- (0,0,3) node[left] {$v_3$};
+					\draw[dashed] (0,0,0) -- (Vxy);
+				\end{tikzpicture}
+				\caption{Representação no $\mathbb{R}^3$.}
+			\end{subfigure}
+			
+			\caption{Componentes de vetores em $\mathbb{R}^2$ e $\mathbb{R}^3$.}
+			\label{fig:vetores-R2-R3}
+		\end{figure}
+		
+		Perceba que, para verificar as componentes de um vetor qualquer $W$ representado por um segmento $\vv{AB}$, basta subtrair as suas coordenadas, de modo que:
+		\[
+		W = \vv{AB}\Rightarrow
+		\begin{cases}
+			w_1 = x_B - x_A\\
+			w_2 = y_B - y_A
+		\end{cases}\Rightarrow
+		W = (x_B - x_A,\, y_B - y_A)
+		\]
+		Para o $\mathbb{R}^3$, a subtração ocorre da mesma forma.
+		
+		Com isso, note que as operações ficam muito mais fáceis, sem depender sempre do apelo geométrico. Assim, podemos buscar uma nova forma de fazer as operações básicas entre vetores (soma e multiplicação por escalar):
+		\begin{proposicao}
+			
+		\end{proposicao}
 	\section{Geometria Analítica}
 	\section{Matrizes como Vetores}
 	
