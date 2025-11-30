@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.17.1 (MiKTeX 24.1) (format=lualatex 2025.11.20)  29 NOV 2025 09:03
+This is LuaHBTeX, Version 1.17.1 (MiKTeX 24.1) (format=lualatex 2025.11.20)  30 NOV 2025 00:06
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -696,6 +696,293 @@ Inserting `l3color' in `luaotfload.parse_color'.
 ))
 Package: xparse 2023-10-10 L3 Experimental document command parser
 ))
+(C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/latex/tikz-3dplot/tikz-3dplot
+.sty (C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/latex/base/ifthen.sty
+Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
+)
+(C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/tik
+z/libraries/tikzlibrarycalc.code.tex
+File: tikzlibrarycalc.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/tik
+z/libraries/tikzlibrary3d.code.tex
+File: tikzlibrary3d.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/tik
+z/libraries/tikzlibraryarrows.code.tex
+File: tikzlibraryarrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/generic/pgf/libraries/pgflibr
+aryarrows.code.tex
+File: pgflibraryarrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\arrowsize=\dimen265
+)))
+(C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/latex/tkz-euclide/tkz-euclide
+.sty
+2025/09/17 5.11c tkz-euclide.sty
+Package: tkz-euclide  2025/09/17 5.11c for pure Euclidean Geometry 
+
+(C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/tik
+z/libraries/tikzlibraryangles.code.tex
+File: tikzlibraryangles.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/generic/pgf/libraries/pgflibr
+aryarrows.meta.code.tex
+File: pgflibraryarrows.meta.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfarrowinset=\dimen266
+\pgfarrowlength=\dimen267
+\pgfarrowwidth=\dimen268
+\pgfarrowlinewidth=\dimen269
+)
+(C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/tik
+z/libraries/tikzlibrarybackgrounds.code.tex
+File: tikzlibrarybackgrounds.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@layerbox@background=\box80
+\pgf@layerboxsaved@background=\box81
+)
+(C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/tik
+z/libraries/tikzlibrarydecorations.code.tex
+(C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/generic/pgf/modules/pgfmodule
+decorations.code.tex
+\pgfdecoratedcompleteddistance=\dimen270
+\pgfdecoratedremainingdistance=\dimen271
+\pgfdecoratedinputsegmentcompleteddistance=\dimen272
+\pgfdecoratedinputsegmentremainingdistance=\dimen273
+\pgf@decorate@distancetomove=\dimen274
+\pgf@decorate@repeatstate=\count312
+\pgfdecorationsegmentamplitude=\dimen275
+\pgfdecorationsegmentlength=\dimen276
+)
+\tikz@lib@dec@box=\box82
+)
+(C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/tik
+z/libraries/tikzlibrarydecorations.markings.code.tex
+(C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/generic/pgf/libraries/decorat
+ions/pgflibrarydecorations.markings.code.tex))
+(C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/tik
+z/libraries/tikzlibrarydecorations.pathreplacing.code.tex
+(C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/generic/pgf/libraries/decorat
+ions/pgflibrarydecorations.pathreplacing.code.tex))
+(C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/tik
+z/libraries/tikzlibrarydecorations.shapes.code.tex
+(C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/generic/pgf/libraries/decorat
+ions/pgflibrarydecorations.shapes.code.tex))
+(C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/tik
+z/libraries/tikzlibrarydecorations.text.code.tex
+(C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/generic/pgf/libraries/decorat
+ions/pgflibrarydecorations.text.code.tex
+\pgf@lib@dec@text@box=\box83
+)
+\tikz@lib@dec@te@box=\box84
+)
+(C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/tik
+z/libraries/tikzlibrarydecorations.pathmorphing.code.tex
+(C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/generic/pgf/libraries/decorat
+ions/pgflibrarydecorations.pathmorphing.code.tex))
+(C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/tik
+z/libraries/tikzlibraryintersections.code.tex
+(C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/generic/pgf/libraries/pgflibr
+aryintersections.code.tex
+(C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/generic/pgf/libraries/pgflibr
+aryfpu.code.tex)
+\pgf@intersect@solutions=\count313
+))
+(C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/tik
+z/libraries/tikzlibrarymath.code.tex
+(C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/tik
+z/libraries/tikzlibraryfpu.code.tex)
+\tikz@math@for@depth=\count314
+\tikz@math@dimen=\dimen277
+\tikz@math@toks=\toks46
+)
+(C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/tik
+z/libraries/tikzlibraryplotmarks.code.tex
+File: tikzlibraryplotmarks.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/generic/pgf/libraries/pgflibr
+aryplotmarks.code.tex
+File: pgflibraryplotmarks.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))
+(C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/tik
+z/libraries/tikzlibrarypositioning.code.tex
+File: tikzlibrarypositioning.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/tik
+z/libraries/tikzlibraryquotes.code.tex
+File: tikzlibraryquotes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/tik
+z/libraries/tikzlibraryshapes.misc.code.tex
+File: tikzlibraryshapes.misc.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/generic/pgf/libraries/shapes/
+pgflibraryshapes.misc.code.tex
+File: pgflibraryshapes.misc.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))
+(C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/tik
+z/libraries/tikzlibrarythrough.code.tex
+File: tikzlibrarythrough.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/latex/l3packages/xfp/xfp.sty
+Package: xfp 2023-10-10 L3 Floating point unit
+) (C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/latex/xpatch/xpatch.sty
+Package: xpatch 2020/03/25 v0.3a Extending etoolbox patching commands
+)
+\tkzRadius=\dimen278
+\tkzLength=\dimen279
+\tkz@radi=\dimen280
+\tkz@ax=\dimen281
+\tkz@ay=\dimen282
+\tkz@bx=\dimen283
+\tkz@by=\dimen284
+\tkz@cx=\dimen285
+\tkz@cy=\dimen286
+\tkz@dx=\dimen287
+\tkz@dy=\dimen288
+\tkz@cntmk=\count315
+
+Local configuration file tkz-euclide.cfg found and used
+
+(C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/latex/tkz-euclide/tkz-euclide
+.cfg
+2025/09/17 5.11c tkz-euclide.cfg
+)
+(C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/latex/tkz-euclide/tools/tkz-t
+ools-eu-base.tex
+2025/09/17 5.11c tkz-tools-eu-base.tex
+)
+(C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/latex/tkz-euclide/tools/tkz-t
+ools-eu-utilities.tex
+2025/09/17 5.11c tkz-tools-eu-utilities.tex
+)
+(C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/latex/tkz-euclide/tools/tkz-t
+ools-eu-BB.tex
+2025/09/17 5.11c tkz-obj-eu-BB.tex
+)
+(C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/latex/tkz-euclide/obj/tkz-obj
+-eu-grids.tex
+2025/09/17 5.11c tkz-obj-eu-grids.tex
+)
+(C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/latex/tkz-euclide/libs/tkz-li
+b-eu-marks.tex
+2025/09/17 5.11c tkz-lib-eu-marks.tex
+)
+(C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/latex/tkz-euclide/tools/tkz-t
+ools-eu-text.tex
+2025/09/17 5.11c tkz-tools-eu-text.tex
+)
+(C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/latex/tkz-euclide/libs/tkz-li
+b-eu-shape.tex
+2025/09/17 5.11c tkz-lib-eu-shape.tex
+)
+(C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/latex/tkz-euclide/obj/tkz-obj
+-eu-axesmin.tex
+2025/09/17 5.11c tkz-obj-eu-axesmin
+)
+(C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/latex/tkz-euclide/tools/tkz-t
+ools-eu-colors.tex
+2025/09/17 5.11c tkz-tools-eu-colors
+)
+(C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/latex/tkz-euclide/obj/tkz-obj
+-eu-points.tex
+2025/09/17 5.11c tkz-obj-eu-points.tex
+)
+(C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/latex/tkz-euclide/drawings/tk
+z-draw-eu-points.tex
+2025/09/17 5.11c tkz-draw-eu-points.tex
+)
+(C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/latex/tkz-euclide/obj/tkz-obj
+-eu-points.tex
+2025/09/17 5.11c tkz-obj-eu-points.tex
+)
+(C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/latex/tkz-euclide/obj/tkz-obj
+-eu-points-by.tex
+2025/09/17 5.11c tkz-tools-eu-points-by.tex
+)
+(C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/latex/tkz-euclide/tools/tkz-t
+ools-eu-math.tex
+2025/09/17 5.11c tkz-tools-eu-math.tex
+)
+(C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/latex/tkz-euclide/tools/tkz-t
+ools-eu-intersections.tex
+2025/09/17 5.11c tkz-tools-eu-intersections.tex
+)
+(C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/latex/tkz-euclide/obj/tkz-obj
+-eu-points-with.tex
+2025/09/17 5.11c tkz-obj-eu-points-with.tex
+)
+(C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/latex/tkz-euclide/obj/tkz-obj
+-eu-points-spc.tex
+2025/09/17 5.11c tkz-obj-el-points.tex
+)
+(C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/latex/tkz-euclide/tools/tkz-t
+ools-eu-angles.tex
+2025/09/17 5.11c tkz-tools-eu-angles.tex
+)
+(C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/latex/tkz-euclide/obj/tkz-obj
+-eu-circles.tex
+2025/09/17 5.11c tkz-obj-eu-circles.tex
+)
+(C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/latex/tkz-euclide/obj/tkz-obj
+-eu-circles-by.tex
+2025/09/17 5.11c tkz-obj-eu-circles.tex
+)
+(C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/latex/tkz-euclide/obj/tkz-obj
+-eu-points-rnd.tex
+2025/09/17 5.11c tkz-obj-eu-points-rnd.tex
+)
+(C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/latex/tkz-euclide/obj/tkz-obj
+-eu-lines.tex
+2025/09/17 5.11c tkz-obj-eu-lines.tex
+)
+(C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/latex/tkz-euclide/obj/tkz-obj
+-eu-polygons.tex
+2025/09/17 5.11c tkz-obj-eu-polygons.tex
+)
+(C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/latex/tkz-euclide/obj/tkz-obj
+-eu-triangles.tex
+2025/09/17 5.11c tkz-obj-eu-triangles.tex
+)
+(C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/latex/tkz-euclide/drawings/tk
+z-draw-eu-lines.tex
+2025/09/17 5.11c tkz-obj-eu-draw-lines.tex
+)
+(C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/latex/tkz-euclide/drawings/tk
+z-draw-eu-circles.tex
+2025/09/17 5.11c tkz-obj-eu-draw-circles.tex
+)
+(C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/latex/tkz-euclide/drawings/tk
+z-draw-eu-ellipses.tex
+2025/09/17 5.11c tkz-obj-eu-draw-ellipses.tex
+)
+(C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/latex/tkz-euclide/drawings/tk
+z-draw-eu-polygons.tex
+2025/09/17 5.11c tkz-obj-eu-polygons.tex
+)
+(C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/latex/tkz-euclide/drawings/tk
+z-draw-eu-arcs.tex
+2025/09/17 5.11c tkz-tool-eu-arcs.tex
+)
+(C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/latex/tkz-euclide/drawings/tk
+z-draw-eu-angles.tex
+2025/09/17 5.11c tkz-tool-eu-angles.tex
+)
+(C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/latex/tkz-euclide/drawings/tk
+z-draw-eu-sectors.tex
+2025/09/17 5.11c tkz-obj-eu-sectors.tex
+)
+(C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/latex/tkz-euclide/drawings/tk
+z-draw-eu-compass.tex
+2025/09/17 5.11c tkz-obj-eu-compass.tex
+)
+(C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/latex/tkz-euclide/drawings/tk
+z-draw-eu-show.tex
+2025/09/17 5.11c tkz-obj-eu-show.tex
+)
+(C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/latex/tkz-euclide/drawings/tk
+z-draw-eu-protractor.tex
+2025/09/17 5.11c tkz-obj-eu-protractor.tex
+))
 (C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/latex/pgfplots/pgfplots.sty
 (C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/pgfplots.rev
 ision.tex)
@@ -707,12 +994,12 @@ e.tex
 .code.tex
 Package pgfplots info on input line 124: Initializing with LUA version Lua 5.3
 \pgfplots@luabackend@table=\catcodetable14
-\t@pgfplots@toka=\toks46
-\t@pgfplots@tokb=\toks47
-\t@pgfplots@tokc=\toks48
-\pgfplots@tmpa=\dimen265
-\c@pgfplots@coordindex=\count312
-\c@pgfplots@scanlineindex=\count313
+\t@pgfplots@toka=\toks47
+\t@pgfplots@tokb=\toks48
+\t@pgfplots@tokc=\toks49
+\pgfplots@tmpa=\dimen289
+\c@pgfplots@coordindex=\count316
+\c@pgfplots@scanlineindex=\count317
 
 (C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/sys/pgfplots
 sysgeneric.code.tex))
@@ -720,12 +1007,10 @@ sysgeneric.code.tex))
 slibrary.code.tex)
 (C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/oldpgfcompat
 ib/pgfplotsoldpgfsupp_loader.code.tex
-(C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/generic/pgf/libraries/pgflibr
-aryfpu.code.tex)
 Package pgfplots: loading complementary utilities for your pgf version...
-\t@pgf@toka=\toks49
-\t@pgf@tokb=\toks50
-\t@pgf@tokc=\toks51
+\t@pgf@toka=\toks50
+\t@pgf@tokb=\toks51
+\t@pgf@tokc=\toks52
 
 (C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/oldpgfcompat
 ib/pgfplotsoldpgfsupp_pgfutil-common-lists.tex)
@@ -745,14 +1030,14 @@ e/pgfplotsliststructure.code.tex)
 e/pgfplotsliststructureext.code.tex)
 (C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/liststructur
 e/pgfplotsarray.code.tex
-\c@pgfplotsarray@tmp=\count314
+\c@pgfplotsarray@tmp=\count318
 )
 (C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/liststructur
 e/pgfplotsmatrix.code.tex)
 (C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/numtable/pgf
 plotstableshared.code.tex
-\c@pgfplotstable@counta=\count315
-\t@pgfplotstable@a=\toks52
+\c@pgfplotstable@counta=\count319
+\t@pgfplotstable@a=\toks53
 )
 (C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/liststructur
 e/pgfplotsdeque.code.tex)
@@ -764,7 +1049,7 @@ sbinary.data.code.tex))
 sutil.verb.code.tex)
 (C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/libs/pgflibr
 arypgfplots.surfshading.code.tex
-\c@pgfplotslibrarysurf@no=\count316
+\c@pgfplotslibrarysurf@no=\count320
 
 (C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/sys/pgflibra
 rypgfplots.surfshading.pgfsys-luatex.def)))
@@ -792,85 +1077,42 @@ kers.code.tex)
 s.code.tex)
 (C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/pgfplots.pat
 hs.code.tex)
-(C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/tik
-z/libraries/tikzlibrarydecorations.code.tex
-(C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/generic/pgf/modules/pgfmodule
-decorations.code.tex
-\pgfdecoratedcompleteddistance=\dimen266
-\pgfdecoratedremainingdistance=\dimen267
-\pgfdecoratedinputsegmentcompleteddistance=\dimen268
-\pgfdecoratedinputsegmentremainingdistance=\dimen269
-\pgf@decorate@distancetomove=\dimen270
-\pgf@decorate@repeatstate=\count317
-\pgfdecorationsegmentamplitude=\dimen271
-\pgfdecorationsegmentlength=\dimen272
-)
-\tikz@lib@dec@box=\box80
-)
-(C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/tik
-z/libraries/tikzlibrarydecorations.pathmorphing.code.tex
-(C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/generic/pgf/libraries/decorat
-ions/pgflibrarydecorations.pathmorphing.code.tex))
-(C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/tik
-z/libraries/tikzlibrarydecorations.pathreplacing.code.tex
-(C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/generic/pgf/libraries/decorat
-ions/pgflibrarydecorations.pathreplacing.code.tex))
 (C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/libs/tikzlib
 rarypgfplots.contourlua.code.tex)
-\pgfplots@numplots=\count318
-\pgfplots@xmin@reg=\dimen273
-\pgfplots@xmax@reg=\dimen274
-\pgfplots@ymin@reg=\dimen275
-\pgfplots@ymax@reg=\dimen276
-\pgfplots@zmin@reg=\dimen277
-\pgfplots@zmax@reg=\dimen278
-)
-(C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/tik
-z/libraries/tikzlibraryplotmarks.code.tex
-File: tikzlibraryplotmarks.code.tex 2023-01-15 v3.1.10 (3.1.10)
-
-(C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/generic/pgf/libraries/pgflibr
-aryplotmarks.code.tex
-File: pgflibraryplotmarks.code.tex 2023-01-15 v3.1.10 (3.1.10)
-)))
-(C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/generic/pgf/libraries/pgflibr
-aryarrows.meta.code.tex
-File: pgflibraryarrows.meta.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfarrowinset=\dimen279
-\pgfarrowlength=\dimen280
-\pgfarrowwidth=\dimen281
-\pgfarrowlinewidth=\dimen282
-)
-(C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/tik
-z/libraries/tikzlibrarydecorations.markings.code.tex
-(C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/generic/pgf/libraries/decorat
-ions/pgflibrarydecorations.markings.code.tex))
+\pgfplots@numplots=\count321
+\pgfplots@xmin@reg=\dimen290
+\pgfplots@xmax@reg=\dimen291
+\pgfplots@ymin@reg=\dimen292
+\pgfplots@ymax@reg=\dimen293
+\pgfplots@zmin@reg=\dimen294
+\pgfplots@zmax@reg=\dimen295
+))
 (C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2025/02/06 v3.11 Customized lists
 \labelindent=\skip56
-\enit@outerparindent=\dimen283
-\enit@toks=\toks53
-\enit@inbox=\box81
-\enit@count@id=\count319
-\enitdp@description=\count320
+\enit@outerparindent=\dimen296
+\enit@toks=\toks54
+\enit@inbox=\box85
+\enit@count@id=\count322
+\enitdp@description=\count323
 )
 (C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/latex/caption/caption.sty
 Package: caption 2023/08/05 v3.6o Customizing captions (AR)
 
 (C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/latex/caption/caption3.sty
 Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
-\caption@tempdima=\dimen284
-\captionmargin=\dimen285
-\caption@leftmargin=\dimen286
-\caption@rightmargin=\dimen287
-\caption@width=\dimen288
-\caption@indent=\dimen289
-\caption@parindent=\dimen290
-\caption@hangindent=\dimen291
+\caption@tempdima=\dimen297
+\captionmargin=\dimen298
+\caption@leftmargin=\dimen299
+\caption@rightmargin=\dimen300
+\caption@width=\dimen301
+\caption@indent=\dimen302
+\caption@parindent=\dimen303
+\caption@hangindent=\dimen304
 Package caption Info: Standard document class detected.
 )
-\c@caption@flags=\count321
-\c@continuedfloat=\count322
+\c@caption@flags=\count324
+\c@continuedfloat=\count325
 Package caption Info: listings package is loaded.
 )
 (C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/latex/hyperref/hyperref.sty
@@ -894,7 +1136,7 @@ Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
-\pdftexcmds@toks=\toks54
+\pdftexcmds@toks=\toks55
 ))
 (C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/latex/hycolor/hycolor.sty
 Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
@@ -919,17 +1161,17 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 (C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/latex/kvoptions/kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 ))
-\c@section@level=\count323
+\c@section@level=\count326
 )
-\@linkdim=\dimen292
-\Hy@linkcounter=\count324
-\Hy@pagecounter=\count325
+\@linkdim=\dimen305
+\Hy@linkcounter=\count327
+\Hy@pagecounter=\count328
  (C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2023-11-26 v7.01g Hyperref: PDFDocEncoding definition (HO)
 ) (C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-\Hy@SavedSpaceFactor=\count326
+\Hy@SavedSpaceFactor=\count329
  (C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/latex/hyperref/puenc.def
 File: puenc.def 2023-11-26 v7.01g Hyperref: PDF Unicode definition (HO)
 )
@@ -940,14 +1182,14 @@ Package hyperref Info: Plain pages OFF on input line 4196.
 Package hyperref Info: Backreferencing OFF on input line 4201.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4448.
-\c@Hy@tempcnt=\count327
+\c@Hy@tempcnt=\count330
 
 (C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 4786.
-\XeTeXLinkMargin=\dimen293
+\XeTeXLinkMargin=\dimen306
 
 (C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
@@ -957,9 +1199,9 @@ Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count328
-\Field@Width=\dimen294
-\Fld@charsize=\dimen295
+\Fld@menulength=\count331
+\Field@Width=\dimen307
+\Fld@charsize=\dimen308
 Package hyperref Info: Hyper figures OFF on input line 6065.
 Package hyperref Info: Link nesting OFF on input line 6070.
 Package hyperref Info: Hyper index ON on input line 6073.
@@ -972,9 +1214,9 @@ Package hyperref Info: PDF/A mode OFF on input line 6095.
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
-\Hy@abspage=\count329
-\c@Item=\count330
-\c@Hfootnote=\count331
+\Hy@abspage=\count332
+\c@Item=\count333
+\c@Hfootnote=\count334
 )
 Package hyperref Info: Driver (autodetected): hluatex.
 (C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/latex/hyperref/hluatex.def
@@ -990,8 +1232,8 @@ Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
 kage
 with kernel methods
 )
-\Fld@listcount=\count332
-\c@bookmark@seq@number=\count333
+\Fld@listcount=\count335
+\c@bookmark@seq@number=\count336
 
 (C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/latex/rerunfilecheck/rerunfil
 echeck.sty
@@ -1012,49 +1254,49 @@ Package: geometry 2020/01/02 v5.9 Page Geometry
 (C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
-\Gm@cnth=\count334
-\Gm@cntv=\count335
-\c@Gm@tempcnt=\count336
-\Gm@bindingoffset=\dimen296
-\Gm@wd@mp=\dimen297
-\Gm@odd@mp=\dimen298
-\Gm@even@mp=\dimen299
-\Gm@layoutwidth=\dimen300
-\Gm@layoutheight=\dimen301
-\Gm@layouthoffset=\dimen302
-\Gm@layoutvoffset=\dimen303
-\Gm@dimlist=\toks55
+\Gm@cnth=\count337
+\Gm@cntv=\count338
+\c@Gm@tempcnt=\count339
+\Gm@bindingoffset=\dimen309
+\Gm@wd@mp=\dimen310
+\Gm@odd@mp=\dimen311
+\Gm@even@mp=\dimen312
+\Gm@layoutwidth=\dimen313
+\Gm@layoutheight=\dimen314
+\Gm@layouthoffset=\dimen315
+\Gm@layoutvoffset=\dimen316
+\Gm@dimlist=\toks56
 
 (C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/latex/geometry/geometry.cfg))
 (C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/latex/mathtools/mathtools.sty
 Package: mathtools 2024/10/04 v1.31 mathematical typesetting tools
 (C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/latex/tools/calc.sty
 Package: calc 2023/07/08 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count337
-\calc@Bcount=\count338
-\calc@Adimen=\dimen304
-\calc@Bdimen=\dimen305
+\calc@Acount=\count340
+\calc@Bcount=\count341
+\calc@Adimen=\dimen317
+\calc@Bdimen=\dimen318
 \calc@Askip=\skip58
 \calc@Bskip=\skip59
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count339
+\calc@Ccount=\count342
 \calc@Cskip=\skip60
 )
 (C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/latex/mathtools/mhsetup.sty
 Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
 )
-\g_MT_multlinerow_int=\count340
-\l_MT_multwidth_dim=\dimen306
+\g_MT_multlinerow_int=\count343
+\l_MT_multwidth_dim=\dimen319
 \origjot=\skip61
-\l_MT_shortvdotswithinadjustabove_dim=\dimen307
-\l_MT_shortvdotswithinadjustbelow_dim=\dimen308
-\l_MT_above_intertext_sep=\dimen309
-\l_MT_below_intertext_sep=\dimen310
-\l_MT_above_shortintertext_sep=\dimen311
-\l_MT_below_shortintertext_sep=\dimen312
-\xmathstrut@box=\box82
-\xmathstrut@dim=\dimen313
+\l_MT_shortvdotswithinadjustabove_dim=\dimen320
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen321
+\l_MT_above_intertext_sep=\dimen322
+\l_MT_below_intertext_sep=\dimen323
+\l_MT_above_shortintertext_sep=\dimen324
+\l_MT_below_shortintertext_sep=\dimen325
+\xmathstrut@box=\box86
+\xmathstrut@dim=\dimen326
 ) (C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/latex/jknappen/mathrsfs.sty
 Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
 \symrsfs=\mathgroup6
@@ -1078,7 +1320,7 @@ Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
 \f@nch@widthL=\skip73
 \f@nch@widthC=\skip74
 \f@nch@widthR=\skip75
-\@temptokenb=\toks56
+\@temptokenb=\toks57
 )
 (C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/latex/subfiles/subfiles.sty
 Package: subfiles 2020/11/14 v2.2 Multi-file projects (package)
@@ -1090,61 +1332,36 @@ Package: import 2020/04/01  v 6.2
 Package: esvect 
 \symesvector=\mathgroup7
 )
-(C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/latex/tikz-3dplot/tikz-3dplot
-.sty (C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/latex/base/ifthen.sty
-Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
-)
-(C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/tik
-z/libraries/tikzlibrarycalc.code.tex
-File: tikzlibrarycalc.code.tex 2023-01-15 v3.1.10 (3.1.10)
-)
-(C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/tik
-z/libraries/tikzlibrary3d.code.tex
-File: tikzlibrary3d.code.tex 2023-01-15 v3.1.10 (3.1.10)
-)
-(C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/tik
-z/libraries/tikzlibraryarrows.code.tex
-File: tikzlibraryarrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
-
-(C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/generic/pgf/libraries/pgflibr
-aryarrows.code.tex
-File: pgflibraryarrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\arrowsize=\dimen314
-)))
 (C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/latex/caption/subcaption.sty
 Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
 Package caption Info: New subtype `subfigure' on input line 238.
-\c@subfigure=\count341
+\c@subfigure=\count344
 Package caption Info: New subtype `subtable' on input line 238.
-\c@subtable=\count342
+\c@subtable=\count345
 ) (C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/latex/tools/multicol.sty
 Package: multicol 2023/03/30 v1.9f multicolumn formatting (FMi)
-\c@tracingmulticols=\count343
-\mult@box=\box83
-\multicol@leftmargin=\dimen315
-\c@unbalance=\count344
-\c@collectmore=\count345
-\doublecol@number=\count346
-\multicoltolerance=\count347
-\multicolpretolerance=\count348
-\full@width=\dimen316
-\page@free=\dimen317
-\premulticols=\dimen318
-\postmulticols=\dimen319
+\c@tracingmulticols=\count346
+\mult@box=\box87
+\multicol@leftmargin=\dimen327
+\c@unbalance=\count347
+\c@collectmore=\count348
+\doublecol@number=\count349
+\multicoltolerance=\count350
+\multicolpretolerance=\count351
+\full@width=\dimen328
+\page@free=\dimen329
+\premulticols=\dimen330
+\postmulticols=\dimen331
 \multicolsep=\skip76
 \multicolbaselineskip=\skip77
-\partial@page=\box84
-\last@line=\box85
-\mc@boxedresult=\box86
-\maxbalancingoverflow=\dimen320
-\mult@rightbox=\box87
-\mult@grightbox=\box88
-\mult@firstbox=\box89
-\mult@gfirstbox=\box90
-\@tempa=\box91
-\@tempa=\box92
-\@tempa=\box93
-\@tempa=\box94
+\partial@page=\box88
+\last@line=\box89
+\mc@boxedresult=\box90
+\maxbalancingoverflow=\dimen332
+\mult@rightbox=\box91
+\mult@grightbox=\box92
+\mult@firstbox=\box93
+\mult@gfirstbox=\box94
 \@tempa=\box95
 \@tempa=\box96
 \@tempa=\box97
@@ -1177,15 +1394,19 @@ Package: multicol 2023/03/30 v1.9f multicolumn formatting (FMi)
 \@tempa=\box124
 \@tempa=\box125
 \@tempa=\box126
-\c@minrows=\count349
-\c@columnbadness=\count350
-\c@finalcolumnbadness=\count351
-\last@try=\dimen321
-\multicolovershoot=\dimen322
-\multicolundershoot=\dimen323
-\mult@nat@firstbox=\box127
-\colbreak@box=\box128
-\mc@col@check@num=\count352
+\@tempa=\box127
+\@tempa=\box128
+\@tempa=\box129
+\@tempa=\box130
+\c@minrows=\count352
+\c@columnbadness=\count353
+\c@finalcolumnbadness=\count354
+\last@try=\dimen333
+\multicolovershoot=\dimen334
+\multicolundershoot=\dimen335
+\mult@nat@firstbox=\box131
+\colbreak@box=\box132
+\mc@col@check@num=\count355
 )
 (C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/generic/babel/babel.sty
 Package: babel 2024/01/07 v24.1 The Babel package
@@ -1273,8 +1494,8 @@ Package babel Info: Non-standard hyphenation setup on input line 118.
 \babelcatcodetablenum=\catcodetable15
 \bbl@pattcodes=\catcodetable16
 )
-\babel@savecnt=\count353
-\U@D=\dimen324
+\babel@savecnt=\count356
+\U@D=\dimen336
 \l@unhyphenated=\language79
 
 (C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/generic/babel/luababel.def
@@ -1298,7 +1519,7 @@ Package babel Info: Making " an active character on input line 143.
 adhyph-pt.tex UTF-8 Portuguese hyphenation patterns
 (C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/generic/hyph-utf8/patterns/te
 x/hyph-pt.tex))))
-Package hyperref Info: Option `colorlinks' set `true' on input line 34.
+Package hyperref Info: Option `colorlinks' set `true' on input line 35.
 
 (C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/latex/lm/lmodern.sty
 Package: lmodern 2015/05/01 v1.6.1 Latin Modern Fonts
@@ -1335,7 +1556,7 @@ LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
 )
-\c@teorema=\count354
+\c@teorema=\count357
 )
 (./main.aux)
 \openout1 = main.aux
@@ -1370,17 +1591,17 @@ LaTeX Font Info:    ... okay on input line 6.
 (C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/context/base/mkii/supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count355
-\scratchdimen=\dimen325
-\scratchbox=\box129
-\nofMPsegments=\count356
-\nofMParguments=\count357
-\everyMPshowfont=\toks57
-\MPscratchCnt=\count358
-\MPscratchDim=\dimen326
-\MPnumerator=\count359
-\makeMPintoPDFobject=\count360
-\everyMPtoPDFconversion=\toks58
+\scratchcounter=\count358
+\scratchdimen=\dimen337
+\scratchbox=\box133
+\nofMPsegments=\count359
+\nofMParguments=\count360
+\everyMPshowfont=\toks58
+\MPscratchCnt=\count361
+\MPscratchDim=\dimen338
+\MPnumerator=\count362
+\makeMPintoPDFobject=\count363
+\everyMPtoPDFconversion=\toks59
 )
 (C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/latex/epstopdf-pkg/epstopdf-b
 ase.sty
@@ -1392,7 +1613,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 fg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-\c@lstlisting=\count361
+\c@lstlisting=\count364
 
 
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
@@ -1525,7 +1746,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 90.
 
-Overfull \hbox (4.6503pt too wide) in paragraph at lines 99--100
+Overfull \hbox (4.64139pt too wide) in paragraph at lines 99--100
  [][] 
  []
 
@@ -1534,11 +1755,23 @@ Overfull \hbox (57.10675pt too wide) in paragraph at lines 178--179
  [][] 
  []
 
-[5] [6]) (./capitulos/capitulo02.tex [7] [8
+[5] [6] [7]
+Runaway argument?
+{, se $V,W \in \mathbb {R^2$}\\ 
+! Paragraph ended before \text@ was complete.
+<to be read again> 
+\par 
+l.417 					
+         
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
 
-]
+) (./capitulos/capitulo02.tex [8]
 Cap\'{\i }tulo 2.
-) (./capitulos/capitulo03.tex [9] [10
+) (./capitulos/capitulo03.tex [9
+
+] [10
 
 ]
 Cap\'{\i }tulo 3.
@@ -1566,23 +1799,23 @@ Ap\^endice A.
 ] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
-L3 programming layer <2024-01-04>
+L3 programming layer <2020/03/25>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 5C6086432CC7D64947E39DB97C41006B;3524.
 )
 
 Here is how much of LuaTeX's memory you used:
- 45181 strings out of 476497
- 125129,1977958 words of node,token memory allocated
- 1396 words of node memory still in use:
-   32 hlist, 2 vlist, 14 rule, 2 glue, 4 kern, 1 glyph, 101 attribute, 61 glue_s
-pec, 88 attribute_list, 2 write, 24 pdf_literal, 24 pdf_colorstack nodes
-   avail lists: 1:2,2:3127,3:1204,4:156,5:339,6:65,7:4599,8:43,9:794,10:16,11:55
+ 48697 strings out of 476497
+ 100000,1977958 words of node,token memory allocated
+ 1414 words of node memory still in use:
+   32 hlist, 2 vlist, 14 rule, 2 glue, 4 kern, 1 glyph, 107 attribute, 61 glue_s
+pec, 91 attribute_list, 2 write, 24 pdf_literal, 24 pdf_colorstack nodes
+   avail lists: 1:2,2:3175,3:1216,4:156,5:339,6:65,7:4603,8:43,9:794,10:16,11:55
 4
- 65807 multiletter control sequences out of 65536+600000
- 81 fonts using 5077543 bytes
- 106i,16n,104p,740b,1173s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 69024 multiletter control sequences out of 65536+600000
+ 83 fonts using 5242903 bytes
+ 106i,16n,104p,1192b,1216s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {C:/Users/maria/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{
 C:/Users/maria/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/Us
 ers/maria/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}{C:/Use
@@ -1605,9 +1838,9 @@ rograms/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/maria/AppData/Local/Pro
 grams/MiKTeX/fonts/type1/public/lm/lmtt12.pfb><C:/Users/maria/AppData/Local/Prog
 rams/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/maria/AppDa
 ta/Local/Programs/MiKTeX/fonts/type1/public/esvect/vect10.pfb>
-Output written on main.pdf (25 pages, 357269 bytes).
+Output written on main.pdf (25 pages, 361858 bytes).
 
-PDF statistics: 396 PDF objects out of 1000 (max. 8388607)
- 98 named destinations out of 1000 (max. 131072)
+PDF statistics: 400 PDF objects out of 1000 (max. 8388607)
+ 102 named destinations out of 1000 (max. 131072)
  424 words of extra memory for PDF output out of 10000 (max. 100000000)
 

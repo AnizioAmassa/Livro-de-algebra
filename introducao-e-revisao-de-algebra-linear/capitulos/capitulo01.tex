@@ -232,7 +232,7 @@
 				\item $\alpha V = (\alpha v_1,\, \alpha v_2)$
 			\end{enumerate} 
 		\end{proposicao}
-		Abaixo temos uma ilustração disso:
+		Abaixo temos uma ilustração disso.
 		\begin{figure}[h]
 			\centering
 			
@@ -296,7 +296,7 @@
 					node[below right] {$V = (v_1,v_2)$};
 					
 					% vetor 2V um pouco acima, para não ficar em cima de V
-					\draw[->,thick,purple] (0,0.1) -- (3.6,2.3)
+					\draw[->,thick,red] (0,0.1) -- (3.6,2.3)
 					node[above right] {$2V = (2v_1,2v_2)$};
 					
 				\end{tikzpicture}
@@ -399,26 +399,112 @@
 		A partir dessa definição de norma, podemos definir outro conceito fundamental: o produto escalar.
 		
 		\begin{definicao}
-			Sejam $V, W\in \mathbb{R}^n$, onde $n\in {2,3}$. O \azul{produto escalar} ou \azul{produto interno} entre esses vetores, denotado por $V\cdot W$, é dado por
+			Sejam $V,\, W\in \mathbb{R}^n$, onde $n\in \{2,3\}$. O \azul{produto escalar} ou \azul{produto interno} entre esses vetores, denotado por $V\cdot W$, é dado por
 			\[
 			V\cdot W = \begin{cases}
 				0\text{, se $V=\bar{0}$ ou $W=\bar{0}$}\\
 				\|V\|\|W\|\cos(\theta)\text{, caso contrário.}
 			\end{cases}
 			\]
-			onde $\theta$ é o ângulo entre eles. 
+			onde $\theta$ é o ângulo no intervalo $[0,\pi]$ entre eles. 
 		\end{definicao}
-		Note, no entanto, que o ângulo entre dois vetores só é bem definido para vetores em $\mathbb{R}^2$ ou $\mathbb{R}^3$. Para resolver esse problema, podemos encontrar uma definição equivalente para o produto interno e depois generalizá-la para dimensões maiores.
+		Note, no entanto, que o ângulo entre dois vetores só é bem definido para vetores em $\mathbb{R}^2$ ou $\mathbb{R}^3$. Para resolver esse problema, podemos encontrar uma definição equivalente para o produto escalar e depois generalizá-la para dimensões maiores.
 		\begin{teorema}
-			Sejam $V$ e $W$ vetores. Então, seu produto interno é dado por
+			Sejam $V$ e $W$ vetores. Então, seu produto escalar é dado por
 			\[
 			V\cdot W = \begin{cases}
-				v_1w_1+v_2w_2\text{, se $V,W \in \mathbb{R^2$}\\
+				v_1w_1+v_2w_2\text{, se $V,W \in \mathbb{R^2}$}\\
 					
-					v_1 w_1 +v_2 w_2 + v_3 w_3\textbf{, se $V, W \in \mathbb{R}^3$.}
+					v_1 w_1 +v_2 w_2 + v_3 w_3\text{, se $V, W \in \mathbb{R}^3$.}
 			\end{cases}
 			\]
 		\end{teorema}
+		A partir disso, podemos definir o produto escalar da seguinte forma generalizada.
+		\begin{definicao}
+			Sejam $V, W\in \mathbb{R}^n$. O produto escalar entre esses vetores, denotado por $V\cdot W$, é dado por
+			\[
+			V\cdot W = v_1 w_1+\dots + v_n w_n
+			\]
+		\end{definicao}
+		Com essa definição, podemos facilmente provar as seguintes propriedades (que futuramente definirão de forma ainda mais abrangente o produto interno).
+		\begin{teorema}
+			Sejam $U,\, V,\, W\in \mathbb{R}^n$ e $\alpha \in \mathbb{R}$. Então:
+			\begin{enumerate}[label=\roman*)]
+				\item $U\cdot V=V\cdot U$;
+				\item $U\cdot (V+W)=U\cdot V+U\cdot W$;
+				\item $\alpha(U\cdot V)=(\alpha U)\cdot V = U\cdot (\alpha V)$;
+				\item $V\cdot V=\|V\|^2\geq 0,\, \forall V$ e $V\cdot V=0 \Leftrightarrow V = \bar{0}$.
+			\end{enumerate}
+		\end{teorema}
+		As ideias de norma e produto escalar são essenciais e possuem interpretação geométrica. O produto escalar, por exemplo, mostra a relação entre dois vetores e seus tamanhos e "alinhamento" (ângulo entre eles). Isso é muito bem visualizado ao tentarmos entender projeções de um vetor sobre outro: a projeção ortogonal.
+		
+		\begin{definicao}
+			Sejam $V$ e $W$ vetores. A \azul{projeção ortogonal de $V$ sobre $W$}, denotada por $\text{proj}_W V$ é o vetor tal que
+			\begin{itemize}
+				\item $\text{proj}_W V \parallelsum W$;
+				\item $V-\text{proj}_W V \perp W$.
+			\end{itemize}
+		\end{definicao}
+		Abaixo segue uma ilustração da projeção ortogonal.
+		\begin{figure}[h]
+			\centering
+			\begin{tikzpicture}[>=stealth,scale=1.2]
+				
+				% Eixos
+				\draw[->] (-0.3,0) -- (4.5,0) node[right] {$x$};
+				\draw[->] (0,-0.3) -- (0,3.5) node[above] {$y$};
+				
+				% Pontos e vetores
+				\coordinate (O) at (0,0);
+				\coordinate (W) at (3,1);    % direção de W
+				\coordinate (V) at (1,3);    % vetor V
+				\coordinate (P) at (1.8,0.6);% proj_W V  (ponto na reta de W)
+				
+				% Reta gerada por W (para ver bem a projeção)
+				\draw[dashed,gray] (-1,-1/3) -- (3.8,1.27);
+				
+				% Vetor W
+				\draw[->,thick,blue] (O) -- (W)
+				node[below right] {$\vec W$};
+				
+				% Vetor V
+				\draw[->,thick,red] (O) -- (V)
+				node[above left] {$\vec V$};
+				
+				% Projeção de V sobre W
+				\draw[->,thick,green!60!black] (O) -- (P)
+				node[below] {$\operatorname{proj}_W V$};
+				
+				% Componente ortogonal V - proj_W V
+				\draw[dashed] (V) -- (P)
+				node[midway,right] {$\vec V - \operatorname{proj}_W V$};
+				
+				% Marcação de ângulo reto entre W e (V - proj_W V)
+				\coordinate (A) at ($(P)!0.2!(V)$);
+				\coordinate (B) at ($(P)!0.2!(W)$);
+				\coordinate (C) at ($(A)+(B)-(P)$);
+				\draw (A) -- (C) -- (B);
+				
+			\end{tikzpicture}
+			\caption{Projeção ortogonal de $\vec V$ sobre $\vec W$.}
+		\end{figure}
+		A partir dessa definição, podemos provar o seguinte teorema.
+		\begin{teorema}
+			Seja $W\neq \bar{0}$ um vetor. Então,
+			\[
+			\text{proj}_W V = \bigg(\frac{V\cdot W}{\|W\|^2}\bigg)W
+			\]
+		\end{teorema}
+		Além do produto escalar, existem outros dois produtos essenciais da Álgebra Vetorial. Enquanto o produto escalar trabalha com "alinhamentos" e projeções, o produto vetorial e misto representam, respectivamente, área e volume.
+		\begin{definicao}
+			Sejam $V,\, W\in \mathbb{R}^3$. O \azul{produto vetorial} (também conhecido como \azul{produto externo}) entre esses vetores, denotado por $V\times W$, é dado por
+			\[
+			V\times W = \begin{cases}
+				\bar{0}\text{, se $V=\bar{0}$ ou $W=\bar{0}$}\\
+				\text{, caso contrário.}
+			\end{cases}
+			\]
+		\end{definicao}
 	\section{Geometria Analítica}
 	\section{Matrizes como Vetores}
 	
