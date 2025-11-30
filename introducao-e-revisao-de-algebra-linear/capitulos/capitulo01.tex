@@ -296,7 +296,7 @@
 					node[below right] {$V = (v_1,v_2)$};
 					
 					% vetor 2V um pouco acima, para não ficar em cima de V
-					\draw[->,thick,purple] (0,0.1) -- (3.,2.2)
+					\draw[->,thick,purple] (0,0.1) -- (3.6,2.3)
 					node[above right] {$2V = (2v_1,2v_2)$};
 					
 				\end{tikzpicture}
@@ -342,7 +342,7 @@
 			\end{multicols}
 		\end{teorema}
 		
-		Outra ideia muito importante é saber o módulo do vetor a partir de seus componentes. 
+		Outra ideia muito importante é saber o módulo do vetor a partir de seus componentes. Para isso, vamos definir o que chamamos de norma euclidiana.
 		\begin{definicao}
 			Seja $V\in \mathbb{R}^n$. O seu comprimento, também chamado de \azul{norma de $V$} e denotado por $\|V\|$, é dado por
 			\[
@@ -350,7 +350,75 @@
 			\]
 		\end{definicao}
 		
+		\begin{exemplo}
+			Para um vetor  $V\in \mathbb{R}^2$, temos que
+			\[
+			\|V\| = \sqrt{v_1^2+v_2^2}
+			\]
+		\end{exemplo}
+		\begin{figure}[h]
+			\centering
+			\begin{tikzpicture}[>=stealth,scale=1.2]
+				
+				% Eixos
+				\draw[->] (-0.3,0) -- (4,0) node[right] {$x$};
+				\draw[->] (0,-0.3) -- (0,3) node[above] {$y$};
+				
+				% Vetor V
+				\coordinate (O) at (0,0);
+				\coordinate (V) at (3,2);   % V = (v1,v2)
+				\coordinate (Vx) at (3,0);
+				\coordinate (Vy) at (0,2);
+				
+				\draw[->,thick,blue] (O) -- (V)
+				node[above right] {$\vec V=(v_1,v_2)$};
+				
+				% Projeções para formar o triângulo retângulo
+				\draw[dashed] (V) -- (Vx);
+				\draw[dashed] (V) -- (Vy);
+				
+				% Catetos rotulados v1 e v2
+				\draw[<->,orange, very thick]
+				(0,-0.4) -- node[below] {$v_1$} (3, -0.4);
+				\draw[<->,orange,very thick]
+				(3.4,0) -- node[right] {$v_2$} (3.4, 2);
+				
+				% Marcação do ângulo reto
+				\tkzMarkRightAngle(V,Vx,O)
+				
+				% Rótulo da norma na hipotenusa
+				\draw (O) -- (V)
+				node[midway,above left,yshift=4pt]
+				{};
+				
+			\end{tikzpicture}
+			\caption{Norma de um vetor $\vec V$ em $\mathbb{R}^2$.}
+		\end{figure}
 		Essa forma de calcular a norma está ligada ao cálculo do tamanho de vetores no $\mathbb{R}^2$ e no $\mathbb{R}^3$, utilizando o Teorema de Pitágoras.
+		
+		A partir dessa definição de norma, podemos definir outro conceito fundamental: o produto escalar.
+		
+		\begin{definicao}
+			Sejam $V, W\in \mathbb{R}^n$, onde $n\in {2,3}$. O \azul{produto escalar} ou \azul{produto interno} entre esses vetores, denotado por $V\cdot W$, é dado por
+			\[
+			V\cdot W = \begin{cases}
+				0\text{, se $V=\bar{0}$ ou $W=\bar{0}$}\\
+				\|V\|\|W\|\cos(\theta)\text{, caso contrário.}
+			\end{cases}
+			\]
+			onde $\theta$ é o ângulo entre eles. 
+		\end{definicao}
+		Note, no entanto, que o ângulo entre dois vetores só é bem definido para vetores em $\mathbb{R}^2$ ou $\mathbb{R}^3$. Para resolver esse problema, podemos encontrar uma definição equivalente para o produto interno e depois generalizá-la para dimensões maiores.
+		\begin{teorema}
+			Sejam $V$ e $W$ vetores. Então, seu produto interno é dado por
+			\[
+			V\cdot W = \begin{cases}
+				v_1w_1+v_2w_2\text{, se $V,W \in \mathbb{R^2$}\\
+					
+					v_1 w_1 +v_2 w_2 + v_3 w_3\textbf{, se $V, W \in \mathbb{R}^3$.}
+			\end{cases}
+			\]
+		\end{teorema}
 	\section{Geometria Analítica}
 	\section{Matrizes como Vetores}
 	
