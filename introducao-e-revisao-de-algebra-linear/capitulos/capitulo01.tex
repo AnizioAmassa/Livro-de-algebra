@@ -120,6 +120,7 @@
 			\end{enumerate}
 			Caso $V=\bar{0}$ ou $\alpha=0$, $\alpha V=\bar{0}$
 		\end{definicao}
+		Note, portanto, que, para um vetor qualquer $W$ ser paralelo (ou seja, ter a mesma direção que) a outro vetor $V$, baste que exista um $\alpha\in \mathbb{R}$ tal que $W=\alpha V$. 
 		\begin{definicao}
 			Seja $V$ um vetor. As \azul{componentes de V} são cada elemento das coordenadas que representam o ponto final com relação à origem do sistema de coordenadas escolhido.
 			
@@ -327,7 +328,7 @@
 		
 		A partir da definição de coordenadas e da soma/multiplicação de vetores por meio delas, podemos provar as seguintes propriedades:
 		\begin{teorema}
-			Sejam $U$, $V$ e $W$ vetores e $\alpha$ e $\beta$ escalares. Então:
+			Sejam $U$, $V$ e $W$ vetores e $\alpha$ e $\beta$ escalares. Então,
 			\begin{multicols}{2}
 				\begin{enumerate}[label=\roman*)]
 					\item $U+V=V+U$;
@@ -409,7 +410,7 @@
 			onde $\theta$ é o ângulo no intervalo $[0,\pi]$ entre eles. 
 		\end{definicao}
 		Note, no entanto, que o ângulo entre dois vetores só é bem definido para vetores em $\mathbb{R}^2$ ou $\mathbb{R}^3$. Para resolver esse problema, podemos encontrar uma definição equivalente para o produto escalar e depois generalizá-la para dimensões maiores.
-		\begin{teorema}
+		\begin{proposicao}
 			Sejam $V$ e $W$ vetores. Então, seu produto escalar é dado por
 			\[
 			V\cdot W = \begin{cases}
@@ -418,7 +419,7 @@
 					v_1 w_1 +v_2 w_2 + v_3 w_3\text{, se $V, W \in \mathbb{R}^3$.}
 			\end{cases}
 			\]
-		\end{teorema}
+		\end{proposicao}
 		A partir disso, podemos definir o produto escalar da seguinte forma generalizada.
 		\begin{definicao}
 			Sejam $V, W\in \mathbb{R}^n$. O produto escalar entre esses vetores, denotado por $V\cdot W$, é dado por
@@ -427,7 +428,7 @@
 			\]
 		\end{definicao}
 		Com essa definição, podemos facilmente provar as seguintes propriedades (que futuramente definirão de forma ainda mais abrangente o produto interno).
-		\begin{teorema}
+		\begin{proposicao}
 			Sejam $U,\, V,\, W\in \mathbb{R}^n$ e $\alpha \in \mathbb{R}$. Então:
 			\begin{enumerate}[label=\roman*)]
 				\item $U\cdot V=V\cdot U$;
@@ -435,7 +436,7 @@
 				\item $\alpha(U\cdot V)=(\alpha U)\cdot V = U\cdot (\alpha V)$;
 				\item $V\cdot V=\|V\|^2\geq 0,\, \forall V$ e $V\cdot V=0 \Leftrightarrow V = \bar{0}$.
 			\end{enumerate}
-		\end{teorema}
+		\end{proposicao}
 		As ideias de norma e produto escalar são essenciais e possuem interpretação geométrica. O produto escalar, por exemplo, mostra a relação entre dois vetores e seus tamanhos e "alinhamento" (ângulo entre eles). Isso é muito bem visualizado ao tentarmos entender projeções de um vetor sobre outro: a projeção ortogonal.
 		
 		\begin{definicao}
@@ -511,7 +512,7 @@
 		A regra da mão direita estabelece que os dedos giram de $V$ para $W$ e o polegar aponta na direção de $U$, representada na Figura \ref{fig:maodireita}.
 		
 		Utilizando as componentes dos vetores, podemos obter as coordenadas do seu produto vetorial de uma forma mais simples.
-		\begin{teorema}
+		\begin{proposicao}
 			Sejam $V,\, W\in \mathbb{R}^3$. Então,
 			\[
 			V\times W = \bigg( \det \begin{bmatrix}
@@ -534,7 +535,7 @@
 			\end{bmatrix}
 			\]
 			onde $\vec i=(1, 0, 0)$, $\vec j=(0,1,0)$ e $\vec k=(0,0,1)$ são os \azul{vetores canônicos}.
-		\end{teorema}
+		\end{proposicao}
 		\begin{figure}[h]
 			\centering
 			% vista 3D
@@ -566,7 +567,7 @@
 		Note que, no abuso de notação para representar o produto vetorial, temos que os componentes da matriz são ora vetores, ora números reais, o que indica uma matriz inválida. A ideia dessa representação é de que, se considerássemos $\vec i$, $\vec j$ e $\vec k$ números reais e fizéssemos a conta de tal determinante, e a multiplicação entre reais fosse igual à multipliação por escalar, teríamos o equivalente à primeira forma do produto vetorial, apresentada imediatamente antes. Em suma, essa segunda representação é, na verdade, um "macete" para decorar o produto vetorial.
 		
 		A partir dessas definições equivalentes do produto vetorial, podemos demonstrar as seguintes propriedades.
-		\begin{teorema}
+		\begin{proposicao}
 			Sejam $U,\, V,\, W\in \mathbb{R}^3$ e $\alpha \in \mathbb{R}$. Então:
 			\begin{enumerate}[label=\roman*)]
 				\item $V\times W=-(W\times V)$;
@@ -575,7 +576,7 @@
 				\item $\alpha(V\times W)=(\alpha V)\times W=V\times (\alpha W)$;
 				\item $V\times (W+U)=V\times W+V\times U$ e $(V+W)\times U=V\times U+W\times U$.
 			\end{enumerate}
-		\end{teorema}
+		\end{proposicao}
 		Já o produto misto é dado pela "mistura" dos dois conceitos apresentados anteriormente.
 		\begin{definicao}
 			Sejam $V,\, W, \, U \in \mathbb{R}^3$. Então, o \azul{produto misto}, denotado por $[V, W, U]$, é dado por
@@ -584,7 +585,7 @@
 			\]
 		\end{definicao}
 		A partir dos conceitos de produto vetorial e escalar, podemos descrever o misto de uma forma facilitada, bem como ressaltar algumas propriedades interessantes.
-		\begin{teorema}
+		\begin{proposicao}
 			Sejam $V,\, W, \, U \in \mathbb{R}^3$. Então, 
 			\[
 			[V, W, U]=\det \begin{bmatrix}
@@ -593,8 +594,8 @@
 				u_1 & u_2 & u_3
 			\end{bmatrix}
 			\]
-		\end{teorema}
-		\begin{teorema}
+		\end{proposicao}
+		\begin{proposicao}
 			Sejam $V,\, W, \, U\in \mathbb{R}^3$ e $\alpha \in \mathbb{R}$. Então,
 			\begin{enumerate}[label=\roman*)]
 				\item $[U+Z,V,W]=[U,V,W]+[Z,V,W]$
@@ -606,7 +607,170 @@
 				\item $[U,V,W]=U\cdot(V\times W)$;
 				\item $\alpha[U, V, W]=[\alpha U, V, W]=[U, \alpha V, W]=[U, V, \alpha W]$.
 			\end{enumerate}
-		\end{teorema}
+		\end{proposicao}
+		Como dito, anteriormente, os produtos vetorial e misto possuem uma interpretação geométrica interessante. Isso se deve ao fato de que, quando os vetores $V$, $W$ e $U$ são não nulos, temos $\|V\times W\|=\|V\|\|W\|\sin(\theta_1)$ e $|[V,W,U]|=\|V\times W\|\|U\|\cos(\theta_2)$.
+		
+		Essas definições permitem o entendimento de que a norma do produto vetorial é a área do paralelogramo formado pelos vetores $V$ e $W$, e o módulo do produto misto é o volume do paralelepípedo.
+		
+		\begin{figure}[htb]
+			\centering
+			
+			%---- Subfigura 1 ----
+			\begin{subfigure}[b]{0.45\textwidth}
+				\centering
+				\begin{tikzpicture}[>=stealth,scale=1.2]
+					%--- Coordenadas ---
+					\coordinate (O) at (0,0);
+					\coordinate (V) at (4,0);
+					\coordinate (W) at (1.2,3);
+					\coordinate (S) at ($(V)+(W)$);
+					\coordinate (P) at (1.2,0);
+					
+					
+					%--- Vetores ---
+					\draw[thick,->, red] (O) -- (V) node[midway,below] {$V$};
+					\draw[thick,->, blue] (O) -- (W) node[midway,left] {$W$};
+					\draw[dashed] (V) -- (S);
+					\draw[dashed] (W) -- (S);
+					
+					%--- Projeção (altura) ---
+					\draw[dashed] (W) -- node[right] {$h=\|W\|\sin\theta_1$} (P);
+					
+					%--- Ângulo theta com arco manual ---
+					\draw (0.5,0) arc[start angle=0, end angle=68, radius=0.5];
+					\node at (0.8,0.25) {$\theta_1$};
+				\end{tikzpicture}
+				\caption{Área do paralelogramo.}
+			\end{subfigure}
+			%---- Subfigura 2 ----
+			\begin{subfigure}[b]{0.45\textwidth}
+				\centering
+				\begin{tikzpicture}[
+					scale=1.2,
+					>=stealth,
+					x={(1cm,0cm)},        % eixo x: horizontal
+					y={(0.7cm,0.35cm)},   % eixo "pra dentro" (y)
+					z={(0cm,1cm)}         % eixo z: vertical
+					]
+					%--- pontos básicos ---
+					\coordinate (O)  at (0,0,0);      % origem
+					\coordinate (H)  at (0,0,1.8);    % topo da altura h
+					\coordinate (V)  at (2.0,0,0);      % vetor v no "chão"
+					\coordinate (U)  at (1.6, 0.3, 1.8);% ponta de u
+					\coordinate (W)  at (1.2,0.6,0);  % direção de w (no chão)
+					
+					% pontos derivados
+					\coordinate (VW)   at ($(V)+(W)$);
+					\coordinate (UW)   at ($(U)+(W)$);
+					\coordinate (UV)   at ($(U)+(V)$);
+					\coordinate (UVW)  at ($(U)+(V)+(W)$);
+					
+					%--- base e paralelepípedo (linhas tracejadas) ---
+					% base da frente
+					\draw[->,thick, red] (O) -- (V) node[below right] {$V$};
+					% base "de trás" (passando por w)
+					\draw[dashed] (W) -- (VW);
+					% laterais tracejadas
+					\draw[dashed] (V)  -- (VW);
+					\draw[dashed] (W)  -- (UW);
+					\draw[dashed] (V)  -- (UV);
+					\draw[dashed] (UW) -- (UVW);
+					\draw[dashed] (UV) -- (UVW);
+					\draw[dashed] (VW) -- (UVW);
+					\draw[dashed] (U) -- (UV);
+					\draw[dashed] (U) -- (UW);
+					
+					%--- altura h ---
+					\draw[dashed] (O) -- (H) node[above] {$h=\|U\|\cos \theta_2$};
+					\draw[dashed] (H) -- (U);
+					\tkzMarkRightAngle(O,H,U)
+					
+					%--- angulo teta 2 ---
+					\draw (0,0,0.3) arc[start angle=90, end angle=46.5, radius=0.4] node[left=5pt] {$\theta_2$};
+					
+					%--- vetores principais ---
+					% w saindo da origem, indo "pra dentro"
+					\draw[->,thick,blue] (O) -- (W) node[above left] {$W$};
+					
+					% u saindo da origem
+					\draw[->,thick, green!60!black] (O) -- (U) node[above right] {$U$};
+					
+				\end{tikzpicture}
+				\caption{Volume do paralelepípedo.}
+			\end{subfigure}
+			
+			\caption{Produto vetorial e produto misto.}
+			\label{fig:areavolume}
+		\end{figure}
+		Como sabemos, a área do paralelogramo é dada pelo produto da base com a altura, enquanto o volume do paralelepípedo é dado pelo produto da área da base com a altura. Assim seguem as relações abaixo. \[A_{VW}=\|V\|\|W\|\sin(\theta_1)=\|V\times W\|\] \[V_{VWU}=A_{VW}\|U\|\cos(\theta_2)=\|V\times W\|\|U\|\cos(\theta_2)=|[V,W,U]|\]
+		
+		Além das suas normas representarem áreas e volumes, os produtos vetorial e misto, assim como o escalar, são indicadores de "alinhamento" entre vetores. A essas características damos o nome de colinearidade e coplanaridade.
+		\begin{definicao}
+			Dois ou mais vetores são \azul{colineares} se pertencem a uma mesma reta (ou seja, se são paralelos). 
+		\end{definicao}
+		\begin{definicao}
+			Dois ou mais vetores são \azul{coplanares} se pertencem a um mesmo plano.
+		\end{definicao}
+		Na próxima seção de Geometria Analítica, ficará mais claro o que significa um vetor pertencer a uma reta ou a um plano. De forma intuitiva, isso significa que o segmento de reta orientado que representa um vetor é paralelo à reta ou ao plano em questão.
+		
+		Como dito anteriormente, ao definir a multiplicação por escalar, implicitamente entendemos as condições de colinearidade no plano.
+		
+		\begin{proposicao}
+			Sejam $V, W\in \mathbb{R}^2$.
+			\begin{itemize}
+				\item $V$ e $W$ são colineares $\Leftrightarrow \exists \, \alpha \in \mathbb{R}\text{, tal que } V=\alpha W$, ou seja, se um for múltiplo escalar do outro;
+				\item $V$ e $W$ são sempre coplanares (pertencem ao $\mathbb{R}^2$).
+			\end{itemize}
+		\end{proposicao}
+		
+		Já para o espaço, é possível utilizar as ideias de senos e cossenos que os produtos vetorial e misto trazem, garantindo as propriedades abaixo.
+		\begin{proposicao}
+			Sejam $V,\, W,\, U\in \mathbb{R}^3$.
+			\begin{itemize}
+				\item $V$ e $W$ são colineares $\Leftrightarrow V\times W=\bar{0}$;
+				\item Dois vetores $V$ e $W$ são sempre coplanares;
+				\item $V$, $W$ e $U$ são coplanares $\Leftrightarrow [V, W, U]=0$.
+			\end{itemize}
+		\end{proposicao}
+		
+		Outra forma de verificar colinearidade ou coplanaridade, é utilizando a ideia de combinação linear.
+		
+		\begin{corolario}
+			Sejam $U,\, V,\, W\in \mathbb{R}^3$ coplanares não nulos. Então,
+			\begin{enumerate}[label=\roman*)]
+				\item um dos vetores é combinação linear dos outros dois;
+				\item $V$ e $W$ não paralelos $\Rightarrow$ $U$ combinação linear de $V$ e $W$.
+			\end{enumerate}
+		\end{corolario}
+		Um fato interessante é que, a partir do item \textit{i)} do corolário acima, obtemos que a equação $xV+yW+zU=\bar{0}$ tem solução não trivial, ou seja, tem solução onde $x,y,z\neq 0$. Isso porque, se existem reais $\alpha, \beta$ tais que $\alpha V+\beta W= U$ (definição de combinação linear), então basta tomar $x=\alpha$, $y=\beta$ e $z=-1$.
+		
+		Com isso, finalizamos a parte de Álgebra Vetorial. Seguem abaixo os exercícios da seção.\\ \bigskip
+		
+		{\Large\textbf{Exercícios}}
+		
+		\begin{enumerate}
+			\item (SANTOS, R; 2014; p. 154)
+			Verifique se o vetor $U$ é combinação linear de $V$ e $W$:
+				\begin{enumerate}[label=\alph*)]
+					\item $V=(9,-12,-6)$, $W=(-1,7,1)$, $U=(-4,-6,2)$;
+					\item $V=(5,4,-3)$, $W=(2,1,1)$, $U=(-3,-4,1)$.
+				\end{enumerate}
+			\item (SANTOS, R; 2014; p. 177)
+			Demonstre que, se $V$ e $W$ são vetores quaisquer, então:
+				\begin{enumerate}[label=\alph*)]
+					\item $|V\cdot W|\leq \|V\|\|W\|$;
+					\item $\|V+W\|\leq \|V\|+\|W\|$; (Sugestão: mostre que $\|V+W\|^2=(V+W)\cdot (V+W)\leq (\|V\|+\|W\|)^2$, usando o item anterior)
+					\item $\big|\|V\|-\|W\| \big|\leq \|V-W\|$. (Sugestão: defina $U=V-W$ e aplique o item anterior a $U$ e $W$)
+				\end{enumerate}
+			\item (SANTOS, R; 2014; p. 199)
+			Calcule o volume do paralelepípedo que tem um dos vértices no ponto $A=(2,1,6)$ e os três vértices adjacentes nos pontos $B=(4,1,3)$, $C=(1,3,2)$ e $D=(1,2,1)$.
+			\item (SANTOS, R; 2014; p.201)
+			Prove a identidade de Lagrange
+			\[
+			\|V\times W\|^2=\|V\|^2\|W\|^2-(V\cdot W)^2
+			\]
+		\end{enumerate}
+		
 	\section{Geometria Analítica}
 	\section{Matrizes como Vetores}
 	

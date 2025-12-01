@@ -7,7 +7,8 @@
 \usepackage{tikz}
 \usepackage{tikz-3dplot}
 \usepackage{tkz-euclide}
-\usetikzlibrary{arrows.meta, decorations.markings, calc}
+\usetikzlibrary{arrows.meta,decorations.markings}
+\usetikzlibrary{calc,angles,quotes}
 \usepackage{pgfplots}
 \usepackage{amsmath}
 \usepackage{enumitem}       % personalizar listas
@@ -61,9 +62,6 @@
 \theoremstyle{remark}
 \newtheorem{exemplo}[teorema]{Exemplo}
 
-\newenvironment{exercicio}[1]{%
-	\vspace{0.5cm}
-	\noindent\textbf{Exercício #1. }\itshape}{\vspace{0.3cm}}
 	
 \newcommand{\azul}[1]{\textbf{\textcolor{blue}{#1}}}
 \newcommand{\parallelsum}{\mathbin{\!/\mkern-5mu/\!}}

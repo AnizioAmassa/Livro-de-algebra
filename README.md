@@ -1,3 +1,6 @@
+# Mariana - 01/12/25
+- terminei primeira versão da seção 1.1 (álgebra vetorial)
+
 # Anizio - 21/09/25
 - coloquei subsec de subespaco
 - tenho que esperar a mariana para continuar

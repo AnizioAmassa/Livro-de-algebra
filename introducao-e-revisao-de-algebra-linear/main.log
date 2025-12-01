@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.17.1 (MiKTeX 24.1) (format=lualatex 2025.11.20)  30 NOV 2025 00:06
+This is LuaHBTeX, Version 1.17.1 (MiKTeX 24.1) (format=lualatex 2025.11.20)  1 DEC 2025 10:59
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -1519,7 +1519,7 @@ Package babel Info: Making " an active character on input line 143.
 adhyph-pt.tex UTF-8 Portuguese hyphenation patterns
 (C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/generic/hyph-utf8/patterns/te
 x/hyph-pt.tex))))
-Package hyperref Info: Option `colorlinks' set `true' on input line 35.
+Package hyperref Info: Option `colorlinks' set `true' on input line 36.
 
 (C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/latex/lm/lmodern.sty
 Package: lmodern 2015/05/01 v1.6.1 Latin Modern Fonts
@@ -1751,27 +1751,20 @@ Overfull \hbox (4.64139pt too wide) in paragraph at lines 99--100
  []
 
 [4]
-Overfull \hbox (57.10675pt too wide) in paragraph at lines 178--179
+Overfull \hbox (57.10675pt too wide) in paragraph at lines 179--180
  [][] 
  []
 
-[5] [6] [7]
-Runaway argument?
-{, se $V,W \in \mathbb {R^2$}\\ 
-! Paragraph ended before \text@ was complete.
-<to be read again> 
-\par 
-l.417 					
-         
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
+[5] [6] [7] [8] [9] [10]
+Overfull \hbox (13.96457pt too wide) in paragraph at lines 698--699
+ [][] 
+ []
 
-) (./capitulos/capitulo02.tex [8]
+[11] [12] [13]) (./capitulos/capitulo02.tex [14]
 Cap\'{\i }tulo 2.
-) (./capitulos/capitulo03.tex [9
+) (./capitulos/capitulo03.tex [15
 
-] [10
+] [16
 
 ]
 Cap\'{\i }tulo 3.
@@ -1779,22 +1772,22 @@ LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 6
 .
 (C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) [11]
-[12] [13]) (./capitulos/capitulo04.tex [14]
+) [17]
+[18] [19]) (./capitulos/capitulo04.tex [20]
 Cap\'{\i }tulo 4.
-) (./capitulos/capitulo05.tex [15
+) (./capitulos/capitulo05.tex [21
 
-] [16
+] [22
 
 ]
 Cap\'{\i }tulo 5.
-) (./capitulos/apendiceA.tex [17] [18
+) (./capitulos/apendiceA.tex [23] [24
 
 ]
 Ap\^endice A.
-) [19] [20
+) [25] [26
 
-] [21
+] [27
 
 ] (./main.aux)
  ***********
@@ -1806,41 +1799,42 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 )
 
 Here is how much of LuaTeX's memory you used:
- 48697 strings out of 476497
+ 48901 strings out of 476497
  100000,1977958 words of node,token memory allocated
- 1414 words of node memory still in use:
-   32 hlist, 2 vlist, 14 rule, 2 glue, 4 kern, 1 glyph, 107 attribute, 61 glue_s
-pec, 91 attribute_list, 2 write, 24 pdf_literal, 24 pdf_colorstack nodes
-   avail lists: 1:2,2:3175,3:1216,4:156,5:339,6:65,7:4603,8:43,9:794,10:16,11:55
+ 1510 words of node memory still in use:
+   32 hlist, 2 vlist, 14 rule, 2 glue, 4 kern, 1 glyph, 139 attribute, 61 glue_s
+pec, 107 attribute_list, 2 write, 24 pdf_literal, 24 pdf_colorstack nodes
+   avail lists: 1:2,2:3113,3:1215,4:156,5:617,6:65,7:4603,8:50,9:794,10:16,11:55
 4
- 69024 multiletter control sequences out of 65536+600000
- 83 fonts using 5242903 bytes
- 106i,16n,104p,1192b,1216s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 69147 multiletter control sequences out of 65536+600000
+ 84 fonts using 5305583 bytes
+ 106i,16n,104p,1220b,1216s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {C:/Users/maria/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{
 C:/Users/maria/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/Us
-ers/maria/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}{C:/Use
-rs/maria/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/User
-s/maria/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}<C:/Users/mar
-ia/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/mari
-a/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbxi10.pfb><C:/Users/mari
-a/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/maria
-/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/maria/
-AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/maria/A
-ppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/maria/App
-Data/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/maria/AppDa
-ta/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/maria/AppData
-/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/maria/AppData/L
-ocal/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/maria/AppData/Loca
-l/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/maria/AppData/Local
-/Programs/MiKTeX/fonts/type1/public/lm/lmro12.pfb><C:/Users/maria/AppData/Local/
-Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/maria/AppData/Local/P
-rograms/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/maria/AppData/Local/Pro
-grams/MiKTeX/fonts/type1/public/lm/lmtt12.pfb><C:/Users/maria/AppData/Local/Prog
-rams/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/maria/AppDa
-ta/Local/Programs/MiKTeX/fonts/type1/public/esvect/vect10.pfb>
-Output written on main.pdf (25 pages, 361858 bytes).
+ers/maria/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}{C:/Users/
+maria/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}{C:/Users/m
+aria/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/ma
+ria/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}<C:/Users/maria/A
+ppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/maria/Ap
+pData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbxi10.pfb><C:/Users/maria/Ap
+pData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/maria/App
+Data/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/maria/AppD
+ata/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/maria/AppDa
+ta/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/maria/AppData
+/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/maria/AppData/L
+ocal/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/maria/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/maria/AppData/Local
+/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/maria/AppData/Local/Pr
+ograms/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/maria/AppData/Local/Pro
+grams/MiKTeX/fonts/type1/public/lm/lmro12.pfb><C:/Users/maria/AppData/Local/Prog
+rams/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/maria/AppData/Local/Progr
+ams/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/maria/AppData/Local/Program
+s/MiKTeX/fonts/type1/public/lm/lmtt12.pfb><C:/Users/maria/AppData/Local/Programs
+/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/maria/AppData/L
+ocal/Programs/MiKTeX/fonts/type1/public/esvect/vect10.pfb>
+Output written on main.pdf (31 pages, 396080 bytes).
 
-PDF statistics: 400 PDF objects out of 1000 (max. 8388607)
- 102 named destinations out of 1000 (max. 131072)
+PDF statistics: 476 PDF objects out of 1000 (max. 8388607)
+ 153 named destinations out of 1000 (max. 131072)
  424 words of extra memory for PDF output out of 10000 (max. 100000000)
 
