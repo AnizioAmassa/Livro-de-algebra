@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.17.1 (MiKTeX 24.1) (format=lualatex 2025.11.20)  30 NOV 2025 00:55
+This is LuaHBTeX, Version 1.17.1 (MiKTeX 24.1) (format=lualatex 2025.11.20)  30 NOV 2025 21:23
  restricted system commands enabled.
 **capitulo01.tex
 (./capitulo01.tex
@@ -1742,11 +1742,7 @@ Overfull \hbox (57.10675pt too wide) in paragraph at lines 178--179
  [][] 
  []
 
-[3] [4] [5]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[6] [7] (./capitulo01.aux)
+[3] [4] [5] [6] [7] [8] [9] (./capitulo01.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
@@ -1756,15 +1752,15 @@ Package rerunfilecheck Info: File `capitulo01.out' has not changed.
 )
 
 Here is how much of LuaTeX's memory you used:
- 48454 strings out of 476497
+ 48510 strings out of 476497
  100000,1977958 words of node,token memory allocated
- 1456 words of node memory still in use:
-   32 hlist, 2 vlist, 14 rule, 5 glue, 4 kern, 1 glyph, 112 attribute, 62 glue_s
-pec, 94 attribute_list, 2 write, 24 pdf_literal, 24 pdf_colorstack nodes
-   avail lists: 1:1,2:3167,3:1216,4:114,5:425,6:45,7:4979,8:26,9:750,10:10,11:57
+ 1492 words of node memory still in use:
+   32 hlist, 2 vlist, 14 rule, 5 glue, 4 kern, 1 glyph, 124 attribute, 62 glue_s
+pec, 100 attribute_list, 2 write, 24 pdf_literal, 24 pdf_colorstack nodes
+   avail lists: 1:1,2:3149,3:1216,4:114,5:502,6:45,7:4979,8:37,9:750,10:13,11:57
 3
- 68973 multiletter control sequences out of 65536+600000
- 79 fonts using 4893463 bytes
+ 69009 multiletter control sequences out of 65536+600000
+ 81 fonts using 5058823 bytes
  126i,16n,120p,1273b,1118s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {C:/Users/maria/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}{C:/
 Users/maria/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}{C:/U
@@ -1786,9 +1782,9 @@ rograms/MiKTeX/fonts/type1/public/lm/lmro12.pfb><C:/Users/maria/AppData/Local/Pr
 ograms/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/maria/AppData/Local/Pro
 grams/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/maria/AppD
 ata/Local/Programs/MiKTeX/fonts/type1/public/esvect/vect10.pfb>
-Output written on capitulo01.pdf (7 pages, 255523 bytes).
+Output written on capitulo01.pdf (9 pages, 268548 bytes).
 
-PDF statistics: 208 PDF objects out of 1000 (max. 8388607)
- 59 named destinations out of 1000 (max. 131072)
+PDF statistics: 237 PDF objects out of 1000 (max. 8388607)
+ 79 named destinations out of 1000 (max. 131072)
  288 words of extra memory for PDF output out of 10000 (max. 100000000)
 

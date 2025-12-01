@@ -396,10 +396,10 @@
 		\end{figure}
 		Essa forma de calcular a norma está ligada ao cálculo do tamanho de vetores no $\mathbb{R}^2$ e no $\mathbb{R}^3$, utilizando o Teorema de Pitágoras.
 		
-		A partir dessa definição de norma, podemos definir outro conceito fundamental: o produto escalar.
+		A partir dessa definição de norma, podemos definir outro conceito fundamental: o produto escalar. Este produto pega dois vetores e devolve um escalar (número real), que vai indicar o "nível de alinhamento entre eles".
 		
 		\begin{definicao}
-			Sejam $V,\, W\in \mathbb{R}^n$, onde $n\in \{2,3\}$. O \azul{produto escalar} ou \azul{produto interno} entre esses vetores, denotado por $V\cdot W$, é dado por
+			Sejam $V,\, W\in \mathbb{R}^n$, onde $n\in \{2,3\}$. O \azul{produto escalar} (também conhecido como \azul{produto interno}) entre esses vetores, denotado por $V\cdot W$, é dado por
 			\[
 			V\cdot W = \begin{cases}
 				0\text{, se $V=\bar{0}$ ou $W=\bar{0}$}\\
@@ -479,11 +479,8 @@
 				\draw[dashed] (V) -- (P)
 				node[midway,right] {$\vec V - \operatorname{proj}_W V$};
 				
-				% Marcação de ângulo reto entre W e (V - proj_W V)
-				\coordinate (A) at ($(P)!0.2!(V)$);
-				\coordinate (B) at ($(P)!0.2!(W)$);
-				\coordinate (C) at ($(A)+(B)-(P)$);
-				\draw (A) -- (C) -- (B);
+				% Marcação do ângulo reto
+				\tkzMarkRightAngle(W,P,V)
 				
 			\end{tikzpicture}
 			\caption{Projeção ortogonal de $\vec V$ sobre $\vec W$.}
@@ -501,10 +498,115 @@
 			\[
 			V\times W = \begin{cases}
 				\bar{0}\text{, se $V=\bar{0}$ ou $W=\bar{0}$}\\
-				\text{, caso contrário.}
+				U\text{, caso contrário.}
 			\end{cases}
 			\]
+			onde $U$ é definido como o vetor tal que:
+			\begin{enumerate}[label=\roman*)]
+				\item $\|U\|=\|V\|\|W\|\sin(\theta)$;
+				\item $U\perp V$ e $U\perp W$;
+				\item o sentido é dado pela regra da mão direita.
+			\end{enumerate}
 		\end{definicao}
+		A regra da mão direita estabelece que os dedos giram de $V$ para $W$ e o polegar aponta na direção de $U$, representada na Figura \ref{fig:maodireita}.
+		
+		Utilizando as componentes dos vetores, podemos obter as coordenadas do seu produto vetorial de uma forma mais simples.
+		\begin{teorema}
+			Sejam $V,\, W\in \mathbb{R}^3$. Então,
+			\[
+			V\times W = \bigg( \det \begin{bmatrix}
+				v_2 & v_3\\
+				w_2 & w_3
+			\end{bmatrix}, -\det \begin{bmatrix}
+				v_1 & v_3\\
+				w_1 & w_3
+			\end{bmatrix}, \det \begin{bmatrix}
+				v_1 & v_2\\
+				w_1 & w_2
+			\end{bmatrix}\bigg)
+			\]
+			Ou, utilizando um abuso de notação, temos
+			\[
+			V\times W = \det \begin{bmatrix}
+				\vec i & \vec j & \vec k\\
+				v_1 & v_2 & v_3\\
+				w_1 & w_2 & w_3
+			\end{bmatrix}
+			\]
+			onde $\vec i=(1, 0, 0)$, $\vec j=(0,1,0)$ e $\vec k=(0,0,1)$ são os \azul{vetores canônicos}.
+		\end{teorema}
+		\begin{figure}[h]
+			\centering
+			% vista 3D
+			\tdplotsetmaincoords{70}{120}
+			\begin{tikzpicture}[tdplot_main_coords,scale=2,>=stealth]
+				
+				\coordinate (O) at (0,0,0);
+				
+				% Vetores a e b no plano xy
+				\draw[->,thick] (O) -- (2,0,0)
+				node[below right] {$V$};
+				\draw[->,thick] (O) -- (0,2,0)
+				node[below left] {$W$};
+				
+				% Produto vetorial a x b (polegar)
+				\draw[->,very thick,blue] (O) -- (0,0,2)
+				node[above] {$V \times W$};
+				
+				% Arco mostrando o sentido de a para b (sentido dos dedos)
+				\draw[->,thick]
+				(1.4,0,0) arc[start angle=0,end angle=90,radius=1.4]
+				node[midway,below] {$\text{sentido dos dedos}$};
+				
+			\end{tikzpicture}
+			\caption{Regra da mão direita}
+			\label{fig:maodireita}
+		\end{figure}
+		
+		Note que, no abuso de notação para representar o produto vetorial, temos que os componentes da matriz são ora vetores, ora números reais, o que indica uma matriz inválida. A ideia dessa representação é de que, se considerássemos $\vec i$, $\vec j$ e $\vec k$ números reais e fizéssemos a conta de tal determinante, e a multiplicação entre reais fosse igual à multipliação por escalar, teríamos o equivalente à primeira forma do produto vetorial, apresentada imediatamente antes. Em suma, essa segunda representação é, na verdade, um "macete" para decorar o produto vetorial.
+		
+		A partir dessas definições equivalentes do produto vetorial, podemos demonstrar as seguintes propriedades.
+		\begin{teorema}
+			Sejam $U,\, V,\, W\in \mathbb{R}^3$ e $\alpha \in \mathbb{R}$. Então:
+			\begin{enumerate}[label=\roman*)]
+				\item $V\times W=-(W\times V)$;
+				\item $V\times W=\bar{0}\Leftrightarrow V=\alpha W\text{ ou } W=\alpha V \text{ (ou seja, caso sejam paralelos)}$;
+				\item $(V\times W)\cdot V=(V\times W)\cdot W=0$;
+				\item $\alpha(V\times W)=(\alpha V)\times W=V\times (\alpha W)$;
+				\item $V\times (W+U)=V\times W+V\times U$ e $(V+W)\times U=V\times U+W\times U$.
+			\end{enumerate}
+		\end{teorema}
+		Já o produto misto é dado pela "mistura" dos dois conceitos apresentados anteriormente.
+		\begin{definicao}
+			Sejam $V,\, W, \, U \in \mathbb{R}^3$. Então, o \azul{produto misto}, denotado por $[V, W, U]$, é dado por
+			\[
+			[V, W, U]=(V\times W)\cdot U
+			\]
+		\end{definicao}
+		A partir dos conceitos de produto vetorial e escalar, podemos descrever o misto de uma forma facilitada, bem como ressaltar algumas propriedades interessantes.
+		\begin{teorema}
+			Sejam $V,\, W, \, U \in \mathbb{R}^3$. Então, 
+			\[
+			[V, W, U]=\det \begin{bmatrix}
+				v_1 & v_2 & v_3\\
+				w_1 & w_2 & w_3\\
+				u_1 & u_2 & u_3
+			\end{bmatrix}
+			\]
+		\end{teorema}
+		\begin{teorema}
+			Sejam $V,\, W, \, U\in \mathbb{R}^3$ e $\alpha \in \mathbb{R}$. Então,
+			\begin{enumerate}[label=\roman*)]
+				\item $[U+Z,V,W]=[U,V,W]+[Z,V,W]$
+				
+				$[U,V+Z,W]=[U,V,W]+[U,Z,W]$
+				
+				$[U,V,W+Z]=[U,V,W]+[U,V,Z]$;
+				\item $[U,V,W]=-[U,W,V]=-[W,V,U]=-[V,U,W]$;
+				\item $[U,V,W]=U\cdot(V\times W)$;
+				\item $\alpha[U, V, W]=[\alpha U, V, W]=[U, \alpha V, W]=[U, V, \alpha W]$.
+			\end{enumerate}
+		\end{teorema}
 	\section{Geometria Analítica}
 	\section{Matrizes como Vetores}
 	
