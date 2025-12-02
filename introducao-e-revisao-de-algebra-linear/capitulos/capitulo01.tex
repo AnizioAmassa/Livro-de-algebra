@@ -772,6 +772,130 @@
 		\end{enumerate}
 		
 	\section{Geometria Analítica}
+		Na Geometria Analítica, estudamos objetos geométricos, como retas e planos, a partir de um sistema de coordenadas. Nesse capítulo, vamos focar nossa atenção principalmente em retas e planos, ampliando a abordagem anterior de vetores. Primeiramente, podemos tentar definir esses objetos do ponto de vista da geometria analítica.
+		
+		\begin{definicao}
+			Uma reta $r \subset \mathbb{R}^2$ (ou $\mathbb{R}^3$) é o conjunto dos pontos $P$
+			dados por
+			\[
+			P = P_0 + t v, \quad t \in \mathbb{R}
+			\]
+			onde $P_0$ é um ponto fixo e $v \in \mathbb{R}^2$ (ou $\mathbb{R}^3$) é o vetor diretor não nulo.
+		\end{definicao}
+		\begin{definicao}
+			Um plano $\pi \subset \mathbb{R}^3$ é o conjunto dos pontos $P$ dados por
+			\[
+			P = P_0 + t v + s w, \quad t, s \in \mathbb{R},
+			\]
+			onde $P_0$ é um ponto fixo e $v, w \in \mathbb{R}^3$ são vetores diretores
+			não nulos e não colineares.
+		\end{definicao}
+		\begin{figure}[h]
+			\centering
+			
+			% ===================== (a) Reta em R^2 =====================
+			\begin{subfigure}[t]{0.45\textwidth}
+				\centering
+				\begin{tikzpicture}[>=stealth,scale=1.2]
+					
+					% eixos (opcional)
+					\draw[->] (-0.5,0) -- (4,0) node[right] {$x$};
+					\draw[->] (0,-0.5) -- (0,3) node[above] {$y$};
+					
+					% ponto P0 e vetor diretor v
+					\coordinate (P0) at (1,1);
+					\coordinate (Vdir) at (3,2); % P0 + v, só para desenhar
+					
+					% reta r = P0 + t v  (prolongamos para os dois lados)
+					\draw[dashed] (-0.2,0.4) -- (3.8,2.4);
+					
+					% vetor diretor v
+					\draw[->,thick,blue] (P0) -- (Vdir)
+					node[above left] {$\vec v$};
+					
+					% ponto P na reta (por exemplo t>0)
+					\coordinate (P) at (2.2,1.6);
+					\fill (P) circle (1pt) node[below right] {$P=P_0+t\vec v$};
+					
+					% ponto P0
+					\fill (P0) circle (1.2pt) node[below right] {$P_0$};
+					
+					% nome da reta
+					\node at (3.5,2) {$r$};
+					
+				\end{tikzpicture}
+				\caption{Reta $r \subset \mathbb{R}^2$ dada por $P=P_0+t\vec v$.}
+			\end{subfigure}
+			\hfill
+			% ===================== (b) Plano em R^3 =====================
+			\begin{subfigure}[t]{0.45\textwidth}
+				\centering
+				\tdplotsetmaincoords{70}{135}
+				
+				\begin{tikzpicture}[tdplot_main_coords,scale=2.2,>=stealth]
+					
+					% eixos
+					\draw[->] (-0.5,0,0) -- (3.5,0,0) node[right] {$x$};
+					\draw[->] (0,-0.5,0) -- (0,3.5,0) node[above] {$y$};
+					% eixo z maior, para pegar todo o plano
+					\draw[->] (0,0,-0.5) -- (0,0,4.0) node[above] {$z$};
+					
+					% ponto P0 e vetores diretores (AGORA mais inclinados em z)
+					\coordinate (P0)  at (0.6,0.5,0.3);
+					
+					% P0 + v  (v = (1.4,0.2,1.1))
+					\coordinate (V)   at (2.0,0.7,1.4);
+					
+					% P0 + w  (w = (0.4,1.3,1.2))
+					\coordinate (W)   at (1.0,1.8,1.5);
+					
+					% P0 + v + w
+					\coordinate (VW)  at (2.4,2.0,2.6);
+					
+					%----------------------------------------------------
+					% 1) Grande "faixa" do plano (retângulo maior no mesmo plano)
+					%    P0 + a v + b w
+					%----------------------------------------------------
+					\coordinate (A) at (0.06,0.05,-0.39);  % ~ P0 - 0.3 v - 0.3 w
+					\coordinate (B) at (2.58,0.41,1.59);   % ~ P0 + 1.5 v - 0.3 w
+					\coordinate (C) at (3.30,2.75,3.75);   % ~ P0 + 1.5 v + 1.5 w
+					\coordinate (D) at (0.78,2.39,1.77);   % ~ P0 - 0.3 v + 1.5 w
+					
+					% plano "grande"
+					\fill[green!20,opacity=0.15]
+					(A) -- (B) -- (C) -- (D) -- cycle;
+					
+					\draw[thin,green!40!black,opacity=0.5]
+					(A) -- (B) -- (C) -- (D) -- cycle;
+					
+					% vetores diretores
+					\draw[->,thick,blue] (P0) -- (V)
+					node[pos=0.55,below right] {$\vec v$};
+					\draw[->,thick,red] (P0) -- (W)
+					node[pos=0.55,above left] {$\vec w$};
+					
+					% ponto P no plano (P = P0 + t v + s w, por ex. t=1.1, s=0.6)
+					\coordinate (P) at (2.38,1.5,2.23);
+					\fill (P) circle (0.8pt);
+					\node[above right] at (P) {$P=P_0+t\vec v+s\vec w$};
+					
+					% ponto P0
+					\fill (P0) circle (0.9pt);
+					\node[left] at (P0) {$P_0$};
+					
+					% nome do plano (no meio do paralelogramo)
+					\path (P0) -- (VW) coordinate[pos=0.5] (Cpi);
+					\node[above] at (Cpi) {$\pi$};
+					
+				\end{tikzpicture}
+				
+				
+				\caption{Plano $\pi \subset \mathbb{R}^3$ dado por $P=P_0+t\vec v+s\vec w$.}
+			\end{subfigure}
+			
+			\caption{Representação paramétrica de reta e plano por pontos e vetores diretores.}
+		\end{figure}
+		
 	\section{Matrizes como Vetores}
 	
 \end{document}
