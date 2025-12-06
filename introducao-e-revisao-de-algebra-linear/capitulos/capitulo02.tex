@@ -1,10 +1,345 @@
 \documentclass[../main.tex]{subfiles}
 \begin{document}
 	
-	\chapter{Sistemas Lineares}
+	\chapter{Sistemas Lineares e Matrizes}
+	Além das ideias de vetores e da própria Geometria Analítica, compreender Sistemas Lineares fundamenta os principais problemas que a Álgebra Linear busca responder. No entanto, antes de apresentar sistemas lineares ou outros conceitos (como combinação e dependência linear), vamos iniciar com matrizes.
 	
-	\section{Matrizes como Sistemas Lineares}
+	\section{Matrizes}
+		As matrizes permitem uma manipulação facilitada dos sistemas lineares e uma abstração maior, porque elas são fundamentalmente tabelas de números ou variáveis, que se assemelham com o formato de sistemas lineares. Além disso, também podem ser interpretadas como vetores ou até mesmo objetos de estudo da Álgebra Linear, como as Transformações Lineares, entrelaçando todos os objetos de estudo da área.
+		\begin{definicao}
+			Seja $m,n\in \mathbb{N}^*$. Uma \azul{matriz} $A_{m\times n}$, ou simplesmente $A$, é uma tabela de $mn$ números dispostos em $m$ linhas e $n$ colunas.
+			\[
+			A=\begin{bmatrix}
+				a_{11} & \dots & a_{1n}\\
+				\vdots & \ddots & \vdots\\
+				a_{1m} & \dots & a_{mn} 
+			\end{bmatrix}
+			\]
+		\end{definicao}
+		\begin{definicao}
+			Denotamos por \azul{$a_{ij}$} o elemento na $i$-ésima linha e $j$-ésima coluna da matriz $A$.
+		\end{definicao}
+		\begin{definicao}
+			Denotamos por \azul{$\mathbb{M}_{m\times n}$} o conjunto de todas as matrizes de ordem $m\times n$.
+		\end{definicao}
+		\begin{definicao}
+			Segue abaixo nomenclaturas de matrizes:
+			\begin{itemize}
+				\item \azul{Matriz Quadrada}: $m=n$, i.e., mesmo número de linhas e colunas.
+				\item \azul{Matriz Linha}: $m=1$, i.e., uma linha.
+				\item \azul{Matriz Coluna}: $n=1$, i.e., uma coluna.
+				\item \azul{Matriz Nula ($\bar{0}$)}: $a_{ij}=0\,\forall\, i,j$.
+				\item \azul{Matriz Identidade ($I$)}: $a_{ij}=\begin{cases}
+					1 \text{, se } i=j\\
+					0 \textbf{, se } i\neq j
+				\end{cases}$.
+			\end{itemize}
+		\end{definicao}
+		\begin{definicao}
+			Seja $A$ uma matriz quadrada. Então,
+			\begin{itemize}
+				\item $A$ é \azul{Matriz Diagonal} $\Leftrightarrow a_{ij}=0,\, \forall\, i\neq j$;
+				\item $A$ é \azul{Matriz Triangular Superior} $\Leftrightarrow a_{ij}=0,\, \forall\, i>j$;
+				\item $A$ é \azul{Matriz Triangular Inferior} $\Leftrightarrow a_{ij}=0,\, \forall\, i<j$.
+			\end{itemize}
+		\end{definicao}
+		A seguir definiremos as operações com matrizes. Note que, com exceção à multiplicação entre matrizes, grande parte envolve somente uma mesma operação elemento a elemento.
+		\begin{definicao}
+			A \azul{soma de matrizes} $A_{m\times n}$ e $B_{m\times n}$ é definida pela matriz $C_{m\times n}=A+B$ tal que
+			\[
+			c_{ij}=a_{ij}+b_{ij},\, \forall\, i, j
+			\]
+		\end{definicao}
+		Note que essa operação só é definida para matrizes de mesmo tamanho.
+		\begin{definicao}
+			A \azul{multiplicação de uma matriz $A_{m\times n}$ por um escalar $\alpha$} é definida pela matriz $B_{m\times n}=\alpha A$ tal que
+			\[
+			b_{ij}=\alpha a_{ij}\, \forall\, i,j
+			\]
+			Dizemos que $B$ é \azul{múltiplo escalar} de $A$.
+		\end{definicao}
+		\begin{definicao}
+			A \azul{multiplicação de matrizes} $A_{m\times p}$ e $B_{p\times n}$ é definida pela matriz $C_{m\times n}=AB$ tal que
+			\[
+			c_{ij}=\sum_{1}^{p} a_{ip}b_{pj}=a_{i1}b{1j}+\dots 	+a_{ip}b{pj}\, \forall\, i,j
+			\]
+		\end{definicao}
+		\begin{definicao}
+			A \azul{transposta} de uma matriz $A_{m\times n}$ é definida pela matriz $B_{m\times n}=A^T$, tal que
+			\[
+			b_{ij}=a_{ji},\, \forall\, i,j
+			\]
+		\end{definicao}
+		\begin{definicao}
+			O \azul{traço} de uma matriz quadrada $A_{m\times m}$ é dado pela soma dos elementos da diagonal:
+			\[
+			\text{tra}(A)=\sum_{1}^{m} a_{ii}
+			\]
+		\end{definicao}
+		\begin{teorema}
+			Sejam $A$, $B$ e $C$ matrizes com ordem apropriada para cada propriedade. Sejam $\alpha, \beta\in \mathbb{R}$. Então,
+			\begin{multicols}{2}
+				\begin{enumerate}[label=\roman*)]
+					\item $A+B=B+A$;
+					\item $A+(B+C)=(A+B)+C$;
+					\item $\forall\, A_{m\times n}, \, \exists\, \bar{0}_{m\times n}$, tal que $A+\bar{0}=A$;
+					\item $\forall\,  A,\, \exists\, -A$, tal que $A+(-A)=\bar{0}$;
+					\item $\alpha(\beta A)=(\alpha \beta)A$;
+					\item $(\alpha+\beta)A=\alpha A+\beta A$;
+					\item $\alpha(A+B)=\alpha A+\alpha B$;
+					\item $\forall\, A_{m\times n}, \, \exists\, I_m,\, I_n$, tal que \\ $A=AI_n=I_mA$;
+					\item $A(BC)=(AB)C$;
+					\item $A(B+C)=AB+AC$ \\ $(B+C)A=BA+CA$;
+					\item $\alpha(AB)=(\alpha A)B=A(\alpha B)$;
+					\item $(A^T)^T=A$;
+					\item $(A+B)^T=A^T+B^T$;
+					\item $(\alpha A)^T=\alpha A^T$;
+					\item $(AB)^T=B^TA^T$.
+				\end{enumerate}
+			\end{multicols} 
+		\end{teorema}
+		
+		\subsection{Matriz Inversa}
+			\begin{definicao}
+				Uma matriz quadrada $A_{n\times n}$ é \azul{invertível} ou não singular, se existe uma matriz $A^{-1}_{n\times n}$ tal que
+				\[
+				AA^{-1}=A^{-1}A=I_n
+				\]
+				Se $A$ não tem inversa, então $A$ é não invertível ou \azul{singular}.
+			\end{definicao}
+			\begin{teorema}
+				Se $A$ é invertível, então $A^{-1}$ é única.
+			\end{teorema}
+			\begin{teorema}
+				Sejam $A$ e $B$ matrizes.
+				\begin{enumerate}[label=\roman*)]
+					\item $A$ invertível $\Rightarrow$ $A^{-1}$ invertível, e $(A^{-1})^{-1}=A$;
+					\item $A$ e $B$ invertíveis $\Rightarrow$ $AB$ invertível, e $(AB)^{-1}=B^{-1}A^{-1}$;
+					\item $A$ invertível $\Rightarrow$ $A^T$ invertível e $(A^T)^{-1}=(A^{-1})^T$.
+				\end{enumerate}
+			\end{teorema}
+			\begin{teorema}
+				Sejam $A_{n\times n}$ e $B_{n\times n}$ matrizes. Então,
+				\[
+				BA=I_n\Leftrightarrow AB=I_n
+				\]
+			\end{teorema}
+		\subsection{Determinante}
+			Existem as formas clássicas, aprendidas no Ensino Médio, de calcular o determinante de uma matriz de ordem 2 ou 3. No entanto, para matrizes de ordem superior, precisamos utilizar a definição generalizada de determinante, que é calculado por meio da \azul{expansão em cofatores do determinante de A}. Abaixo segue essa expansão em termos da primeira linha.
+			\begin{definicao}
+				Seja $A_{n\times n}$ uma matriz. O \azul{determinante} de $A$, denotado por $\det(A)$, é definido por
+				\[
+				\det(A)=\sum_{j=1}^{n} a_{1j}\tilde{a}_{1j}
+				\]
+				onde
+				\begin{itemize}
+					\item $\tilde{A}_{ij}$, dado pela submatriz de $A$ de ordem $(n-1)\times (n-1)$ eliminando a $i$-ésima linha e a $j$-ésima coluna, é o \azul{menor} do elemento $a_{ij}$;
+					\item $ã_{1j}=(-1)^{1+j}\det(\tilde{A}_{1j})$ é o \azul{cofator} de $a_{1j}$.
+				\end{itemize} 
+			\end{definicao}
+			Segue abaixo uma representação mais visual da matriz menor $\tilde{A}_{ij}$ da matriz original $A$.
+			\[
+			\tilde{A}_{ij}=\begin{bmatrix}
+				a_{11} & \dots & a_{1(j-1)} & a_{1(j+1)} & \dots & a_{1n} \\
+				\vdots & \,    & \,         & \,         & \, & \vdots \\
+				a_{(i-1)1} & \,& \ddots     & \,         & \, & a_{(i-1)n} 		\\
+				a_{(i+1)1} & \,& \,         & \ddots     & \, & a_{(i+1)n} 		\\
+				\vdots & \,    & \,         & \,         & \, & \vdots \\
+				a_{n1} & \dots & a_{n(j-1)} & a_{n(j+1)} & \dots & a_{nn} \\
+			\end{bmatrix}
+			\]
+			\begin{teorema}
+				Seja a matriz $A_{n\times n}$ escrita em termos das suas linhas, denotadas por $A_i=[a_{i1}\,\dots\, a_{in}]$. Se existe uma linha $A_k$ tal que $A_k=\alpha X+\beta Y$, para algum $\alpha, \beta \in \mathbb{R}$ e algum $X=[x_1\, \dots\, x_n]$ e $Y=[y_1\,\dots\, y_n]$, então, 
+				\[
+				\begin{bmatrix}
+					A_1 \\
+					\vdots \\
+					A_{k-1}\\
+					\alpha X+\beta Y\\
+					A_{k+1}\\
+					\vdots\\
+					A_n
+				\end{bmatrix} = \alpha \det \begin{bmatrix}
+					A_1 \\
+					\vdots \\
+					A_{k-1}\\
+					X\\
+					A_{k+1}\\
+					\vdots\\
+					A_n
+				\end{bmatrix} + \beta \det \begin{bmatrix}
+					A_1 \\
+					\vdots \\
+					A_{k-1}\\
+					Y\\
+					A_{k+1}\\
+					\vdots\\
+					A_n
+				\end{bmatrix}
+				\]
+			\end{teorema}
+			\begin{teorema}
+				O determinante de uma matriz pode ser calculado com a expansão em cofatores de qualquer linha $i$ ou qualquer coluna $j$. Em outras palavras,
+				\begin{align*}
+					\det(A)
+					&=\sum_{j=1}^{n} a_{ij}ã_{ij}\text{, para } 	i=1,\dots,n\\
+					&=\sum_{i=1}^{n} a_{ij}ã_{ij}\text{, para } j=1,\dots, n
+				\end{align*}
+			\end{teorema}
+			\begin{corolario}
+				Seja $A_{n\times n}$ uma matriz.
+				\[
+				\exists A_i,\, A_j \text{, tal que } A_i=A_j\Rightarrow 	\det(A)=0
+				\]
+			\end{corolario}
+			\begin{teorema}
+				Sejam $A_{n\times n}$ e $B_{n\times n}$ matrizes.
+				\begin{enumerate}[label=\roman*)]
+					\item Se $B$ é obtida de $A$ multiplicando-se uma linha por um escalar $\alpha$, então
+					\[
+					\det(B)=\alpha \det(A);
+					\]
+					\item Se $B$ é obtida de $A$ pela troca de duas linhas, então
+					\[
+					\det(B)=-\det(A);
+					\]
+					\item Se $B$ é obtida de $A$ substituindo uma linha $A_l$ por ela somada um múltiplo escalar de outra linha $A_k$, ou seja, substituindo $A_l$ por $A_l+\alpha A_k$, então
+					\[
+					\det(B)=\det(A).
+					\]
+				\end{enumerate}
+			\end{teorema}
+			\begin{teorema}
+				Sejam $A_{n\times n}$ e $B_{n\times n}$ matrizes.
+				\begin{enumerate}[label=\roman*)]
+					\item $\det(AB)=\det(A)\det(B)$.
+					\item $\det(A)=\det(A^T)$.
+				\end{enumerate}
+			\end{teorema}
+			\begin{teorema}
+				Seja $A_{n\times n}$ uma matriz. $A$ invertível $\Leftrightarrow \det(A)\neq 0$.
+			\end{teorema}
+	\section{Sistemas Lineares}
+		\begin{definicao}
+			Sejam $b, a_1,\dots, a_n\in \mathbb{R}$ fixos e $x_1,\dots,x_n$ variáveis. Então, uma \azul{equação linear} é uma igualdade da forma
+			\[
+			a_1x_1+\dots +a_nx_n=b.
+			\]
+		\end{definicao}
+		\begin{definicao}
+			Um \azul{sistema linear} é um conjunto de equações lineares.
+		\end{definicao}
+		\begin{definicao}
+			Uma \azul{solução} de um sistema linear é o conjunto $\{s_1,\dots, s_n\}$ que satisfaz todas as equações ao substituir cada variável ($x_1=s_1,\dots,x_n=s_n$).
+		\end{definicao}
+		\begin{definicao}
+			O \azul{conjunto solução} ou a \azul{solução geral} do sistema é o conjunto de todas as soluções do sistema linear.
+		\end{definicao}
+		
+		Dessa forma, se tivermos um sistema de $m$ equações e de soluções com $n$ entradas, então temos algo no formato abaixo.
+		\[
+		\begin{cases}
+			a_{11}x_1+\dots +a_{1n}x_n=b_1\\
+			\vdots\\
+			a_{m1}x_1+\dots +a_{mn}x_n=b_m
+		\end{cases}
+		\]
+		Para encontrar as soluções de um sistema linear, são utilizadas três operações fundamentais, chamadas de \azul{operações elementares}:
+		\begin{enumerate}
+			\item Trocar a posição de duas equações;
+			\item Multiplicar uma equação por um escalar $\alpha\neq0$;
+			\item Somar uma equação ao "múltiplo escalar" de outra.
+		\end{enumerate}
+		\begin{teorema}
+			Um sistema linear pode ter:
+			\begin{itemize}
+				\item Nenhuma solução;
+				\item Uma única solução;
+				\item Infinitas soluções.
+			\end{itemize}
+		\end{teorema}
+		
+		\subsection{Matrizes como Sistemas Lineares}
+			Relembrando novamente Sistemas Lineares, eles possuem o seguinte formato:
+			\[
+			\begin{cases}
+				a_{11}x_1+\dots +a_{1n}x_n=b_1\\
+				\vdots\\
+				a_{m1}x_1+\dots +a_{mn}x_n=b_m
+			\end{cases}
+			\]
+			No entanto, esse tipo de "multiplicação e soma ordenadas" lembra muito um dos conceitos apresentados anteriormente: a multiplicação entre matrizes. De fato, note que, definindo matrizes $A_{m\times n}$ e $B_{m\times 1}$ de constantes reais, e uma matriz $X_{n\times 1}$ de variáveis, podemos dizer que
+			\[
+			AX=B\Leftrightarrow \begin{cases}
+				a_{11}x_1+\dots +a_{1n}x_n=b_1\\
+				\vdots\\
+				a_{m1}x_1+\dots +a_{mn}x_n=b_m
+			\end{cases}
+			\]
+			Ou, mais explicitamente, que
+			\[
+			\begin{bmatrix}
+				a_{11} & \dots & a_{1n}\\
+				\vdots & \ddots& \vdots\\
+				a_{m1} & \dots & a_{mn}
+			\end{bmatrix}
+			\begin{bmatrix}
+				x_1\\
+				\vdots\\
+				x_n
+			\end{bmatrix}=
+			\begin{bmatrix}
+				b_1\\
+				\vdots\\
+				b_m
+			\end{bmatrix}
+			\Leftrightarrow
+			\begin{cases}
+				a_{11}x_1+\dots +a_{1n}x_n=b_1\\
+				\vdots\\
+				a_{m1}x_1+\dots +a_{mn}x_n=b_m
+			\end{cases}
+			\]
+			
+			Além disso, podemos novamente definir as operações elementares para matrizes.
+			\begin{definicao}
+				Seguem abaixo as \azul{operações elementares sobre as linhas de uma matriz}.
+				\begin{enumerate}
+					\item Trocar a posição de duas linhas;
+					\item Multiplicar uma linha por um escalar $\alpha\neq0$;
+					\item Somar uma linha ao "múltiplo escalar" de outra.
+				\end{enumerate}
+			\end{definicao}
+			\begin{definicao}
+				Sejam $A$ e $B$ matrizes. $A$ é \azul{equivalente por linhas} a $B$, se $B$ pode ser obtida aplicando operações elementares sobre $A$.
+			\end{definicao}
+			Uma forma de representar os sistemas lineares com matrizes, omitindo as variáveis e obtendo algo mais conciso, temos a \azul{matriz aumentada} abaixo.
+			\[
+			[A\, \mid \, B]= \begin{bmatrix}
+				a_{11} & \dots & a_{1n} & b_1\\
+				\vdots & \ddots& \vdots & \vdots\\
+				a_{m1} & \dots & a_{mn} & b_m
+			\end{bmatrix}
+			\]
+			\begin{teorema}
+				Sejam os sistemas $AX=B$ e $CX=D$. Se $[A \, \mid \, B]$ é equivalente por linhas a $[C \, \mid \, D]$, então o conjunto solução de ambos é a mesma.
+			\end{teorema}
+			\begin{definicao}
+				O \azul{pivô} da $i$-ésima linha de uma matriz $A$ é o primeiro elemento não nulo de $A_i$.
+			\end{definicao}
+			\begin{definicao}
+				Seja $A_{m\times n}$ uma matriz. Ela está na forma \azul{escalonada reduzida}, se satisfaz todas as condições abaixo.
+				\begin{enumerate}[label=\roman*)]
+					\item Todas as linhas nulas ($A_i=[0,\dots,0]$) estão abaixo das não nulas;
+					\item O pivô de cada linha não nula é $1$;
+					\item Se o pivô da linha $A_i$ ocorre na $j$-ésima coluna, então o pivô da linha $A_{i+1}$ ocorre na $(j+1)$-ésima coluna;
+					\item Se uma coluna contém pivô, então todos os outros elementos são $0$.
+				\end{enumerate}
+			\end{definicao}
+			
 	\section{Combinação Linear}
+	
 	\section{Dependência Linear}
+	
 	
 \end{document}

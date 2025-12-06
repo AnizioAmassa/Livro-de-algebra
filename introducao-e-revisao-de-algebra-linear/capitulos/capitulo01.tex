@@ -1,7 +1,7 @@
 \documentclass[../main.tex]{subfiles}
 \begin{document}
 	
-	\chapter{Álgebra Vetorial e Geometria Analítica}
+	\chapter{Introdução}
 	Para iniciar os estudos de Álgebra Linear, é interessante apresentar, inicialmente, conceitos básicos para visualizar e estruturar o conhecimento. Nesse sentido, entender vetores na perspectiva geométrica, ou seja, no plano ($\mathbb{R}^2$) ou no espaço ($\mathbb{R}^3$), é mais intuitivo em um primeiro contato. Nos próximos capítulos, em especial no capítulo 3, a definição de vetores será ampliada para outros espaços vetoriais, com um maior nível de abstração.
 	
 	\section{Álgebra Vetorial}
@@ -744,9 +744,8 @@
 		\end{corolario}
 		Um fato interessante é que, a partir do item \textit{i)} do corolário acima, obtemos que a equação $xV+yW+zU=\bar{0}$ tem solução não trivial, ou seja, tem solução onde $x,y,z\neq 0$. Isso porque, se existem reais $\alpha, \beta$ tais que $\alpha V+\beta W= U$ (definição de combinação linear), então basta tomar $x=\alpha$, $y=\beta$ e $z=-1$.
 		
-		Com isso, finalizamos a parte de Álgebra Vetorial. Seguem abaixo os exercícios da seção.\\ \bigskip
-		
-		{\Large\textbf{Exercícios}}
+		Com isso, finalizamos a parte de Álgebra Vetorial. Seguem abaixo os exercícios da seção.
+		\subsection*{Exercícios}
 		
 		\begin{enumerate}
 			\item (SANTOS, R; 2014; p. 154)
@@ -774,128 +773,283 @@
 	\section{Geometria Analítica}
 		Na Geometria Analítica, estudamos objetos geométricos, como retas e planos, a partir de um sistema de coordenadas. Nesse capítulo, vamos focar nossa atenção principalmente em retas e planos, ampliando a abordagem anterior de vetores. Primeiramente, podemos tentar definir esses objetos do ponto de vista da geometria analítica.
 		
-		\begin{definicao}
-			Uma reta $r \subset \mathbb{R}^2$ (ou $\mathbb{R}^3$) é o conjunto dos pontos $P$
-			dados por
-			\[
-			P = P_0 + t v, \quad t \in \mathbb{R}
-			\]
-			onde $P_0$ é um ponto fixo e $v \in \mathbb{R}^2$ (ou $\mathbb{R}^3$) é o vetor diretor não nulo.
-		\end{definicao}
-		\begin{definicao}
-			Um plano $\pi \subset \mathbb{R}^3$ é o conjunto dos pontos $P$ dados por
-			\[
-			P = P_0 + t v + s w, \quad t, s \in \mathbb{R},
-			\]
-			onde $P_0$ é um ponto fixo e $v, w \in \mathbb{R}^3$ são vetores diretores
-			não nulos e não colineares.
-		\end{definicao}
-		\begin{figure}[h]
-			\centering
-			
-			% ===================== (a) Reta em R^2 =====================
-			\begin{subfigure}[t]{0.45\textwidth}
+		\subsection*{Equações da reta e do plano}
+			\begin{definicao}
+				Uma \azul{reta} $r \subset \mathbb{R}^2$ (ou $\mathbb{R}^3$) é o conjunto dos pontos $P$
+				dados por
+				\[
+				P = P_0 + t V, \quad t \in \mathbb{R}
+				\]
+				onde $P_0$ é um ponto fixo e $V\in \mathbb{R}^2$ (ou $\mathbb{R}^3$) é o vetor diretor não nulo.
+			\end{definicao}
+			\begin{definicao}
+				Um \azul{plano} $\pi \subset \mathbb{R}^3$ é o conjunto dos pontos $P$ dados por
+				\[
+				P = P_0 + t V + s W, \quad t, s \in \mathbb{R},
+				\]
+				onde $P_0$ é um ponto fixo e $V, W \in \mathbb{R}^3$ são vetores diretores
+				não nulos e não colineares.
+			\end{definicao}
+			\begin{figure}[h]
 				\centering
-				\begin{tikzpicture}[>=stealth,scale=1.2]
+				\begin{subfigure}[t]{0.45\textwidth}
+					\centering
+					\begin{tikzpicture}[>=stealth,scale=1.2]
+						
+						% eixos (opcional)
+						\draw[->] (-0.5,0) -- (4,0) node[right] {$x$};
+						\draw[->] (0,-0.5) -- (0,3) node[above] {$y$};
+						
+						% ponto P0 e vetor diretor v
+						\coordinate (P0) at (1,1);
+						\coordinate (Vdir) at (3,2); % P0 + v, só para 	desenhar
+						
+						% reta r = P0 + t v  (prolongamos para os dois 	lados)
+						\draw[dashed] (-0.2,0.4) -- (3.8,2.4);
+						
+						% vetor diretor v
+						\draw[->,thick,blue] (P0) -- (Vdir)
+						node[above left] {$V$};
+						
+						% ponto P na reta (por exemplo t>0)
+						\coordinate (P) at (2.2,1.6);
+						\fill (P) circle (1pt) node[below right] {$P$};
+						
+						% ponto P0
+						\fill (P0) circle (1.2pt) node[below right] {$P_0$};
+						
+						% nome da reta
+						\node at (3.5,2) {$r$};
+						
+					\end{tikzpicture}
+					\caption{Reta $r \subset \mathbb{R}^2$ dada por $P=P_0+tV$.}
+				\end{subfigure}
+				\hfill
+				\begin{subfigure}[t]{0.45\textwidth}
+					\centering
+					\tdplotsetmaincoords{70}{135}
 					
-					% eixos (opcional)
-					\draw[->] (-0.5,0) -- (4,0) node[right] {$x$};
-					\draw[->] (0,-0.5) -- (0,3) node[above] {$y$};
-					
-					% ponto P0 e vetor diretor v
-					\coordinate (P0) at (1,1);
-					\coordinate (Vdir) at (3,2); % P0 + v, só para desenhar
-					
-					% reta r = P0 + t v  (prolongamos para os dois lados)
-					\draw[dashed] (-0.2,0.4) -- (3.8,2.4);
-					
-					% vetor diretor v
-					\draw[->,thick,blue] (P0) -- (Vdir)
-					node[above left] {$\vec v$};
-					
-					% ponto P na reta (por exemplo t>0)
-					\coordinate (P) at (2.2,1.6);
-					\fill (P) circle (1pt) node[below right] {$P=P_0+t\vec v$};
-					
-					% ponto P0
-					\fill (P0) circle (1.2pt) node[below right] {$P_0$};
-					
-					% nome da reta
-					\node at (3.5,2) {$r$};
-					
-				\end{tikzpicture}
-				\caption{Reta $r \subset \mathbb{R}^2$ dada por $P=P_0+t\vec v$.}
-			\end{subfigure}
-			\hfill
-			% ===================== (b) Plano em R^3 =====================
-			\begin{subfigure}[t]{0.45\textwidth}
-				\centering
-				\tdplotsetmaincoords{70}{135}
+					\begin{tikzpicture}[tdplot_main_coords,scale=2.2,>=stealth]
+						
+						% eixos
+						\draw[->] (-0.5,0,0) -- (2,0,0) node[above] {$x$};
+						\draw[->] (0,-0.5,0) -- (0,2,0) node[above] {$y$};
+						\draw[->] (0,0,-0.2) -- (0,0,1.7) node[above] {$z$};
+						
+						% ponto P0
+						\coordinate (P0)  at (0.6,0.5,0.615);
+						
+						% vetores diretores (pontas dos vetores)
+						\coordinate (V)   at (2.0,0.7,1.434);
+						\coordinate (W)   at (1.0,1.8,1.228);
+						\coordinate (VW)  at (2.4,2.0,2.047);
+						
+						% retângulo grande do plano (no plano de P0, v e w)
+						% A = P0 -0.5 v -0.5 w
+						% B = P0 +2   v -0.5 w
+						% C = P0 +2   v +2   w
+						% D = P0 -0.5 v +2   w
+						\coordinate (A) at (-0.3,-0.25,-0.101);
+						\coordinate (B) at ( 3.2, 0.25, 1.947);
+						\coordinate (C) at ( 4.2, 3.50, 3.479);
+						\coordinate (D) at ( 0.7, 3.00, 1.432);
+						
+						% ponto P no plano (P = P0 + t v + s w, t=1.1, 	s=0.6)
+						\coordinate (P) at (2.38,1.5,1.884);
+						
+						% plano "grande"
+						\fill[green!20,opacity=0.15]
+						(A) -- (B) -- (C) -- (D) -- cycle;
+						
+						\draw[thin,green!40!black,opacity=0.5]
+						(A) -- (B) -- (C) -- (D) -- cycle;
+						
+						% vetores diretores
+						\draw[->,thick,blue] (P0) -- (V)
+						node[pos=0.55,above right] {$V$};
+						\draw[->,thick,red] (P0) -- (W)
+						node[pos=0.55,above right] {$W$};
+						
+						% ponto P no plano
+						\fill (P) circle (0.8pt);
+						\node[above left] at (P) {$P$};
+						
+						% ponto P0
+						\fill (P0) circle (0.9pt);
+						\node[below left=0.2pt] at (P0) {\small$P_0$};
+						
+						% nome do plano (no meio do paralelogramo gerado 	por v e w)
+						\path (P0) -- (VW) coordinate[pos=0.5] (Cpi);
+						\node[above left=65pt] at (Cpi) {$\pi$};
+						
+					\end{tikzpicture}
+					\caption{Plano $\pi \subset \mathbb{R}^3$ dado por $P=P_0+tV+sW$.}
+				\end{subfigure}
 				
-				\begin{tikzpicture}[tdplot_main_coords,scale=2.2,>=stealth]
-					
-					% eixos
-					\draw[->] (-0.5,0,0) -- (3.5,0,0) node[right] {$x$};
-					\draw[->] (0,-0.5,0) -- (0,3.5,0) node[above] {$y$};
-					% eixo z maior, para pegar todo o plano
-					\draw[->] (0,0,-0.5) -- (0,0,4.0) node[above] {$z$};
-					
-					% ponto P0 e vetores diretores (AGORA mais inclinados em z)
-					\coordinate (P0)  at (0.6,0.5,0.3);
-					
-					% P0 + v  (v = (1.4,0.2,1.1))
-					\coordinate (V)   at (2.0,0.7,1.4);
-					
-					% P0 + w  (w = (0.4,1.3,1.2))
-					\coordinate (W)   at (1.0,1.8,1.5);
-					
-					% P0 + v + w
-					\coordinate (VW)  at (2.4,2.0,2.6);
-					
-					%----------------------------------------------------
-					% 1) Grande "faixa" do plano (retângulo maior no mesmo plano)
-					%    P0 + a v + b w
-					%----------------------------------------------------
-					\coordinate (A) at (0.06,0.05,-0.39);  % ~ P0 - 0.3 v - 0.3 w
-					\coordinate (B) at (2.58,0.41,1.59);   % ~ P0 + 1.5 v - 0.3 w
-					\coordinate (C) at (3.30,2.75,3.75);   % ~ P0 + 1.5 v + 1.5 w
-					\coordinate (D) at (0.78,2.39,1.77);   % ~ P0 - 0.3 v + 1.5 w
-					
-					% plano "grande"
-					\fill[green!20,opacity=0.15]
-					(A) -- (B) -- (C) -- (D) -- cycle;
-					
-					\draw[thin,green!40!black,opacity=0.5]
-					(A) -- (B) -- (C) -- (D) -- cycle;
-					
-					% vetores diretores
-					\draw[->,thick,blue] (P0) -- (V)
-					node[pos=0.55,below right] {$\vec v$};
-					\draw[->,thick,red] (P0) -- (W)
-					node[pos=0.55,above left] {$\vec w$};
-					
-					% ponto P no plano (P = P0 + t v + s w, por ex. t=1.1, s=0.6)
-					\coordinate (P) at (2.38,1.5,2.23);
-					\fill (P) circle (0.8pt);
-					\node[above right] at (P) {$P=P_0+t\vec v+s\vec w$};
-					
-					% ponto P0
-					\fill (P0) circle (0.9pt);
-					\node[left] at (P0) {$P_0$};
-					
-					% nome do plano (no meio do paralelogramo)
-					\path (P0) -- (VW) coordinate[pos=0.5] (Cpi);
-					\node[above] at (Cpi) {$\pi$};
-					
-				\end{tikzpicture}
-				
-				
-				\caption{Plano $\pi \subset \mathbb{R}^3$ dado por $P=P_0+t\vec v+s\vec w$.}
-			\end{subfigure}
+				\caption{Representação de reta e plano por pontos e vetores diretores.}
+			\end{figure}
+			Note que, de fato, para definir uma reta somente precisamos da sua direção, dada pelo vetor diretor, e de um ponto para "fixar a reta". Igualmente, para definir um plano, basta determinar sua "angulação", dada por dois vetores diretores de direções distintas, e fixá-lo com um ponto.
 			
-			\caption{Representação paramétrica de reta e plano por pontos e vetores diretores.}
-		\end{figure}
-		
-	\section{Matrizes como Vetores}
-	
+			As equações apresentadas essas definições são o que chamamos de \azul{equações vetoriais} desses objetos geométricos. Além delas, existem outras formas de representar retas e planos: as equações paramétricas e as equações  gerais. As retas, em especial, possuem outras duas formas particulares, que são a reduzida (muito conhecida no Ensino Médio no formato de função) e a simétrica.
+			
+			Inicialmente, das equações vetoriais podemos derivar facilmente as equações paramétricas, ou seja, as equações que dependem de parâmetros.
+			
+			Seja $P=(x,y,z)$ as coordenadas de um ponto $P$ qualquer, e seja $P_0=(x_0, y_0, z_0)$ as coordenadas do ponto fixo $P_0$. Então, para uma reta, temos
+			\begin{align*}
+				P=P_0+tV
+				&\Rightarrow (x,y,z)=(x_0,y_0,z_0)+t(v_1,v_2,v_3)\\
+				&\Rightarrow (x,y,z)=(x_0,y_0,z_0)+(tv_1,\, tv_2,\, tv_3)\\
+				&\Rightarrow (x,y,z)=(x_0+tv_1,\, y_0+tv_2,\, z_0+tv_3)\\
+				&\Rightarrow \begin{cases}
+					x=x_0+tv_1\\
+					y=y_0+tv_2\\
+					z=z_0+tv_3
+				\end{cases} \text{\azul{(equações paramétricas da reta no 	$\mathbb{R}^3$)}}
+			\end{align*}
+			
+			Note que, caso $v_1,v_2,v_3\neq 0$, podemos isolar o parâmetro $t$ e obter as \azul{equações simétricas da reta}.
+			\[
+			\frac{x-x_0}{v_1}=\frac{y-y_0}{v_2}=\frac{z-z_0}{v_3}
+			\]
+			
+			De modo semelhante podemos obter as equações da reta caso $r\subset \mathbb{R}^2$, apresentadas abaixo.
+			
+			\[
+			\begin{cases}
+				x=x_0+tv_1\\
+				y=y_0+tv_2
+			\end{cases} \text{\azul{(equações paramétricas da reta no 	$\mathbb{R}^2$)}}
+			\]
+			
+			Analogamente, para o plano, temos
+			\begin{align*}
+				P=P_0+tV+sW
+				&\Rightarrow 	(x,y,z)=(x_0,y_0,z_0)+t(v_1,v_2,v_3)+s(w_1,w_2,w_3)\\
+				&\Rightarrow (x,y,z)=(x_0,y_0,z_0)+(tv_1,\, tv_2,\, 		tv_3)+(sw_1,\, sw_2,\, sw_3)\\
+				&\Rightarrow (x,y,z)=(x_0+tv_1+sw_1,\, y_0+tv_2+sw_2,\, 	z_0+tv_3+sw_3)\\
+				&\Rightarrow \begin{cases}
+					x=x_0+tv_1+sw_1\\
+					y=y_0+tv_2+sw_2\\
+					z=z_0+tv_3+sw_3
+				\end{cases} \text{\azul{(equações paramétricas do plano)}}
+			\end{align*}
+			
+			Em outras palavras, obtemos equações onde o conjunto de pontos denominados reta e plano são determinados por parâmetros ($t,s\in \mathbb{R}$).
+			\[
+			\begin{cases}
+				r=\{P\in \mathbb{R}^3\, \mid\, 	P=(\textcolor{red}{x_0+tv_1},\,\textcolor{green!60!black}{y_0+tv_2},\, \textcolor{orange}{z_0+tv_3})\}\\
+				\pi = \{P\in \mathbb{R}^3\, \mid \, 	P=(\textcolor{red}{x_0+tv_1+sw_1}, \, \textcolor{green!60!black}{y_0+tv_2+sw_2}, \, \textcolor{orange}{z_0+tv_3+sw_3})\}
+			\end{cases}
+			\]
+			No entanto, em ambos os tipos de representação, precisamos de um parâmetro, o que pode nem sempre ser útil. Nesse sentido, também vale a pena definir equações gerais, ou seja, equações que não necessitam de parâmetros e definem os pontos $P$ de forma menos explícita. Para a reta, temos o seguinte.
+			\begin{proposicao}
+				A \azul{equação geral de uma reta} $r$ no $\mathbb{R}^2$ que passa por um ponto 
+				$P_0 = (x_0, y_0)$ é
+				\[
+				ax + by + c = 0,
+				\]
+				em que $a^2 + b^2 \neq 0$ e $c = -(ax_0 + by_0)$.
+			\end{proposicao}
+			
+			No entanto, esse formato da reta raramente é apresentado, devido a outros formatos mais convenientes de descrever uma reta. Por exemplo, uma definição equivalente de reta é dada por $y=mx+n$, com $m, n\in \mathbb{R}$ \azul{(equação reduzida da reta no $\mathbb{R}^2$)}, muito conhecida no Ensino Médio ao tratar de funções lineares.
+			
+			Note que essa definição, para o $\mathbb{R}^3$, na verdade descreve um plano! Para o espaço, a descrição é um pouco diferente.
+			
+			\[
+			\begin{cases}
+				y=mx+n\\
+				z=px+q
+			\end{cases},\quad m,n,p,q\in \mathbb{R}\quad 	\text{\azul{(equações reduzidas da reta no $\mathbb{R}^3$)}}
+			\]
+			
+			Já partindo para o caso do plano, é interessante apresentar antes a definição de vetor normal.
+			\begin{definicao}
+				O \azul{vetor normal ao plano} é o vetor não nulo perpendicular a ele.
+			\end{definicao}
+			Em outras palavras, o normal é o vetor paralelo ao produto vetorial dos vetores diretores, podendo ser ele próprio o produto vetorial em questão.
+			
+			Assim, note que, fixado um ponto $P_0=(x_0,y_0,z_0)$ e um vetor normal ao plano $N=(a,b,c)$, temos que o plano pode ser definido como $\pi=\{P\in \mathbb{R}^3\, \mid\, N\perp \vv{PP_0}\}$, ou seja, como o conjunto de pontos cujo vetor com o ponto fixo $P_0$ é sempre perpendicular ao normal. Lembre, no entanto, que
+			\begin{align*}
+				N\perp \vv{PP_0}
+				&\Rightarrow N\cdot \vv{PP_0}=0\\
+				&\Rightarrow (a,b,c)\cdot (x-x_0,y-y_0,z-z_0)=0\\
+				&\Rightarrow a(x-x_0)+b(y-y_0)+c(z-z_0)=0
+			\end{align*}
+			
+			Com isso, conseguimos a seguinte proposição.
+			
+			\begin{proposicao}
+				A \azul{equação geral de um plano} $\pi$ no $\mathbb{R}^3$ que passa por um ponto $P_0=(x_0, y_0, z_0)$ e tem vetor normal $N=(a,b,c)$ é
+				\[
+				ax+by+cz+d=0
+				\]
+				em que $d=-(ax_0+by_0+cz_0)$.
+			\end{proposicao}
+		\subsection*{Ângulos e distâncias}
+			\begin{proposicao}
+				Sejam duas retas
+				\[
+				r_1\, \colon \, \begin{cases}
+					x=x_1+ta_1\\
+					y=y_1+tb_1\\
+					z=z_1+tc_1
+				\end{cases}
+				r_2\,\colon\, \begin{cases}
+					x=x_2+ta_2\\
+					y=y_2+tb_2\\
+					z=z_2+tc_2
+				\end{cases}\forall t\in\mathbb{R}
+				\]	
+				O cosseno do ângulo entre $r_1$ e $r_2$ é
+				\[
+				\cos(r_1,r_2)=|\cos(\theta)|=\frac{|V_1\cdot V_2|}{\|V_1\|\|V_2\|}
+				\]
+				em que $V_1=(a_1,b_1,c_1)$ e $V_2=(a_2,b_2,c_2)$.
+			\end{proposicao}
+			\begin{proposicao}
+				Sejam dois planos
+				\[
+				\pi_1\,\colon\, a_1x+b_1y+c_1z+d_1=0\\
+				\pi_2\,\colon\, a_2x+b_2y+c_2z+d_2=0
+				\]
+				O cosseno do ângulo entre $\pi_2$ e $\pi_2$ é
+				\[
+				\cos(\pi_1,\pi_2)=\frac{|N_1\cdot N_2|}{\|N_1\|\|N_2\|}
+				\]
+				em que $N_1=(a_1,b_1,c_1)$ e $N_2=(a_2,b_2,c_2)$ são os vetores normais de $\pi_1$ e $\pi_2$, respectivamente.
+			\end{proposicao}
+			\begin{proposicao}
+				Sejam $P_0=(x_0,y_0,z_0)$ um ponto qualquer e $\pi\,\colon\, ax+by+cz+d=0$ um plano. A distância de $P_0$ a $\pi$ é dada por
+				\[
+				\text{dist}(P_0,\pi)=\|\text{proj}_N \vv{P_1P_0}\|=\frac{|\vv{P_1P_0}\cdot N|}{\|N\|}
+				\]
+				em que $N=(a,b,c)$ e $P_1=(x_1,y_1,z_1)$ é um ponto de $\pi$ (isto é, um ponto que satisfaz a equação de $\pi$).
+			\end{proposicao}
+			\begin{proposicao}
+				Sejam $P_0=(x_0,y_0,z_0)$ um ponto qualquer e
+				\[
+				r \, \colon\, \begin{cases}
+					x=x_1+ta\\
+					y=y_1+tb\\
+					z=z_1+tc
+				\end{cases} \forall\, t\in \mathbb{R}
+				\]
+				uma reta. A distância de $P_0$ a $r$ é dada por
+				\[
+				\text{dist}(P_0, r)=\frac{\|\vv{P_1P_0}\times V\|}{\|V\|}
+				\]
+				em que $V=(a,b,c)$ é um vetor diretor e $P_1=(x_1,b_1,c_1)$ é um ponto da reta $r$.
+			\end{proposicao}
+			Para a distância entre dois planos $\pi_1$ e $\pi_2$, temos dois casos.
+			\begin{itemize}
+				\item Planos paralelos: $\text{dist}(\pi_1,\pi_2)=\text{dist}(P_1,\pi_2)=\text{dist}(\pi_2,P_2)$, onde $P_1\in \pi_1$ e $P_2\in \pi_2$.
+				\item Planos não paralelos: $\text{dist}(\pi_1,\pi_2)=0$.
+			\end{itemize}
+			
+			Para a distância entre duas retas $r_1$ e $r_2$, temos três casos.
+			\begin{itemize}
+				\item Retas concorrentes: $\text{dist}(r_1,r_2)=0$.
+				\item Retas paralelas (mesmo caso dos planos): $\text{dist}(r_1,r_2)=\text{dist}(P_1,r_2)=\text{dist}(r_1,P_2)$, onde $P_1\in r_1$ e $P_2\in r_2$
+				\item Retas reversas: sejam $r_1\subset \pi_1$ e $r_2\subset \pi_2$ tal que $\pi_1$ é paralelos a $r_2$ e $\pi_2$ é paralelo a $r_1$. Então, $\text{dist}(r_1,r_2)=\text{dist}(\pi_1,\pi_2)$.
+			\end{itemize}
 \end{document}

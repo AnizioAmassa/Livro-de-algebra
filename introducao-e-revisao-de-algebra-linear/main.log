@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.17.1 (MiKTeX 24.1) (format=lualatex 2025.11.20)  2 DEC 2025 08:44
+This is LuaHBTeX, Version 1.17.1 (MiKTeX 24.1) (format=lualatex 2025.11.20)  6 DEC 2025 11:08
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -1760,11 +1760,29 @@ Overfull \hbox (13.96457pt too wide) in paragraph at lines 698--699
  [][] 
  []
 
-[11] [12] [13]) (./capitulos/capitulo02.tex [14]
-Cap\'{\i }tulo 2.
-) (./capitulos/capitulo03.tex [15
+[11] [12] [13]
+Overfull \hbox (20.33878pt too wide) in paragraph at lines 885--886
+ [][] 
+ []
 
-] [16
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[14]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [15]
+[16] [17]) (./capitulos/capitulo02.tex [18]
+Cap\'{\i }tulo 2.
+[19
+
+] [20] [21]
+Missing character: There is no ã (U+00E3) in font lmmi12!
+Missing character: There is no ã (U+00E3) in font lmmi12!
+Missing character: There is no ã (U+00E3) in font lmmi12!
+Missing character: There is no ã (U+00E3) in font lmmi12!
+Missing character: There is no ã (U+00E3) in font lmmi12!
+[22]) (./capitulos/capitulo03.tex [23] [24
 
 ]
 Cap\'{\i }tulo 3.
@@ -1772,22 +1790,22 @@ LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 6
 .
 (C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) [17]
-[18] [19]) (./capitulos/capitulo04.tex [20]
+) [25]
+[26] [27]) (./capitulos/capitulo04.tex [28]
 Cap\'{\i }tulo 4.
-) (./capitulos/capitulo05.tex [21
+) (./capitulos/capitulo05.tex [29
 
-] [22
+] [30
 
 ]
 Cap\'{\i }tulo 5.
-) (./capitulos/apendiceA.tex [23] [24
+) (./capitulos/apendiceA.tex [31] [32
 
 ]
 Ap\^endice A.
-) [25] [26
+) [33] [34
 
-] [27
+] [35
 
 ] (./main.aux)
  ***********
@@ -1795,22 +1813,23 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 5C6086432CC7D64947E39DB97C41006B;3524.
+(rerunfilecheck)             Checksum: 7D300E447C1F03F008DB1FD0DE9499F5;3475.
 )
 
 Here is how much of LuaTeX's memory you used:
- 48901 strings out of 476497
+ 49059 strings out of 476497
  100000,1977958 words of node,token memory allocated
- 1510 words of node memory still in use:
-   32 hlist, 2 vlist, 14 rule, 2 glue, 4 kern, 1 glyph, 139 attribute, 61 glue_s
-pec, 107 attribute_list, 2 write, 24 pdf_literal, 24 pdf_colorstack nodes
-   avail lists: 1:2,2:3113,3:1215,4:156,5:617,6:65,7:4603,8:50,9:794,10:16,11:55
-4
- 69147 multiletter control sequences out of 65536+600000
- 84 fonts using 5305583 bytes
- 106i,16n,104p,1220b,1216s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{C:/Users/maria/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{
-C:/Users/maria/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/Us
+ 1741 words of node memory still in use:
+   32 hlist, 2 vlist, 14 rule, 2 glue, 4 kern, 1 sub_mlist, 1 glyph, 215 attribu
+te, 61 glue_spec, 145 attribute_list, 2 write, 24 pdf_literal, 24 pdf_colorstack
+ nodes
+   avail lists: 1:2,2:2999,3:1214,4:164,5:626,6:68,7:5401,8:50,9:1018,10:16,11:5
+54
+ 69196 multiletter control sequences out of 65536+600000
+ 88 fonts using 5636367 bytes
+ 106i,20n,104p,1220b,1283s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{C:/Users/maria/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/U
+sers/maria/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Us
 ers/maria/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}{C:/Users/
 maria/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}{C:/Users/m
 aria/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/ma
@@ -1832,9 +1851,9 @@ ams/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/maria/AppData/Local/Program
 s/MiKTeX/fonts/type1/public/lm/lmtt12.pfb><C:/Users/maria/AppData/Local/Programs
 /MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/maria/AppData/L
 ocal/Programs/MiKTeX/fonts/type1/public/esvect/vect10.pfb>
-Output written on main.pdf (31 pages, 396172 bytes).
+Output written on main.pdf (39 pages, 450589 bytes).
 
-PDF statistics: 476 PDF objects out of 1000 (max. 8388607)
- 153 named destinations out of 1000 (max. 131072)
- 424 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 575 PDF objects out of 1000 (max. 8388607)
+ 222 named destinations out of 1000 (max. 131072)
+ 432 words of extra memory for PDF output out of 10000 (max. 100000000)
 

@@ -1,7 +1,7 @@
-This is LuaHBTeX, Version 1.17.1 (MiKTeX 24.1) (format=lualatex 2025.11.20)  2 DEC 2025 09:52
+This is LuaHBTeX, Version 1.17.1 (MiKTeX 24.1) (format=lualatex 2025.11.20)  6 DEC 2025 12:21
  restricted system commands enabled.
-**capitulo01.tex
-(./capitulo01.tex
+**capitulo02.tex
+(./capitulo02.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
 Lua module: luaotfload 2023-08-31 3.26 Lua based OpenType font support
@@ -1562,8 +1562,8 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 )
 \c@teorema=\count357
 )))
-(./capitulo01.aux)
-\openout1 = capitulo01.aux
+(./capitulo02.aux)
+\openout1 = capitulo02.aux
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 2.
 LaTeX Font Info:    ... okay on input line 2.
@@ -1629,10 +1629,10 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
 Package hyperref Info: Link coloring ON on input line 2.
-(./capitulo01.out) (./capitulo01.out)
+(./capitulo02.out) (./capitulo02.out)
 \@outlinefile=\write4
 
-\openout4 = capitulo01.out
+\openout4 = capitulo02.out
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: luatex
@@ -1669,53 +1669,55 @@ Package hyperref Info: Link coloring ON on input line 2.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 Cap\'{\i }tulo 1.
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 5
-.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
+0.
 (C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 5
-.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
+0.
 
 (C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-5.
+10.
 
 (C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-5.
+10.
 
 (C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 5.
+(Font)              <12> on input line 10.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 5.
+(Font)              <8> on input line 10.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 5.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 5.
+(Font)              <6> on input line 10.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 10.
+
 
 (C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 5.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 10.
+
 
 (C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 5.
-
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 10
+.
 
 (C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/latex/jknappen/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
 LaTeX Font Info:    Trying to load font information for U+esvect on input line 
-5.
+10.
 
 (C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/latex/esvect/uesvect.fd
 File: uesvect.fd 
@@ -1723,81 +1725,55 @@ File: uesvect.fd
 [1
 
 
-{C:/Users/maria/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 65.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 90.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 90.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 90.
-
-Overfull \hbox (4.64139pt too wide) in paragraph at lines 99--100
- [][] 
- []
-
-[2]
-Overfull \hbox (57.10675pt too wide) in paragraph at lines 179--180
- [][] 
- []
-
-[3] [4] [5] [6] [7] [8]
-Overfull \hbox (13.96457pt too wide) in paragraph at lines 698--699
- [][] 
- []
-
-[9] [10] [11]
-Overfull \hbox (104.61792pt too wide) in paragraph at lines 890--891
- [][] 
- []
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[12] [13] (./capitulo01.aux)
+{C:/Users/maria/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] [2]
+[3]
+Missing character: There is no ã (U+00E3) in font lmmi12!
+Missing character: There is no ã (U+00E3) in font lmmi12!
+Missing character: There is no ã (U+00E3) in font lmmi12!
+Missing character: There is no ã (U+00E3) in font lmmi12!
+Missing character: There is no ã (U+00E3) in font lmmi12!
+[4] [5] [6] [7] [8] (./capitulo02.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
  ***********
-Package rerunfilecheck Info: File `capitulo01.out' has not changed.
-(rerunfilecheck)             Checksum: D3C3886D8A5443659895425C9FD52350;711.
+Package rerunfilecheck Info: File `capitulo02.out' has not changed.
+(rerunfilecheck)             Checksum: 643B5367F2102BD73225ADAE9D5C0C8F;1206.
 )
 
 Here is how much of LuaTeX's memory you used:
- 48636 strings out of 476497
+ 48157 strings out of 476497
  100000,1977958 words of node,token memory allocated
- 1540 words of node memory still in use:
-   32 hlist, 2 vlist, 14 rule, 5 glue, 4 kern, 1 glyph, 140 attribute, 62 glue_s
-pec, 108 attribute_list, 2 write, 24 pdf_literal, 24 pdf_colorstack nodes
-   avail lists: 1:1,2:3111,3:1215,4:112,5:604,6:47,7:4979,8:50,9:747,10:13,11:57
-3
- 69111 multiletter control sequences out of 65536+600000
- 81 fonts using 5058823 bytes
- 126i,16n,120p,1266b,1128s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{C:/Users/maria/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}{C:/
-Users/maria/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}{C:/U
-sers/maria/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/Users/
-maria/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/m
-aria/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/maria/
+ 1500 words of node memory still in use:
+   32 hlist, 2 vlist, 14 rule, 2 glue, 4 kern, 1 sub_mlist, 1 glyph, 133 attribu
+te, 62 glue_spec, 104 attribute_list, 2 write, 24 pdf_literal, 24 pdf_colorstack
+ nodes
+   avail lists: 1:1,2:1361,3:363,4:114,5:317,6:54,7:4916,8:36,9:1079,10:5,11:540
+
+ 68653 multiletter control sequences out of 65536+600000
+ 53 fonts using 3361319 bytes
+ 126i,10n,120p,1266b,626s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{C:/Users/maria/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/U
+sers/maria/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}{C:/Users
+/maria/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/mari
+a/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}{C:/Users/maria
+/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/maria/
 AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}<C:/Users/maria/A
 ppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/maria/Ap
 pData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbxi10.pfb><C:/Users/maria/Ap
 pData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/maria/App
-Data/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/maria/AppD
-ata/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/maria/AppDa
-ta/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/maria/AppData
-/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/maria/AppData/L
-ocal/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/maria/AppData/Loc
-al/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/maria/AppData/Local/
-Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/maria/AppData/Local/P
-rograms/MiKTeX/fonts/type1/public/lm/lmro12.pfb><C:/Users/maria/AppData/Local/Pr
-ograms/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/maria/AppData/Local/Pro
-grams/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/maria/AppD
-ata/Local/Programs/MiKTeX/fonts/type1/public/esvect/vect10.pfb>
-Output written on capitulo01.pdf (13 pages, 291838 bytes).
+Data/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/maria/AppD
+ata/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/maria/AppDat
+a/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/maria/AppData/
+Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/maria/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/maria/AppData/Loca
+l/Programs/MiKTeX/fonts/type1/public/lm/lmro12.pfb><C:/Users/maria/AppData/Local
+/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/maria/AppData/Local/
+Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/maria/AppData/Local/Pr
+ograms/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on capitulo02.pdf (8 pages, 227014 bytes).
 
-PDF statistics: 276 PDF objects out of 1000 (max. 8388607)
- 103 named destinations out of 1000 (max. 131072)
- 288 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 237 PDF objects out of 1000 (max. 8388607)
+ 82 named destinations out of 1000 (max. 131072)
+ 320 words of extra memory for PDF output out of 10000 (max. 100000000)
 
