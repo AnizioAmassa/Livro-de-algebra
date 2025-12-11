@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.17.1 (MiKTeX 24.1) (format=lualatex 2025.11.20)  6 DEC 2025 12:21
+This is LuaHBTeX, Version 1.17.1 (MiKTeX 24.1) (format=lualatex 2025.11.20)  11 DEC 2025 10:40
  restricted system commands enabled.
 **capitulo02.tex
 (./capitulo02.tex
@@ -1732,27 +1732,27 @@ Missing character: There is no ã (U+00E3) in font lmmi12!
 Missing character: There is no ã (U+00E3) in font lmmi12!
 Missing character: There is no ã (U+00E3) in font lmmi12!
 Missing character: There is no ã (U+00E3) in font lmmi12!
-[4] [5] [6] [7] [8] (./capitulo02.aux)
+[4] [5] [6] [7] [8] [9] (./capitulo02.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
  ***********
 Package rerunfilecheck Info: File `capitulo02.out' has not changed.
-(rerunfilecheck)             Checksum: 643B5367F2102BD73225ADAE9D5C0C8F;1206.
+(rerunfilecheck)             Checksum: 5D50D50897D31F4C80C4F2060835EC70;1173.
 )
 
 Here is how much of LuaTeX's memory you used:
- 48157 strings out of 476497
+ 48182 strings out of 476497
  100000,1977958 words of node,token memory allocated
- 1500 words of node memory still in use:
-   32 hlist, 2 vlist, 14 rule, 2 glue, 4 kern, 1 sub_mlist, 1 glyph, 133 attribu
-te, 62 glue_spec, 104 attribute_list, 2 write, 24 pdf_literal, 24 pdf_colorstack
+ 1512 words of node memory still in use:
+   32 hlist, 2 vlist, 14 rule, 2 glue, 4 kern, 1 sub_mlist, 1 glyph, 137 attribu
+te, 62 glue_spec, 106 attribute_list, 2 write, 24 pdf_literal, 24 pdf_colorstack
  nodes
-   avail lists: 1:1,2:1361,3:363,4:114,5:317,6:54,7:4916,8:36,9:1079,10:5,11:540
+   avail lists: 1:2,2:1355,3:363,4:114,5:320,6:54,7:4952,8:36,9:1079,10:8,11:543
 
- 68653 multiletter control sequences out of 65536+600000
+ 68654 multiletter control sequences out of 65536+600000
  53 fonts using 3361319 bytes
- 126i,10n,120p,1266b,626s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 126i,10n,120p,1266b,657s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {C:/Users/maria/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/U
 sers/maria/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}{C:/Users
 /maria/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/mari
@@ -1771,9 +1771,9 @@ l/Programs/MiKTeX/fonts/type1/public/lm/lmro12.pfb><C:/Users/maria/AppData/Local
 /Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/maria/AppData/Local/
 Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/maria/AppData/Local/Pr
 ograms/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on capitulo02.pdf (8 pages, 227014 bytes).
+Output written on capitulo02.pdf (9 pages, 239259 bytes).
 
-PDF statistics: 237 PDF objects out of 1000 (max. 8388607)
- 82 named destinations out of 1000 (max. 131072)
- 320 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 262 PDF objects out of 1000 (max. 8388607)
+ 106 named destinations out of 1000 (max. 131072)
+ 312 words of extra memory for PDF output out of 10000 (max. 100000000)
 

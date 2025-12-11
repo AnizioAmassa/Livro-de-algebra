@@ -5,7 +5,7 @@
 	Além das ideias de vetores e da própria Geometria Analítica, compreender Sistemas Lineares fundamenta os principais problemas que a Álgebra Linear busca responder. No entanto, antes de apresentar sistemas lineares ou outros conceitos (como combinação e dependência linear), vamos iniciar com matrizes.
 	
 	\section{Matrizes}
-		As matrizes permitem uma manipulação facilitada dos sistemas lineares e uma abstração maior, porque elas são fundamentalmente tabelas de números ou variáveis, que se assemelham com o formato de sistemas lineares. Além disso, também podem ser interpretadas como vetores ou até mesmo objetos de estudo da Álgebra Linear, como as Transformações Lineares, entrelaçando todos os objetos de estudo da área.
+		As matrizes permitem uma manipulação facilitada dos sistemas lineares e uma abstração maior, porque, fundamentalmente, elas são tabelas de números ou variáveis, que se assemelham com o formato de sistemas lineares. Além disso, também podem ser interpretadas como vetores ou até mesmo objetos de estudo da Álgebra Linear, como as Transformações Lineares, entrelaçando todos os elementos de interesse dessa área.
 		\begin{definicao}
 			Seja $m,n\in \mathbb{N}^*$. Uma \azul{matriz} $A_{m\times n}$, ou simplesmente $A$, é uma tabela de $mn$ números dispostos em $m$ linhas e $n$ colunas.
 			\[
@@ -29,10 +29,6 @@
 				\item \azul{Matriz Linha}: $m=1$, i.e., uma linha.
 				\item \azul{Matriz Coluna}: $n=1$, i.e., uma coluna.
 				\item \azul{Matriz Nula ($\bar{0}$)}: $a_{ij}=0\,\forall\, i,j$.
-				\item \azul{Matriz Identidade ($I$)}: $a_{ij}=\begin{cases}
-					1 \text{, se } i=j\\
-					0 \textbf{, se } i\neq j
-				\end{cases}$.
 			\end{itemize}
 		\end{definicao}
 		\begin{definicao}
@@ -41,9 +37,13 @@
 				\item $A$ é \azul{Matriz Diagonal} $\Leftrightarrow a_{ij}=0,\, \forall\, i\neq j$;
 				\item $A$ é \azul{Matriz Triangular Superior} $\Leftrightarrow a_{ij}=0,\, \forall\, i>j$;
 				\item $A$ é \azul{Matriz Triangular Inferior} $\Leftrightarrow a_{ij}=0,\, \forall\, i<j$.
+				\item \azul{Matriz Identidade ($I$)}: $a_{ij}=\begin{cases}
+					1 \text{, se } i=j\\
+					0 \textbf{, se } i\neq j
+				\end{cases}$.
 			\end{itemize}
 		\end{definicao}
-		A seguir definiremos as operações com matrizes. Note que, com exceção à multiplicação entre matrizes, grande parte envolve somente uma mesma operação elemento a elemento.
+		A seguir definiremos as operações com matrizes.
 		\begin{definicao}
 			A \azul{soma de matrizes} $A_{m\times n}$ e $B_{m\times n}$ é definida pela matriz $C_{m\times n}=A+B$ tal que
 			\[
@@ -101,7 +101,7 @@
 		
 		\subsection{Matriz Inversa}
 			\begin{definicao}
-				Uma matriz quadrada $A_{n\times n}$ é \azul{invertível} ou não singular, se existe uma matriz $A^{-1}_{n\times n}$ tal que
+				Uma matriz quadrada $A_{n\times n}$ é \azul{invertível} ou não singular, se existe uma matriz inversa, denotada por $A^{-1}_{n\times n}$, tal que
 				\[
 				AA^{-1}=A^{-1}A=I_n
 				\]
@@ -250,13 +250,26 @@
 			\item Multiplicar uma equação por um escalar $\alpha\neq0$;
 			\item Somar uma equação ao "múltiplo escalar" de outra.
 		\end{enumerate}
+		Um tipo especial de sistema linear é o homogêneo.
+		\begin{definicao}
+			Um sistema tal que $b_1,\dots,b_m=0$ é chamado \azul{sistema linear homogêneo}.
+		\end{definicao}
+		\begin{definicao}
+			Uma solução onde
+			\[
+			\begin{cases}
+				x_1=0\\
+				\vdots
+				x_n=0
+			\end{cases}
+			\]
+			é chamada de \azul{solução trivial}.
+		\end{definicao}
+		\begin{proposicao}
+			Se um sistema linear é homogêneo, então ele admite pelo menos solução trivial. 
+		\end{proposicao}
 		\begin{teorema}
-			Um sistema linear pode ter:
-			\begin{itemize}
-				\item Nenhuma solução;
-				\item Uma única solução;
-				\item Infinitas soluções.
-			\end{itemize}
+			Se um sistema linear homogêneo tem menos equações do que incógnitas, então ele tem infinitas soluções.
 		\end{teorema}
 		
 		\subsection{Matrizes como Sistemas Lineares}
@@ -336,10 +349,81 @@
 					\item Se uma coluna contém pivô, então todos os outros elementos são $0$.
 				\end{enumerate}
 			\end{definicao}
+			\begin{proposicao}
+				Sejam $A_{m\times n}$ e $B_{m\times 1}$ matrizes. Se o sistema $AX=B$ possui duas soluções distintas $X_0\neq X_1$, então ele tem infinitas soluções.
+			\end{proposicao}
+			\begin{teorema}
+				Um sistema linear pode ter:
+				\begin{itemize}
+					\item Nenhuma solução;
+					\item Uma única solução;
+					\item Infinitas soluções.
+				\end{itemize}
+			\end{teorema}
+			\begin{teorema}
+				$\forall\, \text{matriz}\,  A_{m\times n},\, \exists! \, \text{matriz escalonada reduzida}\, R_{m\times n}$.
+			\end{teorema}
+			\begin{proposicao}
+				Seja $R_{n\times n}$ uma matriz escalonada reduzida. $R\neq I_n$ $\Rightarrow$ $R$ tem uma linha nula.
+			\end{proposicao}
+			\begin{teorema}
+				$A_{m\times n}$ é uma matriz tal que $m<n$ $\Rightarrow$ o sistema homogêneo $AX=\bar{0}$ tem infinitas soluções. 
+			\end{teorema}
+			\begin{proposicao}
+				Seja $A_{n\times n}$ uma matriz. Então,
+				\begin{enumerate}[label=\roman*)]
+					\item $X$ e $Y$ são soluções do sistema homogêneo $AX=\bar{0}$ $\Rightarrow$ $X+Y$ também é solução.
+					\item $X$ é solução do sistema homogêneo $AX=\bar{0}$ $\Rightarrow$ $\alpha X$ também é solução, $\forall\, \alpha \in \mathbb{R}$.
+				\end{enumerate}
+			\end{proposicao}
 			
-	\section{Combinação Linear}
-	
-	\section{Dependência Linear}
-	
-	
+			\begin{teorema}
+				Seja $A_{n\times n}$ uma matriz. $A$ invertível $\Leftrightarrow$ $A$ é equivalente por linhas a $I_n$.
+			\end{teorema}
+			
+			\begin{teorema}
+				Seja $A_{n\times n}$ uma matriz.
+				\begin{enumerate}[label=\roman*)]
+					\item O sistema $AX=B$ tem solução única $\Leftrightarrow$ $A$ invertível (a solução é $X=A^{-1}B$).
+					\item O sistema homogêneo $AX=\bar{0}$ tem solução não trivial $\Leftrightarrow$ $A$ é singular.
+				\end{enumerate}
+			\end{teorema}
+			
+			\begin{teorema}
+				O sistema homogêneo $AX=\bar{0}$ tem solução não trivial $\Leftrightarrow$ $\det(A)\neq 0$.
+			\end{teorema}
+			
+	\section{Combinação Linear e Dependência Linear}
+		Vamos retomar a definição de combinação linear.
+		\begin{definicao}
+			Sejam $V_1, \dots, V_k \in \mathbb{R}^n$ vetores e $\alpha_1,\dots, \alpha_k \in \mathbb{R}$ escalares. Seja $W$ um vetor tal que
+			\[
+			W = \alpha_1 V_1 + \dots + \alpha_k V_k 
+			\]
+			Então, $W$ é combinação linear de $V_1, \dots, V_k$.
+		\end{definicao}
+		\begin{proposicao}Sejam $A_{m\times n}$ e $B_{m\times 1}$ matrizes. 
+			
+		O $B$ é combinação linear das colunas de $A$ $\Leftrightarrow$ O sistema $AX=B$ tem solução. 
+		\end{proposicao}
+		\begin{definicao}
+			Sejam $V_1,\dots,V_k\in\mathbb{R}^n$. Seja $V_{n\times k}=[V_1 \quad \dots \quad V_k]$.
+			
+			O conjunto $S$ desses vetores é \azul{linearmente independente (LI)} se $VX=\bar{0}$ possui somente solução trivial.
+			
+			Caso contrário, o conjunto $S$ é \azul{linearmente dependente (LD)}.
+		\end{definicao}
+		\begin{proposicao}
+			Seja $A_{m\times n}$ uma matriz.
+			\begin{enumerate}[label=\roman*)]
+				\item As colunas de $A$ são LI $\Leftrightarrow$ o sistema $AX=\bar{0}$ possui somente solução trivial.
+				\item Seja $m=n$. Então as colunas de $A$ são LI $\Leftrightarrow$ $\det(A)\neq 0$.
+			\end{enumerate} 
+		\end{proposicao}
+		\begin{corolario}
+			Sejam $V_1,\dots, V_k\in\mathbb{R}^n$. Se $k>n$, então o conjunto $S$ desses vetores é LD.
+		\end{corolario}
+		\begin{teorema}
+			Seja o conjunto $S=\{V_1,\dots,V_k\}$, com $k>1$. Então, $S$ é LD $\Leftrightarrow$ $\exists\, V_j$ tal que $V_j$ é combinação linear de $V_1,\dots,V_{j-1},V_{j+1},\dots,V_k$.
+		\end{teorema}
 \end{document}

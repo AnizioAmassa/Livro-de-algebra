@@ -3,21 +3,23 @@
 \contentsline {section}{\numberline {1.1}Álgebra Vetorial}{3}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Geometria Analítica}{14}{section.1.2}%
 \contentsline {chapter}{\numberline {2}Sistemas Lineares e Matrizes}{19}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Sistemas Lineares}{19}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Matrizes}{19}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Combinação Linear}{23}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Dependência Linear}{23}{section.2.4}%
-\contentsline {chapter}{\numberline {3}Espaços Vetoriais}{25}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Espaços Vetoriais}{26}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Subespaços Vetoriais}{28}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Base, Dimensão e Coordenadas}{28}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Produto Interno}{28}{section.3.4}%
-\contentsline {section}{\numberline {3.5}Ortogonalidade}{28}{section.3.5}%
-\contentsline {subsection}{\numberline {3.5.1}Processo de Ortogonalização de Gram-Schmidt}{28}{subsection.3.5.1}%
-\contentsline {chapter}{\numberline {4}Transformações Lineares}{29}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Teorema Núcleo-Imagem}{29}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Matriz de uma Transformação Linear}{29}{section.4.2}%
-\contentsline {chapter}{\numberline {5}Autovalores e Autovetores}{31}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Polinômios}{31}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Diagonalização}{31}{section.5.2}%
-\contentsline {chapter}{\numberline {A}Aplicações (Cônicas)}{33}{appendix.A}%
+\contentsline {section}{\numberline {2.1}Matrizes}{19}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Matriz Inversa}{21}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Determinante}{21}{subsection.2.1.2}%
+\contentsline {section}{\numberline {2.2}Sistemas Lineares}{23}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Matrizes como Sistemas Lineares}{24}{subsection.2.2.1}%
+\contentsline {section}{\numberline {2.3}Combinação Linear e Dependência Linear}{27}{section.2.3}%
+\contentsline {chapter}{\numberline {3}Espaços Vetoriais}{29}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Espaços Vetoriais}{30}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Subespaços Vetoriais}{32}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Base, Dimensão e Coordenadas}{32}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Produto Interno}{32}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Ortogonalidade}{32}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Processo de Ortogonalização de Gram-Schmidt}{32}{subsection.3.5.1}%
+\contentsline {chapter}{\numberline {4}Transformações Lineares}{33}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Teorema Núcleo-Imagem}{33}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Matriz de uma Transformação Linear}{33}{section.4.2}%
+\contentsline {chapter}{\numberline {5}Autovalores e Autovetores}{35}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Polinômios}{35}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Diagonalização}{35}{section.5.2}%
+\contentsline {chapter}{\numberline {A}Aplicações (Cônicas)}{37}{appendix.A}%
