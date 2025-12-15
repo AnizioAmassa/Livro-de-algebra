@@ -5,20 +5,23 @@
 	Além das ideias de vetores e da própria Geometria Analítica, compreender Sistemas Lineares fundamenta os principais problemas que a Álgebra Linear busca responder. No entanto, antes de apresentar sistemas lineares ou outros conceitos (como combinação e dependência linear), vamos iniciar com matrizes.
 	
 	\section{Matrizes}
-		As matrizes permitem uma manipulação facilitada dos sistemas lineares e uma abstração maior, porque, fundamentalmente, elas são tabelas de números ou variáveis, que se assemelham com o formato de sistemas lineares. Além disso, também podem ser interpretadas como vetores ou até mesmo objetos de estudo da Álgebra Linear, como as Transformações Lineares, entrelaçando todos os elementos de interesse dessa área.
+		As matrizes permitem uma manipulação facilitada dos sistemas lineares e uma abstração maior de diversos conceitos, o que é muito útil para a Álgebra Linear. Fundamentalmente, elas são tabelas de números ou variáveis, que se assemelham, por exemplo, com sistemas lineares, apresentados na seção seguinte. Além disso, também podem ser interpretadas como vetores ou até mesmo Transformações Lineares, entrelaçando todos os elementos de interesse dessa área.
+		
+		Iniciando, vamos definir matrizes formalmente e nomear seus elementos, para facilitar o entendimento e a manipulação dessas tabelas.
 		\begin{definicao}
 			Seja $m,n\in \mathbb{N}^*$. Uma \azul{matriz} $A_{m\times n}$, ou simplesmente $A$, é uma tabela de $mn$ números dispostos em $m$ linhas e $n$ colunas.
 			\[
 			A=\begin{bmatrix}
 				a_{11} & \dots & a_{1n}\\
 				\vdots & \ddots & \vdots\\
-				a_{1m} & \dots & a_{mn} 
+				a_{m1} & \dots & a_{mn} 
 			\end{bmatrix}
 			\]
 		\end{definicao}
 		\begin{definicao}
 			Denotamos por \azul{$a_{ij}$} o elemento na $i$-ésima linha e $j$-ésima coluna da matriz $A$.
 		\end{definicao}
+		Um ponto importante dessa definição são os objetos $m$ e $n$, que são, na verdade, a \azul{ordem} da matriz. Isso é importante para entender as operações entre matrizes e até mesmo separá-las em conjuntos ou classificações, apresentados abaixo.
 		\begin{definicao}
 			Denotamos por \azul{$\mathbb{M}_{m\times n}$} o conjunto de todas as matrizes de ordem $m\times n$.
 		\end{definicao}
@@ -31,26 +34,27 @@
 				\item \azul{Matriz Nula ($\bar{0}$)}: $a_{ij}=0\,\forall\, i,j$.
 			\end{itemize}
 		\end{definicao}
+		Para matrizes quadradas, onde a ordem é do tipo $n\times n$, temos classificações específicas.
 		\begin{definicao}
 			Seja $A$ uma matriz quadrada. Então,
 			\begin{itemize}
-				\item $A$ é \azul{Matriz Diagonal} $\Leftrightarrow a_{ij}=0,\, \forall\, i\neq j$;
-				\item $A$ é \azul{Matriz Triangular Superior} $\Leftrightarrow a_{ij}=0,\, \forall\, i>j$;
-				\item $A$ é \azul{Matriz Triangular Inferior} $\Leftrightarrow a_{ij}=0,\, \forall\, i<j$.
+				\item \azul{Matriz Diagonal}: $a_{ij}=0,\, \forall\, i\neq j$;
+				\item \azul{Matriz Triangular Superior}: $a_{ij}=0,\, \forall\, i>j$;
+				\item \azul{Matriz Triangular Inferior}: $a_{ij}=0,\, \forall\, i<j$.
 				\item \azul{Matriz Identidade ($I$)}: $a_{ij}=\begin{cases}
 					1 \text{, se } i=j\\
-					0 \textbf{, se } i\neq j
+					0 \text{, se } i\neq j
 				\end{cases}$.
 			\end{itemize}
 		\end{definicao}
-		A seguir definiremos as operações com matrizes.
+		A seguir, finalmente definiremos as operações com matrizes.
 		\begin{definicao}
 			A \azul{soma de matrizes} $A_{m\times n}$ e $B_{m\times n}$ é definida pela matriz $C_{m\times n}=A+B$ tal que
 			\[
 			c_{ij}=a_{ij}+b_{ij},\, \forall\, i, j
 			\]
 		\end{definicao}
-		Note que essa operação só é definida para matrizes de mesmo tamanho.
+		Note que a operação da soma só é definida para matrizes de mesmo tamanho.
 		\begin{definicao}
 			A \azul{multiplicação de uma matriz $A_{m\times n}$ por um escalar $\alpha$} é definida pela matriz $B_{m\times n}=\alpha A$ tal que
 			\[
@@ -58,12 +62,106 @@
 			\]
 			Dizemos que $B$ é \azul{múltiplo escalar} de $A$.
 		\end{definicao}
+		Perceba que ambas estas operações são basicamente fazer o "esperado", elemento por elemento.
+		
+		A grosso modo, podemos fazer um paralelo com os vetores do $\mathbb{R}^n$ apresentados no capítulo 1, em que as operações mais relevantes eram a soma de vetores e a multiplicação por escalar. 
+		
+		Com ambas as operações somente, podemos provar algumas propriedades interessantes. Primeiro, temos as 8 seguintes, que possuem grande semelhança com o Teorema \ref{teo:vetores8axiomas} para vetores, do capítulo 1. Tudo isso se conectará no capítulo 3 de espaços vetoriais.
+		\begin{teorema}
+			Sejam $A$ e $B$ matrizes com ordem apropriada para cada propriedade. Sejam $\alpha, \beta\in \mathbb{R}$. Então,
+			\begin{multicols}{2}
+				\begin{enumerate}[label=\roman*)]
+					\item $A+B=B+A$;
+					\item $A+(B+C)=(A+B)+C$;
+					\item $\forall\, A_{m\times n}, \, \exists\, \bar{0}_{m\times n}$, tal que $A+\bar{0}=A$;
+					\item $\forall\,  A,\, \exists\, -A$, tal que $A+(-A)=\bar{0}$;
+					\item $\alpha(\beta A)=(\alpha \beta)A$;
+					\item $(\alpha+\beta)A=\alpha A+\beta A$;
+					\item $\alpha(A+B)=\alpha A+\alpha B$;
+					\item $\forall\, A_{m\times n}, \, \exists\, I_m,\, I_n$, tal que \\ $A=AI_n=I_mA$;
+				\end{enumerate}
+			\end{multicols} 
+		\end{teorema}
+		
+		Além dessas duas, também temos outras operações importantes.
 		\begin{definicao}
 			A \azul{multiplicação de matrizes} $A_{m\times p}$ e $B_{p\times n}$ é definida pela matriz $C_{m\times n}=AB$ tal que
 			\[
-			c_{ij}=\sum_{1}^{p} a_{ip}b_{pj}=a_{i1}b{1j}+\dots 	+a_{ip}b{pj}\, \forall\, i,j
+			c_{ij}=\sum_{k=1}^{p} a_{ik}b_{kj}=a_{i1}b_{1j}+\dots 	+a_{ip}b_{pj}\, \forall\, i,j
 			\]
 		\end{definicao}
+		Segue abaixo uma representação visual da multiplicação de matrizes, e depois um exemplo.
+		\[
+		A=
+		\left[
+		\begin{array}{cccc}
+			a_{11} & a_{12} & \cdots & a_{1p}\\
+			\vdots & \vdots & \ddots & \vdots\\
+			\cblue{a_{i1}} & \cblue{a_{i2}} & \cblue{\cdots} & \cblue{a_{ip}}\\
+			\vdots & \vdots & \ddots & \vdots\\
+			a_{m1} & a_{m2} & \cdots & a_{mp}
+		\end{array}
+		\right],
+		\qquad
+		B=
+		\left[
+		\begin{array}{ccccc}
+			b_{11} & \cdots & \cred{b_{1j}} & \cdots & b_{1n}\\
+			b_{21} & \cdots & \cred{b_{2j}} & \cdots & b_{2n}\\
+			\vdots & \ddots & \cred{\vdots} & \ddots & \vdots\\
+			b_{p1} & \cdots & \cred{b_{pj}} & \cdots & b_{pn}
+		\end{array}
+		\right]
+		\]
+		
+		\[
+		c_{ij}
+		=
+		\sum_{k=1}^{p} a_{ik}\,b_{kj}
+		=
+		\cblue{a_{i1}}\cred{b_{1j}}
+		+\cblue{a_{i2}}\cred{b_{2j}}
+		+\cdots
+		+\cblue{a_{ip}}\cred{b_{pj}}.
+		\]
+		
+		\begin{exemplo}
+			Sejam $A_{2\times 3}$ e $B_{3\times 2}$. 
+			\[
+			\left[
+			\begin{array}{ccc}
+				\color{blue}a_{11} & \color{blue}a_{12} & \color{blue}a_{13}\\
+				a_{21} & a_{22} & a_{23}
+			\end{array}
+			\right]
+			\left[
+			\begin{array}{>{\color{red}}c c}
+				b_{11} & b_{12}\\
+				b_{21} & b_{22}\\
+				b_{31} & b_{32}
+			\end{array}
+			\right]
+			=
+			\begin{bmatrix}
+				\cblue{a_{11}}\cred{b_{11}}+
+				\cblue{a_{12}}\cred{b_{21}}+
+				\cblue{a_{13}}\cred{b_{31}} & 
+				{a_{11}}{b_{12}}+
+				{a_{12}}{b_{22}}+
+				{a_{13}}{b_{32}}
+				\\
+				{a_{21}}{b_{11}}+
+				{a_{22}}{b_{21}}+
+				{a_{23}}{b_{31}} &
+				{a_{21}}{b_{12}}+
+				{a_{22}}{b_{22}}+
+				{a_{23}}{b_{32}}
+			\end{bmatrix}
+			\]
+		\end{exemplo}
+		Note que a multiplicação desse exemplo só é possível porque a quantidade de colunas de $A$ é a mesma que a quantidade de linhas de $B$. Além disso, perceba que, como resultado, temos uma matriz de ordem $2\times 2$ (quantidade de linhas de $A$ e de colunas de $B$).
+		
+		Além da multiplicação de matrizes, também temos a ideia da transposta e do traço.
 		\begin{definicao}
 			A \azul{transposta} de uma matriz $A_{m\times n}$ é definida pela matriz $B_{m\times n}=A^T$, tal que
 			\[
@@ -76,18 +174,13 @@
 			\text{tra}(A)=\sum_{1}^{m} a_{ii}
 			\]
 		\end{definicao}
+		
+		Com todas as operações apresentadas, podemos apresentar as demais propriedades de matrizes.
+		
 		\begin{teorema}
-			Sejam $A$, $B$ e $C$ matrizes com ordem apropriada para cada propriedade. Sejam $\alpha, \beta\in \mathbb{R}$. Então,
+			Sejam $A$, $B$ e $C$ matrizes com ordem apropriada para cada propriedade. Seja $\alpha\in \mathbb{R}$. Então,
 			\begin{multicols}{2}
 				\begin{enumerate}[label=\roman*)]
-					\item $A+B=B+A$;
-					\item $A+(B+C)=(A+B)+C$;
-					\item $\forall\, A_{m\times n}, \, \exists\, \bar{0}_{m\times n}$, tal que $A+\bar{0}=A$;
-					\item $\forall\,  A,\, \exists\, -A$, tal que $A+(-A)=\bar{0}$;
-					\item $\alpha(\beta A)=(\alpha \beta)A$;
-					\item $(\alpha+\beta)A=\alpha A+\beta A$;
-					\item $\alpha(A+B)=\alpha A+\alpha B$;
-					\item $\forall\, A_{m\times n}, \, \exists\, I_m,\, I_n$, tal que \\ $A=AI_n=I_mA$;
 					\item $A(BC)=(AB)C$;
 					\item $A(B+C)=AB+AC$ \\ $(B+C)A=BA+CA$;
 					\item $\alpha(AB)=(\alpha A)B=A(\alpha B)$;
@@ -96,10 +189,11 @@
 					\item $(\alpha A)^T=\alpha A^T$;
 					\item $(AB)^T=B^TA^T$.
 				\end{enumerate}
-			\end{multicols} 
+			\end{multicols}
 		\end{teorema}
 		
 		\subsection{Matriz Inversa}
+			Outro conceito fundamental para matrizes é de invertibilidade. Isso se dá pela relativa dificuldade de determinar a inversa das matrizes, mas também pelas propriedades que são adquiridas com as matrizes inversas.
 			\begin{definicao}
 				Uma matriz quadrada $A_{n\times n}$ é \azul{invertível} ou não singular, se existe uma matriz inversa, denotada por $A^{-1}_{n\times n}$, tal que
 				\[
@@ -125,7 +219,9 @@
 				\]
 			\end{teorema}
 		\subsection{Determinante}
-			Existem as formas clássicas, aprendidas no Ensino Médio, de calcular o determinante de uma matriz de ordem 2 ou 3. No entanto, para matrizes de ordem superior, precisamos utilizar a definição generalizada de determinante, que é calculado por meio da \azul{expansão em cofatores do determinante de A}. Abaixo segue essa expansão em termos da primeira linha.
+			Assim como a matriz inversa, o determinante é um objeto de estudo relevante, e até menos intuitivo que a noção de invertibilidade. Também só pode ser calculado para matrizes quadradas.
+			
+			Existem as formas clássicas, aprendidas no Ensino Médio, de calcular o determinante de uma matriz de ordem 2 ou 3 (Regra de Sarrus). No entanto, para matrizes de ordem superior, precisamos utilizar a definição generalizada de determinante, que é calculado por meio da \azul{expansão em cofatores do determinante de A}. Abaixo segue essa expansão em termos da primeira linha.
 			\begin{definicao}
 				Seja $A_{n\times n}$ uma matriz. O \azul{determinante} de $A$, denotado por $\det(A)$, é definido por
 				\[
@@ -133,8 +229,8 @@
 				\]
 				onde
 				\begin{itemize}
-					\item $\tilde{A}_{ij}$, dado pela submatriz de $A$ de ordem $(n-1)\times (n-1)$ eliminando a $i$-ésima linha e a $j$-ésima coluna, é o \azul{menor} do elemento $a_{ij}$;
-					\item $ã_{1j}=(-1)^{1+j}\det(\tilde{A}_{1j})$ é o \azul{cofator} de $a_{1j}$.
+					\item $\tilde{a}_{1j}=(-1)^{1+j}\det(\tilde{A}_{1j})$ é o \azul{cofator} de $a_{1j}$;
+					\item $\tilde{A}_{ij}$, dado pela submatriz de $A$ de ordem $(n-1)\times (n-1)$ eliminando a $i$-ésima linha e a $j$-ésima coluna, é a \azul{matriz menor} do elemento $a_{ij}$.
 				\end{itemize} 
 			\end{definicao}
 			Segue abaixo uma representação mais visual da matriz menor $\tilde{A}_{ij}$ da matriz original $A$.

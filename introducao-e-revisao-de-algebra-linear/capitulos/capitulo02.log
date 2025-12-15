@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.17.1 (MiKTeX 24.1) (format=lualatex 2025.11.20)  11 DEC 2025 10:40
+This is LuaHBTeX, Version 1.17.1 (MiKTeX 24.1) (format=lualatex 2025.11.20)  14 DEC 2025 21:53
  restricted system commands enabled.
 **capitulo02.tex
 (./capitulo02.tex
@@ -1307,27 +1307,37 @@ Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
 ) (C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/latex/jknappen/mathrsfs.sty
 Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
 \symrsfs=\mathgroup6
-) (C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/latex/xurl/xurl.sty
+) (C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/latex/tools/array.sty
+Package: array 2023/10/16 v2.5g Tabular extension package (FMi)
+\col@sep=\dimen327
+\ar@mcellbox=\box87
+\extrarowheight=\dimen328
+\NC@list=\toks57
+\extratabsurround=\skip62
+\backup@length=\skip63
+\ar@cellbox=\box88
+)
+(C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/latex/xurl/xurl.sty
 Package: xurl 2022/01/09 v 0.10 modify URL breaks
 )
 (C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/latex/fancyhdr/fancyhdr.sty
 Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
 
-\f@nch@headwidth=\skip62
-\f@nch@offset@elh=\skip63
-\f@nch@offset@erh=\skip64
-\f@nch@offset@olh=\skip65
-\f@nch@offset@orh=\skip66
-\f@nch@offset@elf=\skip67
-\f@nch@offset@erf=\skip68
-\f@nch@offset@olf=\skip69
-\f@nch@offset@orf=\skip70
-\f@nch@height=\skip71
-\f@nch@footalignment=\skip72
-\f@nch@widthL=\skip73
-\f@nch@widthC=\skip74
-\f@nch@widthR=\skip75
-\@temptokenb=\toks57
+\f@nch@headwidth=\skip64
+\f@nch@offset@elh=\skip65
+\f@nch@offset@erh=\skip66
+\f@nch@offset@olh=\skip67
+\f@nch@offset@orh=\skip68
+\f@nch@offset@elf=\skip69
+\f@nch@offset@erf=\skip70
+\f@nch@offset@olf=\skip71
+\f@nch@offset@orf=\skip72
+\f@nch@height=\skip73
+\f@nch@footalignment=\skip74
+\f@nch@widthL=\skip75
+\f@nch@widthC=\skip76
+\f@nch@widthR=\skip77
+\@temptokenb=\toks58
 )
 (C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/latex/subfiles/subfiles.sty
 Package: subfiles 2020/11/14 v2.2 Multi-file projects (package)
@@ -1345,29 +1355,27 @@ Package caption Info: New subtype `subtable' on input line 238.
 ) (C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/latex/tools/multicol.sty
 Package: multicol 2023/03/30 v1.9f multicolumn formatting (FMi)
 \c@tracingmulticols=\count346
-\mult@box=\box87
-\multicol@leftmargin=\dimen327
+\mult@box=\box89
+\multicol@leftmargin=\dimen329
 \c@unbalance=\count347
 \c@collectmore=\count348
 \doublecol@number=\count349
 \multicoltolerance=\count350
 \multicolpretolerance=\count351
-\full@width=\dimen328
-\page@free=\dimen329
-\premulticols=\dimen330
-\postmulticols=\dimen331
-\multicolsep=\skip76
-\multicolbaselineskip=\skip77
-\partial@page=\box88
-\last@line=\box89
-\mc@boxedresult=\box90
-\maxbalancingoverflow=\dimen332
-\mult@rightbox=\box91
-\mult@grightbox=\box92
-\mult@firstbox=\box93
-\mult@gfirstbox=\box94
-\@tempa=\box95
-\@tempa=\box96
+\full@width=\dimen330
+\page@free=\dimen331
+\premulticols=\dimen332
+\postmulticols=\dimen333
+\multicolsep=\skip78
+\multicolbaselineskip=\skip79
+\partial@page=\box90
+\last@line=\box91
+\mc@boxedresult=\box92
+\maxbalancingoverflow=\dimen334
+\mult@rightbox=\box93
+\mult@grightbox=\box94
+\mult@firstbox=\box95
+\mult@gfirstbox=\box96
 \@tempa=\box97
 \@tempa=\box98
 \@tempa=\box99
@@ -1402,14 +1410,16 @@ Package: multicol 2023/03/30 v1.9f multicolumn formatting (FMi)
 \@tempa=\box128
 \@tempa=\box129
 \@tempa=\box130
+\@tempa=\box131
+\@tempa=\box132
 \c@minrows=\count352
 \c@columnbadness=\count353
 \c@finalcolumnbadness=\count354
-\last@try=\dimen333
-\multicolovershoot=\dimen334
-\multicolundershoot=\dimen335
-\mult@nat@firstbox=\box131
-\colbreak@box=\box132
+\last@try=\dimen335
+\multicolovershoot=\dimen336
+\multicolundershoot=\dimen337
+\mult@nat@firstbox=\box133
+\colbreak@box=\box134
 \mc@col@check@num=\count355
 )
 (C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/generic/babel/babel.sty
@@ -1499,7 +1509,7 @@ Package babel Info: Non-standard hyphenation setup on input line 118.
 \bbl@pattcodes=\catcodetable16
 )
 \babel@savecnt=\count356
-\U@D=\dimen336
+\U@D=\dimen338
 \l@unhyphenated=\language79
 
 (C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/generic/babel/luababel.def
@@ -1523,7 +1533,7 @@ Package babel Info: Making " an active character on input line 143.
 adhyph-pt.tex UTF-8 Portuguese hyphenation patterns
 (C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/generic/hyph-utf8/patterns/te
 x/hyph-pt.tex))))
-Package hyperref Info: Option `colorlinks' set `true' on input line 36.
+Package hyperref Info: Option `colorlinks' set `true' on input line 37.
 
 (C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/latex/lm/lmodern.sty
 Package: lmodern 2015/05/01 v1.6.1 Latin Modern Fonts
@@ -1596,16 +1606,16 @@ LaTeX Font Info:    ... okay on input line 2.
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count358
-\scratchdimen=\dimen337
-\scratchbox=\box133
+\scratchdimen=\dimen339
+\scratchbox=\box135
 \nofMPsegments=\count359
 \nofMParguments=\count360
-\everyMPshowfont=\toks58
+\everyMPshowfont=\toks59
 \MPscratchCnt=\count361
-\MPscratchDim=\dimen338
+\MPscratchDim=\dimen340
 \MPnumerator=\count362
 \makeMPintoPDFobject=\count363
-\everyMPtoPDFconversion=\toks59
+\everyMPtoPDFconversion=\toks60
 )
 (C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/latex/epstopdf-pkg/epstopdf-b
 ase.sty
@@ -1670,54 +1680,54 @@ Package hyperref Info: Link coloring ON on input line 2.
 
 Cap\'{\i }tulo 1.
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
-0.
+2.
 (C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
-0.
+2.
 
 (C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-10.
+12.
 
 (C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-10.
+12.
 
 (C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 10.
+(Font)              <12> on input line 12.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 10.
+(Font)              <8> on input line 12.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 10.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 10.
+(Font)              <6> on input line 12.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 12.
 
 
 (C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 10.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 12.
 
 
 (C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 10
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 12
 .
 
 (C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/latex/jknappen/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
 LaTeX Font Info:    Trying to load font information for U+esvect on input line 
-10.
+12.
 
 (C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/latex/esvect/uesvect.fd
 File: uesvect.fd 
@@ -1725,36 +1735,42 @@ File: uesvect.fd
 [1
 
 
-{C:/Users/maria/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] [2]
-[3]
+{C:/Users/maria/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
+
+LaTeX Warning: Reference `teo:vetores8axiomas' on page 2 undefined on input lin
+e 69.
+
+[2] [3] [4] [5]
 Missing character: There is no ã (U+00E3) in font lmmi12!
 Missing character: There is no ã (U+00E3) in font lmmi12!
 Missing character: There is no ã (U+00E3) in font lmmi12!
 Missing character: There is no ã (U+00E3) in font lmmi12!
-Missing character: There is no ã (U+00E3) in font lmmi12!
-[4] [5] [6] [7] [8] [9] (./capitulo02.aux)
+[6] [7] [8] [9] [10] [11] (./capitulo02.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
  ***********
+
+
+LaTeX Warning: There were undefined references.
+
 Package rerunfilecheck Info: File `capitulo02.out' has not changed.
 (rerunfilecheck)             Checksum: 5D50D50897D31F4C80C4F2060835EC70;1173.
 )
 
 Here is how much of LuaTeX's memory you used:
- 48182 strings out of 476497
+ 48258 strings out of 476497
  100000,1977958 words of node,token memory allocated
- 1512 words of node memory still in use:
-   32 hlist, 2 vlist, 14 rule, 2 glue, 4 kern, 1 sub_mlist, 1 glyph, 137 attribu
-te, 62 glue_spec, 106 attribute_list, 2 write, 24 pdf_literal, 24 pdf_colorstack
+ 1535 words of node memory still in use:
+   32 hlist, 2 vlist, 14 rule, 2 glue, 4 kern, 1 sub_mlist, 1 glyph, 143 attribu
+te, 63 glue_spec, 109 attribute_list, 2 write, 24 pdf_literal, 24 pdf_colorstack
  nodes
-   avail lists: 1:2,2:1355,3:363,4:114,5:320,6:54,7:4952,8:36,9:1079,10:8,11:543
-
- 68654 multiletter control sequences out of 65536+600000
- 53 fonts using 3361319 bytes
- 126i,10n,120p,1266b,657s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{C:/Users/maria/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/U
-sers/maria/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}{C:/Users
+   avail lists: 1:1,2:1414,3:241,4:164,5:331,6:43,7:5224,8:47,9:942,10:6,11:596
+ 68721 multiletter control sequences out of 65536+600000
+ 51 fonts using 3195959 bytes
+ 126i,10n,120p,1266b,659s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{C:/Users/maria/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}{C:/
+Users/maria/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/Users
 /maria/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/mari
 a/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}{C:/Users/maria
 /AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/maria/
@@ -1771,9 +1787,9 @@ l/Programs/MiKTeX/fonts/type1/public/lm/lmro12.pfb><C:/Users/maria/AppData/Local
 /Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/maria/AppData/Local/
 Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/maria/AppData/Local/Pr
 ograms/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on capitulo02.pdf (9 pages, 239259 bytes).
+Output written on capitulo02.pdf (11 pages, 252952 bytes).
 
-PDF statistics: 262 PDF objects out of 1000 (max. 8388607)
- 106 named destinations out of 1000 (max. 131072)
+PDF statistics: 274 PDF objects out of 1000 (max. 8388607)
+ 110 named destinations out of 1000 (max. 131072)
  312 words of extra memory for PDF output out of 10000 (max. 100000000)
 
