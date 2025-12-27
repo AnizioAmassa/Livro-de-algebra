@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.17.1 (MiKTeX 24.1) (format=lualatex 2025.11.20)  14 DEC 2025 21:53
+This is LuaHBTeX, Version 1.17.1 (MiKTeX 24.1) (format=lualatex 2025.11.20)  27 DEC 2025 11:32
  restricted system commands enabled.
 **capitulo02.tex
 (./capitulo02.tex
@@ -1740,12 +1740,7 @@ File: uesvect.fd
 LaTeX Warning: Reference `teo:vetores8axiomas' on page 2 undefined on input lin
 e 69.
 
-[2] [3] [4] [5]
-Missing character: There is no ã (U+00E3) in font lmmi12!
-Missing character: There is no ã (U+00E3) in font lmmi12!
-Missing character: There is no ã (U+00E3) in font lmmi12!
-Missing character: There is no ã (U+00E3) in font lmmi12!
-[6] [7] [8] [9] [10] [11] (./capitulo02.aux)
+[2] [3] [4] [5] [6] [7] [8] [9] [10] [11] (./capitulo02.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
@@ -1759,16 +1754,17 @@ Package rerunfilecheck Info: File `capitulo02.out' has not changed.
 )
 
 Here is how much of LuaTeX's memory you used:
- 48258 strings out of 476497
+ 48259 strings out of 476497
  100000,1977958 words of node,token memory allocated
  1535 words of node memory still in use:
    32 hlist, 2 vlist, 14 rule, 2 glue, 4 kern, 1 sub_mlist, 1 glyph, 143 attribu
 te, 63 glue_spec, 109 attribute_list, 2 write, 24 pdf_literal, 24 pdf_colorstack
  nodes
-   avail lists: 1:1,2:1414,3:241,4:164,5:331,6:43,7:5224,8:47,9:942,10:6,11:596
- 68721 multiletter control sequences out of 65536+600000
+   avail lists: 1:1,2:1414,3:235,4:164,5:331,6:43,7:5224,8:47,9:1068,10:6,11:596
+
+ 68722 multiletter control sequences out of 65536+600000
  51 fonts using 3195959 bytes
- 126i,10n,120p,1266b,659s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 126i,10n,120p,1266b,665s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {C:/Users/maria/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}{C:/
 Users/maria/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/Users
 /maria/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/mari
@@ -1787,7 +1783,7 @@ l/Programs/MiKTeX/fonts/type1/public/lm/lmro12.pfb><C:/Users/maria/AppData/Local
 /Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/maria/AppData/Local/
 Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/maria/AppData/Local/Pr
 ograms/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on capitulo02.pdf (11 pages, 252952 bytes).
+Output written on capitulo02.pdf (11 pages, 254204 bytes).
 
 PDF statistics: 274 PDF objects out of 1000 (max. 8388607)
  110 named destinations out of 1000 (max. 131072)

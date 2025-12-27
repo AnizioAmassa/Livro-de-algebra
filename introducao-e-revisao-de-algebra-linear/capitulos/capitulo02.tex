@@ -175,7 +175,7 @@
 			\]
 		\end{definicao}
 		
-		Com todas as operações apresentadas, podemos apresentar as demais propriedades de matrizes.
+		Com todas as operações apresentadas, podemos provas as seguintes propriedades de matrizes.
 		
 		\begin{teorema}
 			Sejam $A$, $B$ e $C$ matrizes com ordem apropriada para cada propriedade. Seja $\alpha\in \mathbb{R}$. Então,
@@ -193,7 +193,7 @@
 		\end{teorema}
 		
 		\subsection{Matriz Inversa}
-			Outro conceito fundamental para matrizes é de invertibilidade. Isso se dá pela relativa dificuldade de determinar a inversa das matrizes, mas também pelas propriedades que são adquiridas com as matrizes inversas.
+			Outro conceito fundamental para matrizes é de invertibilidade. Isso se dá pela relativa dificuldade de determinar a inversa, mas também pelas propriedades que são adquiridas com elas, relacionadas a Sistemas Lineares por exemplo.
 			\begin{definicao}
 				Uma matriz quadrada $A_{n\times n}$ é \azul{invertível} ou não singular, se existe uma matriz inversa, denotada por $A^{-1}_{n\times n}$, tal que
 				\[
@@ -201,17 +201,19 @@
 				\]
 				Se $A$ não tem inversa, então $A$ é não invertível ou \azul{singular}.
 			\end{definicao}
+			Além da definição, temos quatro propriedades interessantes de matrizes invertíveis, envolvendo unicidade, invertibilidade, multiplicação e a transposta.
 			\begin{teorema}
-				Se $A$ é invertível, então $A^{-1}$ é única.
-			\end{teorema}
-			\begin{teorema}
-				Sejam $A$ e $B$ matrizes.
+				Sejam $A$ e $B$ matrizes invertíveis.
 				\begin{enumerate}[label=\roman*)]
-					\item $A$ invertível $\Rightarrow$ $A^{-1}$ invertível, e $(A^{-1})^{-1}=A$;
-					\item $A$ e $B$ invertíveis $\Rightarrow$ $AB$ invertível, e $(AB)^{-1}=B^{-1}A^{-1}$;
-					\item $A$ invertível $\Rightarrow$ $A^T$ invertível e $(A^T)^{-1}=(A^{-1})^T$.
+					\item $\exists! \text{ matriz inversa } A^{-1}$
+					\item $A^{-1}$ invertível e $(A^{-1})^{-1}=A$;
+					\item $AB$ invertível e $(AB)^{-1}=B^{-1}A^{-1}$;
+					\item $A^T$ invertível e $(A^T)^{-1}=(A^{-1})^T$.
 				\end{enumerate}
 			\end{teorema}
+			Para a demonstração, basta utilizar a definição de inversa e as propriedades da multiplicação de matrizes (especialmente comutatividade e associatividade) apresentadas anteriormente. A prova completa fica de exercício para o leitor.
+			 
+			Outro teorema importante mostra que, se provarmos que duas matrizes $A$ e $B$ são tais que $AB=I$, então já está provado que uma é inversa da outra, sem a necessidade de demonstrar que $BA=I$.
 			\begin{teorema}
 				Sejam $A_{n\times n}$ e $B_{n\times n}$ matrizes. Então,
 				\[
@@ -219,18 +221,20 @@
 				\]
 			\end{teorema}
 		\subsection{Determinante}
-			Assim como a matriz inversa, o determinante é um objeto de estudo relevante, e até menos intuitivo que a noção de invertibilidade. Também só pode ser calculado para matrizes quadradas.
+			Assim como a matriz inversa, o determinante é um objeto de estudo relevante, porém menos intuitivo que a noção de invertibilidade. Também só pode ser calculado para matrizes quadradas.
 			
 			Existem as formas clássicas, aprendidas no Ensino Médio, de calcular o determinante de uma matriz de ordem 2 ou 3 (Regra de Sarrus). No entanto, para matrizes de ordem superior, precisamos utilizar a definição generalizada de determinante, que é calculado por meio da \azul{expansão em cofatores do determinante de A}. Abaixo segue essa expansão em termos da primeira linha.
 			\begin{definicao}
 				Seja $A_{n\times n}$ uma matriz. O \azul{determinante} de $A$, denotado por $\det(A)$, é definido por
 				\[
-				\det(A)=\sum_{j=1}^{n} a_{1j}\tilde{a}_{1j}
+				\det(A)=\begin{cases}\sum_{j=1}^{n} a_{1j}\tilde{a}_{1j}\text{, se } n>1\\
+					a_{11}\text{, se } n=1
+				\end{cases}
 				\]
 				onde
 				\begin{itemize}
 					\item $\tilde{a}_{1j}=(-1)^{1+j}\det(\tilde{A}_{1j})$ é o \azul{cofator} de $a_{1j}$;
-					\item $\tilde{A}_{ij}$, dado pela submatriz de $A$ de ordem $(n-1)\times (n-1)$ eliminando a $i$-ésima linha e a $j$-ésima coluna, é a \azul{matriz menor} do elemento $a_{ij}$.
+					\item $\tilde{A}_{ij}$ é a submatriz de $A$ de ordem $(n-1)\times (n-1)$ eliminando a $i$-ésima linha e a $j$-ésima coluna, denominada \azul{matriz menor do elemento $a_{ij}$}.
 				\end{itemize} 
 			\end{definicao}
 			Segue abaixo uma representação mais visual da matriz menor $\tilde{A}_{ij}$ da matriz original $A$.
@@ -244,10 +248,26 @@
 				a_{n1} & \dots & a_{n(j-1)} & a_{n(j+1)} & \dots & a_{nn} \\
 			\end{bmatrix}
 			\]
-			\begin{teorema}
-				Seja a matriz $A_{n\times n}$ escrita em termos das suas linhas, denotadas por $A_i=[a_{i1}\,\dots\, a_{in}]$. Se existe uma linha $A_k$ tal que $A_k=\alpha X+\beta Y$, para algum $\alpha, \beta \in \mathbb{R}$ e algum $X=[x_1\, \dots\, x_n]$ e $Y=[y_1\,\dots\, y_n]$, então, 
+			\begin{teorema}[Teorema de Laplace]
+				O determinante de uma matriz pode ser calculado com a expansão em cofatores de qualquer linha $i$ ou qualquer coluna $j$. Em outras palavras,
+				\begin{align*}
+					\det(A)
+					&=\sum_{j=1}^{n} a_{ij}\tilde{a}_{ij}\text{, para } 	i\in \{1,\dots,n\}\\
+					&=\sum_{i=1}^{n} a_{ij}\tilde{a}_{ij}\text{, para } j\in \{1,\dots, n\}
+				\end{align*}
+			\end{teorema}
+			\begin{corolario}
+				Seja $A_{n\times n}$ uma matriz.
 				\[
-				\begin{bmatrix}
+				\exists \text{ linhas } A_i,\, A_j \text{, tal que } A_i=A_j\Rightarrow 	\det(A)=0
+				\]
+			\end{corolario}
+			\begin{teorema}
+				Seja a matriz $A_{n\times n}$ escrita em termos das suas linhas, denotadas por $A_i=[a_{i1}\,\dots\, a_{in}]$.
+				
+				Se existe uma linha $A_k$ tal que $A_k=\alpha X+\beta Y$, para algum $\alpha, \beta \in \mathbb{R}$ e algum $X=[x_1\, \dots\, x_n]$ e $Y=[y_1\,\dots\, y_n]$, então, 
+				\[
+				\det \begin{bmatrix}
 					A_1 \\
 					\vdots \\
 					A_{k-1}\\
@@ -274,21 +294,7 @@
 				\end{bmatrix}
 				\]
 			\end{teorema}
-			\begin{teorema}
-				O determinante de uma matriz pode ser calculado com a expansão em cofatores de qualquer linha $i$ ou qualquer coluna $j$. Em outras palavras,
-				\begin{align*}
-					\det(A)
-					&=\sum_{j=1}^{n} a_{ij}ã_{ij}\text{, para } 	i=1,\dots,n\\
-					&=\sum_{i=1}^{n} a_{ij}ã_{ij}\text{, para } j=1,\dots, n
-				\end{align*}
-			\end{teorema}
 			\begin{corolario}
-				Seja $A_{n\times n}$ uma matriz.
-				\[
-				\exists A_i,\, A_j \text{, tal que } A_i=A_j\Rightarrow 	\det(A)=0
-				\]
-			\end{corolario}
-			\begin{teorema}
 				Sejam $A_{n\times n}$ e $B_{n\times n}$ matrizes.
 				\begin{enumerate}[label=\roman*)]
 					\item Se $B$ é obtida de $A$ multiplicando-se uma linha por um escalar $\alpha$, então
@@ -299,12 +305,12 @@
 					\[
 					\det(B)=-\det(A);
 					\]
-					\item Se $B$ é obtida de $A$ substituindo uma linha $A_l$ por ela somada um múltiplo escalar de outra linha $A_k$, ou seja, substituindo $A_l$ por $A_l+\alpha A_k$, então
+					\item Se $B$ é obtida de $A$ substituindo uma linha $A_l$ por ela própria somada ao múltiplo escalar de outra linha ($A_l+\alpha A_k$), então
 					\[
 					\det(B)=\det(A).
 					\]
 				\end{enumerate}
-			\end{teorema}
+			\end{corolario}
 			\begin{teorema}
 				Sejam $A_{n\times n}$ e $B_{n\times n}$ matrizes.
 				\begin{enumerate}[label=\roman*)]
