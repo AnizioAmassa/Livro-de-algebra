@@ -223,9 +223,77 @@
 		\subsection{Determinante}
 			Assim como a matriz inversa, o determinante é um objeto de estudo relevante, porém menos intuitivo que a noção de invertibilidade. Também só pode ser calculado para matrizes quadradas.
 			
-			Existem as formas clássicas, aprendidas no Ensino Médio, de calcular o determinante de uma matriz de ordem 2 ou 3 (Regra de Sarrus), que seguem adiante.
-			
-			
+			Existem as formas clássicas, aprendidas no Ensino Médio, de calcular o determinante de uma matriz de ordem 2 ou 3 (Regra de Sarrus), que seguem abaixo.
+			\begin{figure}[h!]
+				\centering
+				\begin{minipage}{0.45\textwidth}
+					\centering
+					\[
+					\det(A)=\cblue{a_{11}a_{22}}-\cred{a_{12}a_{21}}
+					\]
+					\begin{tikzpicture}[baseline=(A.center)]
+						% Matriz 2x2 com TikZ
+						\matrix (A) [matrix of math nodes, column sep=0.6cm, row sep=0.5cm] {
+							a_{11} & a_{12} \\
+							a_{21} & a_{22} \\
+						};
+						
+						% Seta Azul (Diagonal Principal - Positiva)
+						\draw[blue, -latex, thick] (A-1-1.north west) -- (A-2-2.south east) node[below right] {$+$};
+						
+						% Seta Vermelha (Diagonal Secundária - Negativa)
+						\draw[red, -latex, thick] (A-1-2.north east) -- (A-2-1.south west) node[below left] {$-$};
+						
+						% Colchetes da Matriz
+						% Lado Esquerdo
+						\draw[thick] ([xshift=-4pt]A-1-1.north west) -- ([xshift=-4pt]A-2-1.south west);
+						\draw[thick] ([xshift=-4pt]A-1-1.north west) -- ++(3pt,0);
+						\draw[thick] ([xshift=-4pt]A-2-1.south west) -- ++(3pt,0);
+						
+						% Lado Direito
+						\draw[thick] ([xshift=4pt]A-1-2.north east) -- ([xshift=4pt]A-2-2.south east);
+						\draw[thick] ([xshift=4pt]A-1-2.north east) -- ++(-3pt,0);
+						\draw[thick] ([xshift=4pt]A-2-2.south east) -- ++(-3pt,0);
+					\end{tikzpicture}
+					\caption{Regra de Sarrus na matriz de ordem 2}
+				\end{minipage}
+				\hfill
+				\begin{minipage}{0.45\textwidth}
+					\centering
+					\begin{align*}
+						&\det(A) = \cblue{(a_{11}a_{22}a_{33} + a_{12}a_{23}a_{31} + a_{13}a_{21}a_{32})} \\
+						& - \cred{(a_{13}a_{22}a_{31} + a_{11}a_{23}a_{32} + a_{12}a_{21}a_{33})}
+					\end{align*}
+					\begin{tikzpicture}[baseline=(A.center)]
+						% Matriz com TikZ
+						\matrix (A) [matrix of math nodes, column 	sep=0.5cm, row sep=0.4cm] {
+							a_{11} & a_{12} & a_{13} & a_{11} & a_{12} \\
+							a_{21} & a_{22} & a_{23} & a_{21} & a_{22} \\
+							a_{31} & a_{32} & a_{33} & a_{31} & a_{32} \\
+						};
+						
+						% Setas Azuis (Diagonais Principais - Positivas)
+						\draw[blue, -latex, thick] (A-1-1.north west) -- 	(A-3-3.south east) node[below] {$+$};
+						\draw[blue, -latex, thick] (A-1-2.north west) -- 	(A-3-4.south east) node[below] {$+$};
+						\draw[blue, -latex, thick] (A-1-3.north west) -- 	(A-3-5.south east) node[below] {$+$};
+						
+						% Setas Vermelhas (Diagonais Secundárias - 	Negativas)
+						\draw[red, -latex, thick] (A-1-3.north east) -- 	(A-3-1.south west) node[below] {$-$};
+						\draw[red, -latex, thick] (A-1-4.north east) -- 	(A-3-2.south west) node[below] {$-$};
+						\draw[red, -latex, thick] (A-1-5.north east) -- 	(A-3-3.south west) node[below] {$-$};
+						
+						% Colchetes da Matriz
+						\draw[thick] ([xshift=-2pt]A-1-1.north west) -- 	([xshift=-2pt]A-3-1.south west);
+						\draw[thick] ([xshift=-2pt]A-1-1.north west) -- 	++(2pt,0);
+						\draw[thick] ([xshift=-2pt]A-3-1.south west) -- 	++(2pt,0);
+						
+						\draw[thick] ([xshift=2pt]A-1-3.north east) -- 	([xshift=2pt]A-3-3.south east);
+						\draw[thick] ([xshift=2pt]A-1-3.north east) -- 	++(-2pt,0);
+						\draw[thick] ([xshift=2pt]A-3-3.south east) -- 	++(-2pt,0);
+					\end{tikzpicture}
+					\caption{Regra de Sarrus na matriz de ordem 3}
+				\end{minipage}
+			\end{figure}
 			
 			No entanto, para matrizes de ordem superior, precisamos utilizar a definição generalizada de determinante, que é calculado por meio da \azul{expansão em cofatores do determinante de A}. Abaixo segue essa expansão em termos da primeira linha.
 			\begin{definicao}

@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.17.1 (MiKTeX 24.1) (format=lualatex 2025.11.20)  27 DEC 2025 19:04
+This is LuaHBTeX, Version 1.17.1 (MiKTeX 24.1) (format=lualatex 2025.11.20)  28 DEC 2025 09:29
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -1843,8 +1843,8 @@ Here is how much of LuaTeX's memory you used:
    32 hlist, 2 vlist, 14 rule, 2 glue, 4 kern, 1 sub_mlist, 1 glyph, 233 attribu
 te, 63 glue_spec, 154 attribute_list, 2 write, 24 pdf_literal, 24 pdf_colorstack
  nodes
-   avail lists: 1:1,2:4605,3:1587,4:146,5:529,6:55,7:5390,8:50,9:957,10:15,11:56
-3
+   avail lists: 1:1,2:4605,3:1587,4:146,5:529,6:55,7:5390,8:50,9:957,10:15,11:57
+4
  69345 multiletter control sequences out of 65536+600000
  86 fonts using 5470943 bytes
  106i,20n,104p,1220b,1281s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1871,7 +1871,7 @@ ams/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/maria/AppData/Local/Program
 s/MiKTeX/fonts/type1/public/lm/lmtt12.pfb><C:/Users/maria/AppData/Local/Programs
 /MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/maria/AppData/L
 ocal/Programs/MiKTeX/fonts/type1/public/esvect/vect10.pfb>
-Output written on main.pdf (49 pages, 485454 bytes).
+Output written on main.pdf (49 pages, 485458 bytes).
 
 PDF statistics: 675 PDF objects out of 1000 (max. 8388607)
  278 named destinations out of 1000 (max. 131072)

@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.17.1 (MiKTeX 24.1) (format=lualatex 2025.11.20)  27 DEC 2025 18:47
+This is LuaHBTeX, Version 1.17.1 (MiKTeX 24.1) (format=lualatex 2025.11.20)  28 DEC 2025 09:59
  restricted system commands enabled.
 **capitulo02.tex
 (./capitulo02.tex
@@ -990,6 +990,10 @@ z-draw-eu-show.tex
 z-draw-eu-protractor.tex
 2025/09/17 5.11c tkz-obj-eu-protractor.tex
 ))
+(C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/tik
+z/libraries/tikzlibrarymatrix.code.tex
+File: tikzlibrarymatrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
 (C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/latex/pgfplots/pgfplots.sty
 (C:/Users/maria/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/pgfplots.rev
 ision.tex)
@@ -1748,7 +1752,15 @@ File: uesvect.fd
 LaTeX Warning: Reference `teo:vetores8axiomas' on page 3 undefined on input lin
 e 69.
 
-[3] [4] [5] [6] [7] [8] [9] [10] [11] (./capitulo02.aux)
+[3] [4]
+Overfull \hbox (14.2542pt too wide) detected at line 266
+[]
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[5] [6] [7] [8] [9] [10] [11] [12] (./capitulo02.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
@@ -1762,16 +1774,17 @@ Package rerunfilecheck Info: File `capitulo02.out' has not changed.
 )
 
 Here is how much of LuaTeX's memory you used:
- 48344 strings out of 476497
+ 48636 strings out of 476497
  100000,1977958 words of node,token memory allocated
- 1540 words of node memory still in use:
-   32 hlist, 2 vlist, 14 rule, 2 glue, 4 kern, 1 sub_mlist, 1 glyph, 143 attribu
-te, 64 glue_spec, 109 attribute_list, 2 write, 24 pdf_literal, 24 pdf_colorstack
+ 1546 words of node memory still in use:
+   32 hlist, 2 vlist, 14 rule, 2 glue, 4 kern, 1 sub_mlist, 1 glyph, 145 attribu
+te, 64 glue_spec, 110 attribute_list, 2 write, 24 pdf_literal, 24 pdf_colorstack
  nodes
-   avail lists: 1:1,2:1292,3:232,4:140,5:355,6:38,7:4738,8:47,9:889,10:5,11:549
- 68802 multiletter control sequences out of 65536+600000
+   avail lists: 1:1,2:3942,3:1062,4:140,5:355,6:40,7:4998,8:47,9:1370,10:5,11:54
+9
+ 69085 multiletter control sequences out of 65536+600000
  51 fonts using 3195959 bytes
- 126i,10n,120p,1266b,627s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 126i,20n,120p,1273b,1172s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {C:/Users/maria/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}{C:/
 Users/maria/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/Users
 /maria/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/mari
@@ -1790,9 +1803,9 @@ l/Programs/MiKTeX/fonts/type1/public/lm/lmro12.pfb><C:/Users/maria/AppData/Local
 /Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/maria/AppData/Local/
 Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/maria/AppData/Local/Pr
 ograms/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on capitulo02.pdf (11 pages, 253940 bytes).
+Output written on capitulo02.pdf (12 pages, 257049 bytes).
 
-PDF statistics: 274 PDF objects out of 1000 (max. 8388607)
- 110 named destinations out of 1000 (max. 131072)
+PDF statistics: 279 PDF objects out of 1000 (max. 8388607)
+ 112 named destinations out of 1000 (max. 131072)
  312 words of extra memory for PDF output out of 10000 (max. 100000000)
 
