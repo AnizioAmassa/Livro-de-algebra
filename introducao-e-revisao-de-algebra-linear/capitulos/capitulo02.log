@@ -1,7 +1,12 @@
+<<<<<<< HEAD
 This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2025.12.30)  31 DEC 2025 10:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
+=======
+This is LuaHBTeX, Version 1.17.1 (MiKTeX 24.1) (format=lualatex 2025.11.20)  31 DEC 2025 12:52
+ restricted system commands enabled.
+>>>>>>> dc04fb2c56b023b03299a5f4a4c9fde16602436f
 **capitulo02.tex
 (./capitulo02.tex
 LaTeX2e <2022-11-01> patch level 1
@@ -1471,6 +1476,7 @@ LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `capitulo02.out' has not changed.
 (rerunfilecheck)             Checksum: 5D50D50897D31F4C80C4F2060835EC70;1173.
+<<<<<<< HEAD
  ) 
 Here is how much of TeX's memory you used:
  47337 strings out of 476034
@@ -1496,4 +1502,43 @@ PDF statistics:
  249 compressed objects within 3 object streams
  112 named destinations out of 1000 (max. 500000)
  213 words of extra memory for PDF output out of 10000 (max. 10000000)
+=======
+)
+
+Here is how much of LuaTeX's memory you used:
+ 48635 strings out of 476497
+ 100000,1977958 words of node,token memory allocated
+ 1546 words of node memory still in use:
+   32 hlist, 2 vlist, 14 rule, 2 glue, 4 kern, 1 sub_mlist, 1 glyph, 145 attribu
+te, 64 glue_spec, 110 attribute_list, 2 write, 24 pdf_literal, 24 pdf_colorstack
+ nodes
+   avail lists: 1:1,2:3829,3:1060,4:140,5:354,6:40,7:5060,8:47,9:1312,10:5,11:54
+9
+ 69085 multiletter control sequences out of 65536+600000
+ 51 fonts using 3195959 bytes
+ 126i,20n,120p,1273b,1172s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{C:/Users/maria/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}{C:/
+Users/maria/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/Users
+/maria/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/mari
+a/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}{C:/Users/maria
+/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/maria/
+AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}<C:/Users/maria/A
+ppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/maria/Ap
+pData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbxi10.pfb><C:/Users/maria/Ap
+pData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/maria/App
+Data/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/maria/AppD
+ata/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/maria/AppDat
+a/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/maria/AppData/
+Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/maria/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/maria/AppData/Loca
+l/Programs/MiKTeX/fonts/type1/public/lm/lmro12.pfb><C:/Users/maria/AppData/Local
+/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/maria/AppData/Local/
+Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/maria/AppData/Local/Pr
+ograms/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on capitulo02.pdf (12 pages, 257423 bytes).
+
+PDF statistics: 278 PDF objects out of 1000 (max. 8388607)
+ 111 named destinations out of 1000 (max. 131072)
+ 312 words of extra memory for PDF output out of 10000 (max. 100000000)
+>>>>>>> dc04fb2c56b023b03299a5f4a4c9fde16602436f
 

@@ -320,55 +320,54 @@
 				a_{n1} & \dots & a_{n(j-1)} & a_{n(j+1)} & \dots & a_{nn} \\
 			\end{bmatrix}
 			\]
+			O primeiro teorema que vamos apresentar é de extrema importância, no sentido de que facilita o cálculo do determinante.
 			\begin{teorema}[Teorema de Laplace]
-				O determinante de uma matriz pode ser calculado com a expansão em cofatores de qualquer linha $i$ ou qualquer coluna $j$. Em outras palavras,
+				O determinante de uma matriz pode ser calculado com a expansão em cofatores em termos de qualquer linha $i$ ou qualquer coluna $j$. Em outras palavras,
 				\begin{align*}
 					\det(A)
 					&=\sum_{j=1}^{n} a_{ij}\tilde{a}_{ij}\text{, para } 	i\in \{1,\dots,n\}\\
 					&=\sum_{i=1}^{n} a_{ij}\tilde{a}_{ij}\text{, para } j\in \{1,\dots, n\}
 				\end{align*}
 			\end{teorema}
+			Note que, por consequência, conseguimos o seguinte corolário, o qual afirma que, caso duas linhas de uma matriz sejam iguais, o determinante da matriz é $0$.
 			\begin{corolario}
-				Seja $A_{n\times n}$ uma matriz.
+				Seja $A_{n\times n}$ uma matriz e suas linhas denotadas por $A_i=[a_{i1}\,\dots\, a_{in}]$. Então,
 				\[
 				\exists \text{ linhas } A_i,\, A_j \text{, tal que } A_i=A_j\Rightarrow 	\det(A)=0
 				\]
 			\end{corolario}
+			Seguem abaixo outras propriedades importantes para o determinante. Vale destacar a última propriedade, que associa as noções de invertibilidade e de determinante, sendo de grande relevância, especialmente para a próxima seção.
 			\begin{teorema}
-				Seja a matriz $A_{n\times n}$ escrita em termos das suas linhas, denotadas por $A_i=[a_{i1}\,\dots\, a_{in}]$.
-				
-				Se existe uma linha $A_k$ tal que $A_k=\alpha X+\beta Y$, para algum $\alpha, \beta \in \mathbb{R}$ e algum $X=[x_1\, \dots\, x_n]$ e $Y=[y_1\,\dots\, y_n]$, então, 
-				\[
-				\det \begin{bmatrix}
-					A_1 \\
-					\vdots \\
-					A_{k-1}\\
-					\alpha X+\beta Y\\
-					A_{k+1}\\
-					\vdots\\
-					A_n
-				\end{bmatrix} = \alpha \det \begin{bmatrix}
-					A_1 \\
-					\vdots \\
-					A_{k-1}\\
-					X\\
-					A_{k+1}\\
-					\vdots\\
-					A_n
-				\end{bmatrix} + \beta \det \begin{bmatrix}
-					A_1 \\
-					\vdots \\
-					A_{k-1}\\
-					Y\\
-					A_{k+1}\\
-					\vdots\\
-					A_n
-				\end{bmatrix}
-				\]
-			\end{teorema}
-			\begin{corolario}
 				Sejam $A_{n\times n}$ e $B_{n\times n}$ matrizes.
 				\begin{enumerate}[label=\roman*)]
+					\item Se existe uma linha $A_k$ tal que $A_k=\alpha X+\beta Y$, para algum $\alpha, \beta \in \mathbb{R}$ e algum $X=[x_1\, \dots\, x_n]$ e $Y=[y_1\,\dots\, y_n]$, então, 
+					\[
+					\det \begin{bmatrix}
+						A_1 \\
+						\vdots \\
+						A_{k-1}\\
+						\alpha X+\beta Y\\
+						A_{k+1}\\
+						\vdots\\
+						A_n
+					\end{bmatrix} = \alpha \det \begin{bmatrix}
+						A_1 \\
+						\vdots \\
+						A_{k-1}\\
+						X\\
+						A_{k+1}\\
+						\vdots\\
+						A_n
+					\end{bmatrix} + \beta \det \begin{bmatrix}
+						A_1 \\
+						\vdots \\
+						A_{k-1}\\
+						Y\\
+						A_{k+1}\\
+						\vdots\\
+						A_n
+					\end{bmatrix}
+					\]
 					\item Se $B$ é obtida de $A$ multiplicando-se uma linha por um escalar $\alpha$, então
 					\[
 					\det(B)=\alpha \det(A);
@@ -381,17 +380,10 @@
 					\[
 					\det(B)=\det(A).
 					\]
-				\end{enumerate}
-			\end{corolario}
-			\begin{teorema}
-				Sejam $A_{n\times n}$ e $B_{n\times n}$ matrizes.
-				\begin{enumerate}[label=\roman*)]
 					\item $\det(AB)=\det(A)\det(B)$.
 					\item $\det(A)=\det(A^T)$.
+					\item $A$ invertível $\Leftrightarrow \det(A)\neq 0$.
 				\end{enumerate}
-			\end{teorema}
-			\begin{teorema}
-				Seja $A_{n\times n}$ uma matriz. $A$ invertível $\Leftrightarrow \det(A)\neq 0$.
 			\end{teorema}
 	\section{Sistemas Lineares}
 		\begin{definicao}
@@ -564,7 +556,7 @@
 			\end{teorema}
 			
 			\begin{teorema}
-				O sistema homogêneo $AX=\bar{0}$ tem solução não trivial $\Leftrightarrow$ $\det(A)\neq 0$.
+				O sistema homogêneo $AX=\bar{0}$ tem solução não trivial $\Leftrightarrow$ $\det(A)= 0$.
 			\end{teorema}
 			
 	\section{Combinação Linear e Dependência Linear}

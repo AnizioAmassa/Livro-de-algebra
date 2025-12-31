@@ -1,8 +1,12 @@
-# Mariana - 01/12/25
-- terminei primeira versão da seção 1.1 (álgebra vetorial)
+# Anizio - 31/12/25
+- algumas adições na seção de bases, alterações no prefacio e correções gerais
+- criei o .gitignore porque tava uma merda trabalhar com um monte de arquivo inutil na main
 
 # Anizio - 27/12/25
 - coloquei seção de bases e alguns comentarios no prefacio
+
+# Mariana - 01/12/25
+- terminei primeira versão da seção 1.1 (álgebra vetorial)
 
 # Anizio - 21/09/25
 - coloquei subsec de subespaco
