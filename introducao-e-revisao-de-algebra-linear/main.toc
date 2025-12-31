@@ -6,7 +6,7 @@
 \contentsline {section}{\numberline {2.1}Matrizes}{23}{section.2.1}%
 \contentsline {subsection}{\numberline {2.1.1}Matriz Inversa}{26}{subsection.2.1.1}%
 \contentsline {subsection}{\numberline {2.1.2}Determinante}{27}{subsection.2.1.2}%
-\contentsline {section}{\numberline {2.2}Sistemas Lineares}{29}{section.2.2}%
+\contentsline {section}{\numberline {2.2}Sistemas Lineares}{30}{section.2.2}%
 \contentsline {subsection}{\numberline {2.2.1}Matrizes como Sistemas Lineares}{31}{subsection.2.2.1}%
 \contentsline {section}{\numberline {2.3}Combinação Linear e Dependência Linear}{33}{section.2.3}%
 \contentsline {chapter}{\numberline {3}Espaços Vetoriais}{35}{chapter.3}%
