@@ -33,7 +33,7 @@
 	Além das aplicações na vida real, também temos na matemática pura, espaços vetoriais são muito necessário em cálculo de múltiplas variáveis e uma das bases de análise funcional.
 	
 	\begin{definicao}
-		\azul{Espaços vetorial} é um conjunto $V$ não vazio no qual existe as operações de adição (entre vetores) e multiplicação por um número real (escalar), respeitando as seguintes propriedades com as operações citadas:
+		\azul{Espaços vetorial} é um conjunto $V$ não vazio no qual existe as operações de adição (entre vetores) e multiplicação por um número real (escalar), respeitando as seguintes propriedades com as operações citadas, sendo $u$, $v$ e $w$ vetores e $\alpha$ e $\beta$ escalares:
 		
 			\begin{description}
 				% O \item[] cria o título da categoria
@@ -57,7 +57,7 @@
 	\begin{definicao}
 		Elementos de um espaço vetorial $V$ são denominados \azul{vetores}.
 	\end{definicao}
-	\begin{exemplo}[Exemplo de espaço vetorial] O plano euclidiano de dimensão n ($\mathbb{R}^n$) é um dos exemplos mais clássicos de espaço vetorial, seja dois vetores $u=(\eta_1,...,\eta_n)$ e $v=(\delta_1,...,\delta_n)$ e também dois escales $\alpha$ e $\beta$, com sua soma e multiplicação definido por:
+	\begin{exemplo}[Espaço real - $\mathbb{R}^n$] O plano euclidiano de dimensão n ($\mathbb{R}^n$) é um dos exemplos mais clássicos de espaço vetorial, seja dois vetores $u=(\eta_1,...,\eta_n)$ e $v=(\delta_1,...,\delta_n)$ e também $\alpha$ sendo escalar, com sua soma e multiplicação definido por:
 	\begin{align*}
 		u + v &= (\eta_1 + \delta_1, \dots , \eta_n + \delta_n) \\
 		\alpha \cdot u &= (\alpha \eta_1, \dots, \alpha \eta_n)
@@ -78,11 +78,11 @@
 			\fill (A) circle (1.5pt) node[below left] {$A$};
 			\fill (B) circle (1.5pt) node[above] {$B$};
 			\fill (C) circle (1.5pt) node[below right] {$C$};
-		\end{tikzpicture}
+		\end{tikzpicture}\\
 		(Exemplo no $\mathbb{R}^2$)
 		\end{center}
 		\end{exemplo}
-		\begin{exemplo}[Exemplo de espaço vetorial]
+		\begin{exemplo}[Espaço de matrizes $n \times m$]
 			O conjunto das matrizes $n\times m$ com soma entre vetores e multiplicação por escalar definido da seguinte forma:
 			\begin{description}
 					\item \[
@@ -151,6 +151,76 @@
 		\end{enumerate}
 	
 	\section{Base, Dimensão e Coordenadas}
+	
+	
+	Os espaços vetoriais de dimensão finita (finitas coordenadas) são composto por uma estrutura algébrica simples, sendo principalmente evidenciados pelo conceito de base. Pense como a base sendo um gerador de espaços vetoriais, assim como um vetor (ou dois vetores) no $\mathbb{R}^n$ geram uma reta (ou um plano) é possível expandir isso para dimensões maiores ou outros conceitos utilizando de bases.
+	
+	Recapitulando os conceitos da seção 2.3, mas agora com uma noção vetorial ao invés de matricial, temos que:
+	\begin{definicao}
+		Seja $E$ um espaço vetorial. Dizemos que $X \subset E$ é \azul{linearmente independente} quando nenhum vetor $v \in X$ é combinação linear de outros elementos de $X$. 
+	\end{definicao}
+	
+	\textbf{Observação.} Perceba que dessa definição temos que caso $\vec{0}$ esteja no subconjunto $X$ teremos consequentemente que $X$ é L.D., pois $\vec{0}$ pode ser gerado por quaisquer combinação linear que seus coeficientes sejam todos nulos.
+	
+	$$\vec{0}=0\cdot v_1 + ... + 0\cdot v_m $$
+	
+	\begin{definicao}
+		Dizemos que $X$ é \azul{linearmente dependente} quando \textbf{não é linearmente independente}.
+	\end{definicao}
+	
+	Fazendo ainda conexão com a seção 2.3, temos o seguinte teorema que faz a ligação com matrizes:
+	
+	\begin{teorema}
+		Seja $X$ um subconjunto no espaço vetorial $E$. Se a única combinação linear de $X$ que gera o vetor nulo é aquela cujos coeficientes são todos iguais a zero, então $X$ é L.I.
+	\end{teorema}
+	
+	\textbf{Prova.} Suponha por absurdo que se tenha coeficientes nem todos nulos que podemos ter $\alpha_1 v_1 + ... + \alpha_m v_m = 0$ com $v_1, ..., v_m \in X$. Vamos supor que $\alpha_1 \neq 0$ por via de simplicidade. Então temos que $v_1 = -(\frac{\alpha_2}{\alpha_1})v_2 - ... -(\frac{\alpha_m}{\alpha_1})v_m = 0$, o que deixa $v_1$ como combinação linear de outros elementos de $X$. \qed
+	\smallskip
+	\begin{exemplo}[Vetores canônicos]Os vetores canônicos no $\mathbb{R}^n$ são L.I., basta observar que cada vetor difere um do outro em duas coordenadas, pegue $e_1 = (1,0,0)$, $e_2 = (0,1,0)$ e $e_3 = (0,0,1)$ no $\mathbb{R}^3$ por exemplo, teremos que é impossível formar uma combinação linear de um a partir do outro.
+	\end{exemplo}
+	
+	\begin{definicao}
+		Dizemos que o conjunto $\mathcal{B}$ é uma \azul{base} do espaço vetorial $E$ se:
+		\begin{enumerate}[itemsep=0pt]
+			\item $\mathcal{B} \subset E$;
+			\item $\mathcal{B}$ é L.I;
+			\item $\mathcal{B}$ gera o espaço vetorial $E$.
+		\end{enumerate}
+	\end{definicao}
+	
+	\textbf{Observação.} Isto significa que todos os vetores de $E$ podem ser reescritos como combinação linear dos vetores da base $\mathcal{B}$ de $E$. Volto a trazer o que foi falado antes da reta e do plano, podemos representar todos os vetores de um plano como combinação linear de dois vetores não paralelos desse mesmo plano, o mesmo ocorre com o $\mathbb{R}^3$, mas com 3 vetores não coplanares.
+	\smallskip
+		
+	\begin{definicao}
+		Se $\mathcal{B}$ é uma base de $E$ e $w$ é um vetor formado pela combinação linear $\alpha_1 v_1 + ... + \alpha_m v_m$ com $v_1, ..., v_m \in \mathcal{B}$ então dizemos que $\alpha_1, ..., \alpha_m$ são as \azul{coordenadas} de $w$.
+	\end{definicao}
+	
+	\textbf{Observação.} Também pode ser reinterpretado como os coeficientes dados aos vetores da base para se obter o vetor $w$.
+	\smallskip
+	
+	\begin{definicao}
+		A \azul{dimensão} de um espaço vetorial é a cardinalidade de alguma base desse mesmo espaço, ou seja, a quantidade de elementos que uma base desse espaço tem.
+	\end{definicao}
+	
+	Com o teorema a seguir vemos que podemos sim escolher qualquer base para obtermos a dimensão de um espaço vetorial, por conta que todas as bases de um mesmo espaço vetorial obtém de uma mesma quantidade de elementos.
+	\smallskip
+	
+	\textbf{Lema.} Todo sistema linear homogêneo que o número de incógnitas é maior do que o número de equações admite uma solução não trivial.
+	\\ \smallskip
+	\textbf{Prova:} Use o teorema 2.2.18. \qed
+	\smallskip
+	\begin{teorema}
+		
+	\end{teorema}
+	
+	\begin{exemplo}[Vetores canônicos]
+		Novamente trazendo os vetores canônicos, como dito antes eles são L.I. e sempre estarão contidos no $\mathbb{R}^n$, podemos reescrever qualquer vetor $v=(a_1, ..., a_n)$ com $a_1, ..., a_n \in \mathbb{R}^n$ como:
+		$$ v = a_1 \cdot e_1 + ... + a_n \cdot e_n $$
+	\end{exemplo}
+	
+	\begin{exemplo}[Base nula]
+		Como vimos antes sabemos que existe o espaço vetorial trivial, i.e. que só contém o vetor nulo, este é o único espaço vetorial 
+	\end{exemplo}
 	
 	\section{Produto Interno}
 	
