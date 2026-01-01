@@ -1,7 +1,7 @@
 \documentclass[../main.tex]{subfiles}
 \begin{document}
 	
-	\chapter{Sistemas Lineares e Matrizes}
+	\chapter{Matrizes e Sistemas Lineares}
 	Além das ideias de vetores e da própria Geometria Analítica, compreender Sistemas Lineares fundamenta os principais problemas que a Álgebra Linear busca responder. No entanto, antes de apresentar sistemas lineares ou outros conceitos (como combinação e dependência linear), vamos iniciar com matrizes.
 	
 	\section{Matrizes}
@@ -386,6 +386,7 @@
 				\end{enumerate}
 			\end{teorema}
 	\section{Sistemas Lineares}
+		Nesta seção, vamos apresentar os sistemas lineares e, depois, sua forma em matrizes, objetos que, embora pareçam distantes, estão bem ligados e permitem definições e resoluções interessantes. Assim, inicialmente vamos apresentar o que são sistemas lineares.
 		\begin{definicao}
 			Sejam $b, a_1,\dots, a_n\in \mathbb{R}$ fixos e $x_1,\dots,x_n$ variáveis. Então, uma \azul{equação linear} é uma igualdade da forma
 			\[
@@ -395,14 +396,9 @@
 		\begin{definicao}
 			Um \azul{sistema linear} é um conjunto de equações lineares.
 		\end{definicao}
-		\begin{definicao}
-			Uma \azul{solução} de um sistema linear é o conjunto $\{s_1,\dots, s_n\}$ que satisfaz todas as equações ao substituir cada variável ($x_1=s_1,\dots,x_n=s_n$).
-		\end{definicao}
-		\begin{definicao}
-			O \azul{conjunto solução} ou a \azul{solução geral} do sistema é o conjunto de todas as soluções do sistema linear.
-		\end{definicao}
+		Em outras palavras, vamos ter variáveis arranjadas com números reais, em igualdades chamadas equações lineares. Essa linearidade é dada pelo fato das variáveis estarem sujeitas à potência de no máximo $1$, ou seja, não existirem termos como $x^2$ ou $x^{1000}$.
 		
-		Dessa forma, se tivermos um sistema de $m$ equações e de soluções com $n$ entradas, então temos algo no formato abaixo.
+		Dessa forma, se tivermos um sistema de $m$ equações e $n$ variáveis, então temos algo no formato abaixo.
 		\[
 		\begin{cases}
 			a_{11}x_1+\dots +a_{1n}x_n=b_1\\
@@ -410,33 +406,70 @@
 			a_{m1}x_1+\dots +a_{mn}x_n=b_m
 		\end{cases}
 		\]
+		Isso já dá uma breve ideia de como associamos esses sistemas a matrizes.
+		
+		Com os números associados e as igualdades bem estabelecidas, as variáveis podem ou não assumir valores específicos que mantêm as igualdades verdadeiras. Damos a isso o nome de solução.
+		\begin{definicao}
+			Uma \azul{solução} de um sistema linear é o conjunto $\{s_1,\dots, s_n\}$ que satisfaz todas as equações ao substituir cada variável ($x_1=s_1,\dots,x_n=s_n$).
+		\end{definicao}
+		\begin{definicao}
+			O \azul{conjunto solução} ou a \azul{solução geral} do sistema é o conjunto de todas as soluções do sistema linear.
+		\end{definicao}
+		
 		Para encontrar as soluções de um sistema linear, são utilizadas três operações fundamentais, chamadas de \azul{operações elementares}:
 		\begin{enumerate}
 			\item Trocar a posição de duas equações;
 			\item Multiplicar uma equação por um escalar $\alpha\neq0$;
 			\item Somar uma equação ao "múltiplo escalar" de outra.
 		\end{enumerate}
-		Um tipo especial de sistema linear é o homogêneo.
+		Segue um exemplo de como isso é feito:
+		\begin{exemplo}
+			Considerando o seguinte sistema linear, podemos aplicar as operações acima.
+			\begin{align*}
+				\begin{cases}
+					x+2y=4\\
+					x-y=1
+				\end{cases}
+				&\Rightarrow \begin{cases}
+					x+2y=4\\
+					-x+y=-1
+				\end{cases} \text{(operação 2 na equação 2)}\\
+				&\Rightarrow \begin{cases}
+					x+2y=4\\
+					3y=3
+				\end{cases} \text{(operação 3 na equação 2)}\\
+				&\Rightarrow \begin{cases}
+					x+2=4\\
+					y=1
+				\end{cases}
+				\Rightarrow \begin{cases}
+					x=-2\\
+					y=1
+				\end{cases}
+			\end{align*}
+		\end{exemplo}
+		Embora a primeira operação seja aparentemente "inútil", em frente entenderemos sua utilidade.
+		
+		Vale também apresentar um tipo especial de sistema linear, o homogêneo; bem como de solução, a trivial.
 		\begin{definicao}
 			Um sistema tal que $b_1,\dots,b_m=0$ é chamado \azul{sistema linear homogêneo}.
 		\end{definicao}
 		\begin{definicao}
-			Uma solução onde
-			\[
-			\begin{cases}
-				x_1=0\\
-				\vdots
-				x_n=0
-			\end{cases}
-			\]
-			é chamada de \azul{solução trivial}.
+			Uma solução onde $x_1=0, \dots, x_n=0$ é chamada de \azul{solução trivial}.
 		\end{definicao}
+		Note que, de forma imediata, para um sistema tal que
+		\[
+		\begin{cases}
+			a_{11}x_1+\dots +a_{1n}x_n=0\\
+			\vdots\\
+			a_{m1}x_1+\dots +a_{mn}x_n=0
+		\end{cases}
+		\]
+		a solução trivial faz parte do conjunto solução. Logo, temos abaixo uma conclusão consequente dessas definições.
+		
 		\begin{proposicao}
 			Se um sistema linear é homogêneo, então ele admite pelo menos solução trivial. 
 		\end{proposicao}
-		\begin{teorema}
-			Se um sistema linear homogêneo tem menos equações do que incógnitas, então ele tem infinitas soluções.
-		\end{teorema}
 		
 		\subsection{Matrizes como Sistemas Lineares}
 			Relembrando novamente Sistemas Lineares, eles possuem o seguinte formato:
@@ -480,7 +513,10 @@
 			\end{cases}
 			\]
 			
-			Além disso, podemos novamente definir as operações elementares para matrizes.
+			O leitor pode facilmente verificar isso fazendo a multiplicação das matrizes $A$ e $X$, depois igualando à $B$ e verificar a igualdade entrada a entrada.
+			
+			Além disso, podemos novamente definir as operações elementares para matrizes. Note que, agora, a primeira operação terá mais uso.
+			
 			\begin{definicao}
 				Seguem abaixo as \azul{operações elementares sobre as linhas de uma matriz}.
 				\begin{enumerate}
@@ -489,32 +525,62 @@
 					\item Somar uma linha ao "múltiplo escalar" de outra.
 				\end{enumerate}
 			\end{definicao}
+			
+			Embora as matrizes sejam equivalentes, no entanto, elas não são as mesmas. Ainda assim, representam sistemas lineares com o mesmo conjunto solução. Portanto, vale a pena dar um nome a matrizes que são "semelhantes" nesse sentido.  
+			
 			\begin{definicao}
 				Sejam $A$ e $B$ matrizes. $A$ é \azul{equivalente por linhas} a $B$, se $B$ pode ser obtida aplicando operações elementares sobre $A$.
 			\end{definicao}
 			Uma forma de representar os sistemas lineares com matrizes, omitindo as variáveis e obtendo algo mais conciso, temos a \azul{matriz aumentada} abaixo.
 			\[
-			[A\, \mid \, B]= \begin{bmatrix}
+			[A \mid  B]= \begin{bmatrix}
 				a_{11} & \dots & a_{1n} & b_1\\
 				\vdots & \ddots& \vdots & \vdots\\
 				a_{m1} & \dots & a_{mn} & b_m
 			\end{bmatrix}
 			\]
+			Isso apenas facilita as contas, considerando que as operações elementares devem ser executadas nas matrizes $A$ e $B$ simultaneamente. "Juntando" em uma única matriz aumentada, temos maior praticidade e menos chance de errar.
+			
+			Resumindo o que foi apresentado, temos esse teorema, que pode ser demonstrado e, de fato, apresentar a eficácia das operações elementares.
 			\begin{teorema}
-				Sejam os sistemas $AX=B$ e $CX=D$. Se $[A \, \mid \, B]$ é equivalente por linhas a $[C \, \mid \, D]$, então o conjunto solução de ambos é a mesma.
+				Sejam os sistemas $AX=B$ e $CX=D$. Se $[A \mid B]$ é equivalente por linhas a $[C \, \mid \, D]$, então o conjunto solução de ambos é a mesma.
 			\end{teorema}
+			
+			Com as operações apresentadas e as matrizes ajustadas, ainda temos uma vasta gama de combinações de operações que podemos fazer, e chegar ao mesmo resultado. Para maior praticidade, faz sentido criar um "algoritmo" para solucionar esses sistemas lineares em formato de matrizes. Assim, vamos primeiro definir pivô e a forma escalonada reduzida.
 			\begin{definicao}
-				O \azul{pivô} da $i$-ésima linha de uma matriz $A$ é o primeiro elemento não nulo de $A_i$.
+				Seja $A$ uma matriz. O \azul{pivô} da linha $A_i$ é o seu primeiro elemento não nulo.
 			\end{definicao}
+			Note que linhas nulas não possuem pivô.
 			\begin{definicao}
 				Seja $A_{m\times n}$ uma matriz. Ela está na forma \azul{escalonada reduzida}, se satisfaz todas as condições abaixo.
 				\begin{enumerate}[label=\roman*)]
-					\item Todas as linhas nulas ($A_i=[0,\dots,0]$) estão abaixo das não nulas;
-					\item O pivô de cada linha não nula é $1$;
-					\item Se o pivô da linha $A_i$ ocorre na $j$-ésima coluna, então o pivô da linha $A_{i+1}$ ocorre na $(j+1)$-ésima coluna;
+					\item Todas as linhas nulas ($A_i=[0\, \dots\, 0]$) estão abaixo das não nulas;
+					\item Todos os pivôs são $1$;
+					\item Todo pivô está à direita do pivô da linha anterior;
 					\item Se uma coluna contém pivô, então todos os outros elementos são $0$.
 				\end{enumerate}
 			\end{definicao}
+			Seguem exemplos de matrizes escalonadas reduzidas, para que esse conceito seja mais visual.
+			\begin{exemplo}
+				Seguem matrizes escalonadas reduzidas, com os pivôs em vermelho.
+				
+				\[
+				\begin{bmatrix}
+					\cred{1} & 0 & 0\\
+					0 & \cred{1} & 0\\
+					0 & 0 & \cred{1}
+				\end{bmatrix}
+				\text{ e } 
+				\begin{bmatrix}
+					\cred{1} & 0 & 2 & 9\\
+					0 & \cred{1} & 4 & 0\\
+					0 & 0 & 0 & 0
+				\end{bmatrix}
+				\].
+			\end{exemplo}
+			\begin{teorema}
+				Se um sistema linear homogêneo tem menos equações do que incógnitas, então ele tem infinitas soluções.
+			\end{teorema}
 			\begin{proposicao}
 				Sejam $A_{m\times n}$ e $B_{m\times 1}$ matrizes. Se o sistema $AX=B$ possui duas soluções distintas $X_0\neq X_1$, então ele tem infinitas soluções.
 			\end{proposicao}
