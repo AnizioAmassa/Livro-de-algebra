@@ -382,7 +382,7 @@
 					\]
 					\item $\det(AB)=\det(A)\det(B)$.
 					\item $\det(A)=\det(A^T)$.
-					\item $A$ invertível $\Leftrightarrow \det(A)\neq 0$.
+					\item $A$ invertível $\Leftrightarrow \det(A)\neq 0$ e $\det(A^{-1})=\frac{1}{\det(A)}$
 				\end{enumerate}
 			\end{teorema}
 	\section{Sistemas Lineares}
@@ -443,10 +443,11 @@
 					y=1
 				\end{cases}
 				\Rightarrow \begin{cases}
-					x=-2\\
+					x=2\\
 					y=1
 				\end{cases}
 			\end{align*}
+			\label{ex:SLoperacoes}
 		\end{exemplo}
 		Embora a primeira operação seja aparentemente "inútil", em frente entenderemos sua utilidade.
 		
@@ -526,7 +527,7 @@
 				\end{enumerate}
 			\end{definicao}
 			
-			Embora as matrizes sejam equivalentes, no entanto, elas não são as mesmas. Ainda assim, representam sistemas lineares com o mesmo conjunto solução. Portanto, vale a pena dar um nome a matrizes que são "semelhantes" nesse sentido.  
+			No entanto, embora as matrizes sejam "parecidas", elas não são as mesmas. Ainda assim, representam sistemas lineares equivalentes. Portanto, vale a pena dar um nome a matrizes que são semelhantes nesse sentido.  
 			
 			\begin{definicao}
 				Sejam $A$ e $B$ matrizes. $A$ é \azul{equivalente por linhas} a $B$, se $B$ pode ser obtida aplicando operações elementares sobre $A$.
@@ -539,22 +540,24 @@
 				a_{m1} & \dots & a_{mn} & b_m
 			\end{bmatrix}
 			\]
-			Isso apenas facilita as contas, considerando que as operações elementares devem ser executadas nas matrizes $A$ e $B$ simultaneamente. "Juntando" em uma única matriz aumentada, temos maior praticidade e menos chance de errar.
+			Isso facilita as contas, considerando que as operações elementares devem ser executadas nas matrizes $A$ e $B$ simultaneamente. 
 			
 			Resumindo o que foi apresentado, temos esse teorema, que pode ser demonstrado e, de fato, apresentar a eficácia das operações elementares.
 			\begin{teorema}
-				Sejam os sistemas $AX=B$ e $CX=D$. Se $[A \mid B]$ é equivalente por linhas a $[C \, \mid \, D]$, então o conjunto solução de ambos é a mesma.
+				Sejam os sistemas $AX=B$ e $CX=D$. Se $[A \mid B]$ é equivalente por linhas a $[C \mid D]$, então o conjunto solução de ambos é a mesma.
 			\end{teorema}
 			
-			Com as operações apresentadas e as matrizes ajustadas, ainda temos uma vasta gama de combinações de operações que podemos fazer, e chegar ao mesmo resultado. Para maior praticidade, faz sentido criar um "algoritmo" para solucionar esses sistemas lineares em formato de matrizes. Assim, vamos primeiro definir pivô e a forma escalonada reduzida.
+			Mesmo com as operações e matrizes apresentadas, ainda temos uma vasta gama de combinações de operações que podemos fazer, e chegar ao mesmo resultado. Para maior praticidade, faz sentido criar um "algoritmo" para solucionar esses sistemas lineares em formato de matrizes.
+			
+			Assim, vamos primeiro definir o pivô, e depois um forma de matriz que apresenta claramente a solução.
 			\begin{definicao}
 				Seja $A$ uma matriz. O \azul{pivô} da linha $A_i$ é o seu primeiro elemento não nulo.
 			\end{definicao}
-			Note que linhas nulas não possuem pivô.
+			Note que linhas nulas (i.e., no formato $A_i=[0\, \dots\, 0]$) não possuem pivô.
 			\begin{definicao}
 				Seja $A_{m\times n}$ uma matriz. Ela está na forma \azul{escalonada reduzida}, se satisfaz todas as condições abaixo.
 				\begin{enumerate}[label=\roman*)]
-					\item Todas as linhas nulas ($A_i=[0\, \dots\, 0]$) estão abaixo das não nulas;
+					\item Todas as linhas nulas estão abaixo das não nulas;
 					\item Todos os pivôs são $1$;
 					\item Todo pivô está à direita do pivô da linha anterior;
 					\item Se uma coluna contém pivô, então todos os outros elementos são $0$.
@@ -562,7 +565,7 @@
 			\end{definicao}
 			Seguem exemplos de matrizes escalonadas reduzidas, para que esse conceito seja mais visual.
 			\begin{exemplo}
-				Seguem matrizes escalonadas reduzidas, com os pivôs em vermelho.
+				A seguir temos matrizes escalonadas reduzidas, com os pivôs em vermelho.
 				
 				\[
 				\begin{bmatrix}
@@ -578,28 +581,128 @@
 				\end{bmatrix}
 				\].
 			\end{exemplo}
+			E o mais interessante: além de toda matriz possuir uma forma escalonada reduzida, ela é única!
+			
 			\begin{teorema}
-				Se um sistema linear homogêneo tem menos equações do que incógnitas, então ele tem infinitas soluções.
+				$\forall \text{ matriz }  A_{m\times n},\, \exists! \text{ matriz escalonada reduzida } R_{m\times n}$ equivalente.
 			\end{teorema}
+			
+			Como, no entanto, isso auxilia na busca por soluções de um sistema?
+			
+			Isso é útil, pois as operações elementares transformam uma matriz qualquer $[A\mid B]$ em sua forma escalonada reduzida $[R\mid S]$. Ao obter essa última matriz, obtemos a solução $S$.
+			Esse é o \azul{método de Gauss-Jordan}. Uma forma de fazer isso é seguindo o passo a passo abaixo, linha por linha:
+			\begin{enumerate}
+				\item Se a linha for nula, trocar de posição com uma linha abaixo que tiver pivô (operação 1, para cumprir a condição \textit{i)}). Caso não haja linhas da atual para abaixo com pivô, acabamos.
+				\item Multiplicar a linha atual pelo inverso multiplicativo do pivô, para que ele seja $1$ (operação 2, para cumprir a condição \textit{ii)}).
+				\item Somar um múltiplo da linha atual às demais, para anular os outros elementos da coluna (operação 3, para cumprir a condição \textit{iii)} e \textit{iv)}).
+				\item Passar para a próxima linha.
+			\end{enumerate}
+			
+			
+			Podemos voltar ao exemplo \ref{ex:SLoperacoes} e entender melhor como esse método funciona.
+			\begin{exemplo}
+				Temos o seguinte sistema linear.
+				\[
+				\begin{cases}
+					x+2y=4\\
+					x-y=1
+				\end{cases}
+				\]
+				Na linguagem das matrizes, podemos escrever como:
+				\[
+				\begin{bmatrix}
+					1 & 2 \\
+					1 & -1
+				\end{bmatrix}
+				\begin{bmatrix}
+					x\\
+					y
+				\end{bmatrix}
+				=
+				\begin{bmatrix}
+					4\\
+					1
+				\end{bmatrix}
+				\text{ ou }
+				\begin{bmatrix}
+					1 & 2 & 4\\
+					1 & -1 & 1
+				\end{bmatrix}
+				\]
+				Queremos colocar a matriz $[A\mid B]$ na forma escalonada reduzida. Para isso, vamos utilizar as operações elementares sobre as linhas da matriz.
+				\begin{align*}
+					\begin{bmatrix}
+						1 & 2 & 4\\
+						1 & -1 & 1
+					\end{bmatrix}
+					& \rightarrow \begin{bmatrix}
+						1 & 2 & 4\\
+						0 & -3 & -3
+					\end{bmatrix} \text{(operação 3: $L_2\to L_2+(-1)\cdot L_1$)}\\
+					& \rightarrow \begin{bmatrix}
+						1 & 2 & 4\\
+						0 & 1 & 1
+					\end{bmatrix} \text{(operação 2: $L_2\to -\frac{1}{3}\cdot L_2$)}\\
+					& \rightarrow \begin{bmatrix}
+						1 & 0 & 2\\
+						0 & 1 & 1
+					\end{bmatrix} \text{(operação 3: $L_1\to L_1+(-2)\cdot L_2$)}
+				\end{align*}
+				
+				Perceba que a última matriz $[R\mid S]=\begin{bmatrix}
+					\cred{1} & 0 & 2\\
+					0 & \cred{1} & 1
+				\end{bmatrix}$ está na forma escalonada reduzida, tendo solução $S=\begin{bmatrix}
+				2\\1
+				\end{bmatrix}$, ou, mais precisamente, $\begin{bmatrix}
+				x\\y
+				\end{bmatrix}=\begin{bmatrix}
+				2\\1
+				\end{bmatrix}\Rightarrow \begin{cases}
+				x=2\\y=1
+				\end{cases}$.
+				
+				De fato, para confirmar, podemos executar a multiplicação de matrizes e verificar que:
+				\[
+				\begin{bmatrix}
+					1 & 2 \\
+					1 & -1
+				\end{bmatrix}
+				\begin{bmatrix}
+					2\\
+					1
+				\end{bmatrix}
+				=
+				\begin{bmatrix}
+					4\\
+					1
+				\end{bmatrix}.
+				\]
+			\end{exemplo}
+			Agora que sabemos encontrar a forma escalonada reduzida, precisamos entender de fato como interpretar essa matriz $[R\mid S]$. Embora no exemplo acima tenha dado um único resultado, nem sempre isso ocorre. Às vezes, podemos ter um sistema impossível, ou até mesmo possível, mas com infinitas soluções.
+			
+			No entanto, é possível um sistema ter algo entre uma ou infinitas soluções? A resposta é: não!
 			\begin{proposicao}
 				Sejam $A_{m\times n}$ e $B_{m\times 1}$ matrizes. Se o sistema $AX=B$ possui duas soluções distintas $X_0\neq X_1$, então ele tem infinitas soluções.
 			\end{proposicao}
+			Em outras palavras, se você encontrou duas soluções para um mesmo sistema, então ele tem uma infinitude de valores que você pode substituir. Com isso, temos o teorema abaixo.
 			\begin{teorema}
 				Um sistema linear pode ter:
 				\begin{itemize}
-					\item Nenhuma solução;
-					\item Uma única solução;
-					\item Infinitas soluções.
+					\item Nenhuma solução (sistema impossível);
+					\item Uma única solução (sistema possível e determinado);
+					\item Infinitas soluções (sistema possível e indeterminado).
 				\end{itemize}
 			\end{teorema}
-			\begin{teorema}
-				$\forall\, \text{matriz}\,  A_{m\times n},\, \exists! \, \text{matriz escalonada reduzida}\, R_{m\times n}$.
-			\end{teorema}
+			Para identificar cada caso, é importante saber interpretar a matriz $R$. Embora a matriz $S$ de $[R\mid S]$ pareça ser "mais importante" por apresentar a solução, de nada adianta se for um sistema impossível, por exemplo.
 			\begin{proposicao}
 				Seja $R_{n\times n}$ uma matriz escalonada reduzida. $R\neq I_n$ $\Rightarrow$ $R$ tem uma linha nula.
 			\end{proposicao}
 			\begin{teorema}
 				$A_{m\times n}$ é uma matriz tal que $m<n$ $\Rightarrow$ o sistema homogêneo $AX=\bar{0}$ tem infinitas soluções. 
+			\end{teorema}
+			\begin{teorema}
+				Se um sistema linear homogêneo tem menos equações do que incógnitas, então ele tem infinitas soluções.
 			\end{teorema}
 			\begin{proposicao}
 				Seja $A_{n\times n}$ uma matriz. Então,
