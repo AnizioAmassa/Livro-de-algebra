@@ -580,6 +580,7 @@
 					0 & 0 & 0 & 0
 				\end{bmatrix}
 				\].
+				\label{ex:matrizes}
 			\end{exemplo}
 			E o mais interessante: além de toda matriz possuir uma forma escalonada reduzida, ela é única!
 			
@@ -678,6 +679,7 @@
 					1
 				\end{bmatrix}.
 				\]
+				\label{ex:SLescalonamento}
 			\end{exemplo}
 			Agora que sabemos encontrar a forma escalonada reduzida, precisamos entender de fato como interpretar essa matriz $[R\mid S]$. Embora no exemplo acima tenha dado um único resultado, nem sempre isso ocorre. Às vezes, podemos ter um sistema impossível, ou até mesmo possível, mas com infinitas soluções.
 			
@@ -694,10 +696,100 @@
 					\item Infinitas soluções (sistema possível e indeterminado).
 				\end{itemize}
 			\end{teorema}
-			Para identificar cada caso, é importante saber interpretar a matriz $R$. Embora a matriz $S$ de $[R\mid S]$ pareça ser "mais importante" por apresentar a solução, de nada adianta se for um sistema impossível, por exemplo.
+			Para identificar cada caso, é importante saber interpretar a matriz $R$ e a $[R\mid S]$. Embora a matriz $S$ sozinha pareça ser "mais importante" por apresentar a solução, de nada adianta se for um sistema impossível, por exemplo.
+			
+			Note que, no exemplo \ref{ex:SLescalonamento}, a matriz $R$ é a identidade $I_2$. Isso claramente indica um sistema possível e determinado, pois, ao multiplicar $R$ pela matriz de variáveis temos $RX=IX=X$, obtendo, portanto, $X=S$ (uma única solução). De fato, temos a seguinte preposição:
+			
 			\begin{proposicao}
 				Seja $R_{n\times n}$ uma matriz escalonada reduzida. $R\neq I_n$ $\Rightarrow$ $R$ tem uma linha nula.
-			\end{proposicao}
+			\end{proposicao} 
+			
+			E se, ao obter a matriz escalonada reduzida, obtivermos uma igualdade falsa, independente das variáveis? Então temos um sistema impossível. Um caso é a matriz do exemplo \ref{ex:matrizes}, que representa um sistema de três equações e duas variáveis.
+			\[
+			[R\mid S]=\begin{bmatrix}
+				1 & 0 & 0\\
+				0 & 1 & 0\\
+				0 & 0 & 1
+			\end{bmatrix}
+			\]
+			Note que temos o seguinte:
+			\[
+			\begin{bmatrix}
+				1 & 0\\
+				0 & 1\\
+				0 & 0
+			\end{bmatrix}
+			\begin{bmatrix}
+				x\\y
+			\end{bmatrix}=
+			\begin{bmatrix}
+				0 \\ 0 \\1
+			\end{bmatrix}
+			\Rightarrow
+			\begin{cases}
+				x=0\\
+				y=0\\
+				0=1
+			\end{cases}
+			\]
+			Sabemos que $0=1$ é uma igualdade falsa e, portanto, não há solução para esse sistema. Perceba que o pivô da última linha da matriz $[R\mid S]$ se encontra na matriz $S$, enquanto a $R$ não possui pivô na última linha.
+			
+			Por fim, temos o caso de "faltarem informações". Considere a seguinte matriz (exemplo \ref{ex:matrizes}), que representa um sistema de três equações e três variáveis.
+			\[
+			\begin{bmatrix}
+				{1} & 0 & 2 & 9\\
+				0 & {1} & 4 & 0\\
+				0 & 0 & 0 & 0
+			\end{bmatrix}
+			\]
+			Ao abri-la, temos o sistema abaixo:
+			\[
+			\begin{bmatrix}
+				1 & 0 & 2\\
+				0 & 1 & 4\\
+				0 & 0 & 0
+			\end{bmatrix}
+			\begin{bmatrix}
+				x \\ y \\ z
+			\end{bmatrix}=
+			\begin{bmatrix}
+				9 \\ 0 \\ 0
+			\end{bmatrix}
+			\Rightarrow
+			\begin{cases}
+				x+2z=9\\
+				y+4z=0\\
+				0=0
+			\end{cases}
+			\]
+			Esse sistema linear é plenamente possível. No entanto, podemos, por exemplo, escolher qualquer valor para $z$ e, assim, definir os de $x$ e $y$ também. Ainda assim, existem infinitas soluções, que estão explicitadas abaixo.
+			\[
+			\begin{cases}
+				x=9-2z\\
+				y=-4z\\
+				z=z
+			\end{cases}\Rightarrow
+			S = \left\{ \begin{bmatrix}
+				9 - 2z\\
+				-4z \\
+				z
+			\end{bmatrix} \mid z \in \mathbb{R} \right\}
+			\]
+			Nessa matriz, a última linha era "inútil", pois não tinha informações (nenhum pivô), fazendo com que tivéssemos na verdade duas equações e três variáveis.
+			
+			De forma resumida, podemos interpretar da seguinte forma:
+			\begin{teorema}
+				Seja $[A\mid B]$ uma matriz que representa um sistema linear e $[R\mid S]$ sua forma escalonada reduzida.
+				
+				Seja $p_r$ a quantidade de pivôs da matriz $R$, $p_t$ a quantidade de pivôs da matriz $[R\mid S]$, e $v$ a quantidade de variáveis do sistema.
+				
+				\begin{enumerate}[label=\roman*)]
+					\item $p_r=p_t=v \Rightarrow $ sistema possível e determinado.
+					\item $p_r=p_t<v \Rightarrow $ sistema possível e indeterminado.
+					\item $p_r<p_t \Rightarrow $ sistema impossível. 
+				\end{enumerate}
+			\end{teorema}
+			
 			\begin{teorema}
 				$A_{m\times n}$ é uma matriz tal que $m<n$ $\Rightarrow$ o sistema homogêneo $AX=\bar{0}$ tem infinitas soluções. 
 			\end{teorema}
