@@ -26,7 +26,7 @@
 			Denotamos por \azul{$\mathbb{M}_{m\times n}$} o conjunto de todas as matrizes de ordem $m\times n$.
 		\end{definicao}
 		\begin{definicao}
-			Segue abaixo nomenclaturas de matrizes:
+			Seja $A_{m\times n}$ uma matriz. Seguem abaixo nomenclaturas:
 			\begin{itemize}
 				\item \azul{Matriz Quadrada}: $m=n$, i.e., mesmo número de linhas e colunas.
 				\item \azul{Matriz Linha}: $m=1$, i.e., uma linha.
@@ -34,6 +34,9 @@
 				\item \azul{Matriz Nula ($\bar{0}$)}: $a_{ij}=0\,\forall\, i,j$.
 			\end{itemize}
 		\end{definicao}
+		
+		Vale citar brevemente que matrizes coluna (ou, menos usualmente, matrizes linha) podem representar vetores também. Isso inclui, por exemplo, vetores no $\mathbb{R}^n$, abordados no capítulo 1, que, em vez de serem n-uplas, podem ser matrizes de ordem $n\times 1$.
+		
 		Para matrizes quadradas, onde a ordem é do tipo $n\times n$, temos classificações específicas.
 		\begin{definicao}
 			Seja $A$ uma matriz quadrada. Então,
@@ -191,6 +194,7 @@
 				\end{enumerate}
 			\end{multicols}
 		\end{teorema}
+
 		
 		\subsection{Matriz Inversa}
 			Outro conceito fundamental para matrizes é de invertibilidade. Isso se dá pela relativa dificuldade de determinar a inversa, mas também pelas propriedades que são adquiridas com elas, relacionadas a Sistemas Lineares por exemplo.
@@ -762,7 +766,7 @@
 				0=0
 			\end{cases}
 			\]
-			Esse sistema linear é plenamente possível. No entanto, podemos, por exemplo, escolher qualquer valor para $z$ e, assim, definir os de $x$ e $y$ também. Ainda assim, existem infinitas soluções, que estão explicitadas abaixo.
+			Esse sistema linear é plenamente possível. No entanto, podemos, por exemplo, escolher qualquer valor para $z$ e, assim, definir os de $x$ e $y$ também. Ainda assim, existem infinitas soluções, que estão explicitadas abaixo, em um conjunto $S$ de matrizes.
 			\[
 			\begin{cases}
 				x=9-2z\\
@@ -789,25 +793,92 @@
 					\item $p_r<p_t \Rightarrow $ sistema impossível. 
 				\end{enumerate}
 			\end{teorema}
-			
+			Uma consequência desse teorema está nos sistemas lineares homogêneos.
 			\begin{teorema}
 				$A_{m\times n}$ é uma matriz tal que $m<n$ $\Rightarrow$ o sistema homogêneo $AX=\bar{0}$ tem infinitas soluções. 
 			\end{teorema}
+			Sabemos que $n$ é o número de variáveis e $m$ a quantidade de equações do sistema. Assim, outra forma equivalente de enunciá-lo segue abaixo.
 			\begin{teorema}
 				Se um sistema linear homogêneo tem menos equações do que incógnitas, então ele tem infinitas soluções.
 			\end{teorema}
+			Além disso, podemos extrair propriedades interessantes do seu conjunto solução.
 			\begin{proposicao}
-				Seja $A_{n\times n}$ uma matriz. Então,
+				Seja $A_{n\times n}$ uma matriz. Sejam $X$ e $Y$ soluções do sistema homogêneo $AX=\bar{0}$. Então,
 				\begin{enumerate}[label=\roman*)]
-					\item $X$ e $Y$ são soluções do sistema homogêneo $AX=\bar{0}$ $\Rightarrow$ $X+Y$ também é solução.
-					\item $X$ é solução do sistema homogêneo $AX=\bar{0}$ $\Rightarrow$ $\alpha X$ também é solução, $\forall\, \alpha \in \mathbb{R}$.
+					\item $X+Y$ também é solução.
+					\item $\alpha X$ também é solução, $\forall\, \alpha \in \mathbb{R}$.
 				\end{enumerate}
 			\end{proposicao}
+			A demonstração é bem simples e também é recomendada como exercício para o leitor. Basta verificar o resultado de $A(X+Y)$ e $A(\alpha X)$.
 			
+			Agora, podemos voltar ao estudo das matrizes inversas, e depois entender sua relevância. Primeiro, uma dúvida que não foi bem respondida foi como podemos calcular a inversa.
+			
+			A grande pergunta é como encontrar $B_{n\times n}$, dada uma matriz $A_{n\times n}$ tal que $AB=I_n$. Podemos desenvolver um pouco a multiplicação e obter algo interessante, visualmente falando.
+			\[
+			\begin{bmatrix}
+				a_{11} & \dots & a_{1n}\\
+				\vdots & \ddots& \vdots\\
+				a_{n1} & \dots & a_{nn}
+			\end{bmatrix}
+			\begin{bmatrix}
+				b_{11} & \dots & b_{1n}\\
+				\vdots & \ddots& \vdots\\
+				b_{n1} & \dots & b_{nn}
+			\end{bmatrix}
+			=
+			\begin{bmatrix}
+				1 & \dots & 0\\
+				\vdots & \ddots& \vdots\\
+				0 & \dots & 1
+			\end{bmatrix}
+			\Rightarrow
+			\begin{cases}
+				\begin{bmatrix}
+					a_{11} & \dots & a_{1n}\\
+					\vdots & \ddots& \vdots\\
+					a_{n1} & \dots & a_{nn}
+				\end{bmatrix}
+				\begin{bmatrix}
+					b_{11} \\
+					\dots\\
+					b_{n1}
+				\end{bmatrix}
+				=
+				\begin{bmatrix}
+					1 \\
+					\vdots\\
+					0
+				\end{bmatrix}\\
+				\vdots \\
+				\begin{bmatrix}
+					a_{11} & \dots & a_{1n}\\
+					\vdots & \ddots& \vdots\\
+					a_{n1} & \dots & a_{nn}
+				\end{bmatrix}
+				\begin{bmatrix}
+					b_{1n} \\
+					\dots\\
+					b_{nn}
+				\end{bmatrix}
+				=
+				\begin{bmatrix}
+					0 \\
+					\vdots\\
+					1
+				\end{bmatrix}
+			\end{cases}
+			\]
+			De fato, estamos resolvendo $n$ sistemas lineares para encontrar a inversa de $A$.
+			
+			De forma mais prática, podemos simplesmente dizer que vamos aplicar o método de Gauss-Jordan na matriz $[A\mid I]$ e obter a matriz escalonada reduzida $[R\mid B]$ (isso quando a inversa existir), onde $B=A^{-1}$. Note que, por uma questão de simetria ($(A^{-1})^{-1}=A$), a matriz $R$ também deve ser a identidade. Em outras palavras,
+			\[
+			[A\mid I_n]\longleftrightarrow [I_n \mid A^{-1}] \text{ (escalonamento).}
+			\]
+			Podemos formalizar essa condição de invertibilidade em um teorema.
 			\begin{teorema}
 				Seja $A_{n\times n}$ uma matriz. $A$ invertível $\Leftrightarrow$ $A$ é equivalente por linhas a $I_n$.
 			\end{teorema}
-			
+			Além disso, temos o seguinte teorema, que liga muito bem as ideias de sistemas lineares, matrizes e invertibilidade.
 			\begin{teorema}
 				Seja $A_{n\times n}$ uma matriz.
 				\begin{enumerate}[label=\roman*)]
@@ -815,13 +886,16 @@
 					\item O sistema homogêneo $AX=\bar{0}$ tem solução não trivial $\Leftrightarrow$ $A$ é singular.
 				\end{enumerate}
 			\end{teorema}
-			
+			Evidentemente, o item \textit{ii)} advém do fato de que, ao ter solução não trivial, um sistema linear homogêneo possui pelo menos duas soluções e, consequentemente infinitas.
+				
+			Como consequência, lembrando que $A$ invertível $\Leftrightarrow \det(A)\neq 0$, podemos facilmente provar o teorema abaixo.
 			\begin{teorema}
 				O sistema homogêneo $AX=\bar{0}$ tem solução não trivial $\Leftrightarrow$ $\det(A)= 0$.
 			\end{teorema}
+			E daí vem um dos motivos do determinante também ser um objeto importante de estudo.
 			
 	\section{Combinação Linear e Dependência Linear}
-		Vamos retomar a definição de combinação linear.
+		Depois de discorrer sobre matrizes e sistemas lineares, vale a pena introduzir ideias de combinação e dependência linear, que dão uma boa base para o início de conceitos mais abstratos (como espaços e subespaços vetoriais), que seguem no próximo capítulo. Para iniciar, vamos retomar a definição de combinação linear, lá do capítulo 1.
 		\begin{definicao}
 			Sejam $V_1, \dots, V_k \in \mathbb{R}^n$ vetores e $\alpha_1,\dots, \alpha_k \in \mathbb{R}$ escalares. Seja $W$ um vetor tal que
 			\[
@@ -829,17 +903,63 @@
 			\]
 			Então, $W$ é combinação linear de $V_1, \dots, V_k$.
 		\end{definicao}
-		\begin{proposicao}Sejam $A_{m\times n}$ e $B_{m\times 1}$ matrizes. 
+		Aplicando essa definição para matrizes, podemos fazer uma construção interessante. Lembre que matrizes coluna também são vetores. Assim, podemos pegar $n$ vetores de ordem $m\times 1$, nomeados $A_{1},\dots,A_{n}$ e definir sua combinação linear como um vetor $B_{m\times 1}$:
+		\[
+		B=x_1A_1+\dots +x_n A_n
+		\]
+		Note que isso também é equivalente a:
+		\[
+		B=\begin{bmatrix}
+			A_1 & \dots & A_n
+		\end{bmatrix}\begin{bmatrix}
+			x_1\\
+			\vdots\\
+			x_n
+		\end{bmatrix}=\begin{bmatrix}
+		a_{11} & \dots & a_{1n}\\
+		\vdots & \ddots& \vdots\\
+		a_{n1} & \dots & a_{nn}
+		\end{bmatrix}\begin{bmatrix}
+		x_1\\
+		\vdots\\
+		x_n
+		\end{bmatrix}
+		\]
+		Ou seja, esse vetor $B$ é combinação linear de $A_1,\dots,A_n$, se existirem valores $x_1,\dots,x_n$ que satisfaçam as igualdades acima. Estamos definindo um sistema linear.
+		\begin{proposicao}Sejam $A_{m\times n}$ e $B_{m\times 1}$ matrizes.
 			
-		O $B$ é combinação linear das colunas de $A$ $\Leftrightarrow$ O sistema $AX=B$ tem solução. 
+			$B$ é combinação linear das colunas de $A$ $\Leftrightarrow$ o sistema $AX=B$ tem solução. 
 		\end{proposicao}
+		
+		A partir dessa "mistura" de ideias, podemos fazer a seguinte definição interessante.
 		\begin{definicao}
-			Sejam $V_1,\dots,V_k\in\mathbb{R}^n$. Seja $V_{n\times k}=[V_1 \quad \dots \quad V_k]$.
+			Seja $S=\{V_1,\dots,V_k\}\subset\mathbb{R}^n$. Seja $V_{n\times k}=\begin{bmatrix}
+				V_1 & \dots & V_k
+			\end{bmatrix}$.
 			
-			O conjunto $S$ desses vetores é \azul{linearmente independente (LI)} se $VX=\bar{0}$ possui somente solução trivial.
+			O conjunto $S$ é \azul{linearmente independente (LI)} se $VX=\bar{0}$ possui somente solução trivial.
 			
 			Caso contrário, o conjunto $S$ é \azul{linearmente dependente (LD)}.
 		\end{definicao}
+		Abrindo um pouco essa definição, dizemos que o conjunto $S$ é LI, se
+		\[
+		x_1V_1+\dots+x_kV_k=\bar{0}
+		\]
+		só pode ser verdadeiro quando $x_1=\dots=x_k=0$, i.e., não existe nenhuma outra combinação linear dos vetores de $S$ que dê o nulo.
+		
+		A grosso modo, isso significa que \textbf{nenhum vetor $V_i\in S$ pode ser escrito como combinação linear demais}. Isso porque, caso fosse possível, teríamos, para algum $\alpha_1,\dots,\alpha_k\in\mathbb{R}$,
+		\begin{align*}
+			&V_i=\alpha_1V_1+\dots+\alpha_kV_k\\
+			&\Rightarrow \bar{0}=\alpha_1V_1+\dots -V_{i}+\dots+\alpha_kV_k
+		\end{align*}
+		e poderíamos simplesmente tomar $x_1=\alpha_1, \dots, x_i=-1,\dots, x_k=\alpha_k$ e teríamos nossa solução não trivial do sistema $VX=\bar{0}$.
+		
+		Formalizando, temos o seguinte teorema:
+		\begin{teorema}
+			Seja o conjunto $S=\{V_1,\dots,V_k\}$, com $k>1$. Então, $S$ é LD $\Leftrightarrow$ $\exists\, V_j$ tal que $V_j$ é combinação linear de $V_1,\dots,V_{j-1},V_{j+1},\dots,V_k$.
+		\end{teorema}
+		
+		Trazendo de volta a construção feita anteriormente, podemos também intuitivamente entender a seguinte proposição, resgatando também teoremas da seção anterior.
 		\begin{proposicao}
 			Seja $A_{m\times n}$ uma matriz.
 			\begin{enumerate}[label=\roman*)]
@@ -847,10 +967,11 @@
 				\item Seja $m=n$. Então as colunas de $A$ são LI $\Leftrightarrow$ $\det(A)\neq 0$.
 			\end{enumerate} 
 		\end{proposicao}
+		Recomenda-se que o leitor tente provar essa proposição.
+		
+		Além disso, como consequência, temos que, caso o conjunto $S$ tenha $k$ vetores tal que $k>n$, o conjunto é LD. Isso ocorre porque, ao tentar resolver $VX=\bar{0}$, teremos mais incógnitas que equações, e, portanto, infinitas soluções.
 		\begin{corolario}
 			Sejam $V_1,\dots, V_k\in\mathbb{R}^n$. Se $k>n$, então o conjunto $S$ desses vetores é LD.
 		\end{corolario}
-		\begin{teorema}
-			Seja o conjunto $S=\{V_1,\dots,V_k\}$, com $k>1$. Então, $S$ é LD $\Leftrightarrow$ $\exists\, V_j$ tal que $V_j$ é combinação linear de $V_1,\dots,V_{j-1},V_{j+1},\dots,V_k$.
-		\end{teorema}
+		
 \end{document}
