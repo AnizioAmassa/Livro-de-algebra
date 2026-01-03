@@ -1,3 +1,6 @@
+# Mariana - 02/01/26
+- finalizada primeira versão do capítulo 2
+
 # Anizio - 31/12/25
 - algumas adições na seção de bases, alterações no prefacio e correções gerais
 - criei o .gitignore porque tava uma merda trabalhar com um monte de arquivo inutil na main
