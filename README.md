@@ -1,3 +1,6 @@
+# Anizio - 03/01/26
+- terminando seção de bases
+
 # Mariana - 02/01/26
 - finalizada primeira versão do capítulo 2
 
