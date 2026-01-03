@@ -47,7 +47,7 @@
 				\item $\exists \text{ vetor }\bar{0}\text{, tal que }  V+\bar{0}=V$ (existência do elemento neutro/vetor nulo)
 			\end{enumerate}
 		\end{proposicao}
-		Abaixo seguem ilustrações das propriedades i) e ii).
+		Abaixo seguem ilustrações das propriedades \textit{i)} e \textit{ii)}.
 		\begin{figure}[h!]
 			\centering
 			\begin{minipage}{0.45\textwidth}
@@ -130,7 +130,7 @@
 			
 			Se $V$ está em "dimensões maiores" (\azul{$\mathbb{R}^n$} ou \azul{espaço euclidiano n-dimensional}), então suas coordenadas são uma tupla de $n$ números reais, denotadas usualmente por $(v_1, \dots, v_n)$.
 		\end{definicao}
-		Abaixo seguem ilustrações de como coordenadas funcionam no plano e no espaço.
+		Na Figura \ref{fig:vetores-R2-R3}, seguem ilustrações de como coordenadas funcionam no plano e no espaço.
 		\begin{figure}[h]
 			\centering
 			
@@ -226,6 +226,7 @@
 		Para o $\mathbb{R}^3$, a subtração ocorre da mesma forma.
 		
 		Com isso, note que as operações ficam muito mais fáceis, sem depender sempre do apelo geométrico. Assim, podemos buscar uma nova forma de fazer as operações básicas entre vetores (soma e multiplicação por escalar):
+		\needspace{5\baselineskip}
 		\begin{proposicao}
 			Sejam $V, W\in \mathbb{R}^2$ e $\alpha\in \mathbb{R}$. Então,
 			\begin{enumerate}[label = \roman*)]
@@ -415,7 +416,7 @@
 			Sejam $V$ e $W$ vetores. Então, seu produto escalar é dado por
 			\[
 			V\cdot W = \begin{cases}
-				v_1w_1+v_2w_2\text{, se $V,W \in \mathbb{R^2}$}\\
+				v_1w_1+v_2w_2\text{, se $V,W \in \mathbb{R}^2$}\\
 					
 					v_1 w_1 +v_2 w_2 + v_3 w_3\text{, se $V, W \in \mathbb{R}^3$.}
 			\end{cases}
@@ -435,16 +436,18 @@
 				\item $U\cdot V=V\cdot U$;
 				\item $U\cdot (V+W)=U\cdot V+U\cdot W$;
 				\item $\alpha(U\cdot V)=(\alpha U)\cdot V = U\cdot (\alpha V)$;
-				\item $V\cdot V=\|V\|^2\geq 0,\, \forall V$ e $V\cdot V=0 \Leftrightarrow V = \bar{0}$.
+				\item $V\cdot V=\|V\|^2\geq 0$
+				
+				$V\cdot V=\|V\|^2=0 \Leftrightarrow V = \bar{0}$.
 			\end{enumerate}
 		\end{proposicao}
-		As ideias de norma e produto escalar são essenciais e possuem interpretação geométrica. O produto escalar, por exemplo, mostra a relação entre dois vetores e seus tamanhos e "alinhamento" (ângulo entre eles). Isso é muito bem visualizado ao tentarmos entender projeções de um vetor sobre outro: a projeção ortogonal.
+		As ideias de norma e produto escalar são essenciais e possuem interpretação geométrica. O produto escalar, por exemplo, mostra a relação entre os tamanhos e "alinhamento" (ângulo) entre dois vetores. Isso é muito bem visualizado ao tentarmos entender projeções de um vetor sobre outro: a projeção ortogonal.
 		
 		\begin{definicao}
 			Sejam $V$ e $W$ vetores. A \azul{projeção ortogonal de $V$ sobre $W$}, denotada por $\text{proj}_W V$ é o vetor tal que
 			\begin{itemize}
-				\item $\text{proj}_W V \parallelsum W$;
-				\item $V-\text{proj}_W V \perp W$.
+				\item $\text{proj}_W V \parallelsum W$ (a projeção e $W$ têm a mesma direção);
+				\item $V-\text{proj}_W V \perp W$ (a diferença de $V$ com a projeção é perpendicular a $W$).
 			\end{itemize}
 		\end{definicao}
 		Abaixo segue uma ilustração da projeção ortogonal.
@@ -487,6 +490,7 @@
 			\end{tikzpicture}
 			\caption{Projeção ortogonal de $\vec V$ sobre $\vec W$.}
 		\end{figure}
+		
 		A partir dessa definição, podemos provar o seguinte teorema.
 		\begin{teorema}
 			Seja $W\neq \bar{0}$ um vetor. Então,
@@ -510,7 +514,7 @@
 				\item o sentido é dado pela regra da mão direita.
 			\end{enumerate}
 		\end{definicao}
-		A regra da mão direita estabelece que os dedos giram de $V$ para $W$ e o polegar aponta na direção de $U$, representada na Figura \ref{fig:maodireita}.
+		A regra da mão direita estabelece que os dedos giram de $V$ para $W$ e o polegar aponta na direção de $U$ (movimento representado na Figura \ref{fig:maodireita}). Perceba que, caso invertamos a ordem de $W$ para $V$, a direção também é alterada.
 		
 		Utilizando as componentes dos vetores, podemos obter as coordenadas do seu produto vetorial de uma forma mais simples.
 		\begin{proposicao}
@@ -565,6 +569,8 @@
 			\label{fig:maodireita}
 		\end{figure}
 		
+		Se você não estiver habituado às ideias de matrizes e determinante, não se preocupe. No capítulo 2, apresentaremos formalmente cada um.
+		
 		Note que, no abuso de notação para representar o produto vetorial, temos que os componentes da matriz são ora vetores, ora números reais, o que indica uma matriz inválida. A ideia dessa representação é de que, se considerássemos $\vec i$, $\vec j$ e $\vec k$ números reais e fizéssemos a conta de tal determinante, e a multiplicação entre reais fosse igual à multipliação por escalar, teríamos o equivalente à primeira forma do produto vetorial, apresentada imediatamente antes. Em suma, essa segunda representação é, na verdade, um "macete" para decorar o produto vetorial.
 		
 		A partir dessas definições equivalentes do produto vetorial, podemos demonstrar as seguintes propriedades.
@@ -611,7 +617,7 @@
 		\end{proposicao}
 		Como dito, anteriormente, os produtos vetorial e misto possuem uma interpretação geométrica interessante. Isso se deve ao fato de que, quando os vetores $V$, $W$ e $U$ são não nulos, temos $\|V\times W\|=\|V\|\|W\|\sin(\theta_1)$ e $|[V,W,U]|=\|V\times W\|\|U\|\cos(\theta_2)$.
 		
-		Essas definições permitem o entendimento de que a norma do produto vetorial é a área do paralelogramo formado pelos vetores $V$ e $W$, e o módulo do produto misto é o volume do paralelepípedo.
+		Essas definições permitem o entendimento de que a norma do produto vetorial é a área do paralelogramo formado pelos vetores $V$ e $W$, e o módulo do produto misto é o volume do paralelepípedo. Na Figura \ref{fig:areavolume}, temos uma ilustração de como isso ocorre.
 		
 		\begin{figure}[htb]
 			\centering
@@ -703,7 +709,7 @@
 			\caption{Produto vetorial e produto misto.}
 			\label{fig:areavolume}
 		\end{figure}
-		Como sabemos, a área do paralelogramo é dada pelo produto da base com a altura, enquanto o volume do paralelepípedo é dado pelo produto da área da base com a altura. Assim seguem as relações abaixo. \[A_{VW}=\|V\|\|W\|\sin(\theta_1)=\|V\times W\|\] \[V_{VWU}=A_{VW}\|U\|\cos(\theta_2)=\|V\times W\|\|U\|\cos(\theta_2)=|[V,W,U]|\]
+		Como sabemos, a área do paralelogramo é dada pelo produto da base com a altura, enquanto o volume do paralelepípedo é dado pelo produto da área da base com a altura. Assim seguem as relações abaixo. \[A_{VW}=bh=\|V\|h=\|V\|\|W\|\sin(\theta_1)=\|V\times W\|\] \[V_{VWU}=A_{VW}b=A_{VW}\|U\|\cos(\theta_2)=\|V\times W\|\|U\|\cos(\theta_2)=|[V,W,U]|\]
 		
 		Além das suas normas representarem áreas e volumes, os produtos vetorial e misto, assim como o escalar, são indicadores de "alinhamento" entre vetores. A essas características damos o nome de colinearidade e coplanaridade.
 		\begin{definicao}
@@ -743,7 +749,9 @@
 				\item $V$ e $W$ não paralelos $\Rightarrow$ $U$ combinação linear de $V$ e $W$.
 			\end{enumerate}
 		\end{corolario}
-		Um fato interessante é que, a partir do item \textit{i)} do corolário acima, obtemos que a equação $xV+yW+zU=\bar{0}$ tem solução não trivial, ou seja, tem solução onde $x,y,z\neq 0$. Isso porque, se existem reais $\alpha, \beta$ tais que $\alpha V+\beta W= U$ (definição de combinação linear), então basta tomar $x=\alpha$, $y=\beta$ e $z=-1$.
+		Um fato interessante é que, a partir do item \textit{i)} do corolário acima, obtemos que a equação $xV+yW+zU=\bar{0}$ tem solução onde $x,y,z\neq 0$. Isso porque, se existem reais $\alpha, \beta$ tais que $\alpha V+\beta W= U$ (definição de combinação linear), então basta tomar $x=\alpha$, $y=\beta$ e $z=-1$.
+		
+		A observação acima será mais esclarecedora depois de uma boa leitura da seção 2.3.
 		
 		Com isso, finalizamos a parte de Álgebra Vetorial. Seguem abaixo os exercícios da seção.
 		\subsection*{Exercícios}
@@ -891,7 +899,7 @@
 			\end{figure}
 			Note que, de fato, para definir uma reta somente precisamos da sua direção, dada pelo vetor diretor, e de um ponto para "fixar a reta". Igualmente, para definir um plano, basta determinar sua "angulação", dada por dois vetores diretores de direções distintas, e fixá-lo com um ponto.
 			
-			As equações apresentadas essas definições são o que chamamos de \azul{equações vetoriais} desses objetos geométricos. Além delas, existem outras formas de representar retas e planos: as equações paramétricas e as equações  gerais. As retas, em especial, possuem outras duas formas particulares, que são a reduzida (muito conhecida no Ensino Médio no formato de função) e a simétrica.
+			As equações apresentadas nessas definições são o que chamamos de \azul{equações vetoriais} desses objetos geométricos. Além delas, existem outras formas de representar retas e planos: as equações paramétricas e as equações  gerais. As retas, em especial, possuem outras duas formas particulares, que são a reduzida (muito conhecida no Ensino Médio no formato de função) e a simétrica.
 			
 			Inicialmente, das equações vetoriais podemos derivar facilmente as equações paramétricas, ou seja, as equações que dependem de parâmetros.
 			
@@ -913,7 +921,7 @@
 			\frac{x-x_0}{v_1}=\frac{y-y_0}{v_2}=\frac{z-z_0}{v_3}
 			\]
 			
-			De modo semelhante podemos obter as equações da reta caso $r\subset \mathbb{R}^2$, apresentadas abaixo.
+			De modo semelhante, podemos obter as equações da reta caso $r\subset \mathbb{R}^2$, apresentadas abaixo.
 			
 			\[
 			\begin{cases}
@@ -938,23 +946,24 @@
 			Em outras palavras, obtemos equações onde o conjunto de pontos denominados reta e plano são determinados por parâmetros ($t,s\in \mathbb{R}$).
 			\[
 			\begin{cases}
-				r=\{P\in \mathbb{R}^3\, \mid\, 	P=(\textcolor{red}{x_0+tv_1},\,\textcolor{green!60!black}{y_0+tv_2},\, \textcolor{orange}{z_0+tv_3})\}\\
-				\pi = \{P\in \mathbb{R}^3\, \mid \, 	P=(\textcolor{red}{x_0+tv_1+sw_1}, \, \textcolor{green!60!black}{y_0+tv_2+sw_2}, \, \textcolor{orange}{z_0+tv_3+sw_3})\}
+				r=\{P\in \mathbb{R}^3\, \mid\, 	P=(\textcolor{red}{x_0+tv_1},\,\textcolor{green!60!black}{y_0+tv_2},\, \textcolor{orange}{z_0+tv_3}),\, t\in\mathbb{R}\}
+				\\
+				\pi = \{P\in \mathbb{R}^3\, \mid \, 	P=(\textcolor{red}{x_0+tv_1+sw_1}, \, \textcolor{green!60!black}{y_0+tv_2+sw_2}, \, \textcolor{orange}{z_0+tv_3+sw_3}),\, s,t\in \mathbb{R}\}
 			\end{cases}
 			\]
 			No entanto, em ambos os tipos de representação, precisamos de um parâmetro, o que pode nem sempre ser útil. Nesse sentido, também vale a pena definir equações gerais, ou seja, equações que não necessitam de parâmetros e definem os pontos $P$ de forma menos explícita. Para a reta, temos o seguinte.
 			\begin{proposicao}
-				A \azul{equação geral de uma reta} $r$ no $\mathbb{R}^2$ que passa por um ponto 
+				A \azul{equação geral da reta no $\mathbb{R}^2$} que passa por um ponto 
 				$P_0 = (x_0, y_0)$ é
 				\[
 				ax + by + c = 0,
 				\]
-				em que $a^2 + b^2 \neq 0$ e $c = -(ax_0 + by_0)$.
+				em que $a,b \neq 0$ e $c = -(ax_0 + by_0)$.
 			\end{proposicao}
 			
 			No entanto, esse formato da reta raramente é apresentado, devido a outros formatos mais convenientes de descrever uma reta. Por exemplo, uma definição equivalente de reta é dada por $y=mx+n$, com $m, n\in \mathbb{R}$ \azul{(equação reduzida da reta no $\mathbb{R}^2$)}, muito conhecida no Ensino Médio ao tratar de funções lineares.
 			
-			Note que essa definição, para o $\mathbb{R}^3$, na verdade descreve um plano! Para o espaço, a descrição é um pouco diferente.
+			Note que essa definição, para o $\mathbb{R}^3$, na verdade descreve um plano! Para o espaço, a descrição da reta é um pouco diferente.
 			
 			\[
 			\begin{cases}
@@ -969,7 +978,45 @@
 			\end{definicao}
 			Em outras palavras, o normal é o vetor paralelo ao produto vetorial dos vetores diretores, podendo ser ele próprio o produto vetorial em questão.
 			
-			Assim, note que, fixado um ponto $P_0=(x_0,y_0,z_0)$ e um vetor normal ao plano $N=(a,b,c)$, temos que o plano pode ser definido como $\pi=\{P\in \mathbb{R}^3\, \mid\, N\perp \vv{PP_0}\}$, ou seja, como o conjunto de pontos cujo vetor com o ponto fixo $P_0$ é sempre perpendicular ao normal. Lembre, no entanto, que
+			\begin{figure}[h]
+				\centering
+				\tdplotsetmaincoords{70}{110}
+				\begin{tikzpicture}[tdplot_main_coords, >=stealth]
+					
+					% 1. Definindo o Plano (Desenhado como um paralelogramo)
+					\fill[blue!10, opacity=0.6] (-2,-2,0) -- (2,-2,0) -- (2,2,0) -- 	(-2,2,0) -- cycle;
+					\draw[blue!60!black, thick] (-2,-2,0) -- (2,-2,0) -- (2,2,0) -- 	(-2,2,0) -- cycle;
+					
+					% Rótulo do plano pi
+					\node at (-2, 2, 0) [above left] {$\pi$};
+					
+					% 2. Definindo o ponto fixo P0
+					\coordinate (P0) at (0,0,0);
+					\filldraw[black] (P0) circle (1.5pt) node[anchor=north west] 	{$P_0$};
+					
+					% 3. Definindo um ponto genérico P no plano
+					\coordinate (P) at (1.5, 0, 0);
+					\filldraw[black] (P) circle (1.5pt) node[anchor=north] {$P$};
+					
+					% Vetor ligando P0 a P
+					\draw[thick, ->, green!60!black] (P0) -- (P) node[midway, above left] {$\vec{P_0P}$};
+					
+					% 4. O Vetor Normal N
+					\draw[very thick, ->, red] (0,0,0) -- (0,0,2) node[anchor=south] {$\vec{N} = (a, b, c)$};
+					
+					% 5. Símbolo de Perpendicularidade (ângulo reto)
+					% Desenhado no espaço 3D para mostrar que N é ortogonal a P0P
+					\draw[black] (0.3,0,0) -- (0.3,0,0.3) -- (0,0,0.3);
+					
+				\end{tikzpicture}
+				
+				\caption{Representação do vetor normal $N$ e de um ponto qualquer $P\in \pi$.}
+				\label{fig:vetnormal}
+			\end{figure}
+			
+			Assim, note que, fixado um ponto $P_0=(x_0,y_0,z_0)$ e um vetor normal ao plano $N=(a,b,c)$, temos que o plano pode ser definido como $\pi=\{P\in \mathbb{R}^3\, \mid\, N\perp \vv{PP_0}\}$, ou seja, como o conjunto de pontos cujo vetor com o ponto fixo $P_0$ é sempre perpendicular ao normal (construção ilustrada na Figura \ref{fig:vetnormal}).
+			
+			Lembre, no entanto, que
 			\begin{align*}
 				N\perp \vv{PP_0}
 				&\Rightarrow N\cdot \vv{PP_0}=0\\
@@ -987,6 +1034,7 @@
 				em que $d=-(ax_0+by_0+cz_0)$.
 			\end{proposicao}
 		\subsection*{Ângulos e distâncias}
+			Temos vários casos em que podemos calcular ângulos e distâncias. Abaixo, listamos as formas de realizar esse cálculo entre duas retas, entre dois planos, entre reta e ponto, entre plano e ponto. Os demais casos são apenas derivações dos anteriores.
 			\begin{proposicao}
 				Sejam duas retas
 				\[
