@@ -35,7 +35,10 @@
 			\end{itemize}
 		\end{definicao}
 		
-		Vale citar brevemente que matrizes coluna (ou, menos usualmente, matrizes linha) podem representar vetores também. Isso inclui, por exemplo, vetores no $\mathbb{R}^n$, abordados no capítulo 1, que, em vez de serem n-uplas, podem ser matrizes de ordem $n\times 1$.
+		\begin{comentario}
+			Vale citar brevemente que matrizes coluna (ou, menos usualmente, matrizes linha) podem representar vetores também. Isso inclui, por exemplo, vetores no $\mathbb{R}^n$, abordados no capítulo 1, que, em vez de serem n-uplas, podem ser matrizes de ordem $n\times 1$.
+			\label{com:vetoresematrizes}
+		\end{comentario}
 		
 		Para matrizes quadradas, onde a ordem é do tipo $n\times n$, temos classificações específicas.
 		\begin{definicao}
@@ -895,15 +898,22 @@
 			E daí vem um dos motivos do determinante também ser um objeto importante de estudo.
 			
 	\section{Combinação Linear e Dependência Linear}
-		Depois de discorrer sobre matrizes e sistemas lineares, vale a pena introduzir ideias de combinação e dependência linear, que dão uma boa base para o início de conceitos mais abstratos (como espaços e subespaços vetoriais), que seguem no próximo capítulo. Para iniciar, vamos retomar a definição de combinação linear, lá do capítulo 1.
+		Depois de discorrer sobre matrizes e sistemas lineares, vale a pena introduzir ideias de combinação e dependência linear, que dão uma boa base para o início de conceitos mais abstratos (como espaços e subespaços vetoriais), que seguem no próximo capítulo. Para iniciar, vamos retomar a definição de combinação linear, lá do capítulo 1, mas pensando em vetores de forma generalizada, sem ser somente do $\mathbb{R}^n$.
 		\begin{definicao}
-			Sejam $V_1, \dots, V_k \in \mathbb{R}^n$ vetores e $\alpha_1,\dots, \alpha_k \in \mathbb{R}$ escalares. Seja $W$ um vetor tal que
+			Sejam $V_1, \dots, V_k $ vetores e $\alpha_1,\dots, \alpha_k \in \mathbb{R}$ escalares. Seja $W$ um vetor tal que
 			\[
 			W = \alpha_1 V_1 + \dots + \alpha_k V_k 
 			\]
-			Então, $W$ é combinação linear de $V_1, \dots, V_k$.
+			Então, $W$ é \azul{combinação linear} de $V_1, \dots, V_k$; ou $W$ é \azul{gerado} por $V_1,\dots,V_k$.
 		\end{definicao}
-		Aplicando essa definição para matrizes, podemos fazer uma construção interessante. Lembre que matrizes coluna também são vetores. Assim, podemos pegar $n$ vetores de ordem $m\times 1$, nomeados $A_{1},\dots,A_{n}$ e definir sua combinação linear como um vetor $B_{m\times 1}$:
+		A primeira definição interessante que podemos fazer com esse conceito segue abaixo. 
+		\begin{definicao}
+			O \azul{espaço gerado} pelos vetores $V_1,\dots,V_k$ é o conjunto de todas as suas combinações lineares, i.e.,
+			\[
+			\{W= \alpha_1 V_1 + \dots + \alpha_k V_k\mid \alpha_1,\dots,\alpha_k\in \mathbb{R}\}.
+			\]
+		\end{definicao}
+		Aplicando a definição de combinação linear para matrizes, podemos fazer uma construção interessante. Lembre que matrizes coluna podem representar vetores do $\mathbb{R}^n$ (Comentário \ref{com:vetoresematrizes}). Assim, podemos pegar $n$ vetores de ordem $m\times 1$, nomeados $A_{1},\dots,A_{n}$ e definir sua combinação linear como um vetor $B_{m\times 1}$:
 		\[
 		B=x_1A_1+\dots +x_n A_n
 		\]
@@ -930,6 +940,13 @@
 			
 			$B$ é combinação linear das colunas de $A$ $\Leftrightarrow$ o sistema $AX=B$ tem solução. 
 		\end{proposicao}
+		A esse tipo de construção, que considera as colunas de uma matriz $A$ para fazer uma combinação linear, damos um nome específico.
+		\begin{definicao}
+			Seja $A_{m\times n}$ uma matriz.
+			\begin{enumerate}[label=\roman*)]
+				\item O espaço 
+			\end{enumerate}
+		\end{definicao}
 		
 		A partir dessa "mistura" de ideias, podemos fazer a seguinte definição interessante.
 		\begin{definicao}
@@ -947,7 +964,7 @@
 		\]
 		só pode ser verdadeiro quando $x_1=\dots=x_k=0$, i.e., não existe nenhuma outra combinação linear dos vetores de $S$ que dê o nulo.
 		
-		A grosso modo, isso significa que \textbf{nenhum vetor $V_i\in S$ pode ser escrito como combinação linear demais}. Isso porque, caso fosse possível, teríamos, para algum $\alpha_1,\dots,\alpha_k\in\mathbb{R}$,
+		A grosso modo, isso significa que \textbf{nenhum vetor $V_i\in S$ pode ser escrito como combinação linear dos demais}. Isso porque, caso fosse possível, teríamos, para algum $\alpha_1,\dots,\alpha_k\in\mathbb{R}$,
 		\begin{align*}
 			&V_i=\alpha_1V_1+\dots+\alpha_kV_k\\
 			&\Rightarrow \bar{0}=\alpha_1V_1+\dots -V_{i}+\dots+\alpha_kV_k
@@ -959,7 +976,7 @@
 			Seja o conjunto $S=\{V_1,\dots,V_k\}$, com $k>1$. Então, $S$ é LD $\Leftrightarrow$ $\exists\, V_j$ tal que $V_j$ é combinação linear de $V_1,\dots,V_{j-1},V_{j+1},\dots,V_k$.
 		\end{teorema}
 		
-		Trazendo de volta a construção feita anteriormente, podemos também intuitivamente entender a seguinte proposição, resgatando também teoremas da seção anterior.
+		Trazendo de volta a construção feita anteriormente, podemos também intuitivamente entender a seguinte proposição, resgatando alguns teoremas da seção anterior.
 		\begin{proposicao}
 			Seja $A_{m\times n}$ uma matriz.
 			\begin{enumerate}[label=\roman*)]
@@ -969,9 +986,10 @@
 		\end{proposicao}
 		Recomenda-se que o leitor tente provar essa proposição.
 		
-		Além disso, como consequência, temos que, caso o conjunto $S$ tenha $k$ vetores tal que $k>n$, o conjunto é LD. Isso ocorre porque, ao tentar resolver $VX=\bar{0}$, teremos mais incógnitas que equações, e, portanto, infinitas soluções.
+		Além disso, como consequência, temos que, caso um conjunto tenha $k$ vetores no $\mathbb{R}^n$, tal que $k>n$, o conjunto é LD. Isso ocorre porque, ao tentar resolver $V_{k\times n}X=\bar{0}$, teremos mais incógnitas ($k$ linhas de $V$) que equações ($n$ colunas de $V$), e, portanto, infinitas soluções (não somente a trivial).
 		\begin{corolario}
 			Sejam $V_1,\dots, V_k\in\mathbb{R}^n$. Se $k>n$, então o conjunto $S$ desses vetores é LD.
 		\end{corolario}
+		
 		
 \end{document}
