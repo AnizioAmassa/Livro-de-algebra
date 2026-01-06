@@ -2,8 +2,42 @@
 \begin{document}
 	
 	\chapter{Autovalores e Autovetores}
+		\begin{definicao}
+			Seja $T\colon \mathbb{V}\to \mathbb{V}$ um operador linear. Então $x\in\mathbb{R}^n$, tal que $x\neq \bar{0}$, é um \azul{autovetor} de $T$ se
+			\[
+			\exists \, \lambda\in \mathbb{R} \text{, tal que } T(x)=\lambda x
+			\]
+			O escalar $\lambda$ é um \azul{autovalor} de $T$. Dizemos que $x$ é um autovetor associado ao autovalor $\lambda$.
+		\end{definicao}
+		\begin{definicao}
+			Seja $A_{n\times n}$ uma matriz. A \azul{equação característica} de $A$ é $\det(\lambda I-A)=0$.
+		\end{definicao}
+		\begin{teorema}
+			Seja $A_{n\times n}$ uma matriz associada a uma transformação linear $T$. Então $\lambda$ é autovalor de $T$ $\Leftrightarrow$ $\det(\lambda I-A)=0$.
+		\end{teorema}
+		\begin{teorema}
+			Seja $A_{n\times n}$ uma matriz triangular. Então os autovalores de $A$ são os elementos da sua diagonal principal (os "$a_{ii}$").
+		\end{teorema}
+		\begin{teorema}
+			Seja $A_{n\times n}$ uma matriz. São equivalentes:
+			\begin{enumerate}[label=\roman*)]
+				\item $\lambda$ é autovalor de $A$.
+				\item O sistema$(\lambda I - A)X=\bar{0}$ tem solução não trivial.
+				\item $\exists \, x\neq 0 \text{, tal que } Ax=\lambda x$.
+				\item $\exists \, \lambda \in \mathbb{R} \text{, tal que } \det(\lambda I-A)=0$.
+			\end{enumerate}
+		\end{teorema}
+		\begin{teorema}
+			Seja $k\in \mathbb{N}^*$.
+			
+			$x$ autovetor de $A$ associado ao autovalor $\lambda$ $\Rightarrow$ $\lambda^k$ autovetor de $A^k$ associado ao autovalor $\lambda^k$.
+		\end{teorema}
 	
-	\section{Polinômios}
+		\begin{teorema}
+			$A_{n\times n}$ invertível $\Leftrightarrow$ $\lambda = 0$ não é autovalor de $A$. 
+		\end{teorema}
+		
+		Recomendo consultar o Teorema 5.1.6 do livro do Anton \cite{anton}, para uma revisão boa de conceitos dados desde o início até aqui, de modo a interligar as afirmações desse último teorema com as demais.
 	\section{Diagonalização}
 	
 \end{document}
