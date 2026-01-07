@@ -1,3 +1,8 @@
+# Mariana - 07/01/26
+- adicionei minha parte do prefácio
+- pequenas alterações na bibliografia
+- iniciei capítulo 5
+
 # Anizio - 03/01/26
 - terminando seção de bases
 
