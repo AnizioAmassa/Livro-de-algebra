@@ -132,7 +132,7 @@
 			\end{center}
 		\end{enumerate} 
 		\newpage
-	\section{Subespaços Vetoriais}
+	\subsection{Subespaços Vetoriais}
 		Subespaços vetoriais são subconjuntos de um espaço vetorial maior que ainda utilizam das mesmas operações e são ''independentes'' do espaço vetorial original, sendo mais exato:
 		\begin{definicao}
 			Seja $E$ um espaço vetorial. Um \azul{subespaço vetorial} (ou simplesmente \azul{subespaço}) de $E$ é um subconjunto $F \subset E$ com as seguintes propriedades:
@@ -176,6 +176,14 @@
 	
 	\textbf{Prova.} Suponha por absurdo que se tenha coeficientes nem todos nulos que podemos ter $\alpha_1 v_1 + ... + \alpha_m v_m = 0$ com $v_1, ..., v_m \in X$. Vamos supor que $\alpha_1 \neq 0$ por via de simplicidade. Então temos que $v_1 = -(\frac{\alpha_2}{\alpha_1})v_2 - ... -(\frac{\alpha_m}{\alpha_1})v_m = 0$, o que deixa $v_1$ como combinação linear de outros elementos de $X$. \qed
 	\smallskip
+	\begin{teorema}
+		Sejam $v_1,...,v_m$ vetores não nulos do espaço vetorial $E$. Se nenhum deles é combinação linear dos anteriores então o conjunto $X={v_1,...,v_m}$ é L.I.
+	\end{teorema}
+	
+	\textbf{Prova:} Suponha por absurdo que uma combinação linear dos vetores dados, com coeficientes não todos nulos, fosse igual a zero. Se $a_r v_r$ fosse a última parcela não nula dessa combinação, teríamos então
+	$$a_1 v_1 + ... + a_r v_r = 0$$
+	com $a_r \neq 0$. Daí viria $v_r = -\frac{a_1}{a_r}v_1 - ... - \frac{a_{r_1}}{a_r}v_1$, logo $v_r$ seria uma combinação linear dos outros, ocasionando em uma absurdo. \qed
+	\smallskip
 	\begin{exemplo}[Vetores canônicos]Os vetores canônicos no $\mathbb{R}^n$ são L.I., basta observar que cada vetor difere um do outro em duas coordenadas, pegue $e_1 = (1,0,0)$, $e_2 = (0,1,0)$ e $e_3 = (0,0,1)$ no $\mathbb{R}^3$ por exemplo, teremos que é impossível formar uma combinação linear de um a partir do outro.
 	\end{exemplo}
 	
@@ -189,6 +197,8 @@
 	\end{definicao}
 	
 	\textbf{Observação.} Isto significa que todos os vetores de $E$ podem ser reescritos como combinação linear dos vetores da base $\mathcal{B}$ de $E$. Volto a trazer o que foi falado antes da reta e do plano, podemos representar todos os vetores de um plano como combinação linear de dois vetores não paralelos desse mesmo plano, o mesmo ocorre com o $\mathbb{R}^3$, mas com 3 vetores não coplanares.
+	
+	\textbf{Observação (Relativa ao curso da professora Nara).} Uma coisa a se destacar, com a definição que fizemos de independência linear o espaço trivial possui sim uma base composta somente pelo vetor nulo, a professora Nara desconsidera isso no curso falando que o espaço trivial não admite base, isso é mais uma questão da convenção adotada, então fique atento!
 	\smallskip
 		
 	\begin{definicao}
@@ -202,7 +212,9 @@
 		A \azul{dimensão} de um espaço vetorial é a cardinalidade de alguma base desse mesmo espaço, ou seja, a quantidade de elementos que uma base desse espaço tem.
 	\end{definicao}
 	
-	Com o teorema 1.3.8. veremos que podemos sim escolher qualquer base para obtermos a dimensão de um espaço vetorial, por conta que todas as bases de um mesmo espaço vetorial obtém de uma mesma quantidade de elementos. Também sendo um dos teoremas mais importante no conteúdo de bases, com ele decorre 3 corolários importantíssimos.
+	\textbf{Observação.} Iremos considerar nesse texto que o espaço trivial tem dimensão $0$, apesar de ter um vetor na base (o vetor nulo), para facilitar nossa vida futuramente!
+	
+	Com o teorema 3.2.8. veremos que podemos sim escolher qualquer base para obtermos a dimensão de um espaço vetorial, por conta que todas as bases de um mesmo espaço vetorial obtém de uma mesma quantidade de elementos. Também sendo um dos teoremas mais importante no conteúdo de bases, com ele decorre 3 corolários importantíssimos.
 	
 	\smallskip
 	
@@ -225,13 +237,30 @@
 	
 	Os próximos três corolários decorrem do teorema anterior:
 	
-	\textbf{Corolário 1.} Se os vetores $v_1, ..., v_m$ geram o espaço vetorial $E$ e os vetores $u_1,...,u_n \in E$ são L.I., então $n\leqslant m$
+	\textbf{Corolário.} Se os vetores $v_1, ..., v_m$ geram o espaço vetorial $E$ e os vetores $u_1,...,u_n \in E$ são L.I., então $n\leqslant m$
 	\\
-	\textbf{Corolário 2.} Se o espaço vetorial $E$ admite uma base $\mathcal{B}={u_1,...,u_n}$ com $n$ elementos, qualquer outra base de $E$ terá também n elementos.
+	\textbf{Corolário.} Se o espaço vetorial $E$ admite uma base $\mathcal{B}={u_1,...,u_n}$ com $n$ elementos, qualquer outra base de $E$ terá também n elementos.
 	\\
-	\textbf{Corolário 3.} Se a dimensão de $E$ é $n$, um conjunto com $n$ vetores gera $E$ se, e somente se, é L.I. 
+	\textbf{Corolário.} Se a dimensão de $E$ é $n$, um conjunto com $n$ vetores gera $E$ se, e somente se, é L.I. 
 	
+	Com o próximo teorema teremos propriedades muito importantes para podermos trabalhar, tanto na parte quantitativa quanto qualitativa.
 	
+	\begin{teorema}
+		Seja $E$ um espaço vetorial de dimensão finita $n$. Então:
+		\begin{enumerate}
+			\item Todo conjunto $X$ de geradores de $E$ contém uma base;
+			\item Todo conjunto L.I. ${v_1,...,v_m} \subset E$ está contido em uma base; 
+			\item Todo subespaço vetorial $F \subset E$ tem dimensão finita, qual é menor ou igual a $n$;
+			\item Se a dimensão do subespaço $F \subset E$ é igual a $n$, então $F=E$.
+		\end{enumerate}
+	\end{teorema}
+	\textbf{Prova:} Cada item mostra como resolver seu respectivo item no teorema anterior.
+		\begin{enumerate}
+			\item Mostre por absurdo que isso contradiria o teorema 3.2.4
+			\item Mostre por absurdo usando o teorema 3.2.4
+			\item Idem
+			\item Se a dimensão é a mesma, então toda base de $F$ está contida em $E$ é L.I., logo gera $E$.
+		\end{enumerate}
 	
 	\section{Produto Interno}
 	
