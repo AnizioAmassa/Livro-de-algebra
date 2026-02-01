@@ -1,3 +1,7 @@
+# Anizio - 01/02/26
+- Terminei a seção de bases (finalmente, vou ter pesadelos)
+- Passei a seção de subespaço para uma subseção de espaço vetorial
+
 # Mariana - 07/01/26
 - adicionei minha parte do prefácio
 - pequenas alterações na bibliografia
