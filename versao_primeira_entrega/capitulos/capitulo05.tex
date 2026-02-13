@@ -1,0 +1,100 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+	
+	\chapter{Autovalores e Autovetores}
+		\begin{definicao}
+			Seja $T\colon \mathbb{V}\to \mathbb{V}$ um operador linear. Seja $V\in\mathbb{V}$, tal que $V\neq \bar{0}$. Então, se
+			\[
+			\exists \, \lambda\in \mathbb{R} \text{, tal que } T(V)=\lambda V
+			\]
+			dizemos que $V$ é um \azul{autovetor} associado ao \azul{autovalor} $\lambda$.
+		\end{definicao}
+		\begin{definicao}
+			Seja $A_{n\times n}$ uma matriz. O \azul{polinômio característico} de $A$ é $p(\lambda)=\det(\lambda I-A)$, onde $\lambda$ é autovalor de $A$.
+		\end{definicao}
+		\begin{definicao}
+			Seja $A_{n\times n}$ uma matriz. A \azul{equação característica} de $A$ é $\det(\lambda I-A)=0$.
+		\end{definicao}
+		\begin{teorema}
+			Seja $A_{n\times n}$ uma matriz associada a uma transformação linear $T$. Então $\lambda$ é autovalor de $T$ $\Leftrightarrow$ $\det(\lambda I-A)=0$.
+		\end{teorema}
+		\begin{teorema}
+			Seja $A_{n\times n}$ uma matriz triangular. Então os autovalores de $A$ são os elementos da sua diagonal principal (os "$a_{ii}$").
+		\end{teorema}
+		\begin{teorema}
+			Seja $A_{n\times n}$ uma matriz. São equivalentes:
+			\begin{enumerate}[label=\roman*)]
+				\item $\lambda$ é autovalor de $A$.
+				\item O sistema$(\lambda I - A)X=\bar{0}$ tem solução não trivial.
+				\item $\exists \, x\neq 0 \text{, tal que } Ax=\lambda x$.
+				\item $\exists \, \lambda \in \mathbb{R} \text{, tal que } \det(\lambda I-A)=0$.
+			\end{enumerate}
+		\end{teorema}
+		\begin{definicao}
+			Seja $\mathbb{V}$ um espaço vetorial.
+			O \azul{autoespaço} de $T$ associado ao autovalor $\lambda$ é o conjunto de autovetores de $T$ associados a $\lambda$ mais o nulo $\bar{0}$; i.e.,
+			\[
+			\mathbb{S}_{\lambda}=\{V\in \mathbb{V}\mid T(V)=\lambda V\}.
+			\]
+		\end{definicao}
+		\begin{teorema}
+			Seja $k\in \mathbb{N}^*$.
+			
+			$X$ autovetor de $T$ associado ao autovalor $\lambda$ $\Rightarrow$ $X$ autovetor de $T^k$ associado ao autovalor $\lambda^k$.
+			\label{teo:autovalor^k}
+		\end{teorema}
+	
+		\begin{teorema}
+			$A_{n\times n}$ invertível $\Leftrightarrow$ $\lambda = 0$ não é autovalor de $A$. 
+		\end{teorema}
+		
+		Recomendo consultar o Teorema 5.1.6 do livro do Anton \cite{anton}, para uma revisão boa de conceitos dados desde o início até aqui, de modo a interligar as afirmações desse último teorema com as demais.
+	\section{Diagonalização}
+		\begin{definicao}
+			Sejam $A_{n\times n}$ e $B_{n\times n}$ matrizes. Elas são \azul{semelhante} se $\exists\, P \text{, tal que } B=P^{-1}AP$.
+		\end{definicao}
+		\begin{definicao}
+			Seja $A_{n\times n}$ uma matriz. Ela é \azul{diagonalizável} se for semelhante a uma matriz diagonal $D$.
+			
+			Se $D=P^{-1}AP$, dizemos que $P$ \azul{diagonaliza} $A$.
+		\end{definicao}
+		\begin{teorema}
+			Seja $A_{n\times n}$ uma matriz. $A$ diagonalizável $\Leftrightarrow$ $A$ tem $n$ autovetores LI.
+		\end{teorema}
+		Para diagonalizar uma matriz, seguimos o seguinte passo-a-passo:
+		\begin{enumerate}
+			\item Encontre $n$ autovetores $P_1,\dots,P_n$ LI para verificar se é diagonalizável.
+			\item Construa a matriz $P=\begin{bmatrix}
+				P_1 & \dots & P_n
+			\end{bmatrix}$.
+			\item A matriz $D=P^{-1}AP$ é diagonal, sendo os autovalores $\lambda_1,\dots,\lambda_n$ os elementos da sua diagonal. 
+		\end{enumerate}
+		\begin{teorema}
+			Seja $A_{n\times n}$ uma matriz.
+			
+			$V_1,\dots, V_k$ autovetores de $A$ associados autovalores distintos $\Rightarrow$ $V_1,\dots,V_k$ são LI. 
+		\end{teorema}
+		\begin{teorema}
+			Seja $A_{n\times n}$ uma matriz.
+			
+			$A$ tem $n$ autovalores distintos $\Rightarrow$ $A$ diagonalizável.
+		\end{teorema}
+		Relembrando o Teorema \ref{teo:autovalor^k}, podemos aplicá-lo para matrizes.
+		\begin{teorema}
+			Seja $X$ autovetor de $A_{n\times n}$ associado ao autovalor $\lambda$. Seja $k\in \mathbb{N}$.
+		\end{teorema}
+		\begin{definicao}
+			Seja $\lambda$ autovalor de $T$.
+			\begin{enumerate}[label=\roman*)]
+				\item A \azul{multiplicidade algébrica} é $\text{MA($\lambda$)}=k$, onde $k$ é a quantidade de vezes que $\lambda$ é raiz do polinômio característico de $T$.
+				\item A \azul{multiplicidade geométrica} é $\text{MG($\lambda$)}=\dim\mathbb{S}_{\lambda}$
+			\end{enumerate}
+		\end{definicao}
+		\begin{teorema}
+			Seja $A_{n\times n}$ uma matriz..
+			\begin{enumerate}[label=\roman*)]
+				\item $\text{MG($\lambda$)}\leq \text{MA($\lambda$)},\, \forall \text{ autovalor }\lambda$.
+				\item $A$ diagonalizável $\Leftrightarrow$ $\text{MG($\lambda$)}=\text{MA($\lambda$)},\, \forall \text{ autovalor } \lambda$.
+			\end{enumerate}
+		\end{teorema}
+\end{document}

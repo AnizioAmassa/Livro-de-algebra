@@ -1,0 +1,88 @@
+% Pacotes úteis
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage[most]{tcolorbox}
+\usepackage{physics}
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+\usepackage{tkz-euclide}
+\usetikzlibrary{matrix,arrows.meta,decorations.markings}
+\usetikzlibrary{calc,angles,quotes}
+\usepackage{pgfplots}
+\usepackage{amsmath}
+\usepackage{enumitem}       % personalizar listas
+\usepackage{graphicx}       % imagens
+\usepackage{caption}		% legendas de imagens
+\usepackage{hyperref}       % links no sumário
+\usepackage{geometry}       % margens
+\usepackage{mathtools}
+\usepackage{listings}
+\usepackage{mathrsfs}
+\lstset{numbers=left, captionpos=b}
+\usepackage{xcolor}
+\usepackage{array}
+\usepackage{xurl}
+\usepackage{fancyhdr} 		% cabeçalhos/rodapés
+\usepackage{subfiles}
+\usepackage{esvect}
+\usepackage{subcaption} % para figuras lado a lado
+\usepackage{multicol}
+\usepackage[brazil]{babel}
+\usepackage{authblk}
+\usepackage{needspace}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.8em}
+
+\hypersetup{
+	colorlinks=true,
+	linkcolor=blue,
+	urlcolor=blue
+}
+
+%Configurações do arquivo
+\geometry{margin=2.5cm} % margem
+\linespread{1.2}   		% aumenta o espaçamento entre linhas
+\usepackage{lmodern} 	% usa fonte Latin Modern
+
+
+% Criando ambientes (teorema, definicao, exemplo, exercicio e solucao)
+\newtheoremstyle{meuTeorema}
+{1em}    		% Espaço acima
+{1em}    		% Espaço abaixo
+{\itshape} 		% Fonte
+{}       		% Recuo
+{\bfseries} 	% Fonte do cabeçalho
+{.}      		% Pontuação após cabeçalho
+{.5em}   		% Espaço após cabeçalho
+{}       		% Cabeçalho especifico
+
+\theoremstyle{meuTeorema}
+\newtheorem{teorema}{Teorema}[section]
+\newtheorem{definicao}[teorema]{Definição}
+\newtheorem{corolario}[teorema]{Corolário}
+\newtheorem{lema}[teorema]{Lema}
+\newtheorem{proposicao}[teorema]{Proposição}
+
+\theoremstyle{remark}
+\newtheorem{exemplo}[teorema]{Exemplo}
+\newtheorem{comentario}[teorema]{Comentário}
+
+
+\newcommand{\azul}[1]{\textbf{\textcolor{blue}{#1}}}
+\newcommand{\parallelsum}{\mathbin{\!/\mkern-5mu/\!}}
+\newcommand{\cblue}[1]{{\color{blue}#1}}
+\newcommand{\cred}[1]{{\color{red}#1}}
+
+\newtcolorbox{solucao}[1][]{%
+	enhanced,
+	breakable,
+	colback=brown!5!white,   % creme claro
+	colframe=brown!90!black, % borda suave
+	fonttitle=\bfseries,
+	title=Solução,
+	boxrule=0.4pt,
+	arc=0pt,
+	outer arc=0pt,
+	coltitle=black}

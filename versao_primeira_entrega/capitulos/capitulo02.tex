@@ -1,0 +1,997 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+	
+	\chapter{Matrizes e Sistemas Lineares}
+	Além das ideias de vetores e da própria Geometria Analítica, compreender Sistemas Lineares fundamenta os principais problemas que a Álgebra Linear busca responder. No entanto, antes de apresentar sistemas lineares ou outros conceitos (como combinação e dependência linear), vamos iniciar com matrizes.
+	
+	\section{Matrizes}
+		As matrizes permitem uma manipulação facilitada dos sistemas lineares e de diversos conceitos, o que é muito útil para a Álgebra Linear. Tanto é que muitos livros (e.g. \cite{lay}) abordam praticamente toda a Álgebra Linear através de matrizes.
+		
+		Fundamentalmente, elas são tabelas de números ou variáveis, que se assemelham, por exemplo, com sistemas lineares, apresentados na seção seguinte. Além disso, também podem ser interpretadas como vetores ou até mesmo Transformações Lineares, entrelaçando todos os elementos de interesse dessa área.
+		
+		Iniciando, vamos definir matrizes formalmente e nomear seus elementos, para facilitar o entendimento e a manipulação dessas tabelas.
+		\begin{definicao}
+			Seja $m,n\in \mathbb{N}^*$. Uma \azul{matriz} $A_{m\times n}$, ou simplesmente $A$, é uma tabela de $mn$ números dispostos em $m$ linhas e $n$ colunas.
+			\[
+			A=\begin{bmatrix}
+				a_{11} & \dots & a_{1n}\\
+				\vdots & \ddots & \vdots\\
+				a_{m1} & \dots & a_{mn} 
+			\end{bmatrix}
+			\]
+		\end{definicao}
+		\begin{definicao}
+			Denotamos por \azul{$a_{ij}$} o elemento na $i$-ésima linha e $j$-ésima coluna da matriz $A$.
+		\end{definicao}
+		Um ponto importante dessa definição são os objetos $m$ e $n$, que são, na verdade, a \azul{ordem} da matriz. Isso é importante para entender as operações entre matrizes e até mesmo separá-las em conjuntos ou classificações, apresentados abaixo.
+		\begin{definicao}
+			Denotamos por \azul{$\mathbb{M}_{m\times n}$} o conjunto de todas as matrizes de ordem $m\times n$.
+		\end{definicao}
+		\begin{definicao}
+			Seja $A_{m\times n}$ uma matriz. Seguem abaixo nomenclaturas:
+			\begin{itemize}
+				\item \azul{Matriz Quadrada}: $m=n$, i.e., mesmo número de linhas e colunas.
+				\item \azul{Matriz Linha}: $m=1$, i.e., uma linha.
+				\item \azul{Matriz Coluna}: $n=1$, i.e., uma coluna.
+				\item \azul{Matriz Nula ($\bar{0}$)}: $a_{ij}=0\,\forall\, i,j$.
+			\end{itemize}
+		\end{definicao}
+		
+		\begin{comentario}
+			Vale citar brevemente que matrizes coluna (ou, menos usualmente, matrizes linha) podem representar vetores também. Isso inclui, por exemplo, vetores no $\mathbb{R}^n$, abordados no capítulo 1, que, em vez de serem n-uplas, podem ser matrizes de ordem $n\times 1$.
+			\label{com:vetoresematrizes}
+		\end{comentario}
+		
+		Para matrizes quadradas, onde a ordem é do tipo $n\times n$, temos classificações específicas.
+		\begin{definicao}
+			Seja $A$ uma matriz quadrada. Então,
+			\begin{itemize}
+				\item \azul{Matriz Diagonal}: $a_{ij}=0,\, \forall\, i\neq j$;
+				\item \azul{Matriz Triangular Superior}: $a_{ij}=0,\, \forall\, i>j$;
+				\item \azul{Matriz Triangular Inferior}: $a_{ij}=0,\, \forall\, i<j$.
+				\item \azul{Matriz Identidade ($I$)}: $a_{ij}=\begin{cases}
+					1 \text{, se } i=j\\
+					0 \text{, se } i\neq j
+				\end{cases}$.
+			\end{itemize}
+		\end{definicao}
+		A seguir, finalmente definiremos as operações com matrizes.
+		\begin{definicao}
+			A \azul{soma de matrizes} $A_{m\times n}$ e $B_{m\times n}$ é definida pela matriz $C_{m\times n}=A+B$ tal que
+			\[
+			c_{ij}=a_{ij}+b_{ij},\, \forall\, i, j
+			\]
+		\end{definicao}
+		Note que a operação da soma só é definida para matrizes de mesmo tamanho.
+		\begin{definicao}
+			A \azul{multiplicação de uma matriz $A_{m\times n}$ por um escalar $\alpha$} é definida pela matriz $B_{m\times n}=\alpha A$ tal que
+			\[
+			b_{ij}=\alpha a_{ij}\, \forall\, i,j
+			\]
+			Dizemos que $B$ é \azul{múltiplo escalar} de $A$.
+		\end{definicao}
+		Perceba que ambas estas operações são basicamente fazer o "esperado", elemento por elemento.
+		
+		A grosso modo, podemos fazer um paralelo com os vetores do $\mathbb{R}^n$ apresentados no capítulo 1, em que as operações mais relevantes eram a soma de vetores e a multiplicação por escalar. 
+		
+		Com ambas as operações somente, podemos provar algumas propriedades interessantes. Primeiro, temos as 8 seguintes, que possuem grande semelhança com o Teorema \ref{teo:vetores8axiomas} para vetores, do capítulo 1. Tudo isso se conectará no capítulo 3 de espaços vetoriais.
+		\begin{teorema}
+			Sejam $A$ e $B$ matrizes com ordem apropriada para cada propriedade. Sejam $\alpha, \beta\in \mathbb{R}$. Então,
+			\begin{multicols}{2}
+				\begin{enumerate}[label=\roman*)]
+					\item $A+B=B+A$;
+					\item $A+(B+C)=(A+B)+C$;
+					\item $\forall\, A_{m\times n}, \, \exists\, \bar{0}_{m\times n}$, tal que $A+\bar{0}=A$;
+					\item $\forall\,  A,\, \exists\, -A$, tal que $A+(-A)=\bar{0}$;
+					\item $\alpha(\beta A)=(\alpha \beta)A$;
+					\item $(\alpha+\beta)A=\alpha A+\beta A$;
+					\item $\alpha(A+B)=\alpha A+\alpha B$;
+					\item $\forall\, A_{m\times n}, \, \exists\, I_m,\, I_n$, tal que \\ $A=AI_n=I_mA$;
+				\end{enumerate}
+			\end{multicols} 
+		\end{teorema}
+		
+		Além dessas duas, também temos outras operações importantes.
+		\begin{definicao}
+			A \azul{multiplicação de matrizes} $A_{m\times p}$ e $B_{p\times n}$ é definida pela matriz $C_{m\times n}=AB$ tal que
+			\[
+			c_{ij}=\sum_{k=1}^{p} a_{ik}b_{kj}=a_{i1}b_{1j}+\dots 	+a_{ip}b_{pj}\, \forall\, i,j
+			\]
+		\end{definicao}
+		Segue abaixo uma representação visual da multiplicação de matrizes, e depois um exemplo.
+		\[
+		A=
+		\left[
+		\begin{array}{cccc}
+			a_{11} & a_{12} & \cdots & a_{1p}\\
+			\vdots & \vdots & \ddots & \vdots\\
+			\cblue{a_{i1}} & \cblue{a_{i2}} & \cblue{\cdots} & \cblue{a_{ip}}\\
+			\vdots & \vdots & \ddots & \vdots\\
+			a_{m1} & a_{m2} & \cdots & a_{mp}
+		\end{array}
+		\right],
+		\qquad
+		B=
+		\left[
+		\begin{array}{ccccc}
+			b_{11} & \cdots & \cred{b_{1j}} & \cdots & b_{1n}\\
+			b_{21} & \cdots & \cred{b_{2j}} & \cdots & b_{2n}\\
+			\vdots & \ddots & \cred{\vdots} & \ddots & \vdots\\
+			b_{p1} & \cdots & \cred{b_{pj}} & \cdots & b_{pn}
+		\end{array}
+		\right]
+		\]
+		
+		\[
+		c_{ij}
+		=
+		\sum_{k=1}^{p} a_{ik}\,b_{kj}
+		=
+		\cblue{a_{i1}}\cred{b_{1j}}
+		+\cblue{a_{i2}}\cred{b_{2j}}
+		+\cdots
+		+\cblue{a_{ip}}\cred{b_{pj}}.
+		\]
+		
+		\begin{exemplo}
+			Sejam $A_{2\times 3}$ e $B_{3\times 2}$. 
+			\[
+			\left[
+			\begin{array}{ccc}
+				\color{blue}a_{11} & \color{blue}a_{12} & \color{blue}a_{13}\\
+				a_{21} & a_{22} & a_{23}
+			\end{array}
+			\right]
+			\left[
+			\begin{array}{>{\color{red}}c c}
+				b_{11} & b_{12}\\
+				b_{21} & b_{22}\\
+				b_{31} & b_{32}
+			\end{array}
+			\right]
+			=
+			\begin{bmatrix}
+				\cblue{a_{11}}\cred{b_{11}}+
+				\cblue{a_{12}}\cred{b_{21}}+
+				\cblue{a_{13}}\cred{b_{31}} & 
+				{a_{11}}{b_{12}}+
+				{a_{12}}{b_{22}}+
+				{a_{13}}{b_{32}}
+				\\
+				{a_{21}}{b_{11}}+
+				{a_{22}}{b_{21}}+
+				{a_{23}}{b_{31}} &
+				{a_{21}}{b_{12}}+
+				{a_{22}}{b_{22}}+
+				{a_{23}}{b_{32}}
+			\end{bmatrix}
+			\]
+		\end{exemplo}
+		Note que a multiplicação desse exemplo só é possível porque a quantidade de colunas de $A$ é a mesma que a quantidade de linhas de $B$. Além disso, perceba que, como resultado, temos uma matriz de ordem $2\times 2$ (quantidade de linhas de $A$ e de colunas de $B$).
+		
+		Além da multiplicação de matrizes, também temos a ideia da transposta e do traço.
+		\begin{definicao}
+			A \azul{transposta} de uma matriz $A_{m\times n}$ é definida pela matriz $B_{m\times n}=A^T$, tal que
+			\[
+			b_{ij}=a_{ji},\, \forall\, i,j
+			\]
+		\end{definicao}
+		\begin{definicao}
+			O \azul{traço} de uma matriz quadrada $A_{m\times m}$ é dado pela soma dos elementos da diagonal:
+			\[
+			\text{tra}(A)=\sum_{1}^{m} a_{ii}
+			\]
+		\end{definicao}
+		
+		Com todas as operações apresentadas, podemos provas as seguintes propriedades de matrizes.
+		
+		\begin{teorema}
+			Sejam $A$, $B$ e $C$ matrizes com ordem apropriada para cada propriedade. Seja $\alpha\in \mathbb{R}$. Então,
+			\begin{multicols}{2}
+				\begin{enumerate}[label=\roman*)]
+					\item $A(BC)=(AB)C$;
+					\item $A(B+C)=AB+AC$ \\ $(B+C)A=BA+CA$;
+					\item $\alpha(AB)=(\alpha A)B=A(\alpha B)$;
+					\item $(A^T)^T=A$;
+					\item $(A+B)^T=A^T+B^T$;
+					\item $(\alpha A)^T=\alpha A^T$;
+					\item $(AB)^T=B^TA^T$.
+				\end{enumerate}
+			\end{multicols}
+		\end{teorema}
+
+		
+		\subsection{Matriz Inversa}
+			Outro conceito fundamental para matrizes é de invertibilidade. Isso se dá pela relativa dificuldade de determinar a inversa, mas também pelas propriedades que são adquiridas com elas, relacionadas a Sistemas Lineares por exemplo.
+			\begin{definicao}
+				Uma matriz quadrada $A_{n\times n}$ é \azul{invertível} ou não singular, se existe uma matriz inversa, denotada por $A^{-1}_{n\times n}$, tal que
+				\[
+				AA^{-1}=A^{-1}A=I_n
+				\]
+				Se $A$ não tem inversa, então $A$ é não invertível ou \azul{singular}.
+			\end{definicao}
+			Além da definição, temos quatro propriedades interessantes de matrizes invertíveis, envolvendo unicidade, invertibilidade, multiplicação e a transposta.
+			\begin{teorema}
+				Sejam $A$ e $B$ matrizes invertíveis.
+				\begin{enumerate}[label=\roman*)]
+					\item $\exists! \text{ matriz inversa } A^{-1}$
+					\item $A^{-1}$ invertível e $(A^{-1})^{-1}=A$;
+					\item $AB$ invertível e $(AB)^{-1}=B^{-1}A^{-1}$;
+					\item $A^T$ invertível e $(A^T)^{-1}=(A^{-1})^T$.
+				\end{enumerate}
+			\end{teorema}
+			Para a demonstração, basta utilizar a definição de inversa e as propriedades da multiplicação de matrizes (especialmente comutatividade e associatividade) apresentadas anteriormente. A prova completa fica de exercício para o leitor.
+			 
+			Outro teorema importante mostra que, se provarmos que duas matrizes $A$ e $B$ são tais que $AB=I$, então já está provado que uma é inversa da outra, sem a necessidade de demonstrar que $BA=I$.
+			\begin{teorema}
+				Sejam $A_{n\times n}$ e $B_{n\times n}$ matrizes. Então,
+				\[
+				BA=I_n\Leftrightarrow AB=I_n
+				\]
+			\end{teorema}
+		\subsection{Determinante}
+			Assim como a matriz inversa, o determinante é um objeto de estudo relevante, porém menos intuitivo que a noção de invertibilidade. Também só pode ser calculado para matrizes quadradas.
+			
+			Existem as formas clássicas, aprendidas no Ensino Médio, de calcular o determinante de uma matriz de ordem 2 ou 3 (Regra de Sarrus), que seguem abaixo.
+			\begin{figure}[h!]
+				\centering
+				\begin{minipage}{0.45\textwidth}
+					\centering
+					\[
+					\det(A)=\cblue{a_{11}a_{22}}-\cred{a_{12}a_{21}}
+					\]
+					\begin{tikzpicture}[baseline=(A.center)]
+						% Matriz 2x2 com TikZ
+						\matrix (A) [matrix of math nodes, column sep=0.6cm, row sep=0.5cm] {
+							a_{11} & a_{12} \\
+							a_{21} & a_{22} \\
+						};
+						
+						% Seta Azul (Diagonal Principal - Positiva)
+						\draw[blue, -latex, thick] (A-1-1.north west) -- (A-2-2.south east) node[below right] {$+$};
+						
+						% Seta Vermelha (Diagonal Secundária - Negativa)
+						\draw[red, -latex, thick] (A-1-2.north east) -- (A-2-1.south west) node[below left] {$-$};
+						
+						% Colchetes da Matriz
+						% Lado Esquerdo
+						\draw[thick] ([xshift=-4pt]A-1-1.north west) -- ([xshift=-4pt]A-2-1.south west);
+						\draw[thick] ([xshift=-4pt]A-1-1.north west) -- ++(3pt,0);
+						\draw[thick] ([xshift=-4pt]A-2-1.south west) -- ++(3pt,0);
+						
+						% Lado Direito
+						\draw[thick] ([xshift=4pt]A-1-2.north east) -- ([xshift=4pt]A-2-2.south east);
+						\draw[thick] ([xshift=4pt]A-1-2.north east) -- ++(-3pt,0);
+						\draw[thick] ([xshift=4pt]A-2-2.south east) -- ++(-3pt,0);
+					\end{tikzpicture}
+					\caption{Regra de Sarrus na matriz de ordem 2}
+				\end{minipage}
+				\hfill
+				\begin{minipage}{0.45\textwidth}
+					\centering
+					\begin{align*}
+						&\det(A) = \cblue{(a_{11}a_{22}a_{33} + a_{12}a_{23}a_{31} + a_{13}a_{21}a_{32})} \\
+						& - \cred{(a_{13}a_{22}a_{31} + a_{11}a_{23}a_{32} + a_{12}a_{21}a_{33})}
+					\end{align*}
+					\begin{tikzpicture}[baseline=(A.center)]
+						% Matriz com TikZ
+						\matrix (A) [matrix of math nodes, column 	sep=0.5cm, row sep=0.4cm] {
+							a_{11} & a_{12} & a_{13} & a_{11} & a_{12} \\
+							a_{21} & a_{22} & a_{23} & a_{21} & a_{22} \\
+							a_{31} & a_{32} & a_{33} & a_{31} & a_{32} \\
+						};
+						
+						% Setas Azuis (Diagonais Principais - Positivas)
+						\draw[blue, -latex, thick] (A-1-1.north west) -- 	(A-3-3.south east) node[below] {$+$};
+						\draw[blue, -latex, thick] (A-1-2.north west) -- 	(A-3-4.south east) node[below] {$+$};
+						\draw[blue, -latex, thick] (A-1-3.north west) -- 	(A-3-5.south east) node[below] {$+$};
+						
+						% Setas Vermelhas (Diagonais Secundárias - 	Negativas)
+						\draw[red, -latex, thick] (A-1-3.north east) -- 	(A-3-1.south west) node[below] {$-$};
+						\draw[red, -latex, thick] (A-1-4.north east) -- 	(A-3-2.south west) node[below] {$-$};
+						\draw[red, -latex, thick] (A-1-5.north east) -- 	(A-3-3.south west) node[below] {$-$};
+						
+						% Colchetes da Matriz
+						\draw[thick] ([xshift=-2pt]A-1-1.north west) -- 	([xshift=-2pt]A-3-1.south west);
+						\draw[thick] ([xshift=-2pt]A-1-1.north west) -- 	++(2pt,0);
+						\draw[thick] ([xshift=-2pt]A-3-1.south west) -- 	++(2pt,0);
+						
+						\draw[thick] ([xshift=2pt]A-1-3.north east) -- 	([xshift=2pt]A-3-3.south east);
+						\draw[thick] ([xshift=2pt]A-1-3.north east) -- 	++(-2pt,0);
+						\draw[thick] ([xshift=2pt]A-3-3.south east) -- 	++(-2pt,0);
+					\end{tikzpicture}
+					\caption{Regra de Sarrus na matriz de ordem 3}
+				\end{minipage}
+			\end{figure}
+			
+			No entanto, para matrizes de ordem superior, precisamos utilizar a definição generalizada de determinante, que é calculado por meio da \azul{expansão em cofatores do determinante de A}. Abaixo segue essa expansão em termos da primeira linha.
+			\begin{definicao}
+				Seja $A_{n\times n}$ uma matriz. O \azul{determinante} de $A$, denotado por $\det(A)$, é definido por
+				\[
+				\det(A)=\begin{cases}\sum_{j=1}^{n} a_{1j}\tilde{a}_{1j}\text{, se } n>1\\
+					a_{11}\text{, se } n=1
+				\end{cases}
+				\]
+				onde
+				\begin{itemize}
+					\item $\tilde{a}_{1j}=(-1)^{1+j}\det(\tilde{A}_{1j})$ é o \azul{cofator} de $a_{1j}$;
+					\item $\tilde{A}_{ij}$ é a submatriz de $A$ de ordem $(n-1)\times (n-1)$ eliminando a $i$-ésima linha e a $j$-ésima coluna, denominada \azul{matriz menor do elemento $a_{ij}$}.
+				\end{itemize} 
+			\end{definicao}
+			Segue abaixo uma representação mais visual da matriz menor $\tilde{A}_{ij}$ da matriz original $A$.
+			\[
+			\tilde{A}_{ij}=\begin{bmatrix}
+				a_{11} & \dots & a_{1(j-1)} & a_{1(j+1)} & \dots & a_{1n} \\
+				\vdots & \,    & \,         & \,         & \, & \vdots \\
+				a_{(i-1)1} & \,& \ddots     & \,         & \, & a_{(i-1)n} 		\\
+				a_{(i+1)1} & \,& \,         & \ddots     & \, & a_{(i+1)n} 		\\
+				\vdots & \,    & \,         & \,         & \, & \vdots \\
+				a_{n1} & \dots & a_{n(j-1)} & a_{n(j+1)} & \dots & a_{nn} \\
+			\end{bmatrix}
+			\]
+			O primeiro teorema que vamos apresentar é de extrema importância, no sentido de que facilita o cálculo do determinante.
+			\begin{teorema}[Teorema de Laplace]
+				O determinante de uma matriz pode ser calculado com a expansão em cofatores em termos de qualquer linha $i$ ou qualquer coluna $j$. Em outras palavras,
+				\begin{align*}
+					\det(A)
+					&=\sum_{j=1}^{n} a_{ij}\tilde{a}_{ij}\text{, para } 	i\in \{1,\dots,n\}\\
+					&=\sum_{i=1}^{n} a_{ij}\tilde{a}_{ij}\text{, para } j\in \{1,\dots, n\}
+				\end{align*}
+			\end{teorema}
+			Note que, por consequência, conseguimos o seguinte corolário, o qual afirma que, caso duas linhas de uma matriz sejam iguais, o determinante da matriz é $0$.
+			\begin{corolario}
+				Seja $A_{n\times n}$ uma matriz e suas linhas denotadas por $A_i=[a_{i1}\,\dots\, a_{in}]$. Então,
+				\[
+				\exists \text{ linhas } A_i,\, A_j \text{, tal que } A_i=A_j\Rightarrow 	\det(A)=0
+				\]
+			\end{corolario}
+			Seguem abaixo outras propriedades importantes para o determinante. Vale destacar a última propriedade, que associa as noções de invertibilidade e de determinante, sendo de grande relevância, especialmente para a próxima seção.
+			\begin{teorema}
+				Sejam $A_{n\times n}$ e $B_{n\times n}$ matrizes.
+				\begin{enumerate}[label=\roman*)]
+					\item Se existe uma linha $A_k$ tal que $A_k=\alpha X+\beta Y$, para algum $\alpha, \beta \in \mathbb{R}$ e algum $X=[x_1\, \dots\, x_n]$ e $Y=[y_1\,\dots\, y_n]$, então, 
+					\[
+					\det \begin{bmatrix}
+						A_1 \\
+						\vdots \\
+						A_{k-1}\\
+						\alpha X+\beta Y\\
+						A_{k+1}\\
+						\vdots\\
+						A_n
+					\end{bmatrix} = \alpha \det \begin{bmatrix}
+						A_1 \\
+						\vdots \\
+						A_{k-1}\\
+						X\\
+						A_{k+1}\\
+						\vdots\\
+						A_n
+					\end{bmatrix} + \beta \det \begin{bmatrix}
+						A_1 \\
+						\vdots \\
+						A_{k-1}\\
+						Y\\
+						A_{k+1}\\
+						\vdots\\
+						A_n
+					\end{bmatrix}
+					\]
+					\item Se $B$ é obtida de $A$ multiplicando-se uma linha por um escalar $\alpha$, então
+					\[
+					\det(B)=\alpha \det(A);
+					\]
+					\item Se $B$ é obtida de $A$ pela troca de duas linhas, então
+					\[
+					\det(B)=-\det(A);
+					\]
+					\item Se $B$ é obtida de $A$ substituindo uma linha $A_l$ por ela própria somada ao múltiplo escalar de outra linha ($A_l+\alpha A_k$), então
+					\[
+					\det(B)=\det(A).
+					\]
+					\item $\det(AB)=\det(A)\det(B)$.
+					\item $\det(A)=\det(A^T)$.
+					\item $A$ invertível $\Leftrightarrow \det(A)\neq 0$ e $\det(A^{-1})=\frac{1}{\det(A)}$
+				\end{enumerate}
+			\end{teorema}
+	\section{Sistemas Lineares}
+		Nesta seção, vamos apresentar os sistemas lineares e, depois, sua forma em matrizes, objetos que, embora pareçam distantes, estão bem ligados e permitem definições e resoluções interessantes. Assim, inicialmente vamos apresentar o que são sistemas lineares.
+		\begin{definicao}
+			Sejam $b, a_1,\dots, a_n\in \mathbb{R}$ fixos e $x_1,\dots,x_n$ variáveis. Então, uma \azul{equação linear} é uma igualdade da forma
+			\[
+			a_1x_1+\dots +a_nx_n=b.
+			\]
+		\end{definicao}
+		\begin{definicao}
+			Um \azul{sistema linear} é um conjunto de equações lineares.
+		\end{definicao}
+		Em outras palavras, vamos ter variáveis arranjadas com números reais, em igualdades chamadas equações lineares. Essa linearidade é dada pelo fato das variáveis estarem sujeitas à potência de no máximo $1$, ou seja, não existirem termos como $x^2$ ou $x^{1000}$.
+		
+		Dessa forma, se tivermos um sistema de $m$ equações e $n$ variáveis, então temos algo no formato abaixo.
+		\[
+		\begin{cases}
+			a_{11}x_1+\dots +a_{1n}x_n=b_1\\
+			\vdots\\
+			a_{m1}x_1+\dots +a_{mn}x_n=b_m
+		\end{cases}
+		\]
+		Isso já dá uma breve ideia de como associamos esses sistemas a matrizes.
+		
+		Com os números associados e as igualdades bem estabelecidas, as variáveis podem ou não assumir valores específicos que mantêm as igualdades verdadeiras. Damos a isso o nome de solução.
+		\begin{definicao}
+			Uma \azul{solução} de um sistema linear é o conjunto $\{s_1,\dots, s_n\}$ que satisfaz todas as equações ao substituir cada variável ($x_1=s_1,\dots,x_n=s_n$).
+		\end{definicao}
+		\begin{definicao}
+			O \azul{conjunto solução} ou a \azul{solução geral} do sistema é o conjunto de todas as soluções do sistema linear.
+		\end{definicao}
+		
+		Para encontrar as soluções de um sistema linear, são utilizadas três operações fundamentais, chamadas de \azul{operações elementares}:
+		\begin{enumerate}
+			\item Trocar a posição de duas equações;
+			\item Multiplicar uma equação por um escalar $\alpha\neq0$;
+			\item Somar uma equação ao "múltiplo escalar" de outra.
+		\end{enumerate}
+		Segue um exemplo de como isso é feito:
+		\begin{exemplo}
+			Considerando o seguinte sistema linear, podemos aplicar as operações acima.
+			\begin{align*}
+				\begin{cases}
+					x+2y=4\\
+					x-y=1
+				\end{cases}
+				&\Rightarrow \begin{cases}
+					x+2y=4\\
+					-x+y=-1
+				\end{cases} \text{(operação 2 na equação 2)}\\
+				&\Rightarrow \begin{cases}
+					x+2y=4\\
+					3y=3
+				\end{cases} \text{(operação 3 na equação 2)}\\
+				&\Rightarrow \begin{cases}
+					x+2=4\\
+					y=1
+				\end{cases}
+				\Rightarrow \begin{cases}
+					x=2\\
+					y=1
+				\end{cases}
+			\end{align*}
+			\label{ex:SLoperacoes}
+		\end{exemplo}
+		Embora a primeira operação seja aparentemente "inútil", em frente entenderemos sua utilidade.
+		
+		Vale também apresentar um tipo especial de sistema linear, o homogêneo; bem como de solução, a trivial.
+		\begin{definicao}
+			Um sistema tal que $b_1,\dots,b_m=0$ é chamado \azul{sistema linear homogêneo}.
+		\end{definicao}
+		\begin{definicao}
+			Uma solução onde $x_1=0, \dots, x_n=0$ é chamada de \azul{solução trivial}.
+		\end{definicao}
+		Note que, de forma imediata, para um sistema tal que
+		\[
+		\begin{cases}
+			a_{11}x_1+\dots +a_{1n}x_n=0\\
+			\vdots\\
+			a_{m1}x_1+\dots +a_{mn}x_n=0
+		\end{cases}
+		\]
+		a solução trivial faz parte do conjunto solução. Logo, temos abaixo uma conclusão consequente dessas definições.
+		
+		\begin{proposicao}
+			Se um sistema linear é homogêneo, então ele admite pelo menos solução trivial. 
+		\end{proposicao}
+		
+		\subsection{Matrizes como Sistemas Lineares}
+			Relembrando novamente Sistemas Lineares, eles possuem o seguinte formato:
+			\[
+			\begin{cases}
+				a_{11}x_1+\dots +a_{1n}x_n=b_1\\
+				\vdots\\
+				a_{m1}x_1+\dots +a_{mn}x_n=b_m
+			\end{cases}
+			\]
+			No entanto, esse tipo de "multiplicação e soma ordenadas" lembra muito um dos conceitos apresentados anteriormente: a multiplicação entre matrizes. De fato, note que, definindo matrizes $A_{m\times n}$ e $B_{m\times 1}$ de constantes reais, e uma matriz $X_{n\times 1}$ de variáveis, podemos dizer que
+			\[
+			AX=B\Leftrightarrow \begin{cases}
+				a_{11}x_1+\dots +a_{1n}x_n=b_1\\
+				\vdots\\
+				a_{m1}x_1+\dots +a_{mn}x_n=b_m
+			\end{cases}
+			\]
+			Ou, mais explicitamente, que
+			\[
+			\begin{bmatrix}
+				a_{11} & \dots & a_{1n}\\
+				\vdots & \ddots& \vdots\\
+				a_{m1} & \dots & a_{mn}
+			\end{bmatrix}
+			\begin{bmatrix}
+				x_1\\
+				\vdots\\
+				x_n
+			\end{bmatrix}=
+			\begin{bmatrix}
+				b_1\\
+				\vdots\\
+				b_m
+			\end{bmatrix}
+			\Leftrightarrow
+			\begin{cases}
+				a_{11}x_1+\dots +a_{1n}x_n=b_1\\
+				\vdots\\
+				a_{m1}x_1+\dots +a_{mn}x_n=b_m
+			\end{cases}
+			\]
+			
+			O leitor pode facilmente verificar isso fazendo a multiplicação das matrizes $A$ e $X$, depois igualando à $B$ e verificar a igualdade entrada a entrada.
+			
+			Além disso, podemos novamente definir as operações elementares para matrizes. Note que, agora, a primeira operação terá mais uso.
+			
+			\begin{definicao}
+				Seguem abaixo as \azul{operações elementares sobre as linhas de uma matriz}.
+				\begin{enumerate}
+					\item Trocar a posição de duas linhas;
+					\item Multiplicar uma linha por um escalar $\alpha\neq0$;
+					\item Somar uma linha ao "múltiplo escalar" de outra.
+				\end{enumerate}
+			\end{definicao}
+			
+			No entanto, embora as matrizes sejam "parecidas", elas não são as mesmas. Ainda assim, representam sistemas lineares equivalentes. Portanto, vale a pena dar um nome a matrizes que são parecidas nesse sentido.  
+			
+			\begin{definicao}
+				Sejam $A$ e $B$ matrizes. $A$ é \azul{equivalente por linhas} a $B$, se $B$ pode ser obtida aplicando operações elementares sobre $A$.
+			\end{definicao}
+			Uma forma de representar os sistemas lineares com matrizes, omitindo as variáveis e obtendo algo mais conciso, temos a \azul{matriz aumentada} abaixo.
+			\[
+			[A \mid  B]= \begin{bmatrix}
+				a_{11} & \dots & a_{1n} & b_1\\
+				\vdots & \ddots& \vdots & \vdots\\
+				a_{m1} & \dots & a_{mn} & b_m
+			\end{bmatrix}
+			\]
+			Isso facilita as contas, considerando que as operações elementares devem ser executadas nas matrizes $A$ e $B$ simultaneamente. 
+			
+			Resumindo o que foi apresentado, temos esse teorema, que pode ser demonstrado e, de fato, apresentar a eficácia das operações elementares.
+			\begin{teorema}
+				Sejam os sistemas $AX=B$ e $CX=D$. Se $[A \mid B]$ é equivalente por linhas a $[C \mid D]$, então o conjunto solução de ambos é a mesma.
+			\end{teorema}
+			
+			Mesmo com as operações e matrizes apresentadas, ainda temos uma vasta gama de combinações de operações que podemos fazer, e chegar ao mesmo resultado. Para maior praticidade, faz sentido criar um "algoritmo" para solucionar esses sistemas lineares em formato de matrizes.
+			
+			Assim, vamos primeiro definir o pivô, e depois um forma de matriz que apresenta claramente a solução.
+			\begin{definicao}
+				Seja $A$ uma matriz. O \azul{pivô} da linha $A_i$ é o seu primeiro elemento não nulo.
+			\end{definicao}
+			Note que linhas nulas (i.e., no formato $A_i=[0\, \dots\, 0]$) não possuem pivô.
+			\begin{definicao}
+				Seja $A_{m\times n}$ uma matriz. Ela está na forma \azul{escalonada reduzida}, se satisfaz todas as condições abaixo.
+				\begin{enumerate}[label=\roman*)]
+					\item Todas as linhas nulas estão abaixo das não nulas;
+					\item Todos os pivôs são $1$;
+					\item Todo pivô está à direita do pivô da linha anterior;
+					\item Se uma coluna contém pivô, então todos os outros elementos são $0$.
+				\end{enumerate}
+			\end{definicao}
+			Seguem exemplos de matrizes escalonadas reduzidas, para que esse conceito seja mais visual.
+			\begin{exemplo}
+				A seguir temos matrizes escalonadas reduzidas, com os pivôs em vermelho.
+				
+				\[
+				\begin{bmatrix}
+					\cred{1} & 0 & 0\\
+					0 & \cred{1} & 0\\
+					0 & 0 & \cred{1}
+				\end{bmatrix}
+				\text{ e } 
+				\begin{bmatrix}
+					\cred{1} & 0 & 2 & 9\\
+					0 & \cred{1} & 4 & 0\\
+					0 & 0 & 0 & 0
+				\end{bmatrix}
+				\].
+				\label{ex:matrizes}
+			\end{exemplo}
+			E o mais interessante: além de toda matriz possuir uma forma escalonada reduzida, ela é única!
+			
+			\begin{teorema}
+				$\forall \text{ matriz }  A_{m\times n},\, \exists! \text{ matriz escalonada reduzida } R_{m\times n}$ equivalente.
+			\end{teorema}
+			
+			Como, no entanto, isso auxilia na busca por soluções de um sistema?
+			
+			Isso é útil, pois as operações elementares transformam uma matriz qualquer $[A\mid B]$ em sua forma escalonada reduzida $[R\mid S]$. Ao obter essa última matriz, obtemos a solução $S$.
+			Esse é o \azul{método de Gauss-Jordan}. Uma forma de fazer isso é seguindo o passo a passo abaixo, linha por linha:
+			\begin{enumerate}
+				\item Se a linha for nula, trocar de posição com uma linha abaixo que tiver pivô (operação 1, para cumprir a condição \textit{i)}). Caso não haja linhas da atual para abaixo com pivô, acabamos.
+				\item Multiplicar a linha atual pelo inverso multiplicativo do pivô, para que ele seja $1$ (operação 2, para cumprir a condição \textit{ii)}).
+				\item Somar um múltiplo da linha atual às demais, para anular os outros elementos da coluna (operação 3, para cumprir a condição \textit{iii)} e \textit{iv)}).
+				\item Passar para a próxima linha.
+			\end{enumerate}
+			
+			
+			Podemos voltar ao exemplo \ref{ex:SLoperacoes} e entender melhor como esse método funciona.
+			\begin{exemplo}
+				Temos o seguinte sistema linear.
+				\[
+				\begin{cases}
+					x+2y=4\\
+					x-y=1
+				\end{cases}
+				\]
+				Na linguagem das matrizes, podemos escrever como:
+				\[
+				\begin{bmatrix}
+					1 & 2 \\
+					1 & -1
+				\end{bmatrix}
+				\begin{bmatrix}
+					x\\
+					y
+				\end{bmatrix}
+				=
+				\begin{bmatrix}
+					4\\
+					1
+				\end{bmatrix}
+				\text{ ou }
+				\begin{bmatrix}
+					1 & 2 & 4\\
+					1 & -1 & 1
+				\end{bmatrix}
+				\]
+				Queremos colocar a matriz $[A\mid B]$ na forma escalonada reduzida. Para isso, vamos utilizar as operações elementares sobre as linhas da matriz.
+				\begin{align*}
+					\begin{bmatrix}
+						1 & 2 & 4\\
+						1 & -1 & 1
+					\end{bmatrix}
+					& \rightarrow \begin{bmatrix}
+						1 & 2 & 4\\
+						0 & -3 & -3
+					\end{bmatrix} \text{(operação 3: $L_2\to L_2+(-1)\cdot L_1$)}\\
+					& \rightarrow \begin{bmatrix}
+						1 & 2 & 4\\
+						0 & 1 & 1
+					\end{bmatrix} \text{(operação 2: $L_2\to -\frac{1}{3}\cdot L_2$)}\\
+					& \rightarrow \begin{bmatrix}
+						1 & 0 & 2\\
+						0 & 1 & 1
+					\end{bmatrix} \text{(operação 3: $L_1\to L_1+(-2)\cdot L_2$)}
+				\end{align*}
+				
+				Perceba que a última matriz $[R\mid S]=\begin{bmatrix}
+					\cred{1} & 0 & 2\\
+					0 & \cred{1} & 1
+				\end{bmatrix}$ está na forma escalonada reduzida, tendo solução $S=\begin{bmatrix}
+				2\\1
+				\end{bmatrix}$, ou, mais precisamente, $\begin{bmatrix}
+				x\\y
+				\end{bmatrix}=\begin{bmatrix}
+				2\\1
+				\end{bmatrix}\Rightarrow \begin{cases}
+				x=2\\y=1
+				\end{cases}$.
+				
+				De fato, para confirmar, podemos executar a multiplicação de matrizes e verificar que:
+				\[
+				\begin{bmatrix}
+					1 & 2 \\
+					1 & -1
+				\end{bmatrix}
+				\begin{bmatrix}
+					2\\
+					1
+				\end{bmatrix}
+				=
+				\begin{bmatrix}
+					4\\
+					1
+				\end{bmatrix}.
+				\]
+				\label{ex:SLescalonamento}
+			\end{exemplo}
+			Agora que sabemos encontrar a forma escalonada reduzida, precisamos entender de fato como interpretar essa matriz $[R\mid S]$. Embora no exemplo acima tenha dado um único resultado, nem sempre isso ocorre. Às vezes, podemos ter um sistema impossível, ou até mesmo possível, mas com infinitas soluções.
+			
+			No entanto, é possível um sistema ter algo entre uma ou infinitas soluções? A resposta é: não!
+			\begin{proposicao}
+				Sejam $A_{m\times n}$ e $B_{m\times 1}$ matrizes. Se o sistema $AX=B$ possui duas soluções distintas $X_0\neq X_1$, então ele tem infinitas soluções.
+			\end{proposicao}
+			Em outras palavras, se você encontrou duas soluções para um mesmo sistema, então ele tem uma infinitude de valores que você pode substituir. Com isso, temos o teorema abaixo.
+			\begin{teorema}
+				Um sistema linear pode ter:
+				\begin{itemize}
+					\item Nenhuma solução (sistema impossível);
+					\item Uma única solução (sistema possível e determinado);
+					\item Infinitas soluções (sistema possível e indeterminado).
+				\end{itemize}
+			\end{teorema}
+			Para identificar cada caso, é importante saber interpretar a matriz $R$ e a $[R\mid S]$. Embora a matriz $S$ sozinha pareça ser "mais importante" por apresentar a solução, de nada adianta se for um sistema impossível, por exemplo.
+			
+			Note que, no exemplo \ref{ex:SLescalonamento}, a matriz $R$ é a identidade $I_2$. Isso claramente indica um sistema possível e determinado, pois, ao multiplicar $R$ pela matriz de variáveis temos $RX=IX=X$, obtendo, portanto, $X=S$ (uma única solução). De fato, temos a seguinte preposição:
+			
+			\begin{proposicao}
+				Seja $R_{n\times n}$ uma matriz escalonada reduzida. $R\neq I_n$ $\Rightarrow$ $R$ tem uma linha nula.
+			\end{proposicao} 
+			
+			E se, ao obter a matriz escalonada reduzida, obtivermos uma igualdade falsa, independente das variáveis? Então temos um sistema impossível. Um caso é a matriz do exemplo \ref{ex:matrizes}, que representa um sistema de três equações e duas variáveis.
+			\[
+			[R\mid S]=\begin{bmatrix}
+				1 & 0 & 0\\
+				0 & 1 & 0\\
+				0 & 0 & 1
+			\end{bmatrix}
+			\]
+			Note que temos o seguinte:
+			\[
+			\begin{bmatrix}
+				1 & 0\\
+				0 & 1\\
+				0 & 0
+			\end{bmatrix}
+			\begin{bmatrix}
+				x\\y
+			\end{bmatrix}=
+			\begin{bmatrix}
+				0 \\ 0 \\1
+			\end{bmatrix}
+			\Rightarrow
+			\begin{cases}
+				x=0\\
+				y=0\\
+				0=1
+			\end{cases}
+			\]
+			Sabemos que $0=1$ é uma igualdade falsa e, portanto, não há solução para esse sistema. Perceba que o pivô da última linha da matriz $[R\mid S]$ se encontra na matriz $S$, enquanto a $R$ não possui pivô na última linha.
+			
+			Por fim, temos o caso de "faltarem informações". Considere a seguinte matriz (exemplo \ref{ex:matrizes}), que representa um sistema de três equações e três variáveis.
+			\[
+			\begin{bmatrix}
+				{1} & 0 & 2 & 9\\
+				0 & {1} & 4 & 0\\
+				0 & 0 & 0 & 0
+			\end{bmatrix}
+			\]
+			Ao abri-la, temos o sistema abaixo:
+			\[
+			\begin{bmatrix}
+				1 & 0 & 2\\
+				0 & 1 & 4\\
+				0 & 0 & 0
+			\end{bmatrix}
+			\begin{bmatrix}
+				x \\ y \\ z
+			\end{bmatrix}=
+			\begin{bmatrix}
+				9 \\ 0 \\ 0
+			\end{bmatrix}
+			\Rightarrow
+			\begin{cases}
+				x+2z=9\\
+				y+4z=0\\
+				0=0
+			\end{cases}
+			\]
+			Esse sistema linear é plenamente possível. No entanto, podemos, por exemplo, escolher qualquer valor para $z$ e, assim, definir os de $x$ e $y$ também. Ainda assim, existem infinitas soluções, que estão explicitadas abaixo, em um conjunto $S$ de matrizes.
+			\[
+			\begin{cases}
+				x=9-2z\\
+				y=-4z\\
+				z=z
+			\end{cases}\Rightarrow
+			S = \left\{ \begin{bmatrix}
+				9 - 2z\\
+				-4z \\
+				z
+			\end{bmatrix} \mid z \in \mathbb{R} \right\}
+			\]
+			Nessa matriz, a última linha era "inútil", pois não tinha informações (nenhum pivô), fazendo com que tivéssemos na verdade duas equações e três variáveis.
+			
+			De forma resumida, podemos interpretar da seguinte forma:
+			\begin{teorema}
+				Seja $[A\mid B]$ uma matriz que representa um sistema linear e $[R\mid S]$ sua forma escalonada reduzida.
+				
+				Seja $p_r$ a quantidade de pivôs da matriz $R$, $p_t$ a quantidade de pivôs da matriz $[R\mid S]$, e $v$ a quantidade de variáveis do sistema.
+				
+				\begin{enumerate}[label=\roman*)]
+					\item $p_r=p_t=v \Rightarrow $ sistema possível e determinado.
+					\item $p_r=p_t<v \Rightarrow $ sistema possível e indeterminado.
+					\item $p_r<p_t \Rightarrow $ sistema impossível. 
+				\end{enumerate}
+			\end{teorema}
+			Uma consequência desse teorema está nos sistemas lineares homogêneos.
+			\begin{teorema}
+				$A_{m\times n}$ é uma matriz tal que $m<n$ $\Rightarrow$ o sistema homogêneo $AX=\bar{0}$ tem infinitas soluções. 
+			\end{teorema}
+			Sabemos que $n$ é o número de variáveis e $m$ a quantidade de equações do sistema. Assim, outra forma equivalente de enunciá-lo segue abaixo.
+			\begin{teorema}
+				Se um sistema linear homogêneo tem menos equações do que incógnitas, então ele tem infinitas soluções.
+			\end{teorema}
+			Além disso, podemos extrair propriedades interessantes do seu conjunto solução.
+			\begin{proposicao}
+				Seja $A_{n\times n}$ uma matriz. Sejam $X$ e $Y$ soluções do sistema homogêneo $AX=\bar{0}$. Então,
+				\begin{enumerate}[label=\roman*)]
+					\item $X+Y$ também é solução.
+					\item $\alpha X$ também é solução, $\forall\, \alpha \in \mathbb{R}$.
+				\end{enumerate}
+			\end{proposicao}
+			A demonstração é bem simples e também é recomendada como exercício para o leitor. Basta verificar o resultado de $A(X+Y)$ e $A(\alpha X)$.
+			
+			Agora, podemos voltar ao estudo das matrizes inversas, e depois entender sua relevância. Primeiro, uma dúvida que não foi bem respondida foi como podemos calcular a inversa.
+			
+			A grande pergunta é como encontrar $B_{n\times n}$, dada uma matriz $A_{n\times n}$ tal que $AB=I_n$. Podemos desenvolver um pouco a multiplicação e obter algo interessante, visualmente falando.
+			\[
+			\begin{bmatrix}
+				a_{11} & \dots & a_{1n}\\
+				\vdots & \ddots& \vdots\\
+				a_{n1} & \dots & a_{nn}
+			\end{bmatrix}
+			\begin{bmatrix}
+				b_{11} & \dots & b_{1n}\\
+				\vdots & \ddots& \vdots\\
+				b_{n1} & \dots & b_{nn}
+			\end{bmatrix}
+			=
+			\begin{bmatrix}
+				1 & \dots & 0\\
+				\vdots & \ddots& \vdots\\
+				0 & \dots & 1
+			\end{bmatrix}
+			\Rightarrow
+			\begin{cases}
+				\begin{bmatrix}
+					a_{11} & \dots & a_{1n}\\
+					\vdots & \ddots& \vdots\\
+					a_{n1} & \dots & a_{nn}
+				\end{bmatrix}
+				\begin{bmatrix}
+					b_{11} \\
+					\dots\\
+					b_{n1}
+				\end{bmatrix}
+				=
+				\begin{bmatrix}
+					1 \\
+					\vdots\\
+					0
+				\end{bmatrix}\\
+				\vdots \\
+				\begin{bmatrix}
+					a_{11} & \dots & a_{1n}\\
+					\vdots & \ddots& \vdots\\
+					a_{n1} & \dots & a_{nn}
+				\end{bmatrix}
+				\begin{bmatrix}
+					b_{1n} \\
+					\dots\\
+					b_{nn}
+				\end{bmatrix}
+				=
+				\begin{bmatrix}
+					0 \\
+					\vdots\\
+					1
+				\end{bmatrix}
+			\end{cases}
+			\]
+			De fato, estamos resolvendo $n$ sistemas lineares para encontrar a inversa de $A$.
+			
+			De forma mais prática, podemos simplesmente dizer que vamos aplicar o método de Gauss-Jordan na matriz $[A\mid I]$ e obter a matriz escalonada reduzida $[R\mid B]$ (isso quando a inversa existir), onde $B=A^{-1}$. Note que, por uma questão de simetria ($(A^{-1})^{-1}=A$), a matriz $R$ também deve ser a identidade. Em outras palavras,
+			\[
+			[A\mid I_n]\longleftrightarrow [I_n \mid A^{-1}] \text{ (escalonamento).}
+			\]
+			Podemos formalizar essa condição de invertibilidade em um teorema.
+			\begin{teorema}
+				Seja $A_{n\times n}$ uma matriz. $A$ invertível $\Leftrightarrow$ $A$ é equivalente por linhas a $I_n$.
+			\end{teorema}
+			Além disso, temos o seguinte teorema, que liga muito bem as ideias de sistemas lineares, matrizes e invertibilidade.
+			\begin{teorema}
+				Seja $A_{n\times n}$ uma matriz.
+				\begin{enumerate}[label=\roman*)]
+					\item O sistema $AX=B$ tem solução única $\Leftrightarrow$ $A$ invertível (a solução é $X=A^{-1}B$).
+					\item O sistema homogêneo $AX=\bar{0}$ tem solução não trivial $\Leftrightarrow$ $A$ é singular.
+				\end{enumerate}
+			\end{teorema}
+			Evidentemente, o item \textit{ii)} advém do fato de que, ao ter solução não trivial, um sistema linear homogêneo possui pelo menos duas soluções e, consequentemente infinitas.
+				
+			Como consequência, lembrando que $A$ invertível $\Leftrightarrow \det(A)\neq 0$, podemos facilmente provar o teorema abaixo.
+			\begin{teorema}
+				O sistema homogêneo $AX=\bar{0}$ tem solução não trivial $\Leftrightarrow$ $\det(A)= 0$.
+			\end{teorema}
+			E daí vem um dos motivos do determinante também ser um objeto importante de estudo.
+			
+	\section{Combinação Linear e Dependência Linear}
+		Depois de discorrer sobre matrizes e sistemas lineares, vale a pena introduzir ideias de combinação e dependência linear, que dão uma boa base para o início de conceitos mais abstratos (como espaços e subespaços vetoriais), que seguem no próximo capítulo. Para iniciar, vamos retomar a definição de combinação linear, lá do capítulo 1, mas pensando em vetores de forma generalizada, sem ser somente do $\mathbb{R}^n$.
+		\begin{definicao}
+			Sejam $V_1, \dots, V_k $ vetores e $\alpha_1,\dots, \alpha_k \in \mathbb{R}$ escalares. Seja $W$ um vetor tal que
+			\[
+			W = \alpha_1 V_1 + \dots + \alpha_k V_k 
+			\]
+			Então, $W$ é \azul{combinação linear} de $V_1, \dots, V_k$; ou $W$ é \azul{gerado} por $V_1,\dots,V_k$.
+		\end{definicao}
+		A primeira definição interessante que podemos fazer com esse conceito segue abaixo. 
+		\begin{definicao}
+			O \azul{espaço gerado} pelos vetores $V_1,\dots,V_k$ é o conjunto de todas as suas combinações lineares, i.e.,
+			\[
+			\{W= \alpha_1 V_1 + \dots + \alpha_k V_k\mid \alpha_1,\dots,\alpha_k\in \mathbb{R}\}.
+			\]
+		\end{definicao}
+		Aplicando a definição de combinação linear para matrizes, podemos fazer uma construção interessante. Lembre que matrizes coluna podem representar vetores do $\mathbb{R}^n$ (Comentário \ref{com:vetoresematrizes}). Assim, podemos pegar $n$ vetores de ordem $m\times 1$, nomeados $A_{1},\dots,A_{n}$ e definir sua combinação linear como um vetor $B_{m\times 1}$:
+		\[
+		B=x_1A_1+\dots +x_n A_n
+		\]
+		Note que isso também é equivalente a:
+		\[
+		B=\begin{bmatrix}
+			A_1 & \dots & A_n
+		\end{bmatrix}\begin{bmatrix}
+			x_1\\
+			\vdots\\
+			x_n
+		\end{bmatrix}=\begin{bmatrix}
+		a_{11} & \dots & a_{1n}\\
+		\vdots & \ddots& \vdots\\
+		a_{n1} & \dots & a_{nn}
+		\end{bmatrix}\begin{bmatrix}
+		x_1\\
+		\vdots\\
+		x_n
+		\end{bmatrix}
+		\]
+		Ou seja, esse vetor $B$ é combinação linear de $A_1,\dots,A_n$, se existirem valores $x_1,\dots,x_n$ que satisfaçam as igualdades acima. Estamos definindo um sistema linear.
+		\begin{proposicao}Sejam $A_{m\times n}$ e $B_{m\times 1}$ matrizes.
+			
+			$B$ é combinação linear das colunas de $A$ $\Leftrightarrow$ o sistema $AX=B$ tem solução. 
+		\end{proposicao}
+		A esse tipo de construção, que considera as colunas de uma matriz $A$ para fazer uma combinação linear, damos um nome específico.
+		\begin{definicao}
+			Seja $A_{m\times n}$ uma matriz.
+			\begin{enumerate}[label=\roman*)]
+				\item O espaço 
+			\end{enumerate}
+		\end{definicao}
+		
+		A partir dessa "mistura" de ideias, podemos fazer a seguinte definição interessante.
+		\begin{definicao}
+			Seja $S=\{V_1,\dots,V_k\}\subset\mathbb{R}^n$. Seja $V_{n\times k}=\begin{bmatrix}
+				V_1 & \dots & V_k
+			\end{bmatrix}$.
+			
+			O conjunto $S$ é \azul{linearmente independente (LI)} se $VX=\bar{0}$ possui somente solução trivial.
+			
+			Caso contrário, o conjunto $S$ é \azul{linearmente dependente (LD)}.
+		\end{definicao}
+		Abrindo um pouco essa definição, dizemos que o conjunto $S$ é LI, se
+		\[
+		x_1V_1+\dots+x_kV_k=\bar{0}
+		\]
+		só pode ser verdadeiro quando $x_1=\dots=x_k=0$, i.e., não existe nenhuma outra combinação linear dos vetores de $S$ que dê o nulo.
+		
+		A grosso modo, isso significa que \textbf{nenhum vetor $V_i\in S$ pode ser escrito como combinação linear dos demais}. Isso porque, caso fosse possível, teríamos, para algum $\alpha_1,\dots,\alpha_k\in\mathbb{R}$,
+		\begin{align*}
+			&V_i=\alpha_1V_1+\dots+\alpha_kV_k\\
+			&\Rightarrow \bar{0}=\alpha_1V_1+\dots -V_{i}+\dots+\alpha_kV_k
+		\end{align*}
+		e poderíamos simplesmente tomar $x_1=\alpha_1, \dots, x_i=-1,\dots, x_k=\alpha_k$ e teríamos nossa solução não trivial do sistema $VX=\bar{0}$.
+		
+		Formalizando, temos o seguinte teorema:
+		\begin{teorema}
+			Seja o conjunto $S=\{V_1,\dots,V_k\}$, com $k>1$. Então, $S$ é LD $\Leftrightarrow$ $\exists\, V_j$ tal que $V_j$ é combinação linear de $V_1,\dots,V_{j-1},V_{j+1},\dots,V_k$.
+		\end{teorema}
+		
+		Trazendo de volta a construção feita anteriormente, podemos também intuitivamente entender a seguinte proposição, resgatando alguns teoremas da seção anterior.
+		\begin{proposicao}
+			Seja $A_{m\times n}$ uma matriz.
+			\begin{enumerate}[label=\roman*)]
+				\item As colunas de $A$ são LI $\Leftrightarrow$ o sistema $AX=\bar{0}$ possui somente solução trivial.
+				\item Seja $m=n$. Então as colunas de $A$ são LI $\Leftrightarrow$ $\det(A)\neq 0$.
+			\end{enumerate} 
+		\end{proposicao}
+		Recomenda-se que o leitor tente provar essa proposição.
+		
+		Além disso, como consequência, temos que, caso um conjunto tenha $k$ vetores no $\mathbb{R}^n$, tal que $k>n$, o conjunto é LD. Isso ocorre porque, ao tentar resolver $V_{k\times n}X=\bar{0}$, teremos mais incógnitas ($k$ linhas de $V$) que equações ($n$ colunas de $V$), e, portanto, infinitas soluções (não somente a trivial).
+		\begin{corolario}
+			Sejam $V_1,\dots, V_k\in\mathbb{R}^n$. Se $k>n$, então o conjunto $S$ desses vetores é LD.
+		\end{corolario}
+		
+		
+\end{document}
