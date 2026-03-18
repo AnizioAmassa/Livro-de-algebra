@@ -16,7 +16,7 @@
 				\end{tikzpicture}
 			\end{center}
 		\end{definicao}
-		Note que, pela definição, um vetor não possui "origem fixa" e pode ser representado por diferentes segmentos de reta orientados.
+		Note que, pela definição, um vetor não possui ''origem fixa'' e pode ser representado por diferentes segmentos de reta orientados.
 		\begin{definicao}
 			Sejam $U$ e $V$ vetores representados por $\vv{AB}$ e $\vv{BC}$, respectivamente. A \azul{soma de vetores} $U+V$ é definida como o vetor representado pelo segmento de reta orientado $\vv{AC}$  
 			\begin{center}
@@ -128,7 +128,7 @@
 			
 			Se $V$ está no espaço (\azul{$\mathbb{R}^3$} ou \azul{espaço euclidiano tridimensional}), então suas coordenadas são uma tupla de três números reais, denotadas usualmente por $(v_1, v_2, v_3)$.
 			
-			Se $V$ está em "dimensões maiores" (\azul{$\mathbb{R}^n$} ou \azul{espaço euclidiano n-dimensional}), então suas coordenadas são uma tupla de $n$ números reais, denotadas usualmente por $(v_1, \dots, v_n)$.
+			Se $V$ está em ''dimensões maiores'' (\azul{$\mathbb{R}^n$} ou \azul{espaço euclidiano n-dimensional}), então suas coordenadas são uma tupla de $n$ números reais, denotadas usualmente por $(v_1, \dots, v_n)$.
 		\end{definicao}
 		Na Figura \ref{fig:vetores-R2-R3}, seguem ilustrações de como coordenadas funcionam no plano e no espaço.
 		\begin{figure}[h]
@@ -374,7 +374,7 @@
 				\coordinate (Vy) at (0,2);
 				
 				\draw[->,thick,blue] (O) -- (V)
-				node[above right] {$\vec V=(v_1,v_2)$};
+				node[above right] {$ V=(v_1,v_2)$};
 				
 				% Projeções para formar o triângulo retângulo
 				\draw[dashed] (V) -- (Vx);
@@ -395,11 +395,11 @@
 				{};
 				
 			\end{tikzpicture}
-			\caption{Norma de um vetor $\vec V$ em $\mathbb{R}^2$.}
+			\caption{Norma de um vetor $ V$ em $\mathbb{R}^2$.}
 		\end{figure}
 		Essa forma de calcular a norma está ligada ao cálculo do tamanho de vetores no $\mathbb{R}^2$ e no $\mathbb{R}^3$, utilizando o Teorema de Pitágoras.
 		
-		A partir dessa definição de norma, podemos definir outro conceito fundamental: o produto escalar. Este produto pega dois vetores e devolve um escalar (número real), que vai indicar o "nível de alinhamento entre eles".
+		A partir dessa definição de norma, podemos definir outro conceito fundamental: o produto escalar. Este produto pega dois vetores e devolve um escalar (número real), que vai indicar o ''nível de alinhamento entre eles''.
 		
 		\begin{definicao}
 			Sejam $V,\, W\in \mathbb{R}^n$, onde $n\in \{2,3\}$. O \azul{produto escalar} (também conhecido como \azul{produto interno}) entre esses vetores, denotado por $V\cdot W$, é dado por
@@ -441,7 +441,7 @@
 				$V\cdot V=\|V\|^2=0 \Leftrightarrow V = \bar{0}$.
 			\end{enumerate}
 		\end{proposicao}
-		As ideias de norma e produto escalar são essenciais e possuem interpretação geométrica. O produto escalar, por exemplo, mostra a relação entre os tamanhos e "alinhamento" (ângulo) entre dois vetores. Isso é muito bem visualizado ao tentarmos entender projeções de um vetor sobre outro: a projeção ortogonal.
+		As ideias de norma e produto escalar são essenciais e possuem interpretação geométrica. O produto escalar, por exemplo, mostra a relação entre os tamanhos e ''alinhamento'' (ângulo) entre dois vetores. Isso é muito bem visualizado ao tentarmos entender projeções de um vetor sobre outro: a projeção ortogonal.
 		
 		\begin{definicao}
 			Sejam $V$ e $W$ vetores. A \azul{projeção ortogonal de $V$ sobre $W$}, denotada por $\text{proj}_W V$ é o vetor tal que
@@ -470,11 +470,11 @@
 				
 				% Vetor W
 				\draw[->,thick,blue] (O) -- (W)
-				node[below right] {$\vec W$};
+				node[below right] {$ W$};
 				
 				% Vetor V
 				\draw[->,thick,red] (O) -- (V)
-				node[above left] {$\vec V$};
+				node[above left] {$ V$};
 				
 				% Projeção de V sobre W
 				\draw[->,thick,green!60!black] (O) -- (P)
@@ -482,13 +482,13 @@
 				
 				% Componente ortogonal V - proj_W V
 				\draw[dashed] (V) -- (P)
-				node[midway,right] {$\vec V - \operatorname{proj}_W V$};
+				node[midway,right] {$ V - \operatorname{proj}_W V$};
 				
 				% Marcação do ângulo reto
 				\tkzMarkRightAngle(W,P,V)
 				
 			\end{tikzpicture}
-			\caption{Projeção ortogonal de $\vec V$ sobre $\vec W$.}
+			\caption{Projeção ortogonal de $ V$ sobre $ W$.}
 		\end{figure}
 		
 		A partir dessa definição, podemos provar o seguinte teorema.
@@ -498,7 +498,7 @@
 			\text{proj}_W V = \bigg(\frac{V\cdot W}{\|W\|^2}\bigg)W
 			\]
 		\end{teorema}
-		Além do produto escalar, existem outros dois produtos essenciais da Álgebra Vetorial. Enquanto o produto escalar trabalha com "alinhamentos" e projeções, o produto vetorial e misto representam, respectivamente, área e volume.
+		Além do produto escalar, existem outros dois produtos essenciais da Álgebra Vetorial. Enquanto o produto escalar trabalha com ''alinhamentos'' e projeções, o produto vetorial e misto representam, respectivamente, área e volume.
 		\begin{definicao}
 			Sejam $V,\, W\in \mathbb{R}^3$. O \azul{produto vetorial} (também conhecido como \azul{produto externo}) entre esses vetores, denotado por $V\times W$, é dado por
 			\[
@@ -571,7 +571,7 @@
 		
 		Se você não estiver habituado às ideias de matrizes e determinante, não se preocupe. No capítulo 2, apresentaremos formalmente cada um.
 		
-		Note que, no abuso de notação para representar o produto vetorial, temos que os componentes da matriz são ora vetores, ora números reais, o que indica uma matriz inválida. A ideia dessa representação é de que, se considerássemos $\vec i$, $\vec j$ e $\vec k$ números reais e fizéssemos a conta de tal determinante, e a multiplicação entre reais fosse igual à multipliação por escalar, teríamos o equivalente à primeira forma do produto vetorial, apresentada imediatamente antes. Em suma, essa segunda representação é, na verdade, um "macete" para decorar o produto vetorial.
+		Note que, no abuso de notação para representar o produto vetorial, temos que os componentes da matriz são ora vetores, ora números reais, o que indica uma matriz inválida. A ideia dessa representação é de que, se considerássemos $\vec i$, $\vec j$ e $\vec k$ números reais e fizéssemos a conta de tal determinante, teríamos o equivalente à primeira forma do produto vetorial, apresentada imediatamente antes. Em suma, essa segunda representação é, na verdade, um ''macete'' para decorar o produto vetorial.
 		
 		A partir dessas definições equivalentes do produto vetorial, podemos demonstrar as seguintes propriedades.
 		\begin{proposicao}
@@ -584,7 +584,7 @@
 				\item $V\times (W+U)=V\times W+V\times U$ e $(V+W)\times U=V\times U+W\times U$.
 			\end{enumerate}
 		\end{proposicao}
-		Já o produto misto é dado pela "mistura" dos dois conceitos apresentados anteriormente.
+		Já o produto misto é dado pela ''mistura'' dos dois conceitos apresentados anteriormente.
 		\begin{definicao}
 			Sejam $V,\, W, \, U \in \mathbb{R}^3$. Então, o \azul{produto misto}, denotado por $[V, W, U]$, é dado por
 			\[
@@ -656,13 +656,13 @@
 					scale=1.2,
 					>=stealth,
 					x={(1cm,0cm)},        % eixo x: horizontal
-					y={(0.7cm,0.35cm)},   % eixo "pra dentro" (y)
+					y={(0.7cm,0.35cm)},   % eixo ''pra dentro'' (y)
 					z={(0cm,1cm)}         % eixo z: vertical
 					]
 					%--- pontos básicos ---
 					\coordinate (O)  at (0,0,0);      % origem
 					\coordinate (H)  at (0,0,1.8);    % topo da altura h
-					\coordinate (V)  at (2.0,0,0);      % vetor v no "chão"
+					\coordinate (V)  at (2.0,0,0);      % vetor v no ''chão''
 					\coordinate (U)  at (1.6, 0.3, 1.8);% ponta de u
 					\coordinate (W)  at (1.2,0.6,0);  % direção de w (no chão)
 					
@@ -675,7 +675,7 @@
 					%--- base e paralelepípedo (linhas tracejadas) ---
 					% base da frente
 					\draw[->,thick, red] (O) -- (V) node[below right] {$V$};
-					% base "de trás" (passando por w)
+					% base ''de trás'' (passando por w)
 					\draw[dashed] (W) -- (VW);
 					% laterais tracejadas
 					\draw[dashed] (V)  -- (VW);
@@ -696,7 +696,7 @@
 					\draw (0,0,0.3) arc[start angle=90, end angle=46.5, radius=0.4] node[left=5pt] {$\theta_2$};
 					
 					%--- vetores principais ---
-					% w saindo da origem, indo "pra dentro"
+					% w saindo da origem, indo ''pra dentro''
 					\draw[->,thick,blue] (O) -- (W) node[above left] {$W$};
 					
 					% u saindo da origem
@@ -709,9 +709,11 @@
 			\caption{Produto vetorial e produto misto.}
 			\label{fig:areavolume}
 		\end{figure}
-		Como sabemos, a área do paralelogramo é dada pelo produto da base com a altura, enquanto o volume do paralelepípedo é dado pelo produto da área da base com a altura. Assim seguem as relações abaixo. \[A_{VW}=bh=\|V\|h=\|V\|\|W\|\sin(\theta_1)=\|V\times W\|\] \[V_{VWU}=A_{VW}b=A_{VW}\|U\|\cos(\theta_2)=\|V\times W\|\|U\|\cos(\theta_2)=|[V,W,U]|\]
+		Como sabemos, a área do paralelogramo é dada pelo produto da base com a altura, enquanto o volume do paralelepípedo é dado pelo produto da área da base com a altura. Assim seguem as relações abaixo.
+		\[A_{VW}=bh=\|V\|h=\|V\|\|W\|\sin(\theta_1)=\|V\times W\|\]
+		\[V_{VWU}=A_{VW}h=A_{VW}\|U\|\cos(\theta_2)=\|V\times W\|\|U\|\cos(\theta_2)=|[V,W,U]|\]
 		
-		Além das suas normas representarem áreas e volumes, os produtos vetorial e misto, assim como o escalar, são indicadores de "alinhamento" entre vetores. A essas características damos o nome de colinearidade e coplanaridade.
+		Além das suas normas representarem áreas e volumes, os produtos vetorial e misto, assim como o escalar, são indicadores de ''alinhamento'' entre vetores. A essas características damos o nome de colinearidade e coplanaridade.
 		\begin{definicao}
 			Dois ou mais vetores são \azul{colineares} se pertencem a uma mesma reta (ou seja, se são paralelos). 
 		\end{definicao}
@@ -866,7 +868,7 @@
 						% ponto P no plano (P = P0 + t v + s w, t=1.1, 	s=0.6)
 						\coordinate (P) at (2.38,1.5,1.884);
 						
-						% plano "grande"
+						% plano ''grande''
 						\fill[green!20,opacity=0.15]
 						(A) -- (B) -- (C) -- (D) -- cycle;
 						
@@ -897,7 +899,7 @@
 				
 				\caption{Representação de reta e plano por pontos e vetores diretores.}
 			\end{figure}
-			Note que, de fato, para definir uma reta somente precisamos da sua direção, dada pelo vetor diretor, e de um ponto para "fixar a reta". Igualmente, para definir um plano, basta determinar sua "angulação", dada por dois vetores diretores de direções distintas, e fixá-lo com um ponto.
+			Note que, de fato, para definir uma reta somente precisamos da sua direção, dada pelo vetor diretor, e de um ponto para ''fixar a reta''. Igualmente, para definir um plano, basta determinar sua ''angulação'', dada por dois vetores diretores de direções distintas, e fixá-lo com um ponto.
 			
 			As equações apresentadas nessas definições são o que chamamos de \azul{equações vetoriais} desses objetos geométricos. Além delas, existem outras formas de representar retas e planos: as equações paramétricas e as equações  gerais. As retas, em especial, possuem outras duas formas particulares, que são a reduzida (muito conhecida no Ensino Médio no formato de função) e a simétrica.
 			
@@ -1057,11 +1059,12 @@
 			\end{proposicao}
 			\begin{proposicao}
 				Sejam dois planos
-				\[
-				\pi_1\,\colon\, a_1x+b_1y+c_1z+d_1=0\\
-				\pi_2\,\colon\, a_2x+b_2y+c_2z+d_2=0
+				\[\begin{cases}
+					\pi_1\,\colon\, a_1x+b_1y+c_1z+d_1=0\\
+					\pi_2\,\colon\, a_2x+b_2y+c_2z+d_2=0
+				\end{cases}
 				\]
-				O cosseno do ângulo entre $\pi_2$ e $\pi_2$ é
+				O cosseno do ângulo entre $\pi_1$ e $\pi_2$ é
 				\[
 				\cos(\pi_1,\pi_2)=\frac{|N_1\cdot N_2|}{\|N_1\|\|N_2\|}
 				\]
