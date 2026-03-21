@@ -183,7 +183,7 @@
 			\]
 		\end{definicao}
 		
-		Com todas as operações apresentadas, podemos provas as seguintes propriedades de matrizes.
+		Com todas as operações apresentadas, podemos provar as seguintes propriedades de matrizes.
 		
 		\begin{teorema}
 			Sejam $A$, $B$ e $C$ matrizes com ordem apropriada para cada propriedade. Seja $\alpha\in \mathbb{R}$. Então,
@@ -314,7 +314,7 @@
 				\]
 				onde
 				\begin{itemize}
-					\item $\tilde{a}_{1j}=(-1)^{1+j}\det(\tilde{A}_{1j})$ é o \azul{cofator} de $a_{1j}$;
+					\item $\tilde{a}_{ij}=(-1)^{1+j}\det(\tilde{A}_{ij})$ é o \azul{cofator} de $a_{ij}$;
 					\item $\tilde{A}_{ij}$ é a submatriz de $A$ de ordem $(n-1)\times (n-1)$ eliminando a $i$-ésima linha e a $j$-ésima coluna, denominada \azul{matriz menor do elemento $a_{ij}$}.
 				\end{itemize} 
 			\end{definicao}
@@ -466,7 +466,7 @@
 			Um sistema tal que $b_1,\dots,b_m=0$ é chamado \azul{sistema linear homogêneo}.
 		\end{definicao}
 		\begin{definicao}
-			Uma solução onde $x_1=0, \dots, x_n=0$ é chamada de \azul{solução trivial}.
+			Uma solução de um sistema linear homogêneo onde $x_1=0, \dots, x_n=0$ é chamada de \azul{solução trivial}.
 		\end{definicao}
 		Note que, de forma imediata, para um sistema tal que
 		\[
@@ -542,7 +542,7 @@
 			\begin{definicao}
 				Sejam $A$ e $B$ matrizes. $A$ é \azul{equivalente por linhas} a $B$, se $B$ pode ser obtida aplicando operações elementares sobre $A$.
 			\end{definicao}
-			Uma forma de representar os sistemas lineares com matrizes, omitindo as variáveis e obtendo algo mais conciso, temos a \azul{matriz aumentada} abaixo.
+			Uma forma de representar os sistemas lineares com matrizes, omitindo as variáveis e obtendo algo mais conciso, é por meio da \azul{matriz aumentada} abaixo.
 			\[
 			[A \mid B] = \left[
 			\begin{array}{ccc|c}
@@ -556,12 +556,12 @@
 			
 			Resumindo o que foi apresentado, temos esse teorema, que pode ser demonstrado e, de fato, apresentar a eficácia das operações elementares.
 			\begin{teorema}
-				Sejam os sistemas $AX=B$ e $CX=D$. Se $[A \mid B]$ é equivalente por linhas a $[C \mid D]$, então o conjunto solução de ambos é a mesma.
+				Sejam os sistemas $AX=B$ e $CX=D$. Se $[A \mid B]$ é equivalente por linhas a $[C \mid D]$, então o conjunto solução de ambos é o mesmo.
 			\end{teorema}
 			
 			Mesmo com as operações e matrizes apresentadas, ainda temos uma vasta gama de combinações de operações que podemos fazer, e chegar ao mesmo resultado. Para maior praticidade, faz sentido criar um ''algoritmo'' para solucionar esses sistemas lineares em formato de matrizes.
 			
-			Assim, vamos primeiro definir o pivô, e depois um forma de matriz que apresenta claramente a solução.
+			Assim, vamos primeiro definir o pivô, e depois uma forma de matriz que apresenta claramente a solução.
 			\begin{definicao}
 				Seja $A$ uma matriz. O \azul{pivô} da linha $A_i$ é o seu primeiro elemento não nulo.
 			\end{definicao}
@@ -605,7 +605,7 @@
 			Isso é útil, pois as operações elementares transformam uma matriz qualquer $[A\mid B]$ em sua forma escalonada reduzida $[R\mid S]$. Ao obter essa última matriz, obtemos a solução $S$.
 			Esse é o \azul{método de Gauss-Jordan}. Uma forma de fazer isso é seguindo o passo a passo abaixo, linha por linha:
 			\begin{enumerate}
-				\item Se a linha for nula, trocar de posição com uma linha abaixo que tiver pivô (operação 1, para cumprir a condição \textit{i)}). Caso não haja linhas da atual para abaixo com pivô, acabamos.
+				\item Se a linha for nula, trocar de posição com uma linha abaixo que tiver pivô (operação 1, para cumprir a condição \textit{i)}). Caso não haja linhas abaixo da atual com pivô, acabamos.
 				\item Multiplicar a linha atual pelo inverso multiplicativo do pivô, para que ele seja $1$ (operação 2, para cumprir a condição \textit{ii)}).
 				\item Somar um múltiplo da linha atual às demais, para anular os outros elementos da coluna (operação 3, para cumprir a condição \textit{iii)} e \textit{iv)}).
 				\item Passar para a próxima linha.
@@ -933,7 +933,7 @@
 		\end{bmatrix}=\begin{bmatrix}
 		a_{11} & \dots & a_{1n}\\
 		\vdots & \ddots& \vdots\\
-		a_{n1} & \dots & a_{nn}
+		a_{m1} & \dots & a_{mn}
 		\end{bmatrix}\begin{bmatrix}
 		x_1\\
 		\vdots\\
@@ -941,7 +941,7 @@
 		\end{bmatrix}
 		\]
 		Ou seja, esse vetor $B$ é combinação linear de $A_1,\dots,A_n$, se existirem valores $x_1,\dots,x_n$ que satisfaçam as igualdades acima. Estamos definindo um sistema linear.
-		\begin{proposicao}Sejam $A_{m\times n}$ e $B_{\times 1}$ matrizes.
+		\begin{proposicao}Sejam $A_{m\times n}$ e $B_{n\times 1}$ matrizes.
 			
 			$B$ é combinação linear das colunas de $A$ $\Leftrightarrow$ o sistema $AX=B$ tem solução. 
 		\end{proposicao}
@@ -949,9 +949,12 @@
 		\begin{definicao}
 			Seja $A_{m\times n}$ uma matriz.
 			\begin{enumerate}[label=\roman*)]
-				\item O espaço 
+				\item O \azul{espaço coluna de A} é o conjunto de combinações lineares possíveis das colunas de A;
+				\item O \azul{espaço linha de A} é o conjunto de combinações lineares possíveis das linhas de A.
 			\end{enumerate}
 		\end{definicao}
+		
+		No capítulo 3, será possível nomear esse ''conjunto de combinações lineares possíveis'' de maneira mais elegante.
 		
 		A partir dessa ''mistura'' de ideias, podemos fazer a seguinte definição interessante.
 		\begin{definicao}

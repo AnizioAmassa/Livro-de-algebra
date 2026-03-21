@@ -124,7 +124,7 @@
 		\begin{definicao}
 			Seja $V$ um vetor. As \azul{componentes de V} são cada elemento das coordenadas que representam o ponto final com relação à origem do sistema de coordenadas escolhido.
 			
-			Se $V$ está no plano (\azul{$\mathbb{R}^2$} ou \azul{espaço euclidiano bidimensional}), então suas coordenadas são uma trupla de dois números reais, denotadas usualmente por $(v_1, v_2)$.
+			Se $V$ está no plano (\azul{$\mathbb{R}^2$} ou \azul{espaço euclidiano bidimensional}), então suas coordenadas são uma tupla de dois números reais, denotadas usualmente por $(v_1, v_2)$.
 			
 			Se $V$ está no espaço (\azul{$\mathbb{R}^3$} ou \azul{espaço euclidiano tridimensional}), então suas coordenadas são uma tupla de três números reais, denotadas usualmente por $(v_1, v_2, v_3)$.
 			
@@ -270,10 +270,10 @@
 					
 					% Segmentos representando as diferenças
 					\draw[thick,orange,yshift=-10pt]
-					(1.2,-0.2) -- node[below] {\small $v_2$} (3.2,-0.2);
+					(1.2,-0.2) -- node[below] {\small $v_1$} (3.2,-0.2);
 					
 					\draw[thick,orange,xshift=-13pt]
-					(-0.2,1.6) -- node[left] {\small $v_1$} (-0.2,2.4);
+					(-0.2,1.6) -- node[left] {\small $v_2$} (-0.2,2.4);
 					
 				\end{tikzpicture}
 				\caption{Soma de vetores: $ V+ W=(v_1+w_1,\;v_2+w_2)$.}
@@ -727,7 +727,7 @@
 		\begin{proposicao}
 			Sejam $V, W\in \mathbb{R}^2$.
 			\begin{itemize}
-				\item $V$ e $W$ são colineares $\Leftrightarrow \exists \, \alpha \in \mathbb{R}\text{, tal que } V=\alpha W$, ou seja, se um for múltiplo escalar do outro;
+				\item $V$ e $W$ são colineares $\Leftrightarrow \exists \, \alpha \in \mathbb{R}\text{, tal que } V=\alpha W \text{ ou } W=\alpha V$, ou seja, se um for múltiplo escalar do outro;
 				\item $V$ e $W$ são sempre coplanares (pertencem ao $\mathbb{R}^2$).
 			\end{itemize}
 		\end{proposicao}
@@ -751,7 +751,7 @@
 				\item $V$ e $W$ não paralelos $\Rightarrow$ $U$ combinação linear de $V$ e $W$.
 			\end{enumerate}
 		\end{corolario}
-		Um fato interessante é que, a partir do item \textit{i)} do corolário acima, obtemos que a equação $xV+yW+zU=\bar{0}$ tem solução onde $x,y,z\neq 0$. Isso porque, se existem reais $\alpha, \beta$ tais que $\alpha V+\beta W= U$ (definição de combinação linear), então basta tomar $x=\alpha$, $y=\beta$ e $z=-1$.
+		Um fato interessante é que, a partir do item \textit{i)} do corolário acima, obtemos que a equação $xV+yW+zU=\bar{0}$ tem solução onde $x^2+y^2+z^2\neq 0$, ou seja, em que pelo menos um dos valores é diferente de zero. Isso porque, se existem reais $\alpha, \beta$ tais que $\alpha V+\beta W= U$ (definição de combinação linear), então basta tomar $x=\alpha$, $y=\beta$ e $z=-1$.
 		
 		A observação acima será mais esclarecedora depois de uma boa leitura da seção 2.3.
 		
@@ -791,7 +791,7 @@
 				\[
 				P = P_0 + t V, \quad t \in \mathbb{R}
 				\]
-				onde $P_0$ é um ponto fixo e $V\in \mathbb{R}^2$ (ou $\mathbb{R}^3$) é o vetor diretor não nulo.
+				onde $P_0$ é um ponto fixo e $V\in \mathbb{R}^2$ (ou $\mathbb{R}^3$) é o vetor diretor.
 			\end{definicao}
 			\begin{definicao}
 				Um \azul{plano} $\pi \subset \mathbb{R}^3$ é o conjunto dos pontos $P$ dados por
@@ -1090,7 +1090,7 @@
 				\[
 				\text{dist}(P_0, r)=\frac{\|\vv{P_1P_0}\times V\|}{\|V\|}
 				\]
-				em que $V=(a,b,c)$ é um vetor diretor e $P_1=(x_1,b_1,c_1)$ é um ponto da reta $r$.
+				em que $V=(a,b,c)$ é um vetor diretor e $P_1=(x_1,y_1,z_1)$ é um ponto da reta $r$.
 			\end{proposicao}
 			Para a distância entre dois planos $\pi_1$ e $\pi_2$, temos dois casos.
 			\begin{itemize}
